@@ -69,9 +69,10 @@ def oracle_solve(
     by the *chosen* (often fastest) arm's time while wall clock pays all 12,
     millisecond sub-solves would otherwise mean tens of thousands of rounds."""
     t0 = time.monotonic()
+    initial_budget = max(0.1, total_budget - slice_budget)
     trajectory: list[tuple[float, int]] = []
     incumbent, objective, optimal = initial_incumbent(
-        instance, prev_solution, time_limit=slice_budget, workers=workers,
+        instance, prev_solution, time_limit=initial_budget, workers=workers,
         seed=seed, recorder=trajectory,
     )
     if incumbent is None:

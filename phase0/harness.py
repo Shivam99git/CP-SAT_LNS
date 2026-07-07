@@ -191,11 +191,12 @@ def lns_solve(
 ) -> SolveResult:
     rng = random.Random(seed)
     t0 = time.monotonic()
+    initial_budget = max(0.1, total_budget - slice_budget)
 
     trajectory: list[tuple[float, int]] = []
     rounds: list[RoundLog] = []
     incumbent, objective, optimal = initial_incumbent(
-        instance, prev_solution, time_limit=slice_budget, workers=workers,
+        instance, prev_solution, time_limit=initial_budget, workers=workers,
         seed=seed, recorder=trajectory, t_offset=time.monotonic() - t0,
     )
     if incumbent is None:
