@@ -13,7 +13,9 @@ Methods:
   c. lns_uniform     LNS harness, uniform-random arm choice
   d. lns_eps_reset   LNS + epsilon-greedy, stats reset per instance (BALANS-like)
   e. lns_eps_persist LNS + epsilon-greedy, stats carried across the stream
-  f. oracle          LNS where every round evaluates ALL arms and keeps the
+  f. fixed_*         LNS with one fixed arm, strong static baselines
+  g. round_robin_40  LNS cycling through the strongest 40% destroy arms
+  h. oracle          LNS where every round evaluates ALL arms and keeps the
                      best; only the best arm's time is charged to a virtual
                      clock (best-arm-in-hindsight ceiling, ~12x wall clock)
 
@@ -28,6 +30,7 @@ import argparse
 import random
 import time
 from collections import Counter
+from pathlib import Path
 
 import pandas as pd
 
@@ -43,7 +46,12 @@ from .harness import (
 )
 from .metrics import final_gap, primal_integral
 from .model_builder import Solution, build_model, solve, validate_solution
-from .policies import EpsilonGreedyPolicy, UniformRandomPolicy
+from .policies import (
+    EpsilonGreedyPolicy,
+    FixedArmPolicy,
+    RoundRobinPolicy,
+    UniformRandomPolicy,
+)
 from .streams import Instance, StreamConfig, generate_stream
 
 
@@ -156,6 +164,10 @@ def run_method(
         policy = EpsilonGreedyPolicy(seed=seed, reset_per_instance=True)
     elif name == "lns_eps_persist":
         policy = EpsilonGreedyPolicy(seed=seed, reset_per_instance=False)
+    elif name.startswith("fixed_"):
+        policy = FixedArmPolicy(name.removeprefix("fixed_"))
+    elif name == "round_robin_40":
+        policy = RoundRobinPolicy(("delta_40", "critical_40", "random_40"))
     elif name == "oracle":
         pass
     else:
@@ -190,6 +202,9 @@ def run_method(
 METHODS = (
     "cpsat_cold", "cpsat_warm",
     "lns_uniform", "lns_eps_reset", "lns_eps_persist",
+    "fixed_delta_40", "fixed_random_40",
+    "fixed_critical_40", "fixed_machine_40",
+    "round_robin_40",
     "oracle",
 )
 
@@ -212,6 +227,9 @@ def main() -> None:
     ap.add_argument("--quick", action="store_true",
                     help="tiny settings for a smoke run")
     ap.add_argument("--out", default="phase0_results.csv")
+    ap.add_argument("--oracle-rounds-out", default=None,
+                    help="CSV path for oracle round-level decisions; default "
+                         "is '<out stem>_oracle_rounds.csv'")
     args = ap.parse_args()
 
     if args.quick:
@@ -278,11 +296,32 @@ def main() -> None:
     if "oracle" in all_results:
         picks = Counter()
         improving_picks = Counter()
-        for res in all_results["oracle"]:
+        oracle_rows = []
+        for i, res in enumerate(all_results["oracle"]):
             for r in res.rounds:
                 picks[r.arm] += 1
                 if r.objective_after < r.objective_before:
                     improving_picks[r.arm] += 1
+                oracle_rows.append({
+                    "instance": i,
+                    "delta_kind": stream[i].delta_kind,
+                    "num_ops": len(stream[i].all_ops),
+                    "round_index": r.round_index,
+                    "arm": r.arm,
+                    "objective_before": r.objective_before,
+                    "objective_after": r.objective_after,
+                    "improved": r.objective_after < r.objective_before,
+                    "elapsed": r.elapsed,
+                    "round_time": r.round_time,
+                    "reward": r.reward,
+                })
+        rounds_out = args.oracle_rounds_out
+        if rounds_out is None:
+            out_path = Path(args.out)
+            rounds_out = str(out_path.with_name(f"{out_path.stem}_oracle_rounds.csv"))
+        pd.DataFrame(oracle_rows).to_csv(rounds_out, index=False)
+        print(f"wrote {rounds_out}")
+
         print("\n=== oracle arm choices (all / improving rounds) ===")
         for arm in ARMS:
             print(f"  {arm.name:14s} {picks[arm.name]:4d} / {improving_picks[arm.name]:4d}")

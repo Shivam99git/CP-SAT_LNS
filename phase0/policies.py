@@ -27,6 +27,41 @@ class UniformRandomPolicy(Policy):
         return self.rng.choice(ARMS)
 
 
+class FixedArmPolicy(Policy):
+    """Always select the same arm. Useful as a strong static baseline."""
+
+    def __init__(self, arm_name: str):
+        matches = [arm for arm in ARMS if arm.name == arm_name]
+        if not matches:
+            valid = ", ".join(arm.name for arm in ARMS)
+            raise ValueError(f"unknown arm {arm_name!r}; valid arms: {valid}")
+        self.arm = matches[0]
+
+    def select(self, instance: Instance, solution) -> Arm:
+        return self.arm
+
+
+class RoundRobinPolicy(Policy):
+    """Cycle through a fixed arm list, resetting at each stream instance."""
+
+    def __init__(self, arm_names: tuple[str, ...]):
+        by_name = {arm.name: arm for arm in ARMS}
+        missing = [name for name in arm_names if name not in by_name]
+        if missing:
+            valid = ", ".join(arm.name for arm in ARMS)
+            raise ValueError(f"unknown arms {missing!r}; valid arms: {valid}")
+        self.arms = tuple(by_name[name] for name in arm_names)
+        self.index = 0
+
+    def reset_instance(self) -> None:
+        self.index = 0
+
+    def select(self, instance: Instance, solution) -> Arm:
+        arm = self.arms[self.index % len(self.arms)]
+        self.index += 1
+        return arm
+
+
 class EpsilonGreedyPolicy(Policy):
     """Non-contextual epsilon-greedy over mean reward per arm."""
 
