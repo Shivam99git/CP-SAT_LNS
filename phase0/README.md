@@ -48,3 +48,33 @@ Proceed past phase 0 only if **both** hold:
 2. the oracle's improving-round arm choices are spread over several arms
    and correlate with observable context (round index, delta kind, ...) —
    otherwise a static arm schedule would capture the gain without learning.
+
+## Fixed bug: initial-incumbent budget (2026-07-08)
+
+`lns_solve` and `oracle_solve` used to cap the *first* incumbent solve at
+`slice_budget` regardless of `total_budget`, while `cpsat_cold` gets the
+full `total_budget` as one continuous solve. Since CP-SAT is anytime, this
+systematically started every LNS/oracle method from a worse incumbent than
+`cpsat_cold` for the same nominal budget — verified directly (instance 0,
+`--full-shop --machines 15 --initial-jobs 15`): 2s-initial gave 729, a fair
+8s-initial gave 699, vs. `cpsat_cold`'s 701 at the full 10s. Fixed by adding
+`initial_frac` (default 0.5) to both functions and `--initial-frac` to the
+CLI, giving the initial solve `max(slice_budget, total_budget * initial_frac)`.
+
+**Result after the fix** (`--full-shop --machines 15 --initial-jobs 15
+--stream-length 12 --seed 0 --budget 10 --slice 2`, single seed/stream):
+the ranking flips. `oracle` now has the best mean primal integral (0.0216)
+and mean final gap (0.36%), beating `cpsat_cold` (0.0233 / 0.90%) on 7/13
+instances, tying on 3, losing on 3. The non-adaptive LNS baselines
+(`lns_uniform`, `lns_eps_reset`, `lns_eps_persist`) still trail `cpsat_cold`
+on mean primal integral — meaning naive/non-contextual arm selection
+doesn't capture the headroom the oracle shows is available, which is
+exactly the gap a learned, context-aware selector would need to close.
+46 improving rounds spread across 7/12 distinct arms — heterogeneous, per
+the printed diagnostic.
+
+Both decision-rule conditions above look satisfied on this one seed/stream.
+**Not yet a confirmed pass** — this is a single stream at a single seed;
+the plan calls for ~20 streams × 100 instances before treating the gate as
+cleared. Next step: repeat across multiple seeds/streams before committing
+to Phase 1.

@@ -59,6 +59,7 @@ def oracle_solve(
     workers: int = 1,
     seed: int = 0,
     max_rounds: int = 400,
+    initial_frac: float = 0.5,
 ) -> SolveResult:
     """Each round, run every arm from the same incumbent and keep the best
     (highest improvement/sec; among no-improvement arms, the cheapest). Only
@@ -67,11 +68,16 @@ def oracle_solve(
 
     max_rounds bounds wall-clock blowup: because the virtual clock advances
     by the *chosen* (often fastest) arm's time while wall clock pays all 12,
-    millisecond sub-solves would otherwise mean tens of thousands of rounds."""
+    millisecond sub-solves would otherwise mean tens of thousands of rounds.
+
+    initial_frac: same fix as lns_solve — the initial incumbent must get a
+    fair share of total_budget, not just slice_budget, or the oracle starts
+    from a worse incumbent than cpsat_cold gets for the same nominal budget."""
     t0 = time.monotonic()
     trajectory: list[tuple[float, int]] = []
+    initial_time = max(slice_budget, total_budget * initial_frac)
     incumbent, objective, optimal = initial_incumbent(
-        instance, prev_solution, time_limit=slice_budget, workers=workers,
+        instance, prev_solution, time_limit=initial_time, workers=workers,
         seed=seed, recorder=trajectory,
     )
     if incumbent is None:
@@ -140,6 +146,7 @@ def run_method(
     slice_budget: float,
     seed: int,
     workers: int,
+    initial_frac: float = 0.5,
 ) -> list[SolveResult]:
     """Run one method over the whole stream, carrying its own solution
     forward as the warm start for the next instance."""
@@ -171,13 +178,14 @@ def run_method(
         elif name == "oracle":
             res = oracle_solve(
                 inst, budget, slice_budget, prev_solution=prev,
-                workers=workers, seed=seed,
+                workers=workers, seed=seed, initial_frac=initial_frac,
             )
         else:
             policy.reset_instance()
             res = lns_solve(
                 inst, policy, budget, slice_budget, prev_solution=prev,
                 workers=workers, seed=seed, method_name=name,
+                initial_frac=initial_frac,
             )
         if res.solution is not None:
             assert validate_solution(inst, res.solution) == res.objective
@@ -207,6 +215,10 @@ def main() -> None:
                          "sets ops_per_job=(machines, machines) and durations 5-50")
     ap.add_argument("--seed", type=int, default=0)
     ap.add_argument("--workers", type=int, default=1)
+    ap.add_argument("--initial-frac", type=float, default=0.5,
+                    help="share of --budget given to the first LNS/oracle "
+                         "incumbent solve, matched against cpsat_cold's "
+                         "full-budget single solve")
     ap.add_argument("--methods", nargs="*", default=list(METHODS))
     ap.add_argument("--quick", action="store_true",
                     help="tiny settings for a smoke run")
@@ -235,7 +247,8 @@ def main() -> None:
     for name in args.methods:
         t0 = time.monotonic()
         all_results[name] = run_method(
-            name, stream, args.budget, args.slice_budget, args.seed, args.workers
+            name, stream, args.budget, args.slice_budget, args.seed, args.workers,
+            initial_frac=args.initial_frac,
         )
         print(f"{name:16s} done in {time.monotonic() - t0:6.1f}s wall")
 

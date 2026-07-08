@@ -3,7 +3,7 @@
 **Target venue:** ICML 2027 (deadline ~late January 2027; fallback NeurIPS 2027)
 **Authors:** Shivam Sharma & Mayank
 **Working directory:** `~/CP-SAT model`
-**Status as of 2026-07-07:** Phase 0 implemented; one budget-allocation bug found and verified; ceiling experiment needs a re-run before the Phase 0 gate can be judged.
+**Status as of 2026-07-08:** Phase 0 implemented; the initial-incumbent budget bug (see §5, §6) is fixed and pushed. Re-run on the same single stream/seed flips the result: oracle now beats `cpsat_cold` on mean primal integral and final gap (7/13 instances won, 3 tied, 3 lost), while non-adaptive LNS baselines still trail `cpsat_cold` — both Phase 0 decision-rule conditions look satisfied on this one stream. Not yet a confirmed gate pass: needs multiple seeds/streams before committing to Phase 1, per the plan's own protocol (~20 streams × 100 instances).
 
 ---
 
@@ -68,17 +68,19 @@ Verified directly against the primary sources (arXiv:2412.14382 for BALANS, arXi
 
 **Status: 9/9 unit tests pass. Core model logic verified correct** — order-based freezing preserves feasibility and is guaranteed satisfiable from the incumbent (checked algebraically and empirically), stream generation is deterministic and reproducible, outage/no-overlap handling is correct.
 
-**Known bug (verified 2026-07-07, not yet fixed):** `lns_solve` ([harness.py:197](phase0/harness.py#L197)) and `oracle_solve` ([run_phase0.py:73](phase0/run_phase0.py#L73)) both cap the *initial* incumbent solve at `slice_budget` (2s) instead of giving it a fair share of `total_budget` (10s), while `cpsat_cold` gets the full 10s as one continuous solve. Since CP-SAT is anytime, this systematically starts every LNS/oracle method from a worse incumbent than `cpsat_cold` for the same nominal budget. Directly measured on instance 0 of the `--full-shop --machines 15 --initial-jobs 15` stream:
+**Bug found and fixed (2026-07-08):** `lns_solve` ([harness.py:197](phase0/harness.py#L197)) and `oracle_solve` ([run_phase0.py:73](phase0/run_phase0.py#L73)) used to cap the *initial* incumbent solve at `slice_budget` (2s) instead of giving it a fair share of `total_budget` (10s), while `cpsat_cold` gets the full 10s as one continuous solve. Since CP-SAT is anytime, this systematically started every LNS/oracle method from a worse incumbent than `cpsat_cold` for the same nominal budget. Directly measured on instance 0 of the `--full-shop --machines 15 --initial-jobs 15` stream:
 
 | condition | objective |
 |---|---|
 | plain CP-SAT, 2s | 729 |
-| plain CP-SAT, 10s (= `cpsat_cold` in the existing `phase0_results.csv`) | 701 |
+| plain CP-SAT, 10s (= `cpsat_cold`) | 701 |
 | 8s initial solve + ~43 round-robin repair rounds in the remaining 2s | **699** |
 
-I.e. once the initial-incumbent budget is fixed, even a naive round-robin arm schedule *beats* `cpsat_cold` on this instance. **The existing `phase0_results.csv` (oracle loses to `cpsat_cold` on 7/13 instances) is very likely an artifact of this bug, not a real ceiling.** A separate hypothesis (per-round `build_model()` rebuild overhead) was checked and ruled out — rebuild costs ~3ms out of a ~35–50ms round, not the dominant cost.
+Fixed by adding an `initial_frac` parameter (default 0.5) to both functions and `--initial-frac` to the CLI, so the initial solve gets `max(slice_budget, total_budget * initial_frac)`. A separate hypothesis (per-round `build_model()` rebuild overhead) was checked and ruled out before landing on this cause — rebuild costs ~3ms out of a ~35–50ms round, not the dominant cost.
 
-**Exit criterion (not yet met — re-run pending the fix):** oracle mean primal integral meaningfully below the best non-oracle baseline, and oracle's improving-arm choices spread across several arms and correlated with context — otherwise a static arm schedule would capture the gain without learning.
+**Re-run after the fix** (same stream/config, single seed): the ranking flips. `oracle` now has the best mean primal integral (0.0216) and mean final gap (0.36%) of all six methods, beating `cpsat_cold` (0.0233 / 0.90%) on 7/13 instances, tying on 3, losing on 3 — almost the exact reverse of the pre-fix run. The non-adaptive LNS baselines (`lns_uniform`, `lns_eps_reset`, `lns_eps_persist`) still trail `cpsat_cold` on mean primal integral, which is the interesting part: naive/non-contextual arm selection doesn't capture the headroom the oracle shows is available — exactly the gap a learned, context-aware selector would need to close. 46 improving rounds spread across 7/12 distinct arms (heterogeneous, per the runner's own diagnostic).
+
+**Exit criterion:** both conditions (headroom above non-oracle baselines; heterogeneous, non-degenerate arm usage) look satisfied on this one stream/seed. **Not yet a confirmed gate pass** — this is a single seed and a single stream; the plan calls for ~20 streams × 100 instances before treating Phase 0 as cleared. Next action: repeat across multiple seeds/streams.
 
 ### Phase 1 — Stream benchmark + data pipeline (weeks 2–5, overlaps)
 
@@ -119,8 +121,8 @@ I.e. once the initial-incumbent budget is fixed, even a naive round-robin arm sc
 - **Default random streams are far too easy** — CP-SAT proves optimality in milliseconds even at ~250 ops. Use `--full-shop` (every job visits every machine, e.g. 15 machines × 15 jobs) for genuinely hard instances (unproven after the full budget).
 - **Exact-start freezing kills LNS.** Pinning non-destroyed ops to incumbent *start times* left almost no improving rounds (destroyed ops boxed in by immovable neighbors, makespan locked by frozen job ends). Fixed by **order-based freezing**: preserve incumbent *machine order* via chain constraints between consecutive frozen ops on each machine, letting all starts float so schedules can left-shift. This is the standard JSP LNS neighborhood, and it's proven (algebraically and by test) that the incumbent's own values always satisfy the relaxed chain constraint, so feasibility is never at risk.
 - **Oracle wall-clock pathology:** the virtual clock advances by the *chosen* (often cheapest) arm's time while wall-clock time pays for evaluating all 12 arms every round; guarded by `max_rounds` and by exiting early when the initial solve already proves `OPTIMAL`.
-- **`cpsat_warm` (hinting with the previous instance's solution) was slightly worse than cold** on the one full run so far — hints can mislead search. Worth re-checking once the initial-incumbent bug is fixed, since that bug affects all methods that call the same `initial_incumbent` path.
-- **Initial-incumbent budget asymmetry (see §5, Phase 0):** the highest-priority open bug. Fix before trusting any Phase 0 conclusion.
+- **`cpsat_warm` (hinting with the previous instance's solution) is worse than cold** — re-checked after the initial-incumbent fix (§5), and the finding holds: mean primal integral 0.0326 vs. `cpsat_cold`'s 0.0233. Hints from the previous stream instance appear to mislead search on this benchmark rather than help it. Worth understanding before Phase 2, since the method's own warm-start component leans on the same mechanism.
+- **Initial-incumbent budget asymmetry (see §5, Phase 0): fixed 2026-07-08.** Was the highest-priority bug; resolving it flipped the Phase 0 result from "no headroom" to "headroom exists, not yet captured by non-adaptive baselines."
 
 ---
 
@@ -153,7 +155,8 @@ Both load-bearing citations in §2 were independently checked against the primar
 - **"Incremental over BALANS" review.** Defense: the setting (streams, drift), the benchmark, the growing-margin evidence, and CP-SAT are each new; ablations isolate exactly what context and persistence buy. Experiment 4.1 (§4) is do-or-die.
 - **Python outer-loop overhead.** Checked directly (§5) — NOT currently the dominant cost (rebuild ≈ 3ms/round vs. ≈ 35–50ms total). The real Phase 0 risk turned out to be the initial-incumbent budget bug, not rebuild overhead. Still worth watching as instance sizes grow in later phases.
 - **Closing window.** The lot-sizing paper (May 2026) names iterative, label-free sequential learning as its own future work. Move fast; Phase 0 is the current bottleneck.
-- **Empirical premise unresolved.** The single most important open risk: does real headroom exist above CP-SAT's default once the harness is fixed? Phase 0's own gate exists to answer this before any further investment. Preliminary patched-harness numbers (§5) are promising (699 vs. 701) but come from one instance, one seed, no smart policy — not yet a real ceiling measurement.
+- **Empirical premise: no longer looks negative, but not yet confirmed.** The single most important open risk was whether real headroom exists above CP-SAT's default. Fixed-harness numbers (§5) now show `oracle` beating `cpsat_cold` on mean primal integral and 7/13 instances — a real reversal from the pre-fix result. But this is one instance stream, one seed, and the oracle is a ceiling, not a deployable policy. The gate isn't confirmed until this holds across multiple seeds/streams (§11).
+- **Non-adaptive LNS still underperforms `cpsat_cold`.** Even post-fix, `lns_uniform`/`lns_eps_reset`/`lns_eps_persist` trail `cpsat_cold` on mean primal integral while `oracle` beats it — meaning the gap between "best-arm-in-hindsight" and "what naive/non-contextual selection achieves" is real and currently uncaptured. That gap is the thing a learned policy needs to close; it's also a reminder that a contextual bandit isn't guaranteed to close it just because the oracle shows room exists.
 
 ---
 
@@ -161,7 +164,7 @@ Both load-bearing citations in §2 were independently checked against the primar
 
 | Weeks | Phase | Exit criterion | Status |
 |---|---|---|---|
-| 1–3 | 0: Harness + ceiling experiment | Headroom confirmed above defaults + warm-start (GATE) | **In progress** — harness built, bug found, fix + re-run pending |
+| 1–3 | 0: Harness + ceiling experiment | Headroom confirmed above defaults + warm-start (GATE) | **In progress** — bug fixed, single-seed re-run shows headroom; multi-seed confirmation pending |
 | 2–5 | 1: Benchmark + pipeline | Frozen, seeded stream generator; <100ms feature extraction | Not started |
 | 5–10 | 2: Contextual bandit v1 | Beats CP-SAT default, warm-start-only, BALANS-with-reset | Not started |
 | 10–16 | 3: Full evaluation | All baselines + shift curves + ablation table complete | Not started |
@@ -170,4 +173,4 @@ Both load-bearing citations in §2 were independently checked against the primar
 
 ## 11. Immediate next action
 
-Fix the initial-incumbent budget allocation in `lns_solve` ([harness.py:197](phase0/harness.py#L197)) and `oracle_solve` ([run_phase0.py:73](phase0/run_phase0.py#L73)) so LNS/oracle methods get a fair share of `total_budget` for their first incumbent, matching what `cpsat_cold` receives. Re-run the ceiling experiment across multiple instances/seeds and judge the Phase 0 gate on corrected numbers before writing any further code.
+Re-run the ceiling experiment across multiple seeds and multiple independently-generated streams (the plan's own target is ~20 streams × 100 instances; even a handful of seeds would meaningfully de-risk the single-stream result in §5). If the oracle-beats-`cpsat_cold` finding holds up, treat the Phase 0 gate as passed and move to Phase 1 (agent-driven stream generation). If it doesn't hold across seeds, treat the single-stream result as noise and investigate further before proceeding.
