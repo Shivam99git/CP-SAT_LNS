@@ -57,9 +57,11 @@ full `total_budget` as one continuous solve. Since CP-SAT is anytime, this
 systematically started every LNS/oracle method from a worse incumbent than
 `cpsat_cold` for the same nominal budget — verified directly (instance 0,
 `--full-shop --machines 15 --initial-jobs 15`): 2s-initial gave 729, a fair
-8s-initial gave 699, vs. `cpsat_cold`'s 701 at the full 10s. Fixed by adding
-`initial_frac` (default 0.5) to both functions and `--initial-frac` to the
-CLI, giving the initial solve `max(slice_budget, total_budget * initial_frac)`.
+8s-initial gave 699, vs. `cpsat_cold`'s 701 at the full 10s. This was found
+and fixed independently in two places (this session, and by a collaborator
+who pushed a near-identical fix in parallel); the version that landed gives
+the initial solve `total_budget - slice_budget`, reserving exactly one
+slice's worth of time for at least one repair round.
 
 **Result after the fix** (`--full-shop --machines 15 --initial-jobs 15
 --stream-length 12 --seed 0 --budget 10 --slice 2`, single seed/stream):

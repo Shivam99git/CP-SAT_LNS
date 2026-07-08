@@ -188,23 +188,22 @@ def lns_solve(
     workers: int = 1,
     seed: int = 0,
     method_name: str = "lns",
-    initial_frac: float = 0.5,
 ) -> SolveResult:
-    """initial_frac: share of total_budget given to the first incumbent
-    solve. CP-SAT is anytime, so capping this at slice_budget (as an
-    earlier version of this harness did) starts every LNS method from a
-    materially worse incumbent than cpsat_cold gets for the same nominal
-    budget — verified to flip lns_uniform from losing to beating cpsat_cold
-    on a full-shop instance (729/701 vs 699/701). Default 0.5 is a
-    deliberately unremarkable midpoint, not tuned to that instance."""
+    """The first incumbent solve gets total_budget - slice_budget (reserving
+    one slice for at least one repair round), not just slice_budget as an
+    earlier version of this harness did. CP-SAT is anytime, so capping the
+    initial solve at slice_budget starts every LNS method from a materially
+    worse incumbent than cpsat_cold gets for the same nominal budget —
+    verified to flip lns_uniform from losing to beating cpsat_cold on a
+    full-shop instance (729/701 vs 699/701)."""
     rng = random.Random(seed)
     t0 = time.monotonic()
+    initial_budget = max(0.1, total_budget - slice_budget)
 
     trajectory: list[tuple[float, int]] = []
     rounds: list[RoundLog] = []
-    initial_time = max(slice_budget, total_budget * initial_frac)
     incumbent, objective, optimal = initial_incumbent(
-        instance, prev_solution, time_limit=initial_time, workers=workers,
+        instance, prev_solution, time_limit=initial_budget, workers=workers,
         seed=seed, recorder=trajectory, t_offset=time.monotonic() - t0,
     )
     if incumbent is None:
