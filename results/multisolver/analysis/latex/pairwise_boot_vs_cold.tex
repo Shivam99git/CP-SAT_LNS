@@ -1,0 +1,17 @@
+\begin{table}[t]
+\centering
+\begin{tabular}{lllllllllllllllll}
+\toprule
+domain & solver & n & cold\_mean\_pi & boot\_mean\_pi & pi\_win & pi\_tie & pi\_loss & final\_win & final\_tie & final\_loss & sign\_test\_p & wilcoxon\_p & mean\_pi\_improvement & ci95\_lo & ci95\_hi & sign\_test\_p\_holm \\
+\midrule
+jssp & cpsat & 30 & 0.0005 & 0.0002 & 24 & 0 & 6 & 0 & 30 & 0 & 0.0014 & 0.0000 & 0.0003 & 0.0002 & 0.0003 & 0.0014 \\
+jssp & gurobi & 30 & 0.0042 & 0.0023 & 28 & 0 & 2 & 0 & 30 & 0 & 0.0000 & 0.0000 & 0.0019 & 0.0014 & 0.0024 & 0.0000 \\
+jssp & cplex & 30 & 0.0034 & 0.0016 & 25 & 0 & 5 & 0 & 30 & 0 & 0.0003 & 0.0000 & 0.0018 & 0.0013 & 0.0023 & 0.0006 \\
+knapsack & cpsat & 30 & 0.0198 & 0.0043 & 29 & 0 & 1 & 0 & 30 & 0 & 0.0000 & 0.0000 & 0.0155 & 0.0121 & 0.0186 & 0.0000 \\
+knapsack & gurobi & 30 & 0.0030 & 0.0001 & 30 & 0 & 0 & 0 & 30 & 0 & 0.0000 & 0.0000 & 0.0029 & 0.0001 & 0.0086 & 0.0000 \\
+knapsack & cplex & 30 & 0.0005 & 0.0001 & 29 & 0 & 1 & 0 & 30 & 0 & 0.0000 & 0.0000 & 0.0003 & 0.0003 & 0.0004 & 0.0000 \\
+\bottomrule
+\end{tabular}
+\caption{boot\_cold vs its own cold variant, per solver and domain (sign test, Wilcoxon, and bootstrap 95\% CI on mean primal-integral improvement)}
+\label{tab:multisolver-pairwise}
+\end{table}

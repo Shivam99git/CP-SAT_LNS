@@ -1,0 +1,25 @@
+family=dmu_benchmarks planned stream configs: 20, methods=['cpsat_cold', 'cpsat_warm', 'boot_cold', 'boot_warm'], sizes=[(0, 0)], budgets=[8], workers=[1], severities=['medium']
+running 20 stream configs across 6 worker processes
+  dmu02_20x15 seed=2 budget=8 workers=1 severity=medium bpolicy=append: 4 methods done
+  dmu01_20x15 seed=1 budget=8 workers=1 severity=medium bpolicy=append: 4 methods done
+  dmu02_20x15 seed=1 budget=8 workers=1 severity=medium bpolicy=append: 4 methods done
+  dmu01_20x15 seed=4 budget=8 workers=1 severity=medium bpolicy=append: 4 methods done
+  dmu01_20x15 seed=2 budget=8 workers=1 severity=medium bpolicy=append: 4 methods done
+  dmu01_20x15 seed=3 budget=8 workers=1 severity=medium bpolicy=append: 4 methods done
+  dmu02_20x15 seed=3 budget=8 workers=1 severity=medium bpolicy=append: 4 methods done
+  dmu02_20x15 seed=4 budget=8 workers=1 severity=medium bpolicy=append: 4 methods done
+  dmu03_20x15 seed=1 budget=8 workers=1 severity=medium bpolicy=append: 4 methods done
+  dmu03_20x15 seed=2 budget=8 workers=1 severity=medium bpolicy=append: 4 methods done
+  dmu03_20x15 seed=3 budget=8 workers=1 severity=medium bpolicy=append: 4 methods done
+  dmu03_20x15 seed=4 budget=8 workers=1 severity=medium bpolicy=append: 4 methods done
+  dmu05_20x15 seed=1 budget=8 workers=1 severity=medium bpolicy=append: 4 methods done
+  dmu04_20x15 seed=1 budget=8 workers=1 severity=medium bpolicy=append: 4 methods done
+  dmu04_20x15 seed=2 budget=8 workers=1 severity=medium bpolicy=append: 4 methods done
+  dmu04_20x15 seed=3 budget=8 workers=1 severity=medium bpolicy=append: 4 methods done
+  dmu04_20x15 seed=4 budget=8 workers=1 severity=medium bpolicy=append: 4 methods done
+  dmu05_20x15 seed=2 budget=8 workers=1 severity=medium bpolicy=append: 4 methods done
+  dmu05_20x15 seed=3 budget=8 workers=1 severity=medium bpolicy=append: 4 methods done
+  dmu05_20x15 seed=4 budget=8 workers=1 severity=medium bpolicy=append: 4 methods done
+
+wrote results/icaps/runs/dmu_benchmarks.csv (560 rows) and results/icaps/runs/dmu_benchmarks_metadata.json
+stream-runs: 80 executed, 0 skipped (resume), 0 rows with errors

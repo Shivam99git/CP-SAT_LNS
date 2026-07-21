@@ -1,0 +1,22 @@
+\begin{table}[t]
+\centering
+\begin{tabular}{lllll}
+\toprule
+method & n & mean\_pi & mean\_final\_gap & optimality\_proof\_rate \\
+\midrule
+boot\_cold & 1547 & 0.0170 & 0.0039 & 0.0000 \\
+cpsat\_cold & 1547 & 0.0227 & 0.0045 & 0.0000 \\
+boot\_warm & 1543 & 0.0242 & 0.0045 & 0.0000 \\
+cpsat\_warm & 1255 & 0.0246 & 0.0067 & 0.0000 \\
+lns\_prev\_solution & 495 & 0.0662 & 0.0367 & 0.0000 \\
+fix\_and\_optimize\_50 & 495 & 0.1215 & 0.1188 & 1.0000 \\
+dispatch\_mwkr & 603 & 0.1523 & 0.1521 & 0.0000 \\
+greedy\_from\_scratch & 4 & 0.1625 & 0.1623 & 0.0000 \\
+local\_branching\_prev & 495 & 0.2238 & 0.1496 & 0.1657 \\
+dispatch\_spt & 603 & 0.2467 & 0.2464 & 0.0000 \\
+repair\_only & 719 & 0.9327 & 0.9327 & 0.0000 \\
+\bottomrule
+\end{tabular}
+\caption{Per-method aggregate results}
+\label{tab:main-jssp}
+\end{table}

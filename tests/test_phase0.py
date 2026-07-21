@@ -133,3 +133,60 @@ def test_primal_integral():
     # gap 0.5 for the first half, 0 after
     pi = primal_integral([(0.0, 150), (5.0, 100)], best_known=100, budget=10.0)
     assert pi == pytest.approx(0.25)
+
+
+def test_list_schedule_bootstrap_feasible_across_deltas():
+    from phase0.harness import list_schedule_bootstrap
+
+    cfg = StreamConfig(num_machines=3, initial_jobs=5, stream_length=12, seed=3,
+                       p_arrival=0.3, p_cancellation=0.2,
+                       p_duration_jitter=0.25, p_outage=0.25)
+    stream = generate_stream(cfg)
+    prev, _, _ = solve(build_model(stream[0]), time_limit=5.0)
+    seen = set()
+    for inst in stream[1:]:
+        boot = list_schedule_bootstrap(inst, prev)
+        makespan = validate_solution(inst, boot)  # raises if infeasible
+        assert makespan > 0
+        seen.add(inst.delta_kind)
+        prev = boot  # chain: bootstrap of a bootstrap must stay feasible
+    assert {"arrival", "cancellation", "duration_jitter", "outage"} <= seen
+
+
+def test_list_schedule_bootstrap_long_jobs_arrival():
+    # regression: new jobs with >9 ops used to be ordered lexicographically
+    # ("o10" < "o2"), scheduling a job's 10th op before its 2nd and breaking
+    # precedence. Full-shop 12-machine jobs (12 ops) cover that case.
+    from phase0.harness import list_schedule_bootstrap
+
+    cfg = StreamConfig(num_machines=12, initial_jobs=4, stream_length=6, seed=5,
+                       p_arrival=1.0, p_cancellation=0, p_duration_jitter=0,
+                       p_outage=0)
+    cfg.ops_per_job = (12, 12)
+    stream = generate_stream(cfg)
+    prev, _, _ = solve(build_model(stream[0]), time_limit=5.0)
+    for inst in stream[1:]:
+        boot = list_schedule_bootstrap(inst, prev)
+        validate_solution(inst, boot)  # raises on any precedence violation
+        prev = boot
+
+
+def test_context_gated_selector():
+    from phase0.policies import ContextGatedSelector
+
+    stream = generate_stream(SMALL_CFG)
+    # map one delta kind explicitly, prefix-form arm name; leave others to default
+    kind = stream[1].delta_kind
+    sel = ContextGatedSelector(
+        mapping={kind: "fixed_delta_40"}, default_arm="random_25"
+    )
+    # mapped context -> the mapped arm
+    assert sel.select(stream[1], {}).name == "delta_40"
+    # an unmapped context -> the default arm
+    other = next((i for i in stream[1:] if i.delta_kind != kind), None)
+    if other is not None:
+        assert sel.select(other, {}).name == "random_25"
+    # both prefixed and bare arm names resolve; unknown arm raises
+    assert ContextGatedSelector({}, "delta_40").default.name == "delta_40"
+    with pytest.raises(ValueError):
+        ContextGatedSelector({}, "no_such_arm_99")

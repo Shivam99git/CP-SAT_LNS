@@ -1,0 +1,50 @@
+seed 1: 5 instances, deltas=['arrival', 'arrival', 'cancellation', 'cancellation'], max mip size=(357, 650)
+Restricted license - for non-production use only - expires 2027-11-29
+  seed=1 step=0 delta=base (15.3s for 6 methods)
+  seed=1 step=1 delta=arrival (32.1s for 6 methods)
+  seed=1 step=2 delta=arrival (32.1s for 6 methods)
+  seed=1 step=3 delta=cancellation (32.2s for 6 methods)
+  seed=1 step=4 delta=cancellation (3.9s for 6 methods)
+seed 2: 5 instances, deltas=['arrival', 'outage', 'duration_jitter', 'outage'], max mip size=(352, 642)
+  seed=2 step=0 delta=base (17.2s for 6 methods)
+  seed=2 step=1 delta=arrival (23.4s for 6 methods)
+  seed=2 step=2 delta=outage (5.0s for 6 methods)
+  seed=2 step=3 delta=duration_jitter (5.9s for 6 methods)
+  seed=2 step=4 delta=outage (21.6s for 6 methods)
+seed 3: 5 instances, deltas=['arrival', 'arrival', 'arrival', 'outage'], max mip size=(392, 718)
+  seed=3 step=0 delta=base (17.8s for 6 methods)
+  seed=3 step=1 delta=arrival (18.6s for 6 methods)
+  seed=3 step=2 delta=arrival (19.7s for 6 methods)
+  seed=3 step=3 delta=arrival (28.5s for 6 methods)
+  seed=3 step=4 delta=outage (32.3s for 6 methods)
+seed 4: 5 instances, deltas=['duration_jitter', 'outage', 'arrival', 'cancellation'], max mip size=(256, 459)
+  seed=4 step=0 delta=base (17.7s for 6 methods)
+  seed=4 step=1 delta=duration_jitter (6.9s for 6 methods)
+  seed=4 step=2 delta=outage (18.0s for 6 methods)
+  seed=4 step=3 delta=arrival (19.1s for 6 methods)
+  seed=4 step=4 delta=cancellation (18.4s for 6 methods)
+seed 5: 5 instances, deltas=['arrival', 'duration_jitter', 'cancellation', 'arrival'], max mip size=(302, 545)
+  seed=5 step=0 delta=base (0.8s for 6 methods)
+  seed=5 step=1 delta=arrival (8.6s for 6 methods)
+  seed=5 step=2 delta=duration_jitter (12.8s for 6 methods)
+  seed=5 step=3 delta=cancellation (2.0s for 6 methods)
+  seed=5 step=4 delta=arrival (16.7s for 6 methods)
+seed 6: 5 instances, deltas=['duration_jitter', 'duration_jitter', 'duration_jitter', 'duration_jitter'], max mip size=(244, 435)
+  seed=6 step=0 delta=base (2.2s for 6 methods)
+  seed=6 step=1 delta=duration_jitter (3.4s for 6 methods)
+  seed=6 step=2 delta=duration_jitter (1.4s for 6 methods)
+  seed=6 step=3 delta=duration_jitter (1.4s for 6 methods)
+  seed=6 step=4 delta=duration_jitter (2.1s for 6 methods)
+
+total wall time: 436.8s
+wrote results/multisolver/jssp_results.csv (180 rows)
+
+=== summary ===
+                  mean_pi  mean_final_gap  proven_optimal_rate   n
+method                                                            
+boot_cold         0.00022         0.00000              0.00000  30
+cpsat_cold        0.00048         0.00000              0.00000  30
+cplex_boot_cold   0.00165         0.00000              0.53333  30
+gurobi_boot_cold  0.00233         0.00000              0.86667  30
+cplex_cold        0.00344         0.00000              0.53333  30
+gurobi_cold       0.00422         0.00000              0.86667  30

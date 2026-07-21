@@ -1,0 +1,50 @@
+family=paper_main planned stream configs: 45, methods=['cpsat_cold', 'cpsat_warm', 'boot_cold', 'boot_warm', 'repair_only', 'dispatch_spt', 'dispatch_mwkr', 'fix_and_optimize_50', 'lns_prev_solution', 'local_branching_prev'], sizes=[(10, 10), (15, 15), (20, 20)], budgets=[8], workers=[1], severities=['medium']
+running 45 stream configs across 16 worker processes
+  10x10 seed=107 budget=8 workers=1 severity=medium bpolicy=append: 10 methods done
+  10x10 seed=113 budget=8 workers=1 severity=medium bpolicy=append: 10 methods done
+  10x10 seed=114 budget=8 workers=1 severity=medium bpolicy=append: 10 methods done
+  10x10 seed=115 budget=8 workers=1 severity=medium bpolicy=append: 10 methods done
+  10x10 seed=111 budget=8 workers=1 severity=medium bpolicy=append: 10 methods done
+  10x10 seed=104 budget=8 workers=1 severity=medium bpolicy=append: 10 methods done
+  10x10 seed=108 budget=8 workers=1 severity=medium bpolicy=append: 10 methods done
+  10x10 seed=102 budget=8 workers=1 severity=medium bpolicy=append: 10 methods done
+  10x10 seed=112 budget=8 workers=1 severity=medium bpolicy=append: 10 methods done
+  10x10 seed=101 budget=8 workers=1 severity=medium bpolicy=append: 10 methods done
+  10x10 seed=105 budget=8 workers=1 severity=medium bpolicy=append: 10 methods done
+  10x10 seed=106 budget=8 workers=1 severity=medium bpolicy=append: 10 methods done
+  10x10 seed=110 budget=8 workers=1 severity=medium bpolicy=append: 10 methods done
+  10x10 seed=109 budget=8 workers=1 severity=medium bpolicy=append: 10 methods done
+  10x10 seed=103 budget=8 workers=1 severity=medium bpolicy=append: 10 methods done
+  15x15 seed=101 budget=8 workers=1 severity=medium bpolicy=append: 10 methods done
+  15x15 seed=102 budget=8 workers=1 severity=medium bpolicy=append: 10 methods done
+  15x15 seed=105 budget=8 workers=1 severity=medium bpolicy=append: 10 methods done
+  15x15 seed=103 budget=8 workers=1 severity=medium bpolicy=append: 10 methods done
+  15x15 seed=104 budget=8 workers=1 severity=medium bpolicy=append: 10 methods done
+  15x15 seed=107 budget=8 workers=1 severity=medium bpolicy=append: 10 methods done
+  15x15 seed=106 budget=8 workers=1 severity=medium bpolicy=append: 10 methods done
+  15x15 seed=109 budget=8 workers=1 severity=medium bpolicy=append: 10 methods done
+  15x15 seed=108 budget=8 workers=1 severity=medium bpolicy=append: 10 methods done
+  15x15 seed=110 budget=8 workers=1 severity=medium bpolicy=append: 10 methods done
+  15x15 seed=111 budget=8 workers=1 severity=medium bpolicy=append: 10 methods done
+  15x15 seed=115 budget=8 workers=1 severity=medium bpolicy=append: 10 methods done
+  15x15 seed=112 budget=8 workers=1 severity=medium bpolicy=append: 10 methods done
+  15x15 seed=113 budget=8 workers=1 severity=medium bpolicy=append: 10 methods done
+  15x15 seed=114 budget=8 workers=1 severity=medium bpolicy=append: 10 methods done
+  20x20 seed=101 budget=8 workers=1 severity=medium bpolicy=append: 10 methods done
+  20x20 seed=102 budget=8 workers=1 severity=medium bpolicy=append: 10 methods done
+  20x20 seed=104 budget=8 workers=1 severity=medium bpolicy=append: 10 methods done
+  20x20 seed=103 budget=8 workers=1 severity=medium bpolicy=append: 10 methods done
+  20x20 seed=105 budget=8 workers=1 severity=medium bpolicy=append: 10 methods done
+  20x20 seed=106 budget=8 workers=1 severity=medium bpolicy=append: 10 methods done
+  20x20 seed=107 budget=8 workers=1 severity=medium bpolicy=append: 10 methods done
+  20x20 seed=109 budget=8 workers=1 severity=medium bpolicy=append: 10 methods done
+  20x20 seed=108 budget=8 workers=1 severity=medium bpolicy=append: 10 methods done
+  20x20 seed=110 budget=8 workers=1 severity=medium bpolicy=append: 10 methods done
+  20x20 seed=111 budget=8 workers=1 severity=medium bpolicy=append: 10 methods done
+  20x20 seed=112 budget=8 workers=1 severity=medium bpolicy=append: 10 methods done
+  20x20 seed=113 budget=8 workers=1 severity=medium bpolicy=append: 10 methods done
+  20x20 seed=115 budget=8 workers=1 severity=medium bpolicy=append: 10 methods done
+  20x20 seed=114 budget=8 workers=1 severity=medium bpolicy=append: 10 methods done
+
+wrote results/icaps/runs/paper_main.csv (4950 rows) and results/icaps/runs/paper_main_metadata.json
+stream-runs: 450 executed, 0 skipped (resume), 0 rows with errors

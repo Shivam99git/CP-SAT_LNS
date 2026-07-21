@@ -1,0 +1,27 @@
+seed 1: 9 instances, 60 activities, deltas=['duration_jitter', 'duration_jitter', 'resource_capacity_reduction', 'resource_capacity_reduction', 'duration_jitter', 'resource_capacity_reduction', 'activity_insertion', 'duration_jitter']
+  cpsat_cold     64.2s wall
+  boot_cold      64.2s wall
+seed 2: 9 instances, 60 activities, deltas=['activity_cancellation', 'duration_jitter', 'duration_jitter', 'duration_jitter', 'duration_jitter', 'resource_capacity_reduction', 'activity_insertion', 'resource_capacity_reduction']
+  cpsat_cold     72.1s wall
+  boot_cold      72.1s wall
+seed 3: 9 instances, 60 activities, deltas=['duration_jitter', 'activity_cancellation', 'activity_insertion', 'duration_jitter', 'activity_insertion', 'activity_cancellation', 'resource_capacity_reduction', 'activity_insertion']
+  cpsat_cold     72.2s wall
+  boot_cold      72.1s wall
+seed 4: 9 instances, 60 activities, deltas=['duration_jitter', 'resource_capacity_reduction', 'duration_jitter', 'duration_jitter', 'resource_capacity_reduction', 'duration_jitter', 'duration_jitter', 'activity_insertion']
+  cpsat_cold     18.5s wall
+  boot_cold      18.5s wall
+seed 5: 9 instances, 60 activities, deltas=['activity_insertion', 'activity_cancellation', 'resource_capacity_reduction', 'resource_capacity_reduction', 'activity_insertion', 'activity_cancellation', 'resource_capacity_reduction', 'duration_jitter']
+  cpsat_cold     56.3s wall
+  boot_cold      56.3s wall
+
+wrote results/icaps/rcpsp/rcpsp_seeds1_5.csv
+
+=== summary ===
+            mean_pi  mean_final_gap  wins  proven_optimal
+method                                                   
+boot_cold   0.00239         0.00000    45              10
+cpsat_cold  0.00880         0.00276    36              10
+
+boot_cold vs cpsat_cold over 45 instances:
+  final objective : better 9, worse 0, tied 36
+  primal integral : better 41 / 45

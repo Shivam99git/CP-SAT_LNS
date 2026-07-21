@@ -1,0 +1,51 @@
+\begin{table}[t]
+\centering
+\begin{tabular}{lllll}
+\toprule
+method & budget\_s & mean\_pi & mean\_final\_gap & n \\
+\midrule
+boot\_cold & 0.2 & 0.0025 & 0.0000 & 4 \\
+cpsat\_cold & 0.2 & 0.0080 & 0.0000 & 4 \\
+greedy\_from\_scratch & 0.2 & 0.1625 & 0.1623 & 4 \\
+repair\_only & 0.2 & 0.3523 & 0.3522 & 4 \\
+boot\_cold & 1.0 & 0.0255 & 0.0038 & 36 \\
+cpsat\_cold & 1.0 & 0.0347 & 0.0039 & 36 \\
+cpsat\_warm & 1.0 & 0.0403 & 0.0091 & 36 \\
+boot\_warm & 1.0 & 0.0419 & 0.0117 & 36 \\
+dispatch\_mwkr & 1.0 & 0.1547 & 0.1542 & 36 \\
+dispatch\_spt & 1.0 & 0.2587 & 0.2582 & 36 \\
+repair\_only & 1.0 & 0.6507 & 0.6506 & 36 \\
+boot\_warm & 2.0 & 0.0282 & 0.0078 & 56 \\
+boot\_cold & 2.0 & 0.0311 & 0.0099 & 56 \\
+cpsat\_warm & 2.0 & 0.0345 & 0.0086 & 56 \\
+cpsat\_cold & 2.0 & 0.0423 & 0.0127 & 56 \\
+repair\_only & 2.0 & 0.8450 & 0.8450 & 56 \\
+cpsat\_warm & 5.0 & 0.0142 & 0.0018 & 36 \\
+boot\_cold & 5.0 & 0.0225 & 0.0002 & 324 \\
+cpsat\_cold & 5.0 & 0.0260 & 0.0002 & 324 \\
+boot\_warm & 5.0 & 0.0460 & 0.0003 & 324 \\
+dispatch\_mwkr & 5.0 & 0.1639 & 0.1638 & 36 \\
+dispatch\_spt & 5.0 & 0.2686 & 0.2685 & 36 \\
+repair\_only & 5.0 & 0.6643 & 0.6643 & 36 \\
+boot\_cold & 8.0 & 0.0148 & 0.0048 & 1091 \\
+boot\_warm & 8.0 & 0.0175 & 0.0054 & 1091 \\
+cpsat\_cold & 8.0 & 0.0208 & 0.0055 & 1091 \\
+cpsat\_warm & 8.0 & 0.0244 & 0.0068 & 1091 \\
+lns\_prev\_solution & 8.0 & 0.0662 & 0.0367 & 495 \\
+fix\_and\_optimize\_50 & 8.0 & 0.1215 & 0.1188 & 495 \\
+dispatch\_mwkr & 8.0 & 0.1502 & 0.1499 & 495 \\
+local\_branching\_prev & 8.0 & 0.2238 & 0.1496 & 495 \\
+dispatch\_spt & 8.0 & 0.2423 & 0.2421 & 495 \\
+repair\_only & 8.0 & 0.9990 & 0.9990 & 551 \\
+boot\_cold & 10.0 & 0.0071 & 0.0006 & 36 \\
+boot\_warm & 10.0 & 0.0091 & 0.0018 & 36 \\
+cpsat\_cold & 10.0 & 0.0092 & 0.0009 & 36 \\
+cpsat\_warm & 10.0 & 0.0105 & 0.0020 & 36 \\
+dispatch\_mwkr & 10.0 & 0.1680 & 0.1679 & 36 \\
+dispatch\_spt & 10.0 & 0.2728 & 0.2728 & 36 \\
+repair\_only & 10.0 & 0.6698 & 0.6697 & 36 \\
+\bottomrule
+\end{tabular}
+\caption{Results by budget}
+\label{tab:by-budget}
+\end{table}

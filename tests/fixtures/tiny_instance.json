@@ -1,0 +1,7 @@
+{
+  "num_machines": 3,
+  "jobs": [
+    {"job_id": "custom_j0", "ops": [{"machine": 0, "duration": 5}, {"machine": 1, "duration": 3}]},
+    {"job_id": "custom_j1", "ops": [{"machine": 1, "duration": 4}, {"machine": 2, "duration": 2}]}
+  ]
+}

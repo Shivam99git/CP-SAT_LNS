@@ -1,0 +1,163 @@
+loaded 40 real instances from tests/fixtures/rcpsp_real: ['j120_1_1', 'j120_1_2', 'j120_2_1', 'j120_2_2', 'j120_3_1', 'j120_3_2', 'j120_4_1', 'j120_4_2', 'j120_5_1', 'j120_5_2', 'j30_1_1', 'j30_1_2', 'j30_2_1', 'j30_2_2', 'j30_3_1', 'j30_3_2', 'j30_4_1', 'j30_4_2', 'j30_5_1', 'j30_5_2', 'j60_1_1', 'j60_1_2', 'j60_2_1', 'j60_2_2', 'j60_3_1', 'j60_3_2', 'j60_4_1', 'j60_4_2', 'j60_5_1', 'j60_5_2', 'j90_1_1', 'j90_1_2', 'j90_2_1', 'j90_2_2', 'j90_3_1', 'j90_3_2', 'j90_4_1', 'j90_4_2', 'j90_5_1', 'j90_5_2']
+running 120 (name,seed) stream configs (--parallel 8)
+multiprocessing.pool.RemoteTraceback: 
+"""
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/multiprocessing/pool.py", line 125, in worker
+    result = (True, func(*args, **kwds))
+                    ^^^^^^^^^^^^^^^^^^^
+  File "/home/shivam-sharma/CP-SAT model/phase0/rcpsp/run_rcpsp_test.py", line 92, in _run_one
+    assert validate_rcpsp_solution(inst, res.solution) == res.objective
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shivam-sharma/CP-SAT model/phase0/rcpsp/model_builder.py", line 119, in validate_rcpsp_solution
+    assert solution[act.activity_id] >= end_pred, (
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: precedence violated: a119 ends 94, a122 starts 0
+"""
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/shivam-sharma/CP-SAT model/phase0/rcpsp/run_rcpsp_test.py", line 196, in <module>
+    main()
+  File "/home/shivam-sharma/CP-SAT model/phase0/rcpsp/run_rcpsp_test.py", line 155, in main
+    for i, rows in enumerate(pool.imap_unordered(_run_one, tasks), 1):
+  File "/usr/lib/python3.12/multiprocessing/pool.py", line 873, in next
+    raise value
+AssertionError: precedence violated: a119 ends 94, a122 starts 0
+loaded 40 real instances from tests/fixtures/rcpsp_real: ['j120_1_1', 'j120_1_2', 'j120_2_1', 'j120_2_2', 'j120_3_1', 'j120_3_2', 'j120_4_1', 'j120_4_2', 'j120_5_1', 'j120_5_2', 'j30_1_1', 'j30_1_2', 'j30_2_1', 'j30_2_2', 'j30_3_1', 'j30_3_2', 'j30_4_1', 'j30_4_2', 'j30_5_1', 'j30_5_2', 'j60_1_1', 'j60_1_2', 'j60_2_1', 'j60_2_2', 'j60_3_1', 'j60_3_2', 'j60_4_1', 'j60_4_2', 'j60_5_1', 'j60_5_2', 'j90_1_1', 'j90_1_2', 'j90_2_1', 'j90_2_2', 'j90_3_1', 'j90_3_2', 'j90_4_1', 'j90_4_2', 'j90_5_1', 'j90_5_2']
+running 120 (name,seed) stream configs (--parallel 8)
+  1/120 configs done (5s elapsed)
+  2/120 configs done (5s elapsed)
+  3/120 configs done (12s elapsed)
+  4/120 configs done (16s elapsed)
+  5/120 configs done (25s elapsed)
+  6/120 configs done (27s elapsed)
+  7/120 configs done (30s elapsed)
+  8/120 configs done (30s elapsed)
+  9/120 configs done (30s elapsed)
+  10/120 configs done (31s elapsed)
+  11/120 configs done (31s elapsed)
+  12/120 configs done (31s elapsed)
+  13/120 configs done (31s elapsed)
+  14/120 configs done (32s elapsed)
+  15/120 configs done (32s elapsed)
+  16/120 configs done (32s elapsed)
+  17/120 configs done (32s elapsed)
+  18/120 configs done (32s elapsed)
+  19/120 configs done (32s elapsed)
+  20/120 configs done (33s elapsed)
+  21/120 configs done (33s elapsed)
+  22/120 configs done (33s elapsed)
+  23/120 configs done (33s elapsed)
+  24/120 configs done (33s elapsed)
+  25/120 configs done (33s elapsed)
+  26/120 configs done (33s elapsed)
+  27/120 configs done (33s elapsed)
+  28/120 configs done (34s elapsed)
+  29/120 configs done (34s elapsed)
+  30/120 configs done (34s elapsed)
+  31/120 configs done (34s elapsed)
+  32/120 configs done (34s elapsed)
+  33/120 configs done (34s elapsed)
+  34/120 configs done (34s elapsed)
+  35/120 configs done (34s elapsed)
+  36/120 configs done (34s elapsed)
+  37/120 configs done (34s elapsed)
+  38/120 configs done (34s elapsed)
+  39/120 configs done (34s elapsed)
+  40/120 configs done (34s elapsed)
+  41/120 configs done (34s elapsed)
+  42/120 configs done (34s elapsed)
+  43/120 configs done (34s elapsed)
+  44/120 configs done (34s elapsed)
+  45/120 configs done (34s elapsed)
+  46/120 configs done (34s elapsed)
+  47/120 configs done (34s elapsed)
+  48/120 configs done (35s elapsed)
+  49/120 configs done (35s elapsed)
+  50/120 configs done (35s elapsed)
+  51/120 configs done (35s elapsed)
+  52/120 configs done (35s elapsed)
+  53/120 configs done (35s elapsed)
+  54/120 configs done (36s elapsed)
+  55/120 configs done (36s elapsed)
+  56/120 configs done (36s elapsed)
+  57/120 configs done (36s elapsed)
+  58/120 configs done (36s elapsed)
+  59/120 configs done (36s elapsed)
+  60/120 configs done (36s elapsed)
+  61/120 configs done (37s elapsed)
+  62/120 configs done (37s elapsed)
+  63/120 configs done (37s elapsed)
+  64/120 configs done (37s elapsed)
+  65/120 configs done (37s elapsed)
+  66/120 configs done (37s elapsed)
+  67/120 configs done (37s elapsed)
+  68/120 configs done (37s elapsed)
+  69/120 configs done (37s elapsed)
+  70/120 configs done (37s elapsed)
+  71/120 configs done (37s elapsed)
+  72/120 configs done (37s elapsed)
+  73/120 configs done (37s elapsed)
+  74/120 configs done (38s elapsed)
+  75/120 configs done (38s elapsed)
+  76/120 configs done (38s elapsed)
+  77/120 configs done (38s elapsed)
+  78/120 configs done (38s elapsed)
+  79/120 configs done (38s elapsed)
+  80/120 configs done (39s elapsed)
+  81/120 configs done (64s elapsed)
+  82/120 configs done (112s elapsed)
+  83/120 configs done (112s elapsed)
+  84/120 configs done (112s elapsed)
+  85/120 configs done (116s elapsed)
+  86/120 configs done (117s elapsed)
+  87/120 configs done (117s elapsed)
+  88/120 configs done (118s elapsed)
+  89/120 configs done (119s elapsed)
+  90/120 configs done (119s elapsed)
+  91/120 configs done (120s elapsed)
+  92/120 configs done (120s elapsed)
+  93/120 configs done (121s elapsed)
+  94/120 configs done (122s elapsed)
+  95/120 configs done (122s elapsed)
+  96/120 configs done (123s elapsed)
+  97/120 configs done (123s elapsed)
+  98/120 configs done (123s elapsed)
+  99/120 configs done (124s elapsed)
+  100/120 configs done (124s elapsed)
+  101/120 configs done (124s elapsed)
+  102/120 configs done (124s elapsed)
+  103/120 configs done (124s elapsed)
+  104/120 configs done (124s elapsed)
+  105/120 configs done (124s elapsed)
+  106/120 configs done (125s elapsed)
+  107/120 configs done (125s elapsed)
+  108/120 configs done (125s elapsed)
+  109/120 configs done (129s elapsed)
+  110/120 configs done (136s elapsed)
+  111/120 configs done (138s elapsed)
+  112/120 configs done (150s elapsed)
+  113/120 configs done (169s elapsed)
+  114/120 configs done (224s elapsed)
+  115/120 configs done (232s elapsed)
+  116/120 configs done (237s elapsed)
+  117/120 configs done (237s elapsed)
+  118/120 configs done (241s elapsed)
+  119/120 configs done (248s elapsed)
+  120/120 configs done (262s elapsed)
+
+wrote results/icaps/rcpsp/rcpsp_real_benchmarks.csv
+
+=== summary ===
+            mean_pi  mean_final_gap  wins  proven_optimal
+method                                                   
+boot_cold   0.00127         0.00001   839             760
+cpsat_cold  0.00522         0.00020   827             759
+
+boot_cold vs cpsat_cold over 840 instances:
+  final objective : better 13, worse 1, tied 826
+  primal integral : better 732 / 840

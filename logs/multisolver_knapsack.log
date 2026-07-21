@@ -1,0 +1,50 @@
+seed 1: 5 instances, deltas=['value_jitter', 'value_jitter', 'value_jitter', 'arrival']
+Restricted license - for non-production use only - expires 2027-11-29
+  seed=1 step=0 delta=base (5.1s for 6 methods)
+  seed=1 step=1 delta=value_jitter (0.5s for 6 methods)
+  seed=1 step=2 delta=value_jitter (0.5s for 6 methods)
+  seed=1 step=3 delta=value_jitter (0.6s for 6 methods)
+  seed=1 step=4 delta=arrival (0.6s for 6 methods)
+seed 2: 5 instances, deltas=['arrival', 'value_jitter', 'removal', 'removal']
+  seed=2 step=0 delta=base (10.1s for 6 methods)
+  seed=2 step=1 delta=arrival (5.2s for 6 methods)
+  seed=2 step=2 delta=value_jitter (1.5s for 6 methods)
+  seed=2 step=3 delta=removal (14.2s for 6 methods)
+  seed=2 step=4 delta=removal (0.9s for 6 methods)
+seed 3: 5 instances, deltas=['capacity', 'value_jitter', 'arrival', 'removal']
+  seed=3 step=0 delta=base (2.1s for 6 methods)
+  seed=3 step=1 delta=capacity (3.1s for 6 methods)
+  seed=3 step=2 delta=value_jitter (0.7s for 6 methods)
+  seed=3 step=3 delta=arrival (0.7s for 6 methods)
+  seed=3 step=4 delta=removal (0.4s for 6 methods)
+seed 4: 5 instances, deltas=['arrival', 'removal', 'value_jitter', 'removal']
+  seed=4 step=0 delta=base (10.2s for 6 methods)
+  seed=4 step=1 delta=arrival (10.2s for 6 methods)
+  seed=4 step=2 delta=removal (7.9s for 6 methods)
+  seed=4 step=3 delta=value_jitter (0.4s for 6 methods)
+  seed=4 step=4 delta=removal (5.9s for 6 methods)
+seed 5: 5 instances, deltas=['removal', 'value_jitter', 'arrival', 'value_jitter']
+  seed=5 step=0 delta=base (10.1s for 6 methods)
+  seed=5 step=1 delta=removal (8.4s for 6 methods)
+  seed=5 step=2 delta=value_jitter (0.5s for 6 methods)
+  seed=5 step=3 delta=arrival (6.3s for 6 methods)
+  seed=5 step=4 delta=value_jitter (0.4s for 6 methods)
+seed 6: 5 instances, deltas=['capacity', 'value_jitter', 'value_jitter', 'arrival']
+  seed=6 step=0 delta=base (3.9s for 6 methods)
+  seed=6 step=1 delta=capacity (10.4s for 6 methods)
+  seed=6 step=2 delta=value_jitter (0.4s for 6 methods)
+  seed=6 step=3 delta=value_jitter (1.8s for 6 methods)
+  seed=6 step=4 delta=arrival (0.3s for 6 methods)
+
+total wall time: 123.3s
+wrote results/multisolver/knapsack_results.csv (180 rows)
+
+=== summary ===
+                  mean_pi  mean_final_gap  proven_optimal_rate   n
+method                                                            
+gurobi_boot_cold  0.00007         0.00000              1.00000  30
+cplex_boot_cold   0.00015         0.00002              0.96667  30
+cplex_cold        0.00049         0.00002              0.96667  30
+gurobi_cold       0.00299         0.00000              1.00000  30
+boot_cold         0.00435         0.00000              0.83333  30
+cpsat_cold        0.01982         0.00000              0.83333  30

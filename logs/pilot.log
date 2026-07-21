@@ -1,0 +1,23 @@
+>>> .venv/bin/python -m phase0.run_icaps_jssp_suite --preset pilot --out-dir results/icaps/runs --resume --skip-existing
+family=pilot planned stream configs: 18, methods=['cpsat_cold', 'cpsat_warm', 'boot_cold', 'boot_warm', 'repair_only', 'dispatch_spt', 'dispatch_mwkr'], sizes=[(10, 10), (15, 15)], budgets=[1, 5, 10], workers=[1], severities=['medium']
+  10x10 seed=1 budget=1 workers=1 severity=medium bpolicy=append: 7 methods done
+  10x10 seed=1 budget=5 workers=1 severity=medium bpolicy=append: 7 methods done
+  10x10 seed=1 budget=10 workers=1 severity=medium bpolicy=append: 7 methods done
+  10x10 seed=2 budget=1 workers=1 severity=medium bpolicy=append: 7 methods done
+  10x10 seed=2 budget=5 workers=1 severity=medium bpolicy=append: 7 methods done
+  10x10 seed=2 budget=10 workers=1 severity=medium bpolicy=append: 7 methods done
+  10x10 seed=3 budget=1 workers=1 severity=medium bpolicy=append: 7 methods done
+  10x10 seed=3 budget=5 workers=1 severity=medium bpolicy=append: 7 methods done
+  10x10 seed=3 budget=10 workers=1 severity=medium bpolicy=append: 7 methods done
+  15x15 seed=1 budget=1 workers=1 severity=medium bpolicy=append: 7 methods done
+  15x15 seed=1 budget=5 workers=1 severity=medium bpolicy=append: 7 methods done
+  15x15 seed=1 budget=10 workers=1 severity=medium bpolicy=append: 7 methods done
+  15x15 seed=2 budget=1 workers=1 severity=medium bpolicy=append: 7 methods done
+  15x15 seed=2 budget=5 workers=1 severity=medium bpolicy=append: 7 methods done
+  15x15 seed=2 budget=10 workers=1 severity=medium bpolicy=append: 7 methods done
+  15x15 seed=3 budget=1 workers=1 severity=medium bpolicy=append: 7 methods done
+  15x15 seed=3 budget=5 workers=1 severity=medium bpolicy=append: 7 methods done
+  15x15 seed=3 budget=10 workers=1 severity=medium bpolicy=append: 7 methods done
+
+wrote results/icaps/runs/pilot.csv (756 rows) and results/icaps/runs/pilot_metadata.json
+stream-runs: 126 executed, 0 skipped (resume), 0 rows with errors

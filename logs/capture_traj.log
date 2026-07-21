@@ -1,0 +1,14 @@
+capturing trajectories: 12 (size,seed) configs x 4 methods x 7 instances @ 8.0s
+  1/12 configs done
+  2/12 configs done
+  3/12 configs done
+  4/12 configs done
+  5/12 configs done
+  6/12 configs done
+  7/12 configs done
+  8/12 configs done
+  9/12 configs done
+  10/12 configs done
+  11/12 configs done
+  12/12 configs done
+wrote 336 rows to results/icaps/figures/trajectories.pkl

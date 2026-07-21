@@ -1,0 +1,48 @@
+>>> .venv/bin/python -m phase0.analyze_icaps_results --csv results/icaps/runs/smoke.csv --out-dir results/icaps --baseline cpsat_cold
+loaded 16 rows from 1 file(s)
+methods: ['boot_cold', 'cpsat_cold', 'greedy_from_scratch', 'repair_only']
+scipy available: False | matplotlib available: False
+
+wrote tables to results/icaps/tables, figures to results/icaps/figures, report to results/icaps/report.md
+>>> .venv/bin/python -m phase0.analyze_icaps_results --csv results/icaps/runs/pilot.csv results/icaps/runs/smoke.csv --out-dir results/icaps --baseline cpsat_cold
+loaded 772 rows from 2 file(s)
+methods: ['boot_cold', 'boot_warm', 'cpsat_cold', 'cpsat_warm', 'dispatch_mwkr', 'dispatch_spt', 'greedy_from_scratch', 'repair_only']
+scipy available: False | matplotlib available: False
+
+wrote tables to results/icaps/tables, figures to results/icaps/figures, report to results/icaps/report.md
+>>> .venv/bin/python -m phase0.analyze_icaps_results --csv results/icaps/runs/pilot.csv results/icaps/runs/smoke.csv results/icaps/runs/workers.csv --out-dir results/icaps --baseline cpsat_cold
+loaded 1332 rows from 3 file(s)
+methods: ['boot_cold', 'boot_warm', 'cpsat_cold', 'cpsat_warm', 'dispatch_mwkr', 'dispatch_spt', 'greedy_from_scratch', 'repair_only']
+scipy available: False | matplotlib available: False
+
+wrote tables to results/icaps/tables, figures to results/icaps/figures, report to results/icaps/report.md
+>>> .venv/bin/python -m phase0.analyze_icaps_results --csv results/icaps/runs/arrivals.csv results/icaps/runs/pilot.csv results/icaps/runs/smoke.csv results/icaps/runs/workers.csv --out-dir results/icaps --baseline cpsat_cold
+loaded 2196 rows from 4 file(s)
+methods: ['boot_cold', 'boot_warm', 'cpsat_cold', 'cpsat_warm', 'dispatch_mwkr', 'dispatch_spt', 'greedy_from_scratch', 'repair_only']
+scipy available: False | matplotlib available: False
+
+wrote tables to results/icaps/tables, figures to results/icaps/figures, report to results/icaps/report.md
+>>> .venv/bin/python -m phase0.analyze_icaps_results --csv results/icaps/runs/arrivals.csv results/icaps/runs/pilot.csv results/icaps/runs/smoke.csv results/icaps/runs/workers.csv --out-dir results/icaps --baseline cpsat_cold
+loaded 2196 rows from 4 file(s)
+methods: ['boot_cold', 'boot_warm', 'cpsat_cold', 'cpsat_warm', 'dispatch_mwkr', 'dispatch_spt', 'greedy_from_scratch', 'repair_only']
+scipy available: False | matplotlib available: True
+
+wrote tables to results/icaps/tables, figures to results/icaps/figures, report to results/icaps/report.md
+>>> .venv/bin/python -m phase0.analyze_icaps_results --csv results/icaps/runs/arrivals.csv results/icaps/runs/paper_main.csv results/icaps/runs/pilot.csv results/icaps/runs/smoke.csv results/icaps/runs/workers.csv --out-dir results/icaps --baseline cpsat_cold
+loaded 7146 rows from 5 file(s)
+methods: ['boot_cold', 'boot_warm', 'cpsat_cold', 'cpsat_warm', 'dispatch_mwkr', 'dispatch_spt', 'fix_and_optimize_50', 'greedy_from_scratch', 'lns_prev_solution', 'local_branching_prev', 'repair_only']
+scipy available: True | matplotlib available: True
+
+wrote tables to results/icaps/tables, figures to results/icaps/figures, report to results/icaps/report.md
+>>> .venv/bin/python -m phase0.analyze_icaps_results --csv results/icaps/runs/arrivals.csv results/icaps/runs/paper_main.csv results/icaps/runs/pilot.csv results/icaps/runs/real_benchmarks.csv results/icaps/runs/smoke.csv results/icaps/runs/workers.csv --out-dir results/icaps --baseline cpsat_cold
+loaded 9306 rows from 6 file(s)
+methods: ['boot_cold', 'boot_warm', 'cpsat_cold', 'cpsat_warm', 'dispatch_mwkr', 'dispatch_spt', 'fix_and_optimize_50', 'greedy_from_scratch', 'lns_prev_solution', 'local_branching_prev', 'repair_only']
+scipy available: True | matplotlib available: True
+
+wrote tables to results/icaps/tables, figures to results/icaps/figures, report to results/icaps/report.md
+>>> .venv/bin/python -m phase0.analyze_icaps_results --csv results/icaps/runs/arrivals.csv results/icaps/runs/paper_main.csv results/icaps/runs/pilot.csv results/icaps/runs/real_benchmarks.csv results/icaps/runs/smoke.csv results/icaps/runs/workers.csv --out-dir results/icaps --baseline cpsat_cold
+loaded 9306 rows from 6 file(s)
+methods: ['boot_cold', 'boot_warm', 'cpsat_cold', 'cpsat_warm', 'dispatch_mwkr', 'dispatch_spt', 'fix_and_optimize_50', 'greedy_from_scratch', 'lns_prev_solution', 'local_branching_prev', 'repair_only']
+scipy available: True | matplotlib available: True
+
+wrote tables to results/icaps/tables, figures to results/icaps/figures, report to results/icaps/report.md

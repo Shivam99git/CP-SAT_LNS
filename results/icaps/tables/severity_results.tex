@@ -1,0 +1,70 @@
+\begin{table}[t]
+\centering
+\begin{tabular}{lllll}
+\toprule
+method & delta\_kind & mean\_pi & mean\_final\_gap & n \\
+\midrule
+boot\_cold & arrival & 0.0208 & 0.0043 & 453 \\
+cpsat\_cold & arrival & 0.0232 & 0.0043 & 453 \\
+cpsat\_warm & arrival & 0.0282 & 0.0071 & 393 \\
+boot\_warm & arrival & 0.0334 & 0.0076 & 453 \\
+lns\_prev\_solution & arrival & 0.0922 & 0.0294 & 163 \\
+fix\_and\_optimize\_50 & arrival & 0.1255 & 0.1217 & 163 \\
+dispatch\_mwkr & arrival & 0.1489 & 0.1486 & 196 \\
+local\_branching\_prev & arrival & 0.2510 & 0.1636 & 163 \\
+dispatch\_spt & arrival & 0.2608 & 0.2606 & 196 \\
+repair\_only & arrival & 1.2547 & 1.2547 & 236 \\
+cpsat\_warm & base & 0.0178 & 0.0027 & 139 \\
+boot\_cold & base & 0.0180 & 0.0024 & 172 \\
+boot\_warm & base & 0.0185 & 0.0026 & 171 \\
+cpsat\_cold & base & 0.0186 & 0.0025 & 172 \\
+local\_branching\_prev & base & 0.0263 & 0.0042 & 45 \\
+fix\_and\_optimize\_50 & base & 0.0664 & 0.0626 & 45 \\
+lns\_prev\_solution & base & 0.0880 & 0.0490 & 45 \\
+dispatch\_mwkr & base & 0.1417 & 0.1415 & 63 \\
+dispatch\_spt & base & 0.2225 & 0.2223 & 63 \\
+repair\_only & base & 0.2417 & 0.2414 & 80 \\
+greedy\_from\_scratch & base & 0.3737 & 0.3735 & 1 \\
+boot\_cold & batch\_arrival & 0.0231 & 0.0000 & 132 \\
+cpsat\_cold & batch\_arrival & 0.0262 & 0.0000 & 132 \\
+boot\_warm & batch\_arrival & 0.0561 & 0.0000 & 132 \\
+boot\_warm & cancellation & 0.0120 & 0.0049 & 251 \\
+boot\_cold & cancellation & 0.0146 & 0.0060 & 251 \\
+cpsat\_warm & cancellation & 0.0157 & 0.0058 & 251 \\
+cpsat\_cold & cancellation & 0.0241 & 0.0071 & 251 \\
+lns\_prev\_solution & cancellation & 0.0464 & 0.0382 & 106 \\
+fix\_and\_optimize\_50 & cancellation & 0.1191 & 0.1172 & 106 \\
+dispatch\_mwkr & cancellation & 0.1537 & 0.1534 & 130 \\
+local\_branching\_prev & cancellation & 0.2010 & 0.1475 & 106 \\
+dispatch\_spt & cancellation & 0.2411 & 0.2408 & 130 \\
+repair\_only & cancellation & 0.8100 & 0.8100 & 162 \\
+boot\_warm & duration\_jitter & 0.0101 & 0.0037 & 281 \\
+boot\_cold & duration\_jitter & 0.0124 & 0.0054 & 282 \\
+cpsat\_cold & duration\_jitter & 0.0240 & 0.0070 & 282 \\
+cpsat\_warm & duration\_jitter & 0.0330 & 0.0099 & 281 \\
+lns\_prev\_solution & duration\_jitter & 0.0466 & 0.0385 & 124 \\
+greedy\_from\_scratch & duration\_jitter & 0.0833 & 0.0831 & 1 \\
+fix\_and\_optimize\_50 & duration\_jitter & 0.1305 & 0.1286 & 124 \\
+dispatch\_mwkr & duration\_jitter & 0.1552 & 0.1550 & 133 \\
+dispatch\_spt & duration\_jitter & 0.2452 & 0.2450 & 133 \\
+local\_branching\_prev & duration\_jitter & 0.2645 & 0.1730 & 124 \\
+repair\_only & duration\_jitter & 0.9848 & 0.9848 & 158 \\
+boot\_cold & outage & 0.0107 & 0.0033 & 193 \\
+boot\_warm & outage & 0.0116 & 0.0038 & 191 \\
+cpsat\_cold & outage & 0.0173 & 0.0040 & 193 \\
+cpsat\_warm & outage & 0.0215 & 0.0053 & 191 \\
+lns\_prev\_solution & outage & 0.0542 & 0.0414 & 57 \\
+greedy\_from\_scratch & outage & 0.0965 & 0.0963 & 2 \\
+fix\_and\_optimize\_50 & outage & 0.1386 & 0.1364 & 57 \\
+dispatch\_mwkr & outage & 0.1620 & 0.1617 & 81 \\
+dispatch\_spt & outage & 0.2427 & 0.2425 & 81 \\
+local\_branching\_prev & outage & 0.2561 & 0.1775 & 57 \\
+repair\_only & outage & 0.8237 & 0.8237 & 83 \\
+boot\_cold & rush\_job & 0.0244 & 0.0000 & 64 \\
+cpsat\_cold & rush\_job & 0.0286 & 0.0000 & 64 \\
+boot\_warm & rush\_job & 0.0557 & 0.0000 & 64 \\
+\bottomrule
+\end{tabular}
+\caption{Results by delta kind}
+\label{tab:by-delta}
+\end{table}

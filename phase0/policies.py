@@ -62,6 +62,42 @@ class RoundRobinPolicy(Policy):
         return arm
 
 
+class ContextGatedSelector(Policy):
+    """Deterministic context -> arm lookup table (a "hybrid selector").
+
+    Not a trained model: it maps a discrete context key (by default the
+    instance's ``delta_kind``) to a fixed destroy arm, with a fallback arm for
+    unseen contexts. The mapping is meant to be *derived on training seeds* and
+    then applied unchanged to held-out seeds — deriving and scoring on the same
+    seeds would be circular. See ``derive_context_mapping`` in
+    ``run_budget_sweep`` for how to build the table from a sweep CSV.
+
+    Arm names may be given either as an Arm.name ("random_40") or with the
+    runner's "fixed_" method prefix ("fixed_random_40"); both resolve.
+    """
+
+    def __init__(
+        self,
+        mapping: dict[str, str],
+        default_arm: str,
+        context_fn=lambda instance: instance.delta_kind,
+    ):
+        self._by_name = {arm.name: arm for arm in ARMS}
+        self.context_fn = context_fn
+        self.mapping = {key: self._resolve(name) for key, name in mapping.items()}
+        self.default = self._resolve(default_arm)
+
+    def _resolve(self, name: str) -> Arm:
+        key = name[len("fixed_"):] if name.startswith("fixed_") else name
+        if key not in self._by_name:
+            valid = ", ".join(self._by_name)
+            raise ValueError(f"unknown arm {name!r}; valid arms: {valid}")
+        return self._by_name[key]
+
+    def select(self, instance: Instance, solution) -> Arm:
+        return self.mapping.get(self.context_fn(instance), self.default)
+
+
 class EpsilonGreedyPolicy(Policy):
     """Non-contextual epsilon-greedy over mean reward per arm."""
 
@@ -92,3 +128,21 @@ class EpsilonGreedyPolicy(Policy):
         n = self.counts[arm.name] + 1
         self.counts[arm.name] = n
         self.mean_reward[arm.name] += (reward - self.mean_reward[arm.name]) / n
+
+
+def make_policy(name: str, seed: int = 0) -> Policy:
+    """Build the LNS policy for a method name. Shared by the runners so the
+    method-name -> policy mapping lives in one place. Non-LNS methods
+    (cpsat_cold / cpsat_warm) are handled by the runners themselves and are
+    not valid here."""
+    if name == "lns_uniform":
+        return UniformRandomPolicy(seed=seed)
+    if name == "lns_eps_reset":
+        return EpsilonGreedyPolicy(seed=seed, reset_per_instance=True)
+    if name == "lns_eps_persist":
+        return EpsilonGreedyPolicy(seed=seed, reset_per_instance=False)
+    if name.startswith("fixed_"):
+        return FixedArmPolicy(name.removeprefix("fixed_"))
+    if name == "round_robin_40":
+        return RoundRobinPolicy(("delta_40", "critical_40", "random_40"))
+    raise ValueError(f"no LNS policy for method {name!r}")

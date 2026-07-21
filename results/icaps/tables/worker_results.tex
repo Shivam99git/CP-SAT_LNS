@@ -1,0 +1,37 @@
+\begin{table}[t]
+\centering
+\begin{tabular}{lllll}
+\toprule
+method & workers & mean\_pi & mean\_final\_gap & n \\
+\midrule
+boot\_cold & 1 & 0.0167 & 0.0037 & 1463 \\
+cpsat\_cold & 1 & 0.0222 & 0.0042 & 1463 \\
+boot\_warm & 1 & 0.0246 & 0.0044 & 1459 \\
+cpsat\_warm & 1 & 0.0248 & 0.0068 & 1171 \\
+lns\_prev\_solution & 1 & 0.0662 & 0.0367 & 495 \\
+fix\_and\_optimize\_50 & 1 & 0.1215 & 0.1188 & 495 \\
+dispatch\_mwkr & 1 & 0.1523 & 0.1521 & 603 \\
+greedy\_from\_scratch & 1 & 0.1625 & 0.1623 & 4 \\
+local\_branching\_prev & 1 & 0.2238 & 0.1496 & 495 \\
+dispatch\_spt & 1 & 0.2467 & 0.2464 & 603 \\
+repair\_only & 1 & 0.9409 & 0.9409 & 635 \\
+boot\_warm & 4 & 0.0163 & 0.0058 & 28 \\
+cpsat\_warm & 4 & 0.0205 & 0.0073 & 28 \\
+boot\_cold & 4 & 0.0228 & 0.0084 & 28 \\
+cpsat\_cold & 4 & 0.0309 & 0.0102 & 28 \\
+repair\_only & 4 & 0.8685 & 0.8685 & 28 \\
+boot\_warm & 8 & 0.0162 & 0.0040 & 28 \\
+cpsat\_warm & 8 & 0.0207 & 0.0047 & 28 \\
+boot\_cold & 8 & 0.0222 & 0.0062 & 28 \\
+cpsat\_cold & 8 & 0.0289 & 0.0081 & 28 \\
+repair\_only & 8 & 0.8712 & 0.8712 & 28 \\
+boot\_warm & 16 & 0.0200 & 0.0056 & 28 \\
+cpsat\_warm & 16 & 0.0235 & 0.0040 & 28 \\
+boot\_cold & 16 & 0.0237 & 0.0066 & 28 \\
+cpsat\_cold & 16 & 0.0352 & 0.0086 & 28 \\
+repair\_only & 16 & 0.8714 & 0.8714 & 28 \\
+\bottomrule
+\end{tabular}
+\caption{Results by worker count}
+\label{tab:by-workers}
+\end{table}

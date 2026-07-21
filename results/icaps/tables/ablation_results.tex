@@ -1,0 +1,21 @@
+\begin{table}[t]
+\centering
+\begin{tabular}{llllll}
+\toprule
+method & n\_common & pi\_win & pi\_tie & pi\_loss & sign\_test\_p \\
+\midrule
+boot\_cold & 1547 & 1313 & 0 & 234 & 0.0000 \\
+boot\_warm & 1543 & 964 & 0 & 579 & 0.0000 \\
+cpsat\_warm & 1255 & 685 & 0 & 570 & 0.0013 \\
+lns\_prev\_solution & 495 & 121 & 0 & 374 & 0.0000 \\
+fix\_and\_optimize\_50 & 495 & 65 & 0 & 430 & 0.0000 \\
+dispatch\_mwkr & 603 & 1 & 0 & 602 & 0.0000 \\
+greedy\_from\_scratch & 4 & 0 & 0 & 4 & 0.1250 \\
+local\_branching\_prev & 495 & 27 & 0 & 468 & 0.0000 \\
+dispatch\_spt & 603 & 0 & 0 & 603 & 0.0000 \\
+repair\_only & 719 & 0 & 0 & 719 & 0.0000 \\
+\bottomrule
+\end{tabular}
+\caption{Pairwise comparison vs cpsat_cold}
+\label{tab:ablation}
+\end{table}

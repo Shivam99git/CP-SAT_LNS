@@ -1,0 +1,17 @@
+\begin{table}[t]
+\centering
+\begin{tabular}{lllllll}
+\toprule
+method & mean\_pi & median\_pi & mean\_final\_gap & proven\_optimal\_rate & n & domain \\
+\midrule
+cpsat\_cold & 0.0005 & 0.0004 & 0.0000 & 0.0000 & 30 & jssp \\
+cplex\_cold & 0.0034 & 0.0028 & 0.0000 & 0.5333 & 30 & jssp \\
+gurobi\_cold & 0.0042 & 0.0033 & 0.0000 & 0.8667 & 30 & jssp \\
+cplex\_cold & 0.0005 & 0.0005 & 0.0000 & 0.9667 & 30 & knapsack \\
+gurobi\_cold & 0.0030 & 0.0001 & 0.0000 & 1.0000 & 30 & knapsack \\
+cpsat\_cold & 0.0198 & 0.0172 & 0.0000 & 0.8333 & 30 & knapsack \\
+\bottomrule
+\end{tabular}
+\caption{Raw cold-solve comparison across solvers: which solver reaches best primal integral at this license-capped instance size}
+\label{tab:multisolver-speed}
+\end{table}

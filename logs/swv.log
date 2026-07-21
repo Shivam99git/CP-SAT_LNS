@@ -1,0 +1,25 @@
+family=swv_benchmarks planned stream configs: 20, methods=['cpsat_cold', 'cpsat_warm', 'boot_cold', 'boot_warm'], sizes=[(0, 0)], budgets=[8], workers=[1], severities=['medium']
+running 20 stream configs across 6 worker processes
+  swv01_20x10 seed=3 budget=8 workers=1 severity=medium bpolicy=append: 4 methods done
+  swv02_20x10 seed=1 budget=8 workers=1 severity=medium bpolicy=append: 4 methods done
+  swv02_20x10 seed=2 budget=8 workers=1 severity=medium bpolicy=append: 4 methods done
+  swv01_20x10 seed=4 budget=8 workers=1 severity=medium bpolicy=append: 4 methods done
+  swv01_20x10 seed=2 budget=8 workers=1 severity=medium bpolicy=append: 4 methods done
+  swv01_20x10 seed=1 budget=8 workers=1 severity=medium bpolicy=append: 4 methods done
+  swv02_20x10 seed=3 budget=8 workers=1 severity=medium bpolicy=append: 4 methods done
+  swv02_20x10 seed=4 budget=8 workers=1 severity=medium bpolicy=append: 4 methods done
+  swv03_20x10 seed=1 budget=8 workers=1 severity=medium bpolicy=append: 4 methods done
+  swv03_20x10 seed=2 budget=8 workers=1 severity=medium bpolicy=append: 4 methods done
+  swv03_20x10 seed=4 budget=8 workers=1 severity=medium bpolicy=append: 4 methods done
+  swv03_20x10 seed=3 budget=8 workers=1 severity=medium bpolicy=append: 4 methods done
+  swv04_20x10 seed=1 budget=8 workers=1 severity=medium bpolicy=append: 4 methods done
+  swv04_20x10 seed=2 budget=8 workers=1 severity=medium bpolicy=append: 4 methods done
+  swv05_20x10 seed=1 budget=8 workers=1 severity=medium bpolicy=append: 4 methods done
+  swv04_20x10 seed=4 budget=8 workers=1 severity=medium bpolicy=append: 4 methods done
+  swv04_20x10 seed=3 budget=8 workers=1 severity=medium bpolicy=append: 4 methods done
+  swv05_20x10 seed=2 budget=8 workers=1 severity=medium bpolicy=append: 4 methods done
+  swv05_20x10 seed=3 budget=8 workers=1 severity=medium bpolicy=append: 4 methods done
+  swv05_20x10 seed=4 budget=8 workers=1 severity=medium bpolicy=append: 4 methods done
+
+wrote results/icaps/runs/swv_benchmarks.csv (560 rows) and results/icaps/runs/swv_benchmarks_metadata.json
+stream-runs: 80 executed, 0 skipped (resume), 0 rows with errors

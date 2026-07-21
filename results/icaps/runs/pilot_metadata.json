@@ -1,0 +1,13 @@
+{
+  "command": "/home/shivam-sharma/CP-SAT model/phase0/run_icaps_jssp_suite.py --preset pilot --out-dir results/icaps/runs --resume --skip-existing",
+  "ortools_version": "9.15.6755",
+  "python_version": "3.12.3",
+  "git_commit": "ea1cd62",
+  "hostname": "shivam-sharma-OptiPlex-7000",
+  "timestamp_utc": "2026-07-10T11:29:33Z",
+  "preset": "pilot",
+  "n_stream_runs": 126,
+  "n_skipped": 0,
+  "n_errors": 0,
+  "n_rows": 756
+}

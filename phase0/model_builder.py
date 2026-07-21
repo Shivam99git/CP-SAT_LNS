@@ -30,6 +30,7 @@ def build_model(
     instance: Instance,
     hint: Solution | None = None,
     frozen: dict[str, int] | None = None,
+    exact_frozen: dict[str, int] | None = None,
 ) -> BuiltModel:
     """Build the CP-SAT model.
 
@@ -41,6 +42,11 @@ def build_model(
             float, so repairs can left-shift the schedule. Destroyed ops are
             free to reorder anywhere. The incumbent itself always satisfies
             the chains, so feasibility is preserved.
+    exact_frozen: op_id -> required start time, pinned EXACTLY (equality
+            constraint), for operations already executed/committed
+            (partial_schedule_freeze). Distinct from `frozen`, which only
+            preserves relative order, not the absolute time -- a partially
+            executed schedule cannot be re-timed for the ops already run.
     """
     model = cp_model.CpModel()
     horizon = instance.horizon
@@ -88,6 +94,11 @@ def build_model(
             ops.sort(key=lambda op: frozen[op.op_id])
             for a, b in zip(ops, ops[1:]):
                 model.add(starts[b.op_id] >= starts[a.op_id] + a.duration)
+
+    if exact_frozen:
+        for op_id, value in exact_frozen.items():
+            if op_id in starts:
+                model.add(starts[op_id] == value)
 
     if hint:
         for op_id, value in hint.items():
