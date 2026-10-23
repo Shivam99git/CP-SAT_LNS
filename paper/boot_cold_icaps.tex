@@ -1,3 +1,6 @@
+% SUPERSEDED (2026-10-06): the ICAPS-27 submission is paper/icaps27/manuscript.tex,
+% built with the official AAAI-27 author kit and with every number re-derived
+% from raw data. This older draft is kept for history only.
 % boot_cold: A Near-Zero-Cost Constructive Floor for Streaming CP-SAT Reoptimization
 % ICAPS technical-track draft.
 %
@@ -303,10 +306,9 @@ internal adaptive large-neighborhood search only activates with
 \texttt{workers}${>}1$, so a single-threaded advantage might vanish under the
 solver's real portfolio. It does not (Figure~\ref{fig:workers}): boot\_cold
 beats the cold baseline on primal integral at \emph{every} worker count
-(87\% @1, 75--82\% @4/8/16, all $p{\le}1.3{\times}10^{-2}$). We further find
-that \texttt{boot\_warm} (hinted continuation) is \emph{worker-dependent}: it
-loses single-threaded (36\% win rate) but wins multi-worker (79--86\%)---a
-genuine nuance, reported rather than hidden.
+(100\% @1, 75--82\% @4/8/16, 28 paired instances per level, all $p{\le}1.3{\times}10^{-2}$).
+% CORRECTED 2026-10-06: an earlier claim that boot_warm loses single-threaded
+% (36%) was a pooling artifact; see paper/icaps27/README.md.
 
 \begin{figure}[t]
 \centering
@@ -405,8 +407,9 @@ Wilcoxon agrees, $p \le 8.3\times10^{-7}$ in every row) -- the mechanism is
 not a CP-SAT artifact. Final-objective domination holds exactly at this
 sample size (0 losses / 30 in all six rows). An unplanned correctness
 cross-check: all three independently-coded formulations (CP-SAT interval,
-Gurobi and CPLEX disjunctive MIP) agreed on the identical optimal objective
-on every one of the 60 instances tested. A secondary, orthogonal finding:
+Gurobi and CPLEX disjunctive MIP) returned the identical final makespan on
+all 30 job-shop instances (on knapsack they agree only within the MIP
+solvers' default $10^{-4}$ optimality tolerance). A secondary, orthogonal finding:
 the raw cold-solver comparison shows CP-SAT beating Gurobi/CPLEX by
 7--9$\times$ on job-shop, while CPLEX/Gurobi beat CP-SAT by up to
 40$\times$ on knapsack -- each solver dominates the problem structure its
