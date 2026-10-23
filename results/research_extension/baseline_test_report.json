@@ -1,0 +1,26 @@
+{
+  "source_revision": "8178b2a81d6c3063746b0ad6e6d8e4a674301368 (branch research/iaip-sr, pre-extension baseline commit)",
+  "python": "3.12.3",
+  "platform": "Linux-7.0.0-34-generic-x86_64-with-glibc2.39",
+  "cpu": "12th Gen Intel(R) Core(TM) i7-12700",
+  "logical_cpus": 20,
+  "topology": "8 performance cores (CPUs 0-15, 2 threads each, max 4.8-4.9 GHz) + 4 efficiency cores (CPUs 16-19, max 3.6 GHz)",
+  "suites": {
+    "fast (default, -m 'not slow')": {
+      "tests": 130,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "time_s": 17.83
+    },
+    "slow solver-integration (-m slow)": {
+      "tests": 25,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "time_s": 100.191
+    }
+  },
+  "summary": "155 tests executed before any extension code was written: 130 fast + 25 slow, 0 failures, 0 errors. No test was modified.",
+  "note": "requirements_rework.txt, run_causal_confirmatory.sh and the other files named in the task brief do not exist in this repository or its remote; the environment below is the one actually used."
+}
