@@ -166,3 +166,22 @@ def test_integrated_respects_commitments_and_release_dates():
         res, _ = run_iaip(inst2, prev, stream[0], 0.8, cfg)
         assert check_schedule(inst2, res.solution) == res.objective
         assert all(res.solution[v] == s for v, s in frozen.items())
+
+
+def test_alpha_rule_new_ops_skips_local_phase_without_arrivals():
+    for kind, expect_local in (("cancellation", False), ("arrival", True)):
+        stream = _stream(seed=5, kinds=[kind], length=2)
+        prev, _, _ = solve(build_model(stream[0]), time_limit=0.2)
+        res, meta = run_iaip(stream[1], prev, stream[0], 0.6,
+                             IAIPConfig(alpha=0.2, neighbourhood="N1", alpha_rule="new_ops"))
+        assert ("local" in meta) == expect_local
+        assert res.validated
+
+
+def test_portfolio_incumbent_published_before_all_members_built():
+    stream = _stream(length=2)
+    prev, _, _ = solve(build_model(stream[0]), time_limit=0.2)
+    res, meta = run_iaip(stream[1], prev, stream[0], 0.6, IAIPConfig(portfolio="full"))
+    first = res.events[0]
+    assert first[2].startswith("portfolio:")
+    assert first[0] < res.construction_s + 1e-9  # available before construction finished

@@ -101,4 +101,14 @@ These are fixed in advance:
 
 ## 8. Deviations log
 
-(none yet)
+**2026-10-23 — anytime portfolio (affects §5's primary comparator).**
+
+*What the development sweep showed.* The first version of `build_portfolio` retained an incumbent only after all members were built. Under the predeclared metric (g = 1 before the first incumbent), the delay cost more PI than the extra members recovered:
+- the fresh portfolio (first incumbent at about 20 ms) did worse than MWKR+Cold (5 ms): stream mean PI 0.0438 vs 0.0412;
+- the full portfolio did no better than ELR alone.
+
+*Change.* The portfolio now publishes every validated improving member at the moment it is built. Construction order became hist, elr, mwkr, spt, insert, lpt, fifo (the fresh portfolio therefore builds MWKR first).
+
+*Effect on the comparator.* This makes the predeclared comparator, fresh-portfolio+Cold, strictly stronger. The change was made on development streams only, before any confirmatory stream was run.
+
+**2026-10-23 — `alpha_rule` added (development only).** By delta type, the local phase helped after arrivals and hurt after cancellations and outages. An option `alpha_rule = new_ops` (run the local phase only when the disruption added operations) was added to the E5 development sweep. It is a pre-solve rule based on an observable event feature. Whether it enters the frozen configuration is decided on development streams only.

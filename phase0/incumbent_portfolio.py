@@ -17,7 +17,11 @@ Members (cheapest first; history-dependent members need a previous schedule):
   fresh:             spt, mwkr, lpt, fifo dispatching rules
 Construction is sequential in a fixed order, shares one construction budget
 (and the caller's overall deadline), and records provenance, time, validity
-and duplicates for every member.
+and duplicates for every member. It is anytime: `on_improve(solution,
+objective, name)` is called as soon as a member is validated and improves on
+the members built so far, so the caller can retain it immediately instead of
+waiting for the whole portfolio (development data showed that waiting costs
+more primal integral than the extra members recover).
 """
 
 from __future__ import annotations
@@ -35,7 +39,9 @@ Solution = dict[str, int]
 
 HISTORY_MEMBERS = ("hist", "elr", "insert")
 FRESH_MEMBERS = ("spt", "mwkr", "lpt", "fifo")
-ORDER = ("hist", "elr", "insert", "spt", "mwkr", "lpt", "fifo")
+# cheapest strong members first: with anytime publication, order sets when
+# each incumbent becomes available (and breaks objective ties)
+ORDER = ("hist", "elr", "mwkr", "spt", "insert", "lpt", "fifo")
 
 PORTFOLIOS = {  # ablation configurations (Task 5)
     "hist": ("hist",),
@@ -91,7 +97,8 @@ def _builders(instance: Instance, previous: Solution | None):
 
 
 def build_portfolio(instance: Instance, previous: Solution | None, members: tuple[str, ...],
-                    construction_budget: float, deadline: float | None = None) -> PortfolioResult:
+                    construction_budget: float, deadline: float | None = None,
+                    on_improve=None) -> PortfolioResult:
     """Construct `members` (in canonical ORDER) until the construction budget
     or the caller's absolute monotonic `deadline` is exhausted."""
     t0 = time.monotonic()
@@ -125,6 +132,8 @@ def build_portfolio(instance: Instance, previous: Solution | None, members: tupl
         cands.append(cand)
         if best is None or (obj, rank) < (best[0], best[1]):
             best = (obj, rank, name, sol)
+            if on_improve is not None:
+                on_improve(sol, obj, name)
     return PortfolioResult(solution=best[3] if best else None, objective=best[0] if best else None,
                            chosen=best[2] if best else None, candidates=cands,
                            total_time_s=time.monotonic() - t0, skipped_for_budget=skipped)

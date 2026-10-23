@@ -63,3 +63,13 @@ def test_duplicates_detected():
             elr = next(c for c in r.candidates if c.name == "elr")
             assert elr.duplicate_of == "hist"
         prev, _, _ = solve(build_model(inst), time_limit=0.3)
+
+
+def test_anytime_publication_reports_each_improvement_in_order():
+    stream = _stream()
+    prev, _, _ = solve(build_model(stream[0]), time_limit=0.3)
+    seen = []
+    r = build_portfolio(stream[1], prev, PORTFOLIOS["full"], 1.0,
+                        on_improve=lambda sol, obj, name: seen.append((obj, name)))
+    assert seen and seen[-1] == (r.objective, r.chosen)
+    assert all(a[0] > b[0] for a, b in zip(seen, seen[1:]))  # strictly improving

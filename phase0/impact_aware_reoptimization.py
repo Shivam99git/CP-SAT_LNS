@@ -39,6 +39,7 @@ class IAIPConfig:
     neighbourhood: str = "N5"
     expansion_frac: float = 0.25
     alpha: float = 0.0                  # share of B given to the local phase
+    alpha_rule: str = "fixed"           # fixed | new_ops (local phase only if operations were added)
     require_improvement: bool = True
     global_mode: str = "unhinted"       # unhinted | hinted | cutoff
 
@@ -53,19 +54,27 @@ def run_iaip(instance: Instance, previous: Solution | None, prev_instance: Insta
     D = disruption_set(prev_instance, instance, previous)
     meta["disruption_size"] = len(D)
 
+    def retain(sol, obj, name):  # anytime: each improving member counts from its own time
+        res.objective, res.solution = obj, sol
+        res.events.append((clock.elapsed(), obj, f"portfolio:{name}"))
+
     t = clock.elapsed()
     pf = build_portfolio(instance, previous, PORTFOLIOS[cfg.portfolio],
-                         construction_budget=cfg.construction_frac * budget, deadline=clock.deadline)
+                         construction_budget=cfg.construction_frac * budget, deadline=clock.deadline,
+                         on_improve=retain)
     res.construction_s += clock.elapsed() - t
     meta["portfolio"] = {"chosen": pf.chosen, "objective": pf.objective,
                          "skipped": pf.skipped_for_budget,
                          "members": [c.__dict__ for c in pf.candidates]}
     if pf.solution is not None:
         res.construction_objective, res.construction_source = pf.objective, f"portfolio:{pf.chosen}"
-        res.objective, res.solution = pf.objective, pf.solution
-        res.events.append((clock.elapsed(), pf.objective, f"portfolio:{pf.chosen}"))
 
-    if cfg.alpha > 0 and res.solution is not None:
+    new_ops = previous is not None and any(o.op_id not in previous for o in instance.all_ops)
+    meta["new_ops"] = bool(new_ops)
+    use_local = cfg.alpha > 0 and res.solution is not None and (cfg.alpha_rule == "fixed" or new_ops)
+    if cfg.alpha_rule not in ("fixed", "new_ops"):
+        raise ValueError(cfg.alpha_rule)
+    if use_local:
         t = clock.elapsed()
         N = make_neighbourhood(cfg.neighbourhood, instance, res.solution, D, cfg.expansion_frac)
         meta["neighbourhood_build_s"] = clock.elapsed() - t
