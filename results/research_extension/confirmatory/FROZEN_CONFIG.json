@@ -1,0 +1,118 @@
+{
+  "frozen_at": "2026-10-24T11:36:31+0530",
+  "git_revision": "45c62bf530bb93e8ca9a3f8a4b20bc46786c168e",
+  "selection_basis": "development streams 301-310 only (dev_e3e4, dev_e5, dev_e5b, dev_e5c)",
+  "roles": {
+    "iaip_sr": "iaip|portfolio=full|alpha=0.6|neighbourhood=N5|global_mode=hinted",
+    "portfolio_hinted": "iaip|portfolio=full|global_mode=hinted",
+    "portfolio_cold": "iaip|portfolio=full",
+    "fresh_portfolio_cold": "iaip|portfolio=fresh",
+    "fresh_portfolio_hinted": "iaip|portfolio=fresh|global_mode=hinted",
+    "mwkr_cold": "mwkr_cold",
+    "floor": "floor",
+    "cold": "cold",
+    "elr_cold": "iaip|portfolio=elr",
+    "random_nbh_control": "iaip|portfolio=full|alpha=0.6|neighbourhood=random|global_mode=hinted"
+  },
+  "methods": [
+    "iaip|portfolio=full|alpha=0.6|neighbourhood=N5|global_mode=hinted",
+    "iaip|portfolio=full|global_mode=hinted",
+    "iaip|portfolio=full",
+    "iaip|portfolio=fresh",
+    "iaip|portfolio=fresh|global_mode=hinted",
+    "mwkr_cold",
+    "floor",
+    "cold",
+    "iaip|portfolio=elr",
+    "iaip|portfolio=full|alpha=0.6|neighbourhood=random|global_mode=hinted"
+  ],
+  "family": [
+    [
+      "iaip_sr",
+      "fresh_portfolio_cold"
+    ],
+    [
+      "iaip_sr",
+      "fresh_portfolio_hinted"
+    ],
+    [
+      "iaip_sr",
+      "mwkr_cold"
+    ],
+    [
+      "iaip_sr",
+      "floor"
+    ],
+    [
+      "iaip_sr",
+      "cold"
+    ],
+    [
+      "iaip_sr",
+      "portfolio_hinted"
+    ],
+    [
+      "iaip_sr",
+      "random_nbh_control"
+    ],
+    [
+      "portfolio_cold",
+      "fresh_portfolio_cold"
+    ]
+  ],
+  "selective_check": [
+    "iaip_sr",
+    "portfolio_hinted"
+  ],
+  "streams": {
+    "sizes": [
+      15,
+      20
+    ],
+    "stream_seeds": [
+      501,
+      502,
+      503,
+      504,
+      505,
+      506,
+      507,
+      508,
+      509,
+      510,
+      511,
+      512,
+      513,
+      514,
+      515,
+      516,
+      517,
+      518,
+      519,
+      520
+    ],
+    "stream_length": 10,
+    "generator": "full job shop, durations U[5,50], default delta weights, severity medium"
+  },
+  "solver_seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "budget_s": 8.0,
+  "workers": 1,
+  "cpus": [
+    0,
+    2,
+    4,
+    6,
+    8,
+    10,
+    12,
+    14
+  ],
+  "primary_endpoint": "stream mean of archived primal integral (pi) over steps 1..10, shared z* per instance",
+  "go_criteria": "docs/research_extension/04_experimental_methodology.md section 5"
+}
