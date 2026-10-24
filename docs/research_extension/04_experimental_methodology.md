@@ -90,6 +90,29 @@ Results that miss these criteria are reported as CONDITIONAL GO or NO-GO under t
 
 Budgets, worker counts, delta-only streams (arrival-heavy, outage-heavy, freeze), severities, and published benchmark families (Taillard, DMU, SWV, YN as stream bases), with the frozen configuration and no further tuning.
 
+**E6 plan, written 2026-10-24 after the confirmatory analysis and before any E6 run.**
+
+Common settings:
+- the frozen IAIP-SR configuration from `FROZEN_CONFIG.json`, unchanged;
+- comparators: fresh-portfolio+Cold (the primary comparator), portfolio + hinted global (the selective-stage control), Floor and Cold;
+- 10 deltas per stream; solver seed 0;
+- new stream seeds 601–610, never used in the research extension before;
+- performance cores;
+- runner: `phase0/run_iaip_campaign.py`. The options `--delta-mix`, `--severity`, `--benchmarks` and `--cpu-groups` were added for E6; their defaults reproduce the confirmatory streams exactly, as tested.
+
+| Run | Variation | Streams |
+|---|---|---|
+| E6a | B = 2 s and B = 30 s | 15×15, 20×20 × 601–610 |
+| E6b | B = 8 s, 4 CP-SAT workers; each process pinned to 4 physical cores ({0,2,4,6}, {8,10,12,14}) | same 20 |
+| E6c | B = 8 s; arrival-only, outage-only and high-severity streams | same 20 sizes and seeds |
+| E6d | B = 8 s; published instances as stream bases: ta01–ta20, dmu01–05, swv01–05, yn1–4 (34 bases) × stream seeds 601–602 | 68 |
+
+Arriving jobs in E6d have one operation per machine, with durations drawn from the base's own duration range. E6d inference uses the **base instance** as the unit: the two streams per base are averaged first.
+
+All E6 results are exploratory. They are reported in full, whichever way they come out.
+
+Freeze-only streams are **not run**. The generator's `partial_schedule_freeze` delta needs the previous step's solution at generation time. These campaigns generate streams up front, so every freeze step would be a no-op, and running them would test nothing.
+
 ## 7. Rules
 
 These are fixed in advance:

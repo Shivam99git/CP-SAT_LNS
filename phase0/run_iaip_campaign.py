@@ -36,6 +36,7 @@ from .impact_aware_reoptimization import IAIPConfig, run_iaip
 from .reuse_methods import GATE1_METHODS, RunResult, run_method
 from .run_gate1 import StreamSpec, _init_worker, _write_atomic, git_rev, instance_to_dict
 from .schedule_validator import ScheduleError, check_schedule
+from .streams import StreamConfig, generate_stream
 
 ARCHIVED = ("lns_prev_solution", "fix_and_optimize_50", "local_branching_prev")
 _CFG_FIELDS = {f.name: f.type for f in fields(IAIPConfig)}
@@ -74,6 +75,53 @@ def _archived(name, inst, prev, budget, workers, seed) -> RunResult:
             res.notes.append(f"archived solution rejected: {e}")
     res.solver_status = "ARCHIVED"
     return res
+
+
+MIXES = {  # delta-kind weights; "default" is the generator's own (0.4/0.2/0.25/0.15)
+    "default": None,
+    "arrival": {"p_arrival": 1.0, "p_cancellation": 0.0, "p_duration_jitter": 0.0, "p_outage": 0.0},
+    "outage": {"p_arrival": 0.0, "p_cancellation": 0.0, "p_duration_jitter": 0.0, "p_outage": 1.0},
+}
+
+
+@dataclass(frozen=True)
+class CampaignSpec(StreamSpec):
+    """StreamSpec with an optional delta mix, severity and published-benchmark
+    base. With the defaults it builds exactly the same stream (and name) as
+    StreamSpec, so earlier campaigns are reproduced unchanged."""
+    mix: str = "default"
+    severity: str = "medium"
+    base_path: str = ""
+
+    @property
+    def name(self) -> str:
+        n = f"{Path(self.base_path).stem}_s{self.seed}" if self.base_path else super().name
+        if self.mix != "default":
+            n += f"_{self.mix}"
+        if self.severity != "medium":
+            n += f"_{self.severity}"
+        return n
+
+    def build(self):
+        if self.mix == "default" and self.severity == "medium" and not self.base_path:
+            return super().build()
+        cfg = StreamConfig(num_machines=self.machines, initial_jobs=self.jobs,
+                           stream_length=self.length, seed=self.seed, severity=self.severity)
+        for k, v in (MIXES[self.mix] or {}).items():
+            setattr(cfg, k, v)
+        cfg.ops_per_job = (self.machines, self.machines)
+        cfg.duration_range = (5, 50)
+        base = None
+        if self.base_path:
+            from .benchmark_loaders import load_benchmark_file
+            base = load_benchmark_file(self.base_path)
+            d = [o.duration for j in base.jobs for o in j.ops]
+            cfg.duration_range = (min(d), max(d))  # arriving jobs drawn like the base's
+        return generate_stream(cfg, base_instance=base)
+
+
+def _init_group(q):
+    os.sched_setaffinity(0, q.get())
 
 
 @dataclass(frozen=True)
@@ -137,8 +185,17 @@ def main():
     ap.add_argument("--budget", type=float, default=8.0)
     ap.add_argument("--workers", type=int, default=1)
     ap.add_argument("--methods", nargs="+", required=True)
-    ap.add_argument("--cpus", type=int, nargs="+", required=True)
+    ap.add_argument("--cpus", type=int, nargs="+", default=None,
+                    help="one pool process pinned to each CPU")
+    ap.add_argument("--cpu-groups", nargs="+", default=None,
+                    help="one pool process pinned to each comma-separated CPU group (for --workers > 1)")
+    ap.add_argument("--delta-mix", choices=sorted(MIXES), default="default")
+    ap.add_argument("--severity", default="medium")
+    ap.add_argument("--benchmarks", nargs="+", default=None,
+                    help="published instance files used as stream bases (replaces --sizes)")
     a = ap.parse_args()
+    if (a.cpus is None) == (a.cpu_groups is None):
+        raise SystemExit("give exactly one of --cpus and --cpu-groups")
     for m in a.methods:
         if m.startswith("iaip|"):
             parse_iaip(m)
@@ -148,7 +205,16 @@ def main():
     (out / "runs").mkdir(parents=True, exist_ok=True)
     (out / "instances").mkdir(exist_ok=True)
     rev = git_rev()
-    specs = [StreamSpec(m, m, s, a.stream_length) for m in a.sizes for s in a.stream_seeds]
+    if a.benchmarks:
+        from .benchmark_loaders import load_benchmark_file
+        specs = []
+        for p in a.benchmarks:
+            b = load_benchmark_file(p)
+            specs += [CampaignSpec(b.num_machines, len(b.jobs), s, a.stream_length,
+                                   a.delta_mix, a.severity, str(p)) for s in a.stream_seeds]
+    else:
+        specs = [CampaignSpec(m, m, s, a.stream_length, a.delta_mix, a.severity)
+                 for m in a.sizes for s in a.stream_seeds]
     for spec in specs:
         p = out / "instances" / f"{spec.name}.json"
         if not p.exists():
@@ -163,9 +229,14 @@ def main():
     print(f"{len(tasks) - len(todo)} done, {len(todo)} to run", flush=True)
     ctx = mp.get_context("fork")
     q = ctx.Queue()
-    for c in a.cpus:
+    if a.cpu_groups:
+        slots = [{int(c) for c in g.split(",")} for g in a.cpu_groups]
+        init = _init_group
+    else:
+        slots, init = a.cpus, _init_worker
+    for c in slots:
         q.put(c)
-    with ctx.Pool(len(a.cpus), initializer=_init_worker, initargs=(q,)) as pool:
+    with ctx.Pool(len(slots), initializer=init, initargs=(q,)) as pool:
         for i, (name, n, dt) in enumerate(pool.imap_unordered(_run, todo), 1):
             print(f"[{i}/{len(todo)}] {name}: {n} records, {dt:.0f}s", flush=True)
     print("done", flush=True)
