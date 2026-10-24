@@ -73,6 +73,29 @@ Test files: `tests/test_reuse_methods.py`, `tests/test_analyze_gate1.py`, `tests
 | primal-integral integration (no incumbent, windows, cap, post-deadline events, ordering) | PASS | hand-computed cases in `tests/test_analyze_gate1.py` |
 | sign test, Holm, cluster bootstrap | PASS | same file |
 
+## F2. Confirmatory campaign integrity (2026-10-24)
+
+| Property | Status | Evidence |
+|---|---|---|
+| frozen configuration unchanged at analysis time | PASS | `analyze_confirmatory` recomputes the SHA-256 of `FROZEN_CONFIG.json` and asserts it equals the stored value (`5fddfb71…`) |
+| every output validated | PASS | 22,000/22,000 records `validated`, 0 without a solution |
+| every method chains its own previous solution | PASS | `prev_source = own` in all 20,000 step ≥ 1 records |
+| shared z\* consistent | PASS | min gap_B over all runs = 0.0 (no negative gap) |
+| local phase within α·B | PASS | max `local_time_s` = 4.75 s ≤ 4.8 s |
+| incumbents after B excluded | PASS | latest recorded incumbent at 8.009 s; `gap_B` and `pi` integrate over [0, B] only (`tests/test_analyze_gate1.py`) |
+| fresh portfolio distinct from MWKR+Cold | PASS | chose another rule in 310/2,200 runs; trajectory differs in 647/2,200 |
+| raw run files tamper-evident | PASS (checksums) | `RUNS.sha256` committed for the Gate 1 and confirmatory run files |
+
+## F3. E6 runner options
+
+| Property | Status | Evidence |
+|---|---|---|
+| default `CampaignSpec` = `StreamSpec` (name and stream) | PASS | `test_default_spec_reproduces_stream_spec_exactly`; equals the saved confirmatory instance file |
+| delta mixes / severity change only the stated fields | PASS | `test_mixes_and_severity_change_only_what_they_say` |
+| benchmark base is the published instance; arriving jobs are full-length in the base's duration range | PASS | `test_benchmark_base_is_the_published_instance` |
+| integrated method valid on a benchmark-based stream | PASS | `test_integrated_method_runs_valid_on_benchmark_stream` |
+| E6 analysis reproduces the confirmatory numbers | PASS (self-consistency) | `phase0.analyze_e6` on the confirmatory directory gives the same means, CIs and W/L as `analyze_confirmatory` |
+
 ## G. Not verified
 
 - Behaviour with more than one CP-SAT worker for the new methods (not yet exercised).
