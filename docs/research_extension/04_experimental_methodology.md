@@ -112,3 +112,22 @@ These are fixed in advance:
 *Effect on the comparator.* This makes the predeclared comparator, fresh-portfolio+Cold, strictly stronger. The change was made on development streams only, before any confirmatory stream was run.
 
 **2026-10-23 — `alpha_rule` added (development only).** By delta type, the local phase helped after arrivals and hurt after cancellations and outages. An option `alpha_rule = new_ops` (run the local phase only when the disruption added operations) was added to the E5 development sweep. It is a pre-solve rule based on an observable event feature. Whether it enters the frozen configuration is decided on development streams only.
+
+**2026-10-24 — confirmatory configuration and comparators (before any confirmatory run, and before Gate 1 was analysed).**
+
+*Selection.* Chosen on development streams 301–310 only:
+- `dev_e5` (budget allocation × global mode): the hinted global continuation beat unhinted, and the cutoff variant was worst.
+- `dev_e5b` (control: portfolio + hinted global with no local phase): N5 beat N1; a random neighbourhood of equal size was worse than no local phase; `alpha_rule=new_ops` was worse than fixed α and was dropped.
+- `dev_e5c` (α ∈ {0.4, 0.6, 0.8}): α = 0.6 was an interior optimum.
+
+Frozen: portfolio=full (anytime), neighbourhood N5 (bounded expansion, 25% of operations), α = 0.6, improvement cutoff in the local phase, global continuation hinted with the current incumbent.
+
+*Added comparators* (the predeclared primary comparison is unchanged: IAIP-SR vs fresh-portfolio+Cold):
+- **portfolio + hinted global, no local phase.** It replaces "portfolio+Cold" as the control for the selective stage's value, because the frozen method's global phase is hinted.
+- **fresh-portfolio + hinted global.** It gives the fresh baseline the same hinting; on development data it was weaker than unhinted.
+- **random-neighbourhood control** at the same α.
+- **portfolio+Cold vs fresh-portfolio+Cold**, testing whether history helps.
+
+*Family.* The predeclared family therefore has 8 members (listed in FROZEN_CONFIG.json); Holm correction is over all 8.
+
+*Development caution.* The selective-stage gain over portfolio + hinted varied between development campaigns (α = 0.4: −27%, 13/7 streams in dev_e5b; −38.5%, 15/5 in dev_e5c). No development comparison against that control was significant at 20 streams except in dev_e5c.
