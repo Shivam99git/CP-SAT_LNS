@@ -94,11 +94,12 @@ Test files: `tests/test_reuse_methods.py`, `tests/test_analyze_gate1.py`, `tests
 | delta mixes / severity change only the stated fields | PASS | `test_mixes_and_severity_change_only_what_they_say` |
 | benchmark base is the published instance; arriving jobs are full-length in the base's duration range | PASS | `test_benchmark_base_is_the_published_instance` |
 | integrated method valid on a benchmark-based stream | PASS | `test_integrated_method_runs_valid_on_benchmark_stream` |
+| E6 campaigns: every output validated | PASS | 10,340 E6a–E6d records + 880 E6e records, 0 not validated, 0 without a solution |
 | E6 analysis reproduces the confirmatory numbers | PASS (self-consistency) | `phase0.analyze_e6` on the confirmatory directory gives the same means, CIs and W/L as `analyze_confirmatory` |
 
 ## G. Not verified
 
-- Behaviour with more than one CP-SAT worker for the new methods (not yet exercised).
+- Behaviour with more than four CP-SAT workers. E6b ran 4 workers per process, pinned to 4 physical cores; all 1,100 runs were validated, and nothing beyond that was checked.
 - RCPSP or knapsack versions of the new mechanism: **not implemented**. The new methods are job-shop only, and no cross-domain claim is made for them.
 
 ## H. Full-suite run
@@ -111,3 +112,10 @@ Test files: `tests/test_reuse_methods.py`, `tests/test_analyze_gate1.py`, `tests
 | slow (`-m slow`) | 25 | 0 | 0 |
 
 No pre-existing test was modified. Before any extension code, the same suites ran 130 + 25 tests with 0 failures.
+
+**2026-10-24, final run** (after the E6 runner options were added), performance cores, nothing else running. JUnit files: `results/research_extension/final_{fast,slow}.xml`.
+
+| Suite | Tests | Failures | Errors |
+|---|---|---|---|
+| fast | 204 (130 pre-existing + 74 new) | 0 | 0 |
+| slow | 25 | 0 | 0 |

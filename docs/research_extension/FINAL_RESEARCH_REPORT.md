@@ -11,10 +11,10 @@
 |---|---|---|
 | Does historical reuse add value beyond a fresh incumbent? (Gate 1) | **Yes**, predeclared rule met | Floor beats SPT+Cold −16.9% (45/0 streams) and MWKR+Cold −15.8% (44/1), Holm p ≤ 1e-11 |
 | Does IAIP-SR meet the brief's GO criteria? | **GO**: all 7 criteria met | vs fresh-portfolio+Cold −43.2% PI, 40/0 streams, CI [−0.0288, −0.0228], Holm 1.5e-11 |
-| Does the selective stage add value? | **Yes** | vs portfolio + hinted global with no local stage: −23.4%, 40/0, Holm 1.5e-11 |
+| Does the selective stage add value? | **Yes** in the confirmatory setting (1 worker, 8 s); not detectable at 2 s or with 4 workers (E6) | vs portfolio + hinted global with no local stage: −23.4%, 40/0, Holm 1.5e-11 |
 | Does impact-awareness matter? | **Yes** | vs random neighbourhood of equal size: −19.4%, 36/4, Holm 1.9e-7 |
 | Is any component new? | **No**, individually | §7 and `06_related_work_novelty.md` |
-| Robust beyond the confirmatory setting? | see §5 (E6, exploratory) | |
+| Robust beyond the confirmatory setting? | **Overall gain: yes. Selective stage: only in some regimes** (exploratory) | vs Fresh+Cold −36% to −66% in all 7 E6 settings. Selective stage not detectable at B = 2 s (13/7) or with 4 workers (10/10) |
 
 **Scope of the GO:**
 - synthetic full job shops, 15×15 and 20×20;
@@ -104,7 +104,24 @@ The archived LNS consists of 1 s rounds with fixed neighbourhoods and no unrestr
 - it carries an improvement bound;
 - it is followed by an unrestricted continuation.
 
-E6a–E6d: *pending; filled in from `results/research_extension/e6_analysis.json` once the runs finish.*
+**E6a–E6d** (source: `results/research_extension/E6_CONCLUSION.md`, `e6_analysis.json`). 20 streams per setting; E6d uses 34 published bases as units. All runs validated.
+
+| Setting | vs Fresh+Cold | vs Port+Hint (selective stage) | vs Floor |
+|---|---|---|---|
+| B = 2 s | −36.1% (17/3) | −7.8% (13/7), **ns** | −28.2% (15/5), **ns** |
+| B = 30 s | −55.3% (20/0) | −33.5% (18/2) | −45.2% (20/0) |
+| 4 workers | −65.7% (20/0) | −9.4% (10/10), **ns** | −60.6% (20/0) |
+| arrival-only | −63.1% (20/0) | −59.1% (20/0) | −64.5% (20/0) |
+| outage-only | −42.2% (18/2) | −24.8% (17/3) | −25.2% (16/4) |
+| high severity | −58.5% (20/0) | −41.3% (17/3) | −50.0% (19/1) |
+| published bases (34) | −61.2% (34/0) | −37.9% (33/1) | −54.3% (34/0) |
+
+"ns" means Holm p ≥ 0.05 over the 4 comparisons in a setting; every other cell has p ≤ 0.012.
+- **Final gap.** It is lower than Fresh+Cold's everywhere. The CI excludes 0 except on outage-only streams.
+- **What E6 shows:**
+  - The gain is not a short-budget, single-worker artefact; it grows with B = 30 s and with 4 workers.
+  - The selective stage matters with one worker at B ≥ 8 s, especially after arrivals. It does not matter at 2 s or with 4 workers.
+- **Freeze-only streams** were not run (generator limitation, stated in §6 of the methodology).
 
 ## 6. Correctness
 
@@ -119,7 +136,7 @@ E6a–E6d: *pending; filled in from `results/research_extension/e6_analysis.json
 **Test suite:** 199 fast + 25 slow tests pass, plus 5 tests for the E6 runner options.
 
 **Not verified:**
-- multi-worker behaviour, except through E6b;
+- multi-worker behaviour beyond 4 workers (E6b ran 4 workers, with 1,100 runs validated);
 - any non-job-shop domain. The new methods are job-shop only.
 
 ## 7. Novelty (see `06_related_work_novelty.md`)
@@ -155,7 +172,7 @@ E6e was added to §6 before it was run.
 ## 9. Threats to validity
 
 - **Generator.** The development and confirmatory streams come from the same generator, so the configuration is selected for that distribution.
-- **Budget.** The baselines' final gaps at 8 s are about 3% with one worker. Part of the gain is better use of a short budget. E6a/E6b test longer budgets and more workers.
+- **Budget and workers.** The overall gain held at 2 s and 30 s and with 4 workers. The selective stage's own value did not hold at 2 s or with 4 workers. More than 4 workers and budgets above 30 s were not tested. E6 used a single solver seed.
 - **z\*.** It is the best value found within each campaign, not a proven optimum. Absolute PI values are therefore not comparable across campaigns.
 - **Stability.** It is not optimized. IAIP-SR moves 85.9% of surviving operations per step (Cold: 94.7%).
 - **Domain.** Job shop only.
@@ -181,4 +198,6 @@ E6e was added to §6 before it was run.
 | 1,608 improved / 392 proved-no-better local runs | confirmatory run files (`meta.local`) | verified |
 | by-delta reductions | `confirmatory_analysis.json` (`by_delta`) | verified, exploratory |
 | stability 85.9 / 91.1 / 94.7% | `supplementary_analysis.json` | verified, exploratory |
-| E6 statements | `e6_analysis.json` | pending |
+| E6 statements (Table 3, robustness text; 30 s −55.3%, 4 workers −65.7%, PI .0117 vs .0106) | `e6_analysis.json` | verified, exploratory |
+| neighbourhood-baseline comparison (−45.0 / −84.2 / −77.6%) | `e6e_lns/analysis.json` | verified, exploratory |
+| all of the above, mechanically | `paper/icaps27_iaip/verify_numbers.py` | 149/149 values found in the .tex |

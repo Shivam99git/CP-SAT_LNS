@@ -1,0 +1,144 @@
+\begin{thebibliography}{28}
+\providecommand{\natexlab}[1]{#1}
+
+\bibitem[{Abumaizar and Svestka(1997)}]{abumaizar1997}
+Abumaizar, R.~J.; and Svestka, J.~A. 1997.
+\newblock Rescheduling Job Shops under Random Disruptions.
+\newblock \emph{International Journal of Production Research}, 35(7): 2065--2082.
+
+\bibitem[{Bean et~al.(1991)Bean, Birge, Mittenthal, and Noon}]{bean1991}
+Bean, J.~C.; Birge, J.~R.; Mittenthal, J.; and Noon, C.~E. 1991.
+\newblock Matchup Scheduling with Multiple Resources, Release Dates and Disruptions.
+\newblock \emph{Operations Research}, 39(3): 470--483.
+
+\bibitem[{Berthold(2013)}]{berthold2013}
+Berthold, T. 2013.
+\newblock Measuring the Impact of Primal Heuristics.
+\newblock \emph{Operations Research Letters}, 41(6): 611--614.
+
+\bibitem[{Bolusani et~al.(2024)Bolusani, Besan{\c{c}}on, Gleixner, Berthold, D'Ambrosio, Mu{\~n}oz, Paat, and Thomopulos}]{bolusani2024}
+Bolusani, S.; Besan{\c{c}}on, M.; Gleixner, A.; Berthold, T.; D'Ambrosio, C.; Mu{\~n}oz, G.; Paat, J.; and Thomopulos, D. 2024.
+\newblock The {MIP} Workshop 2023 Computational Competition on Reoptimization.
+\newblock \emph{Mathematical Programming Computation}, 16(2): 255--266.
+
+\bibitem[{Cai, Kad{\i}o{\u{g}}lu, and Dilkina(2025)}]{cai2025}
+Cai, J.; Kad{\i}o{\u{g}}lu, S.; and Dilkina, B. 2025.
+\newblock {BALANS}: Multi-Armed Bandits-based Adaptive Large Neighborhood Search for Mixed-Integer Programming Problems.
+\newblock In \emph{Proceedings of the Thirty-Fourth International Joint Conference on Artificial Intelligence (IJCAI)}, 2566--2574.
+
+\bibitem[{Dean and Boddy(1988)}]{dean1988}
+Dean, T.; and Boddy, M. 1988.
+\newblock An Analysis of Time-Dependent Planning.
+\newblock In \emph{Proceedings of the Seventh National Conference on Artificial Intelligence (AAAI)}, 49--54.
+
+\bibitem[{Demirkol, Mehta, and Uzsoy(1998)}]{demirkol1998}
+Demirkol, E.; Mehta, S.; and Uzsoy, R. 1998.
+\newblock Benchmarks for Shop Scheduling Problems.
+\newblock \emph{European Journal of Operational Research}, 109(1): 137--141.
+
+\bibitem[{Feo and Resende(1995)}]{feo1995}
+Feo, T.~A.; and Resende, M. G.~C. 1995.
+\newblock Greedy Randomized Adaptive Search Procedures.
+\newblock \emph{Journal of Global Optimization}, 6(2): 109--133.
+
+\bibitem[{Fischetti and Lodi(2003)}]{fischetti2003}
+Fischetti, M.; and Lodi, A. 2003.
+\newblock Local Branching.
+\newblock \emph{Mathematical Programming}, 98(1--3): 23--47.
+
+\bibitem[{Fox et~al.(2006)Fox, Gerevini, Long, and Serina}]{fox2006}
+Fox, M.; Gerevini, A.; Long, D.; and Serina, I. 2006.
+\newblock Plan Stability: Replanning versus Plan Repair.
+\newblock In \emph{Proceedings of the International Conference on Automated Planning and Scheduling (ICAPS)}, 212--221.
+
+\bibitem[{Godard, Laborie, and Nuijten(2005)}]{godard2005}
+Godard, D.; Laborie, P.; and Nuijten, W. 2005.
+\newblock Randomized Large Neighborhood Search for Cumulative Scheduling.
+\newblock In \emph{Proceedings of the Fifteenth International Conference on Automated Planning and Scheduling (ICAPS 2005)}, 81--89.
+
+\bibitem[{Gomes and Selman(2001)}]{gomes2001}
+Gomes, C.~P.; and Selman, B. 2001.
+\newblock Algorithm Portfolios.
+\newblock \emph{Artificial Intelligence}, 126(1--2): 43--62.
+
+\bibitem[{Nebel and Koehler(1995)}]{nebel1995}
+Nebel, B.; and Koehler, J. 1995.
+\newblock Plan Reuse versus Plan Generation: A Theoretical and Empirical Analysis.
+\newblock \emph{Artificial Intelligence}, 76(1--2): 427--454.
+
+\bibitem[{Nowicki and Smutnicki(1996)}]{nowicki1996}
+Nowicki, E.; and Smutnicki, C. 1996.
+\newblock A Fast Taboo Search Algorithm for the Job Shop Problem.
+\newblock \emph{Management Science}, 42(6): 797--813.
+
+\bibitem[{Ouelhadj and Petrovic(2009)}]{ouelhadj2009}
+Ouelhadj, D.; and Petrovic, S. 2009.
+\newblock A Survey of Dynamic Scheduling in Manufacturing Systems.
+\newblock \emph{Journal of Scheduling}, 12(4): 417--431.
+
+\bibitem[{Pacino and Van~Hentenryck(2011)}]{pacino2011}
+Pacino, D.; and Van~Hentenryck, P. 2011.
+\newblock Large Neighborhood Search and Adaptive Randomized Decompositions for Flexible Jobshop Scheduling.
+\newblock In \emph{Proceedings of the Twenty-Second International Joint Conference on Artificial Intelligence (IJCAI 2011)}, 1997--2002.
+
+\bibitem[{Shaw(1998)}]{shaw1998}
+Shaw, P. 1998.
+\newblock Using Constraint Programming and Local Search Methods to Solve Vehicle Routing Problems.
+\newblock In \emph{Principles and Practice of Constraint Programming -- CP98}, Lecture Notes in Computer Science, 417--431. Springer.
+
+\bibitem[{Storer, Wu, and Vaccari(1992)}]{storer1992}
+Storer, R.~H.; Wu, S.~D.; and Vaccari, R. 1992.
+\newblock New Search Spaces for Sequencing Problems with Application to Job Shop Scheduling.
+\newblock \emph{Management Science}, 38(10): 1495--1509.
+
+\bibitem[{Subramaniam and Raheja(2003)}]{subramaniam2003}
+Subramaniam, V.; and Raheja, A.~S. 2003.
+\newblock {mAOR}: A Heuristic-Based Reactive Repair Mechanism for Job Shop Schedules.
+\newblock \emph{The International Journal of Advanced Manufacturing Technology}, 22(9--10): 669--680.
+
+\bibitem[{Sun et~al.(2026)Sun, Cheng, Ding, and Zhao}]{sun2026}
+Sun, R.; Cheng, G.; Ding, Q.; and Zhao, X. 2026.
+\newblock Impact of Optimization Scope on Solution Quality and Stability in Dynamic Flexible Job Shop Rescheduling.
+\newblock \emph{Computers \& Industrial Engineering}, 215: 111943.
+
+\bibitem[{Taillard(1993)}]{taillard1993}
+Taillard, E. 1993.
+\newblock Benchmarks for Basic Scheduling Problems.
+\newblock \emph{European Journal of Operational Research}, 64(2): 278--285.
+
+\bibitem[{van~der Krogt and de~Weerdt(2005)}]{vanderkrogt2005}
+van~der Krogt, R.; and de~Weerdt, M. 2005.
+\newblock Plan Repair as an Extension of Planning.
+\newblock In \emph{Proceedings of the International Conference on Automated Planning and Scheduling (ICAPS)}, 161--170.
+
+\bibitem[{van Laarhoven, Aarts, and Lenstra(1992)}]{vanlaarhoven1992}
+van Laarhoven, P. J.~M.; Aarts, E. H.~L.; and Lenstra, J.~K. 1992.
+\newblock Job Shop Scheduling by Simulated Annealing.
+\newblock \emph{Operations Research}, 40(1): 113--125.
+
+\bibitem[{Verfaillie and Schiex(1994)}]{verfaillie1994}
+Verfaillie, G.; and Schiex, T. 1994.
+\newblock Solution Reuse in Dynamic Constraint Satisfaction Problems.
+\newblock In \emph{Proceedings of the Twelfth National Conference on Artificial Intelligence (AAAI-94)}, 307--312.
+
+\bibitem[{Vieira, Herrmann, and Lin(2003)}]{vieira2003}
+Vieira, G.~E.; Herrmann, J.~W.; and Lin, E. 2003.
+\newblock Rescheduling Manufacturing Systems: A Framework of Strategies, Policies, and Methods.
+\newblock \emph{Journal of Scheduling}, 6(1): 39--62.
+
+\bibitem[{Werner and Winkler(1995)}]{werner1995}
+Werner, F.; and Winkler, A. 1995.
+\newblock Insertion Techniques for the Heuristic Solution of the Job Shop Problem.
+\newblock \emph{Discrete Applied Mathematics}, 58(2): 191--211.
+
+\bibitem[{Yamada and Nakano(1992)}]{yamada1992}
+Yamada, T.; and Nakano, R. 1992.
+\newblock A Genetic Algorithm Applicable to Large-Scale Job-Shop Problems.
+\newblock In \emph{Parallel Problem Solving from Nature 2 (PPSN)}.
+
+\bibitem[{Zilberstein(1996)}]{zilberstein1996}
+Zilberstein, S. 1996.
+\newblock Using Anytime Algorithms in Intelligent Systems.
+\newblock \emph{AI Magazine}, 17(3): 73--83.
+
+\end{thebibliography}
