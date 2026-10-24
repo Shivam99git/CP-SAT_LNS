@@ -1,0 +1,89 @@
+{
+  "portfolio_hinted vs portfolio_cold": {
+    "n_streams": 40,
+    "mean_a": 0.04427320025932657,
+    "mean_b": 0.04945147858087088,
+    "mean_diff": -0.005178278321544308,
+    "rel_diff": -0.10471432746092654,
+    "ci95": [
+      -0.0067572012194077,
+      -0.0035900527016096066
+    ],
+    "stream_wins": 34,
+    "stream_losses": 6,
+    "stream_ties": 0,
+    "sign_p": 8.364584573428147e-06
+  },
+  "fresh_portfolio_hinted vs fresh_portfolio_cold": {
+    "n_streams": 40,
+    "mean_a": 0.06117487119560385,
+    "mean_b": 0.05967261042657945,
+    "mean_diff": 0.0015022607690243956,
+    "rel_diff": 0.02517504694842806,
+    "ci95": [
+      -0.00011243173423064985,
+      0.003094397707965222
+    ],
+    "stream_wins": 13,
+    "stream_losses": 27,
+    "stream_ties": 0,
+    "sign_p": 0.03847730828420026
+  },
+  "elr_cold vs floor": {
+    "n_streams": 40,
+    "mean_a": 0.051162482653668254,
+    "mean_b": 0.05302881977040843,
+    "mean_diff": -0.001866337116740191,
+    "rel_diff": -0.035194770029214555,
+    "ci95": [
+      -0.002761012466653113,
+      -0.0010359109302032115
+    ],
+    "stream_wins": 28,
+    "stream_losses": 12,
+    "stream_ties": 0,
+    "sign_p": 0.01658900337497471
+  },
+  "random_nbh_control vs portfolio_hinted": {
+    "n_streams": 40,
+    "mean_a": 0.042039458056414604,
+    "mean_b": 0.04427320025932657,
+    "mean_diff": -0.002233742202911975,
+    "rel_diff": -0.05045359698029545,
+    "ci95": [
+      -0.0034831114800971978,
+      -0.000955622112162002
+    ],
+    "stream_wins": 28,
+    "stream_losses": 12,
+    "stream_ties": 0,
+    "sign_p": 0.01658900337497471
+  },
+  "portfolio_cold vs floor": {
+    "n_streams": 40,
+    "mean_a": 0.04945147858087088,
+    "mean_b": 0.05302881977040843,
+    "mean_diff": -0.0035773411895375605,
+    "rel_diff": -0.06746032072797173,
+    "ci95": [
+      -0.004551934716486916,
+      -0.00264902316646397
+    ],
+    "stream_wins": 37,
+    "stream_losses": 3,
+    "stream_ties": 0,
+    "sign_p": 1.946500560734421e-08
+  },
+  "stability_frac_changed": {
+    "random_nbh_control": 0.9106646999141266,
+    "iaip_sr": 0.8585557713074212,
+    "floor": 0.9113854820593998,
+    "fresh_portfolio_cold": 0.9471343176995526,
+    "fresh_portfolio_hinted": 0.9460657782594487,
+    "cold": 0.9468147752160637,
+    "portfolio_cold": 0.9014864829906691,
+    "mwkr_cold": 0.9469463943815777,
+    "portfolio_hinted": 0.9256613149152445,
+    "elr_cold": 0.9014464568384422
+  }
+}

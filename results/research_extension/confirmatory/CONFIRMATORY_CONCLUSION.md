@@ -129,6 +129,34 @@ By size: 15×15 −45.0% (20/0); 20×20 −41.7% (20/0).
 
   This attribution depends on the order in which components are added; other orders were not run.
 
+## Supplementary comparisons (not predeclared; uncorrected sign tests)
+
+Source: `supplementary_analysis.json`, computed after the predeclared analysis.
+
+| Comparison | rel. Δ PI | 95% CI | W/L | p |
+|---|---|---|---|---|
+| portfolio_hinted vs portfolio_cold (middle step of the chain) | −10.5% | [−0.0068, −0.0036] | 34/6 | 8.4e-6 |
+| fresh_portfolio_hinted vs fresh_portfolio_cold | +2.5% | [−0.0001, +0.0031] | 13/27 | 0.038 |
+| elr_cold vs floor | −3.5% | [−0.0028, −0.0010] | 28/12 | 0.017 |
+| random_nbh_control vs portfolio_hinted | −5.0% | [−0.0035, −0.0010] | 28/12 | 0.017 |
+| portfolio_cold vs floor | −6.7% | [−0.0046, −0.0026] | 37/3 | 1.9e-8 |
+
+Reading:
+- Hinting the continuation with the current, history-informed incumbent helps.
+- Hinting it with a fresh dispatching schedule does not; if anything it hurts slightly.
+- A random neighbourhood still adds a little over no restricted stage.
+
+**Stability** (exploratory): the share of operations present in both S_{t−1} and S_t whose start time changed (same method, same solver seed), averaged over steps 1–10:
+
+| Method | Share changed |
+|---|---|
+| iaip_sr | 85.9% |
+| floor | 91.1% |
+| portfolio_hinted | 92.6% |
+| cold, mwkr_cold, fresh_portfolio_cold | 94.7% |
+
+No method is stable in the sense of Fox et al. (2006). None optimizes stability.
+
 ## Scope and caveats
 
 1. **Setup.** Synthetic full job shops of two sizes, one delta mix, medium severity, B = 8 s, one CP-SAT worker. Other budgets, worker counts, delta mixes and published benchmark bases are E6 (exploratory) and are not covered by this verdict.

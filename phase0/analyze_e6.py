@@ -21,7 +21,8 @@ from .analyze_gate1 import compare, holm
 
 IAIP = "iaip|portfolio=full|alpha=0.6|neighbourhood=N5|global_mode=hinted"
 ROLES = {IAIP: "iaip_sr", "iaip|portfolio=fresh": "fresh_portfolio_cold",
-         "iaip|portfolio=full|global_mode=hinted": "portfolio_hinted", "floor": "floor", "cold": "cold"}
+         "iaip|portfolio=full|global_mode=hinted": "portfolio_hinted", "floor": "floor", "cold": "cold",
+         "lns_prev_solution": "lns_prev_solution", "fix_and_optimize_50": "fix_and_optimize_50"}
 SYNTHETIC = re.compile(r"^\d+x\d+_s\d+")
 
 
