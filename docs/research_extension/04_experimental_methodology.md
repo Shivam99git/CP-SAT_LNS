@@ -111,6 +111,11 @@ Arriving jobs in E6d have one operation per machine, with durations drawn from t
 
 All E6 results are exploratory. They are reported in full, whichever way they come out.
 
+**E6e (added 2026-10-24, before it was run):** the frozen IAIP-SR vs the archived neighbourhood baselines `lns_prev_solution` and `fix_and_optimize_50` (unchanged, from `phase0/baselines.py`) and Floor.
+- Streams: 15×15, 20×20 × 601–610; B = 8 s.
+- CPUs: efficiency cores 16–19. All four methods run on the same cores, so the comparison is within this campaign only. Its PI values are not comparable with the performance-core campaigns.
+- Purpose: the archived paper found these baselines far behind Floor, while IAIP-SR's restricted stage beats Floor; E6e measures them on the same streams.
+
 Freeze-only streams are **not run**. The generator's `partial_schedule_freeze` delta needs the previous step's solution at generation time. These campaigns generate streams up front, so every freeze step would be a no-op, and running them would test nothing.
 
 ## 7. Rules
