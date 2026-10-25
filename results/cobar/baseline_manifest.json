@@ -1,0 +1,952 @@
+{
+  "created": "2026-10-25",
+  "git_commit": "6a669789738ba634abdd6aba88d5820febfc2c26",
+  "branch": "research/cobar-certificate-guided",
+  "python": "3.12.3",
+  "ortools": "9.15.6755",
+  "numpy": "2.5.1",
+  "pandas": "3.0.3",
+  "scipy": "1.18.0",
+  "pip_freeze_file": "requirements_research.txt",
+  "os": "Ubuntu 24.04.4 LTS, Linux 7.0.0-34-generic x86_64",
+  "cpu": "Intel Core i7-12700: 8 P-cores (logical 0-15, even ids used = one thread per physical core), 4 E-cores (16-19); 20 logical CPUs",
+  "memory_gb": 31,
+  "cpsat_parameters": {
+    "max_time_in_seconds": "remaining budget at solve start (clock.remaining())",
+    "num_workers": "1 unless stated (E6b: 4)",
+    "random_seed": "solver seed 0-4",
+    "all_other": "OR-Tools defaults"
+  },
+  "budget_definition": "one monotonic deadline per instance covering construction, model build, solve and final validation; incumbents after B ignored",
+  "seeds": {
+    "gate1_streams": "101-115 (10/15/20)",
+    "dev_streams": "301-310",
+    "iaip_confirmatory_streams": "501-520 (15/20)",
+    "e6_streams": "601-610",
+    "reference_chain_seed": 1000,
+    "solver_seeds": "0-4 (confirmatory, gate1); 0 (dev, E6)"
+  },
+  "campaigns": {
+    "gate1_historical_reuse": {
+      "n_instance_files": 45,
+      "instances_combined_sha256": "4747249303b85b9444d08476ac475ceb6371b0763dd446bd49182ab0b6c9ae7b",
+      "n_run_files": 450,
+      "runs_checksum_file_sha256": "7522e8a520f1737623345deec9fb3755fbd012c1a81ddff1917d42ab5705775f",
+      "raw_runs_tracked_in_git": false,
+      "manifest_argv": [
+        {
+          "out": "results/research_extension/gate1_historical_reuse",
+          "sizes": [
+            10,
+            15,
+            20
+          ],
+          "stream_seeds": [
+            101,
+            102,
+            103,
+            104,
+            105,
+            106,
+            107,
+            108,
+            109,
+            110,
+            111,
+            112,
+            113,
+            114,
+            115
+          ],
+          "solver_seeds": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "stream_length": 10,
+          "budget": 8.0,
+          "workers": 1,
+          "protocols": [
+            "B",
+            "A"
+          ],
+          "cpus": [
+            0,
+            2,
+            4,
+            6,
+            8,
+            10,
+            12,
+            14
+          ],
+          "processes": 4
+        }
+      ],
+      "manifest_revs": [
+        "8178b2a81d6c3063746b0ad6e6d8e4a674301368"
+      ]
+    },
+    "confirmatory": {
+      "n_instance_files": 40,
+      "instances_combined_sha256": "6026a0f32f55ea3156ad56a3927fd9ae69bbf10978c072ea2593543e7a7b0b90",
+      "n_run_files": 200,
+      "runs_checksum_file_sha256": "5fba4463939a55c5b66d6946d5095bb08e5be4e18523d9801bf85f83ce9c1e1d",
+      "raw_runs_tracked_in_git": false,
+      "manifest_argv": [
+        {
+          "out": "results/research_extension/confirmatory",
+          "tag": "confirmatory",
+          "sizes": [
+            15,
+            20
+          ],
+          "stream_seeds": [
+            501,
+            502,
+            503,
+            504,
+            505,
+            506,
+            507,
+            508,
+            509,
+            510,
+            511,
+            512,
+            513,
+            514,
+            515,
+            516,
+            517,
+            518,
+            519,
+            520
+          ],
+          "solver_seeds": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "stream_length": 10,
+          "budget": 8.0,
+          "workers": 1,
+          "methods": [
+            "iaip|portfolio=full|alpha=0.6|neighbourhood=N5|global_mode=hinted",
+            "iaip|portfolio=full|global_mode=hinted",
+            "iaip|portfolio=full",
+            "iaip|portfolio=fresh",
+            "iaip|portfolio=fresh|global_mode=hinted",
+            "mwkr_cold",
+            "floor",
+            "cold",
+            "iaip|portfolio=elr",
+            "iaip|portfolio=full|alpha=0.6|neighbourhood=random|global_mode=hinted"
+          ],
+          "cpus": [
+            0,
+            2,
+            4,
+            6,
+            8,
+            10,
+            12,
+            14
+          ]
+        }
+      ],
+      "manifest_revs": [
+        "026a9f4563977259a77ab0101d83fb0c99ce7e1e"
+      ]
+    },
+    "dev_e3e4": {
+      "n_instance_files": 20,
+      "instances_combined_sha256": "e8e8c76909ddf9db3837123563ff25575dbad234843369726582d21166b3e22c",
+      "n_run_files": 20,
+      "runs_checksum_file_sha256": null,
+      "raw_runs_tracked_in_git": false,
+      "manifest_argv": [
+        {
+          "out": "results/research_extension/dev_e3e4",
+          "tag": "dev",
+          "sizes": [
+            15,
+            20
+          ],
+          "stream_seeds": [
+            301,
+            302,
+            303,
+            304,
+            305,
+            306,
+            307,
+            308,
+            309,
+            310
+          ],
+          "solver_seeds": [
+            0
+          ],
+          "stream_length": 6,
+          "budget": 8.0,
+          "workers": 1,
+          "methods": [
+            "cold",
+            "floor",
+            "mwkr_cold",
+            "hint",
+            "iaip|portfolio=hist",
+            "iaip|portfolio=elr",
+            "iaip|portfolio=fresh",
+            "iaip|portfolio=hist+fresh",
+            "iaip|portfolio=hist+elr",
+            "iaip|portfolio=full",
+            "iaip|portfolio=full|alpha=0.2|neighbourhood=N1",
+            "iaip|portfolio=full|alpha=0.2|neighbourhood=N2",
+            "iaip|portfolio=full|alpha=0.2|neighbourhood=N3",
+            "iaip|portfolio=full|alpha=0.2|neighbourhood=N4",
+            "iaip|portfolio=full|alpha=0.2|neighbourhood=N5",
+            "iaip|portfolio=full|alpha=0.2|neighbourhood=random",
+            "lns_prev_solution",
+            "fix_and_optimize_50",
+            "local_branching_prev"
+          ],
+          "cpus": [
+            16,
+            17,
+            18,
+            19
+          ]
+        }
+      ],
+      "manifest_revs": [
+        "8178b2a81d6c3063746b0ad6e6d8e4a674301368"
+      ]
+    },
+    "dev_e5": {
+      "n_instance_files": 20,
+      "instances_combined_sha256": "e8e8c76909ddf9db3837123563ff25575dbad234843369726582d21166b3e22c",
+      "n_run_files": 20,
+      "runs_checksum_file_sha256": null,
+      "raw_runs_tracked_in_git": false,
+      "manifest_argv": [
+        {
+          "out": "results/research_extension/dev_e5",
+          "tag": "dev",
+          "sizes": [
+            15,
+            20
+          ],
+          "stream_seeds": [
+            301,
+            302,
+            303,
+            304,
+            305,
+            306,
+            307,
+            308,
+            309,
+            310
+          ],
+          "solver_seeds": [
+            0
+          ],
+          "stream_length": 6,
+          "budget": 8.0,
+          "workers": 1,
+          "methods": [
+            "iaip|portfolio=full|alpha=0.1|neighbourhood=N1|global_mode=unhinted",
+            "iaip|portfolio=full|alpha=0.1|neighbourhood=N1|global_mode=cutoff",
+            "iaip|portfolio=full|alpha=0.1|neighbourhood=N1|global_mode=hinted",
+            "iaip|portfolio=full|alpha=0.2|neighbourhood=N1|global_mode=unhinted",
+            "iaip|portfolio=full|alpha=0.2|neighbourhood=N1|global_mode=cutoff",
+            "iaip|portfolio=full|alpha=0.2|neighbourhood=N1|global_mode=hinted",
+            "iaip|portfolio=full|alpha=0.4|neighbourhood=N1|global_mode=unhinted",
+            "iaip|portfolio=full|alpha=0.4|neighbourhood=N1|global_mode=cutoff",
+            "iaip|portfolio=full|alpha=0.4|neighbourhood=N1|global_mode=hinted",
+            "iaip|portfolio=full|alpha=0.2|neighbourhood=N5|global_mode=unhinted",
+            "iaip|portfolio=full|alpha=0.2|neighbourhood=N1|alpha_rule=new_ops|global_mode=unhinted",
+            "iaip|portfolio=full|alpha=0.2|neighbourhood=N5|global_mode=cutoff",
+            "iaip|portfolio=full|alpha=0.2|neighbourhood=N1|alpha_rule=new_ops|global_mode=cutoff",
+            "iaip|portfolio=full|alpha=0.2|neighbourhood=N5|global_mode=hinted",
+            "iaip|portfolio=full|alpha=0.2|neighbourhood=N1|alpha_rule=new_ops|global_mode=hinted",
+            "iaip|portfolio=full|alpha=0.2|neighbourhood=N5|alpha_rule=new_ops|global_mode=cutoff",
+            "iaip|portfolio=full",
+            "iaip|portfolio=full|global_mode=cutoff",
+            "iaip|portfolio=fresh",
+            "iaip|portfolio=elr",
+            "mwkr_cold",
+            "floor",
+            "cold"
+          ],
+          "cpus": [
+            16,
+            17,
+            18,
+            19
+          ]
+        }
+      ],
+      "manifest_revs": [
+        "d38454a8d8da8cef5f949a59907446967a36189d"
+      ]
+    },
+    "dev_e5b": {
+      "n_instance_files": 20,
+      "instances_combined_sha256": "e8e8c76909ddf9db3837123563ff25575dbad234843369726582d21166b3e22c",
+      "n_run_files": 20,
+      "runs_checksum_file_sha256": null,
+      "raw_runs_tracked_in_git": false,
+      "manifest_argv": [
+        {
+          "out": "results/research_extension/dev_e5b",
+          "tag": "dev",
+          "sizes": [
+            15,
+            20
+          ],
+          "stream_seeds": [
+            301,
+            302,
+            303,
+            304,
+            305,
+            306,
+            307,
+            308,
+            309,
+            310
+          ],
+          "solver_seeds": [
+            0
+          ],
+          "stream_length": 6,
+          "budget": 8.0,
+          "workers": 1,
+          "methods": [
+            "iaip|portfolio=full|global_mode=hinted",
+            "iaip|portfolio=full",
+            "iaip|portfolio=fresh|global_mode=hinted",
+            "iaip|portfolio=fresh",
+            "iaip|portfolio=full|alpha=0.1|neighbourhood=N5|global_mode=hinted",
+            "iaip|portfolio=full|alpha=0.2|neighbourhood=N5|global_mode=hinted",
+            "iaip|portfolio=full|alpha=0.4|neighbourhood=N5|global_mode=hinted",
+            "iaip|portfolio=full|alpha=0.2|neighbourhood=N1|global_mode=hinted",
+            "iaip|portfolio=full|alpha=0.2|neighbourhood=random|global_mode=hinted",
+            "iaip|portfolio=full|alpha=0.2|neighbourhood=N5|alpha_rule=new_ops|global_mode=hinted",
+            "mwkr_cold",
+            "floor",
+            "cold"
+          ],
+          "cpus": [
+            0,
+            2,
+            4,
+            6,
+            8,
+            10,
+            12,
+            14
+          ]
+        }
+      ],
+      "manifest_revs": [
+        "d38454a8d8da8cef5f949a59907446967a36189d"
+      ]
+    },
+    "dev_e5c": {
+      "n_instance_files": 20,
+      "instances_combined_sha256": "e8e8c76909ddf9db3837123563ff25575dbad234843369726582d21166b3e22c",
+      "n_run_files": 20,
+      "runs_checksum_file_sha256": null,
+      "raw_runs_tracked_in_git": false,
+      "manifest_argv": [
+        {
+          "out": "results/research_extension/dev_e5c",
+          "tag": "dev",
+          "sizes": [
+            15,
+            20
+          ],
+          "stream_seeds": [
+            301,
+            302,
+            303,
+            304,
+            305,
+            306,
+            307,
+            308,
+            309,
+            310
+          ],
+          "solver_seeds": [
+            0
+          ],
+          "stream_length": 6,
+          "budget": 8.0,
+          "workers": 1,
+          "methods": [
+            "iaip|portfolio=full|global_mode=hinted",
+            "iaip|portfolio=full|alpha=0.4|neighbourhood=N5|global_mode=hinted",
+            "iaip|portfolio=full|alpha=0.6|neighbourhood=N5|global_mode=hinted",
+            "iaip|portfolio=full|alpha=0.8|neighbourhood=N5|global_mode=hinted"
+          ],
+          "cpus": [
+            0,
+            2,
+            4,
+            6,
+            8,
+            10,
+            12,
+            14
+          ]
+        }
+      ],
+      "manifest_revs": [
+        "d38454a8d8da8cef5f949a59907446967a36189d"
+      ]
+    },
+    "e6a_b2": {
+      "n_instance_files": 20,
+      "instances_combined_sha256": "14a50b4f91d4f63307e104a2371cafc1ed5cbc3046efb64596a08a146cca1084",
+      "n_run_files": 20,
+      "runs_checksum_file_sha256": "532dd22a1dbffa43aeda6d64c37a9637aecff303a294416d76591c9c5207ef24",
+      "raw_runs_tracked_in_git": false,
+      "manifest_argv": [
+        {
+          "out": "results/research_extension/e6a_b2",
+          "tag": "e6a",
+          "sizes": [
+            15,
+            20
+          ],
+          "stream_seeds": [
+            601,
+            602,
+            603,
+            604,
+            605,
+            606,
+            607,
+            608,
+            609,
+            610
+          ],
+          "solver_seeds": [
+            0
+          ],
+          "stream_length": 10,
+          "budget": 2.0,
+          "workers": 1,
+          "methods": [
+            "iaip|portfolio=full|alpha=0.6|neighbourhood=N5|global_mode=hinted",
+            "iaip|portfolio=fresh",
+            "iaip|portfolio=full|global_mode=hinted",
+            "floor",
+            "cold"
+          ],
+          "cpus": [
+            0,
+            2,
+            4,
+            6,
+            8,
+            10,
+            12,
+            14
+          ],
+          "cpu_groups": null,
+          "delta_mix": "default",
+          "severity": "medium",
+          "benchmarks": null
+        }
+      ],
+      "manifest_revs": [
+        "1090267ea0663d099c67a99761280b2c25ace894"
+      ]
+    },
+    "e6a_b30": {
+      "n_instance_files": 20,
+      "instances_combined_sha256": "14a50b4f91d4f63307e104a2371cafc1ed5cbc3046efb64596a08a146cca1084",
+      "n_run_files": 20,
+      "runs_checksum_file_sha256": "3972dc8780eb621f69bae81b1675ffa5ba9a4c11d1f334087a75d85f93d8a418",
+      "raw_runs_tracked_in_git": false,
+      "manifest_argv": [
+        {
+          "out": "results/research_extension/e6a_b30",
+          "tag": "e6a",
+          "sizes": [
+            15,
+            20
+          ],
+          "stream_seeds": [
+            601,
+            602,
+            603,
+            604,
+            605,
+            606,
+            607,
+            608,
+            609,
+            610
+          ],
+          "solver_seeds": [
+            0
+          ],
+          "stream_length": 10,
+          "budget": 30.0,
+          "workers": 1,
+          "methods": [
+            "iaip|portfolio=full|alpha=0.6|neighbourhood=N5|global_mode=hinted",
+            "iaip|portfolio=fresh",
+            "iaip|portfolio=full|global_mode=hinted",
+            "floor",
+            "cold"
+          ],
+          "cpus": [
+            0,
+            2,
+            4,
+            6,
+            8,
+            10,
+            12,
+            14
+          ],
+          "cpu_groups": null,
+          "delta_mix": "default",
+          "severity": "medium",
+          "benchmarks": null
+        }
+      ],
+      "manifest_revs": [
+        "8dc36fbaa7cb4d0e0cf881139c61202b6c84e933"
+      ]
+    },
+    "e6b_w4": {
+      "n_instance_files": 20,
+      "instances_combined_sha256": "14a50b4f91d4f63307e104a2371cafc1ed5cbc3046efb64596a08a146cca1084",
+      "n_run_files": 20,
+      "runs_checksum_file_sha256": "d4de647bc31ff0ee012aa0a38f66e176f86ffc3ddb58e4ee57371e7ca190be1c",
+      "raw_runs_tracked_in_git": false,
+      "manifest_argv": [
+        {
+          "out": "results/research_extension/e6b_w4",
+          "tag": "e6b",
+          "sizes": [
+            15,
+            20
+          ],
+          "stream_seeds": [
+            601,
+            602,
+            603,
+            604,
+            605,
+            606,
+            607,
+            608,
+            609,
+            610
+          ],
+          "solver_seeds": [
+            0
+          ],
+          "stream_length": 10,
+          "budget": 8.0,
+          "workers": 4,
+          "methods": [
+            "iaip|portfolio=full|alpha=0.6|neighbourhood=N5|global_mode=hinted",
+            "iaip|portfolio=fresh",
+            "iaip|portfolio=full|global_mode=hinted",
+            "floor",
+            "cold"
+          ],
+          "cpus": null,
+          "cpu_groups": [
+            "0,2,4,6",
+            "8,10,12,14"
+          ],
+          "delta_mix": "default",
+          "severity": "medium",
+          "benchmarks": null
+        }
+      ],
+      "manifest_revs": [
+        "4427b15fbf8f13b05631fe0935bd28c3f88edbcb"
+      ]
+    },
+    "e6c_arrival": {
+      "n_instance_files": 20,
+      "instances_combined_sha256": "f0eb03e66870844948b3016d9d538a7efaaf46508a86071a5f00ea6727899909",
+      "n_run_files": 20,
+      "runs_checksum_file_sha256": "d0f9f786f6266be68020a74b83a17f842a4dd745fe89ec5d357bfa8e5be4f938",
+      "raw_runs_tracked_in_git": false,
+      "manifest_argv": [
+        {
+          "out": "results/research_extension/e6c_arrival",
+          "tag": "e6c",
+          "sizes": [
+            15,
+            20
+          ],
+          "stream_seeds": [
+            601,
+            602,
+            603,
+            604,
+            605,
+            606,
+            607,
+            608,
+            609,
+            610
+          ],
+          "solver_seeds": [
+            0
+          ],
+          "stream_length": 10,
+          "budget": 8.0,
+          "workers": 1,
+          "methods": [
+            "iaip|portfolio=full|alpha=0.6|neighbourhood=N5|global_mode=hinted",
+            "iaip|portfolio=fresh",
+            "iaip|portfolio=full|global_mode=hinted",
+            "floor",
+            "cold"
+          ],
+          "cpus": [
+            0,
+            2,
+            4,
+            6,
+            8,
+            10,
+            12,
+            14
+          ],
+          "cpu_groups": null,
+          "delta_mix": "arrival",
+          "severity": "medium",
+          "benchmarks": null
+        }
+      ],
+      "manifest_revs": [
+        "4427b15fbf8f13b05631fe0935bd28c3f88edbcb"
+      ]
+    },
+    "e6c_outage": {
+      "n_instance_files": 20,
+      "instances_combined_sha256": "58a67ec368a7d597ca9c3bcf7e1b0a6af931222c10f31ea31ee3d273d4ec3c35",
+      "n_run_files": 20,
+      "runs_checksum_file_sha256": "c992da977d8a831545af33b2ff409bf95edab63d679055e29dd0ba33e19cafce",
+      "raw_runs_tracked_in_git": false,
+      "manifest_argv": [
+        {
+          "out": "results/research_extension/e6c_outage",
+          "tag": "e6c",
+          "sizes": [
+            15,
+            20
+          ],
+          "stream_seeds": [
+            601,
+            602,
+            603,
+            604,
+            605,
+            606,
+            607,
+            608,
+            609,
+            610
+          ],
+          "solver_seeds": [
+            0
+          ],
+          "stream_length": 10,
+          "budget": 8.0,
+          "workers": 1,
+          "methods": [
+            "iaip|portfolio=full|alpha=0.6|neighbourhood=N5|global_mode=hinted",
+            "iaip|portfolio=fresh",
+            "iaip|portfolio=full|global_mode=hinted",
+            "floor",
+            "cold"
+          ],
+          "cpus": [
+            0,
+            2,
+            4,
+            6,
+            8,
+            10,
+            12,
+            14
+          ],
+          "cpu_groups": null,
+          "delta_mix": "outage",
+          "severity": "medium",
+          "benchmarks": null
+        }
+      ],
+      "manifest_revs": [
+        "4427b15fbf8f13b05631fe0935bd28c3f88edbcb"
+      ]
+    },
+    "e6c_high": {
+      "n_instance_files": 20,
+      "instances_combined_sha256": "0316aa2b2621b82093bd80bba6d500fc43e20f0a758a98cb9d873bcb897f6949",
+      "n_run_files": 20,
+      "runs_checksum_file_sha256": "ba57c2026f4b4926a63123a75e6c9937dd70779bfa9f4033b13e2dec1ede81ca",
+      "raw_runs_tracked_in_git": false,
+      "manifest_argv": [
+        {
+          "out": "results/research_extension/e6c_high",
+          "tag": "e6c",
+          "sizes": [
+            15,
+            20
+          ],
+          "stream_seeds": [
+            601,
+            602,
+            603,
+            604,
+            605,
+            606,
+            607,
+            608,
+            609,
+            610
+          ],
+          "solver_seeds": [
+            0
+          ],
+          "stream_length": 10,
+          "budget": 8.0,
+          "workers": 1,
+          "methods": [
+            "iaip|portfolio=full|alpha=0.6|neighbourhood=N5|global_mode=hinted",
+            "iaip|portfolio=fresh",
+            "iaip|portfolio=full|global_mode=hinted",
+            "floor",
+            "cold"
+          ],
+          "cpus": [
+            0,
+            2,
+            4,
+            6,
+            8,
+            10,
+            12,
+            14
+          ],
+          "cpu_groups": null,
+          "delta_mix": "default",
+          "severity": "high",
+          "benchmarks": null
+        }
+      ],
+      "manifest_revs": [
+        "4427b15fbf8f13b05631fe0935bd28c3f88edbcb"
+      ]
+    },
+    "e6d_benchmarks": {
+      "n_instance_files": 68,
+      "instances_combined_sha256": "2f67a53126963a2a855aaedd0568cf91d519eb08a2b5abc52e5f69daa497069a",
+      "n_run_files": 68,
+      "runs_checksum_file_sha256": "ba38ff72ebf35e8832b13bc314fc0dc4e3714f6c3c75f52329aef6c2cbff4fae",
+      "raw_runs_tracked_in_git": false,
+      "manifest_argv": [
+        {
+          "out": "results/research_extension/e6d_benchmarks",
+          "tag": "e6d",
+          "sizes": [
+            15,
+            20
+          ],
+          "stream_seeds": [
+            601,
+            602
+          ],
+          "solver_seeds": [
+            0
+          ],
+          "stream_length": 10,
+          "budget": 8.0,
+          "workers": 1,
+          "methods": [
+            "iaip|portfolio=full|alpha=0.6|neighbourhood=N5|global_mode=hinted",
+            "iaip|portfolio=fresh",
+            "iaip|portfolio=full|global_mode=hinted",
+            "floor",
+            "cold"
+          ],
+          "cpus": [
+            0,
+            2,
+            4,
+            6,
+            8,
+            10,
+            12,
+            14
+          ],
+          "cpu_groups": null,
+          "delta_mix": "default",
+          "severity": "medium",
+          "benchmarks": [
+            "tests/fixtures/benchmarks_real/taillard/ta01.txt",
+            "tests/fixtures/benchmarks_real/taillard/ta02.txt",
+            "tests/fixtures/benchmarks_real/taillard/ta03.txt",
+            "tests/fixtures/benchmarks_real/taillard/ta04.txt",
+            "tests/fixtures/benchmarks_real/taillard/ta05.txt",
+            "tests/fixtures/benchmarks_real/taillard/ta06.txt",
+            "tests/fixtures/benchmarks_real/taillard/ta07.txt",
+            "tests/fixtures/benchmarks_real/taillard/ta08.txt",
+            "tests/fixtures/benchmarks_real/taillard/ta09.txt",
+            "tests/fixtures/benchmarks_real/taillard/ta10.txt",
+            "tests/fixtures/benchmarks_real/taillard/ta11.txt",
+            "tests/fixtures/benchmarks_real/taillard/ta12.txt",
+            "tests/fixtures/benchmarks_real/taillard/ta13.txt",
+            "tests/fixtures/benchmarks_real/taillard/ta14.txt",
+            "tests/fixtures/benchmarks_real/taillard/ta15.txt",
+            "tests/fixtures/benchmarks_real/taillard/ta16.txt",
+            "tests/fixtures/benchmarks_real/taillard/ta17.txt",
+            "tests/fixtures/benchmarks_real/taillard/ta18.txt",
+            "tests/fixtures/benchmarks_real/taillard/ta19.txt",
+            "tests/fixtures/benchmarks_real/taillard/ta20.txt",
+            "tests/fixtures/benchmarks_real/dmu/dmu01.txt",
+            "tests/fixtures/benchmarks_real/dmu/dmu02.txt",
+            "tests/fixtures/benchmarks_real/dmu/dmu03.txt",
+            "tests/fixtures/benchmarks_real/dmu/dmu04.txt",
+            "tests/fixtures/benchmarks_real/dmu/dmu05.txt",
+            "tests/fixtures/benchmarks_real/swv/swv01.txt",
+            "tests/fixtures/benchmarks_real/swv/swv02.txt",
+            "tests/fixtures/benchmarks_real/swv/swv03.txt",
+            "tests/fixtures/benchmarks_real/swv/swv04.txt",
+            "tests/fixtures/benchmarks_real/swv/swv05.txt",
+            "tests/fixtures/benchmarks_real/yn/yn1.txt",
+            "tests/fixtures/benchmarks_real/yn/yn2.txt",
+            "tests/fixtures/benchmarks_real/yn/yn3.txt",
+            "tests/fixtures/benchmarks_real/yn/yn4.txt"
+          ]
+        }
+      ],
+      "manifest_revs": [
+        "4427b15fbf8f13b05631fe0935bd28c3f88edbcb"
+      ]
+    },
+    "e6e_lns": {
+      "n_instance_files": 20,
+      "instances_combined_sha256": "14a50b4f91d4f63307e104a2371cafc1ed5cbc3046efb64596a08a146cca1084",
+      "n_run_files": 20,
+      "runs_checksum_file_sha256": "6064c3030105b315503c9475f8f8c750243efc77d9ae51ce5f43cc44530927eb",
+      "raw_runs_tracked_in_git": false,
+      "manifest_argv": [
+        {
+          "out": "results/research_extension/e6e_lns",
+          "tag": "e6e",
+          "sizes": [
+            15,
+            20
+          ],
+          "stream_seeds": [
+            601,
+            602,
+            603,
+            604,
+            605,
+            606,
+            607,
+            608,
+            609,
+            610
+          ],
+          "solver_seeds": [
+            0
+          ],
+          "stream_length": 10,
+          "budget": 8.0,
+          "workers": 1,
+          "methods": [
+            "iaip|portfolio=full|alpha=0.6|neighbourhood=N5|global_mode=hinted",
+            "lns_prev_solution",
+            "fix_and_optimize_50",
+            "floor"
+          ],
+          "cpus": [
+            16,
+            17,
+            18,
+            19
+          ],
+          "cpu_groups": null,
+          "delta_mix": "default",
+          "severity": "medium",
+          "benchmarks": null
+        }
+      ],
+      "manifest_revs": [
+        "8dc36fbaa7cb4d0e0cf881139c61202b6c84e933"
+      ]
+    }
+  },
+  "benchmark_fixture_sha256": {
+    "dmu01.txt": "6a0bcaccb4da323532e3d72bbf088dc1ba9f03b8070acbe37c8ea9c267ccf7e8",
+    "dmu02.txt": "5ce15b59e41c6b20514526264c69259416b104d2d0c6337b6ba84d178c7f92e9",
+    "dmu03.txt": "c12f38870d502bb0b5cadc1fcd3939d8a2d377a3e6d53e66c0a64c888c40f083",
+    "dmu04.txt": "1d618be97ff4cc956960a0e07d056c46eb0fb64b2ac33d5eee7561f3814aa774",
+    "dmu05.txt": "4ca12bc77023f4bd10ea8c7461a1442b61528fb96a0c9cafbfb57e3b2be1046f",
+    "swv01.txt": "7f645f0cd47f8a85f8ea98ea1dbde0918fee8d5bd892df3e700d5f2156c38f7c",
+    "swv02.txt": "950298232696821b98714e15418b7edb2d07123c4840593262374f18cbbd5bc4",
+    "swv03.txt": "02735ea84b78779e00c8f85543a6f0a8cc31c11ccb92cbbc0a960a3a2feeb021",
+    "swv04.txt": "889f490fd1e810a64814557301d97e6392f62840dc954a672b802dc1daa11f16",
+    "swv05.txt": "b99841c33659bde7967d1a9e732f0f165974c773da3b8fe08bfa500d6fdc81f2",
+    "ta01.txt": "eb6efca2f3b22f29609abbbc15acc3ec33cac91eb2b75097aad343fc6930623d",
+    "ta02.txt": "fbaa2020bd8e67526dbdc46670fac4a77bf8d183a4dc61b45759a0c61fdd90bc",
+    "ta03.txt": "c78693f564896fe33485c4f71bc16ad768dc3dfa738e5e62c35bb1ab4c42e131",
+    "ta04.txt": "222e4f080ebaa120f1279b2b434e3afe70a2eb92d13747fbc115e39b702207b3",
+    "ta05.txt": "d816516c19ede6ba15db25e44ef160f2fdb964f078ffda92a5a2f25ca6f456fb",
+    "ta06.txt": "616bd9ee51e375fe39dbf8c33bc5896a4c2750a7e439b523c632e452ef263447",
+    "ta07.txt": "ade2f5698540eec124b3a230f711167d01ac6ab0f2995f1a625b27c10c2d906f",
+    "ta08.txt": "96ffe26579f0eb865ac3da96ad67c4083f1df6434d07961514324d6e57c74e19",
+    "ta09.txt": "8a25ea98bb24ac37f350df332ce6188c84f22f3ffe2993d64f86371c44211ebc",
+    "ta10.txt": "f720a68f44474a77c6b71122bcd07fc2fc2a0bb4a87a74f5bf569b3a2e61cd96",
+    "ta11.txt": "1e55a9039437d95715a7f7d0f419585732e6a0fbc707bbdf3e5a554e30357072",
+    "ta12.txt": "fda8719335ca2d1374400a4934ab2410f59d8ac1db651421d793ad3eba70f9f7",
+    "ta13.txt": "28495d17354a1c4c093b78dc9d2097ca8feed70caea2f47c02516b76c8799351",
+    "ta14.txt": "f294ea711d1332ef332c116d359c9e33c362bb9bf445256b4376d4a4edc7cb81",
+    "ta15.txt": "c9043e956dadef3dacf1af7abdd5d359e3f18e5831c73cffb542877a58e3b170",
+    "ta16.txt": "2593fabae1a8d6da82d3f39e30aac3f38d29dbf1d1871674a6bb128bd8fccaa1",
+    "ta17.txt": "51685600e9a157800d899d70bd95a41b2430e452272895559542d6fbd5adcf0e",
+    "ta18.txt": "3eb4ca89eb680fa852a9d98d0ced10489d1a37685d504e588864e350758429a6",
+    "ta19.txt": "60ffa166caca075f0ecb21be1ba0b9219091c78dc778322f0631cc24ec3461ec",
+    "ta20.txt": "01623ea01ed502de1cecbfef4fc51af421aa5b3726f3847edeec9d91a7de4a2e",
+    "yn1.txt": "f4df42840b44049dc6fc3ec5ecc60c36e90e9cf03e4353ceccdb5a8b692368c8",
+    "yn2.txt": "63fa106c696445676ca84f4a19e1465bcafb6b1b976c6a8c2b43f72cdd7c8444",
+    "yn3.txt": "8189d5e61c3a4fb083ccfb615346bf59542df6e5c087abe005f09791e28e62b6",
+    "yn4.txt": "a6a32259b7df7a6e5c51534924d86ace0932cf76d69801c2d123dec8f56fefe7"
+  },
+  "tests": {
+    "fast": "204 passed",
+    "slow": "25 passed",
+    "junit": [
+      "results/cobar/baseline_fast.xml",
+      "results/cobar/baseline_slow.xml"
+    ]
+  },
+  "raw_checksum_verification": "sha256sum -c RUNS.sha256 per campaign: 0 mismatches over 913 files (gate1 495, confirmatory 200, E6 218)",
+  "recomputation": "analyze_gate1 / analyze_confirmatory / analyze_e6 re-run on raw files; outputs byte-identical to committed JSON (git diff empty)"
+}
