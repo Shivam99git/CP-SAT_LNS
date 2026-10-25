@@ -44,3 +44,71 @@
 - **Component questions:** A2 vs A1, A3 vs A1, A4 vs A1, A5 vs A4, A6 vs A4, A8 vs A1, A6r vs A10, A6r vs A12, A9 vs A0.
 
 **Gate:** if no certificate-dependent variant beats its certificate-free counterpart (A4, A10 or A12), the certificate is not credited. In that case the confirmatory study either becomes CONDITIONAL GO with the simpler variant, or the decision is NO-GO.
+
+---
+
+## Round 1 results (P1–P7, development streams, solver seed 0)
+
+Source: `results/cobar/pilot/p1_b8/analysis.json` and `regimes_analysis.json`. All runs validated. Exploratory.
+
+**P1 (B = 8 s, 1 worker, 20 streams)**
+
+| Comparison | ΔPI | W/L | CI | Interpretation |
+|---|---|---|---|---|
+| A2 / A3 / A5 / A6 / A8 vs their counterparts | −1.9% to +2.4% | 7/13 – 12/8 | all include 0 | the single-round certificate components (skip, release, certificate-aware allocation) change nothing |
+| A4 vs A1 | −4.1% | 11/9 | includes 0 | the budget rule is inactive at 8 s / 1 worker; this is the noise level |
+| A9 vs A0 | −1.4% | 9/11 | includes 0 | native single-core interleaved LNS ≈ hinted search |
+| **A6r vs A1** | **−26.2%** | 14/6 | [−0.0095, −0.0029] | certificate-guided rounds help |
+| A6r vs A10 (rounds, `iaip` neighbourhood) | −27.6% | 16/4 | [−0.0097, −0.0038] | |
+| A6r vs A12 (rounds, `critical` neighbourhood) | −18.0% | 14/6 | [−0.0064, −0.0015] | |
+| A12 vs A1 | −9.9% | 16/4 | includes 0 | |
+
+**P2–P7 (10 streams; A6r uses `cert+budget`)**
+
+| Setting | A1 vs A0 | A6r vs A1 |
+|---|---|---|
+| 2 s | −31.3% (8/2) | **+46.6% (2/8)**: the budget rule skipped the useful local stage |
+| 30 s | −30.0% | +4.4% (3/7); A9 is best here (−34% vs A0) |
+| 4 workers | −27.5% (9/1) | **+34.6% (3/7)**: the budget rule skipped the useful local stage. A9 with `interleave_search` and 4 workers is pathological (+318% vs A0) |
+| arrival-only | −50.7% | −36.8% (6/4) |
+| outage-only | −27.9% | −3.4% (4/6) |
+| high severity | −35.9% | −12.3% (7/3) |
+
+### Negative results recorded
+
+1. **The pre-specified budget-only rule is harmful** (skip the local stage if B < 4 s or workers ≥ 4).
+   - It was derived from IAIP-SR E6, where the selective stage was *not significant* at 2 s (13/7) and with 4 workers (10/10).
+   - Treating a non-significant result as "no effect" was an error.
+   - On these development streams the local stage helps in both settings.
+2. **The certificate's skip, release and allocation uses have no measurable effect** at 8 s.
+
+## Round 2 (written before it runs)
+
+### Question
+Is the gain of A6r due to the certificate (min-cut seeding), or to repeated breadth-first neighbourhoods around any seed?
+
+### Simplified candidate and controls
+
+All share `cobar|neighbourhood=iaip|use_certificate=0|skip_certified=0|global_certificate=0|policy=fixed|rounds=10` and differ only in `round_neighbourhood`:
+
+| ID | `round_neighbourhood` | Seeds of the 25% breadth-first expansion |
+|---|---|---|
+| C1 | `release+expand` | endpoints of a minimum cut of the incumbent's longest binding chains |
+| C2 | `critical+expand` | every operation on those chains |
+| C3 | `random+expand` | the same number of uniformly random operations (deterministic per instance) |
+
+**Interpreting C1 vs C3.** If C1 beats C3, *where* the rounds search matters. Only C1 vs C2 separates the min cut from a critical-path seeding, which is known prior art.
+
+### Runs
+
+| Run | Setting | Streams | Solver seed | Methods |
+|---|---|---|---|---|
+| P8 | B = 8 s, 1 worker | 15/20 × 301–310 | **1** (replication) | A0, A1, A6r, C1, C2, C3 |
+| P9a | B = 2 s | 15/20 × 301–305 | 1 | A0, A1, C1 |
+| P9b | 4 workers | 15/20 × 301–305 | 1 | A0, A1, C1 |
+| P9c | B = 30 s | 15/20 × 301–305 | 1 | A0, A1, C1 |
+
+### Decision rules for the freeze (development only)
+
+1. If C1 does not beat C3 at 8 s, the certificate is not credited. The candidate for confirmation is then the simplest variant that beats A1.
+2. If C1 is clearly worse than A1 at 2 s or with 4 workers, the freeze must address it, and the reason is documented.

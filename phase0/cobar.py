@@ -31,6 +31,7 @@ guaranteed against an independently executed solver run.
 
 from __future__ import annotations
 
+import random
 from dataclasses import asdict, dataclass
 
 from .cobar_budget_policy import Features, PolicyConfig, decide
@@ -43,7 +44,12 @@ from .selective_reoptimization import bounded_expansion, disruption_set, make_ne
 from .streams import Instance
 
 Solution = dict[str, int]
-NEIGHBOURHOODS = ("none", "iaip", "closure", "critical", "release", "release+expand", "iaip+release")
+NEIGHBOURHOODS = ("none", "iaip", "closure", "critical", "release", "release+expand", "iaip+release",
+                  "critical+expand", "random+expand")
+# The three *+expand types differ only in the seeds of the same 25% breadth-first
+# expansion: release+expand = endpoints of a minimum cut of the longest binding
+# chains; critical+expand = every operation on those chains; random+expand = as
+# many uniformly random operations as release+expand would use (control).
 SOLVER_PARAMS = {"default": None, "interleave": {"interleave_search": True}}
 
 
@@ -100,11 +106,11 @@ def _neighbourhood(cfg: COBARConfig, instance, incumbent, D, meta):
         N = make_neighbourhood("N2", instance, incumbent, D, cfg.expansion_frac)
     elif kind == "critical":
         N = make_neighbourhood("N3", instance, incumbent, D, cfg.expansion_frac)
-    elif kind in ("release", "release+expand"):
+    elif kind in ("release", "release+expand", "critical+expand", "random+expand"):
         N = set()
     else:
         raise ValueError(kind)
-    if kind == "release+expand":
+    if kind in ("release+expand", "critical+expand", "random+expand"):
         # seeds: endpoints of a minimum cut of the longest binding chains of the
         # incumbent's own machine orders (any improving schedule must release
         # one arc on each chain; if the incumbent has slack, the chains of its
@@ -113,8 +119,14 @@ def _neighbourhood(cfg: COBARConfig, instance, incumbent, D, meta):
         ob = obstruction(instance, incumbent, set(), set(), cert0.L_path)
         cut, c = min_release_cut(ob)
         seeds = {x for a in cut for x in a} if c < INF else set()
-        meta.setdefault("rounds_seed", []).append({"cut_arcs": len(cut) if c < INF else None,
-                                                  "L_path": cert0.L_path, "U": cert0.U})
+        if kind == "critical+expand":
+            seeds = {x for u, v, _ in ob.arcs for x in (u, v)} | set(ob.sinks) | set(ob.starts)
+        elif kind == "random+expand":
+            ids = sorted(o.op_id for o in instance.all_ops)
+            rng = random.Random(f"{instance.index}|{cert0.U}|{len(seeds)}")
+            seeds = set(rng.sample(ids, min(len(seeds), len(ids))))
+        meta.setdefault("rounds_seed", []).append({"kind": kind, "cut_arcs": len(cut) if c < INF else None,
+                                                  "n_seeds": len(seeds), "L_path": cert0.L_path, "U": cert0.U})
         N = bounded_expansion(instance, incumbent, seeds, cfg.expansion_frac) if seeds else set()
         return N, set(), None
     if kind in ("iaip+release", "release"):

@@ -35,6 +35,9 @@ ROLE_OF = {
     "cobar|neighbourhood=iaip+release|use_certificate=1|skip_certified=1|global_certificate=1|policy=cert+budget|rounds=10": "A6r",
     "cobar|neighbourhood=iaip|use_certificate=0|skip_certified=0|global_certificate=0|policy=fixed|rounds=10|round_neighbourhood=iaip": "A10",
     "cobar|neighbourhood=iaip|use_certificate=0|skip_certified=0|global_certificate=0|policy=fixed|rounds=10|round_neighbourhood=critical": "A12",
+    "cobar|neighbourhood=iaip|use_certificate=0|skip_certified=0|global_certificate=0|policy=fixed|rounds=10|round_neighbourhood=release+expand": "C1",
+    "cobar|neighbourhood=iaip|use_certificate=0|skip_certified=0|global_certificate=0|policy=fixed|rounds=10|round_neighbourhood=critical+expand": "C2",
+    "cobar|neighbourhood=iaip|use_certificate=0|skip_certified=0|global_certificate=0|policy=fixed|rounds=10|round_neighbourhood=random+expand": "C3",
 }
 DEFAULT_FAMILY = ["A1:A0", "A2:A1", "A3:A1", "A4:A1", "A5:A4", "A6:A4", "A6:A1", "A8:A1", "A9:A0",
                   "A6r:A1", "A6r:A10", "A6r:A12", "A6r:A9", "A10:A1", "A12:A1"]

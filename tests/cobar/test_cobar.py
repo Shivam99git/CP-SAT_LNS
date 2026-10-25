@@ -152,3 +152,22 @@ def test_multi_round_local_stage_stays_inside_the_local_window():
                 assert r["size"] > 0
         prev, prev_inst = res.solution, inst
     print("extra rounds", n_rounds)
+
+
+@pytest.mark.parametrize("kind", ["release+expand", "critical+expand", "random+expand"])
+def test_round_neighbourhood_controls_are_valid_and_deterministic(kind):
+    cfg = parse_cobar("cobar|neighbourhood=iaip|use_certificate=0|skip_certified=0|global_certificate=0"
+                      f"|policy=fixed|rounds=4|round_neighbourhood={kind}")
+    stream = StreamSpec(10, 10, 6, 3).build()
+    prev = prev_inst = None
+    for inst in stream:
+        res, meta = run_cobar(inst, prev, prev_inst, 1.5, cfg, 1, 0)
+        assert res.validated
+        for s in meta.get("rounds_seed", []):
+            assert s["kind"] == kind
+        prev, prev_inst = res.solution, inst
+    from phase0.cobar import _neighbourhood
+    inc = prev
+    a = _neighbourhood(cfg.__class__(neighbourhood=kind), stream[-1], inc, set(), {})
+    b = _neighbourhood(cfg.__class__(neighbourhood=kind), stream[-1], inc, set(), {})
+    assert a[0] == b[0]
