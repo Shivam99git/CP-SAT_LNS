@@ -14,7 +14,10 @@ One monotonic deadline B covers every step:
   5. deterministic budget policy: skip the local stage, or run it until an
      absolute elapsed time alpha * B
   6. restricted CP-SAT on (N, R) with Cmax <= U - 1, hinted with the incumbent;
-     only validated strict improvements are retained
+     only validated strict improvements are retained; with rounds > 1, while
+     the local window lasts and the previous round improved, further rounds
+     on a neighbourhood seeded at a minimum cut of the current incumbent's
+     longest binding chains (round_neighbourhood = release+expand)
   7. unrestricted CP-SAT for the remaining time, hinted with the current
      incumbent (a separate solver run: no internal search state is carried
      over from step 6)
@@ -32,7 +35,7 @@ from dataclasses import asdict, dataclass
 
 from .cobar_budget_policy import Features, PolicyConfig, decide
 from .cobar_certificates import CertificateError, certificate, global_certificate, kept_arcs
-from .cobar_neighborhood import release_obstructions
+from .cobar_neighborhood import INF, min_release_cut, obstruction, release_obstructions
 from .event_localized_repair import index_instance
 from .incumbent_portfolio import PORTFOLIOS, build_portfolio
 from .reuse_methods import Clock, RunResult, _finish, build_research_model, run_cpsat
@@ -63,6 +66,8 @@ class COBARConfig:
     stall_s: float = -1.0               # < 0: no stall stop in the local stage
     global_params: str = "default"      # default | interleave (native CP-SAT LNS, see 01 F2)
     require_improvement: bool = True
+    rounds: int = 1                     # local rounds inside the local window (>1: certificate-guided rounds)
+    round_neighbourhood: str = "release+expand"
 
     def policy_config(self) -> PolicyConfig:
         return PolicyConfig(self.policy, self.alpha, self.alpha_short, self.gap_threshold,
@@ -99,18 +104,26 @@ def _neighbourhood(cfg: COBARConfig, instance, incumbent, D, meta):
         N = set()
     else:
         raise ValueError(kind)
-    if kind in ("iaip+release", "release", "release+expand"):
+    if kind == "release+expand":
+        # seeds: endpoints of a minimum cut of the longest binding chains of the
+        # incumbent's own machine orders (any improving schedule must release
+        # one arc on each chain; if the incumbent has slack, the chains of its
+        # left-shifted version are used)
+        cert0 = certificate(instance, incumbent, set())
+        ob = obstruction(instance, incumbent, set(), set(), cert0.L_path)
+        cut, c = min_release_cut(ob)
+        seeds = {x for a in cut for x in a} if c < INF else set()
+        meta.setdefault("rounds_seed", []).append({"cut_arcs": len(cut) if c < INF else None,
+                                                  "L_path": cert0.L_path, "U": cert0.U})
+        N = bounded_expansion(instance, incumbent, seeds, cfg.expansion_frac) if seeds else set()
+        return N, set(), None
+    if kind in ("iaip+release", "release"):
         rel = release_obstructions(instance, incumbent, N, mode=cfg.release_mode if kind == "iaip+release" else "arcs")
         meta["release"] = {"status": rel.status, "iterations": rel.iterations, "cut_cost": rel.cut_cost,
                            "n_released_arcs": len(rel.R), "n_added_ops": len(rel.added_ops),
                            "time_s": rel.time_s, "before_L": rel.before.L, "after_L": rel.after.L,
                            "before_decisive": rel.before.decisive, "after_decisive": rel.after.decisive}
-        N, R = rel.N, rel.R
-        if kind == "release+expand":
-            seeds = {x for a in R for x in a}
-            N = bounded_expansion(instance, incumbent, seeds, cfg.expansion_frac) if seeds else set()
-            return N, set(), None
-        return N, R, rel.after
+        return rel.N, rel.R, rel.after
     return N, R, None
 
 
@@ -202,7 +215,35 @@ def run_cobar(instance: Instance, previous: Solution | None, prev_instance: Inst
                         "local_time_s": clock.elapsed() - t, "local_solver_s": res.solver_s - solver_before})
             res.solver_status = status_before
             meta["local"] = loc
-            stage["local_s"] = loc["local_time_s"]
+            # further certificate-guided rounds inside the same local window
+            rounds = []
+            local_end_abs = clock.t0 + decision.local_end
+            for _ in range(cfg.rounds - 1):
+                if local_end_abs - clock.t0 - clock.elapsed() < 0.05 or res.solution is None:
+                    break
+                t_r = clock.elapsed()
+                rcfg = COBARConfig(neighbourhood=cfg.round_neighbourhood, expansion_frac=cfg.expansion_frac)
+                try:
+                    Nr, Rr, _ = _neighbourhood(rcfg, instance, res.solution, D, meta)
+                except CertificateError as e:
+                    meta["fallbacks"].append(f"round neighbourhood: {e}")
+                    break
+                if not Nr and not Rr:
+                    break
+                before_r = res.objective
+                built, n_arcs = build_cobar_restricted_model(instance, res.solution, Nr, Rr,
+                                                             cfg.require_improvement, res.objective)
+                sub = Clock(0.0)
+                sub.t0, sub.deadline = clock.t0, min(local_end_abs, clock.deadline)
+                run_cpsat(res, sub, instance, None, workers, seed, source="local",  built=built,
+                          stall_s=cfg.stall_s if cfg.stall_s >= 0 else None)
+                rounds.append({"size": len(Nr), "status": res.solver_status, "improved": res.objective < before_r,
+                               "time_s": clock.elapsed() - t_r})
+                res.solver_status = status_before
+                if not rounds[-1]["improved"]:
+                    break
+            meta["rounds"] = rounds
+            stage["local_s"] = clock.elapsed() - t
 
     if run_global:
         before = res.objective

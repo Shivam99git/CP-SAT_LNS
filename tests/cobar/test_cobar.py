@@ -134,3 +134,21 @@ def test_interleave_parameter_reaches_the_solver():
     with pytest.raises(Exception):
         run_cpsat(RunResult(method="t", budget=1.0), Clock(1.0), inst, None, 1, 0,
                   params={"no_such_parameter": True})
+
+
+def test_multi_round_local_stage_stays_inside_the_local_window():
+    cfg = parse_cobar("cobar|neighbourhood=iaip|use_certificate=1|skip_certified=1|global_certificate=0"
+                      "|policy=fixed|alpha=0.6|rounds=5")
+    stream = StreamSpec(12, 12, 5, 3).build()
+    prev = prev_inst = None
+    n_rounds = 0
+    for inst in stream:
+        res, meta = run_cobar(inst, prev, prev_inst, 2.0, cfg, 1, 0)
+        assert res.validated
+        if "local" in meta:
+            assert meta["stage_s"]["local_s"] <= 0.6 * 2.0 + 0.1
+            n_rounds += len(meta["rounds"])
+            for r in meta["rounds"]:
+                assert r["size"] > 0
+        prev, prev_inst = res.solution, inst
+    print("extra rounds", n_rounds)
