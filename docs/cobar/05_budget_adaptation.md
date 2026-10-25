@@ -67,6 +67,19 @@ From the `dev_e5c` replay (`scripts/cobar/diagnose_certificates.py`):
 
 The skip/short rules can therefore save only milliseconds per step. Whether that changes the PI is an empirical question for the pilot.
 
-## 4. Pilot results
+## 4. Pilot results (development data; `07_pilot_protocol.md`)
 
-*To be filled from `results/cobar/pilot/*/analysis.json`.*
+| Question | Comparison | Result |
+|---|---|---|
+| Does the certificate improve the allocation beyond knowing B, the workers and the event? | A5 vs A4 (P1, 8 s) | +2.2% (11/9), CI includes 0: **no** |
+| Does the full single-round policy help? | A6 vs A4; A6 vs A1 | +2.4%, −1.9%, CIs include 0: **no** |
+| How often does the certificate change a decision? | A6 | short local stage in 57–62 of 200 steps; skip in 10 of 200 (A2/A5) |
+| Why no effect? | local stage statistics | local stages end early anyway (mean 0.48–0.53 s of the 4.8 s window), and INFEASIBLE stages cost about 21 ms, so shortening or skipping saves milliseconds |
+| Does the budget-only rule help? | A4 vs A1 at 2 s; at 4 workers | **+41% and +24% worse** (P2, P4): the rule removed a useful local stage |
+| Stall stop | — | implemented and tested; not used in the pilots, because local stages rarely run to the end of their window (FEASIBLE in 3 of 120 `dev_e5c` stages) |
+
+**Conclusions** (development):
+1. **Certificate-aware allocation has no measurable value** in this setting.
+2. **The skip rule** for B < 4 s or workers ≥ 4 is **harmful** and is not part of the frozen candidate.
+   - It was built from non-significant E6 results, which is the error the brief warns against: absence of significance is not evidence of no effect.
+3. **The frozen candidate** uses the fixed α = 0.6 window. Inside it, it runs up to 10 restricted rounds while the previous round improved, so the time split adapts through the rounds' early termination, not through a certificate.
