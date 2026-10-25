@@ -2,6 +2,8 @@
 
 | Macro | Value | Setting | Algorithm | Comparator | Metric | Statistic | Source |
 |---|---|---|---|---|---|---|---|
+| `\AuditInvalid` | 0 |  |  |  |  | invalid intermediate solutions | `results/cobar/audit_intermediate.json` |
+| `\AuditSolutions` | 977 |  |  |  |  | intermediate CP-SAT solutions validated | `results/cobar/audit_intermediate.json` |
 | `\DiagDecisive` | 3 |  |  |  |  | certificate decisive | `results/research_extension/dev_e5c/cobar_certificate_diagnostic.jsonl` |
 | `\DiagExplained` | 3 |  |  |  |  | INFEASIBLE stages with a decisive certificate | `results/research_extension/dev_e5c/cobar_certificate_diagnostic.jsonl` |
 | `\DiagInfeasible` | 29 |  |  |  |  | CP-SAT INFEASIBLE local stages | `results/research_extension/dev_e5c/cobar_certificate_diagnostic.jsonl` |
@@ -24,27 +26,51 @@
 | `\PilotReleaseMs` | 1.5 | p1_b8 | A6 |  |  | mean release time (ms) | `results/cobar/pilot/p1_b8/analysis.json` |
 | `\PilotShortStage` | 62 | p1_b8 | A6 |  |  | steps given a short local stage by the certificate rule | `results/cobar/pilot/p1_b8/analysis.json` |
 | `\PilotTwoAFourVsAOneRel` | 41.0 | p2_b2 | A4 | A1 | pi | relative difference of means (+) | `results/cobar/pilot/regimes_analysis.json` |
-| `\SOneCandidateVsIaipSrCI` | [-0.0108, -0.0063] | S1_primary | candidate | iaip_sr | pi | stream-clustered bootstrap 95% CI of the mean difference | `results/cobar/confirmatory/confirmatory_analysis_S1_primary.json` |
-| `\SOneCandidateVsIaipSrGapRel` | 31.1 | S1_primary | candidate | iaip_sr | gap_B | relative difference of means (-) | `results/cobar/confirmatory/confirmatory_analysis_S1_primary.json` |
-| `\SOneCandidateVsIaipSrGapWL` | 37/3 | S1_primary | candidate | iaip_sr | gap_B | streams won/lost by algorithm | `results/cobar/confirmatory/confirmatory_analysis_S1_primary.json` |
-| `\SOneCandidateVsIaipSrHolm` | 2.2\cdot10^{-10} | S1_primary | candidate | iaip_sr | pi | Holm-adjusted exact sign-test p | `results/cobar/confirmatory/confirmatory_analysis_S1_primary.json` |
-| `\SOneCandidateVsIaipSrRel` | 24.8 | S1_primary | candidate | iaip_sr | pi | relative difference of means (-) | `results/cobar/confirmatory/confirmatory_analysis_S1_primary.json` |
-| `\SOneCandidateVsIaipSrWL` | 39/1 | S1_primary | candidate | iaip_sr | pi | streams won/lost by algorithm | `results/cobar/confirmatory/confirmatory_analysis_S1_primary.json` |
-| `\SOneCandidateVsPortfolioHintedRel` | 42.7 | S1_primary | candidate | portfolio_hinted | pi | relative difference of means (-) | `results/cobar/confirmatory/confirmatory_analysis_S1_primary.json` |
-| `\SOneCandidateVsPortfolioHintedWL` | 40/0 | S1_primary | candidate | portfolio_hinted | pi | streams won/lost by algorithm | `results/cobar/confirmatory/confirmatory_analysis_S1_primary.json` |
-| `\SOneCandidateVsRandomRoundsRel` | 17.7 | S1_primary | candidate | random_rounds | pi | relative difference of means (-) | `results/cobar/confirmatory/confirmatory_analysis_S1_primary.json` |
-| `\SOneCandidateVsRandomRoundsWL` | 38/2 | S1_primary | candidate | random_rounds | pi | streams won/lost by algorithm | `results/cobar/confirmatory/confirmatory_analysis_S1_primary.json` |
+| `\SFiveCandidateVsIaipSrRel` | 14.7 | S5_outage | candidate | iaip_sr | pi | relative difference of means (-) | `results/cobar/confirmatory/confirmatory_analysis.json` |
+| `\SFiveCandidateVsIaipSrSign` | - | S5_outage | candidate | iaip_sr | pi | sign of the relative difference | `results/cobar/confirmatory/confirmatory_analysis.json` |
+| `\SFiveCandidateVsIaipSrWL` | 16/4 | S5_outage | candidate | iaip_sr | pi | streams won/lost by algorithm | `results/cobar/confirmatory/confirmatory_analysis.json` |
+| `\SFourCandidateVsIaipSrRel` | 40.8 | S4_arrival | candidate | iaip_sr | pi | relative difference of means (-) | `results/cobar/confirmatory/confirmatory_analysis.json` |
+| `\SFourCandidateVsIaipSrSign` | - | S4_arrival | candidate | iaip_sr | pi | sign of the relative difference | `results/cobar/confirmatory/confirmatory_analysis.json` |
+| `\SFourCandidateVsIaipSrWL` | 20/0 | S4_arrival | candidate | iaip_sr | pi | streams won/lost by algorithm | `results/cobar/confirmatory/confirmatory_analysis.json` |
+| `\SOneCandidateVsIaipSrCI` | [-0.0108, -0.0063] | S1_primary | candidate | iaip_sr | pi | stream-clustered bootstrap 95% CI of the mean difference | `results/cobar/confirmatory/confirmatory_analysis.json` |
+| `\SOneCandidateVsIaipSrGapRel` | 31.1 | S1_primary | candidate | iaip_sr | gap_B | relative difference of means (-) | `results/cobar/confirmatory/confirmatory_analysis.json` |
+| `\SOneCandidateVsIaipSrGapWL` | 37/3 | S1_primary | candidate | iaip_sr | gap_B | streams won/lost by algorithm | `results/cobar/confirmatory/confirmatory_analysis.json` |
+| `\SOneCandidateVsIaipSrHolm` | 2.2\cdot10^{-10} | S1_primary | candidate | iaip_sr | pi | Holm-adjusted exact sign-test p | `results/cobar/confirmatory/confirmatory_analysis.json` |
+| `\SOneCandidateVsIaipSrRel` | 24.8 | S1_primary | candidate | iaip_sr | pi | relative difference of means (-) | `results/cobar/confirmatory/confirmatory_analysis.json` |
+| `\SOneCandidateVsIaipSrWL` | 39/1 | S1_primary | candidate | iaip_sr | pi | streams won/lost by algorithm | `results/cobar/confirmatory/confirmatory_analysis.json` |
+| `\SOneCandidateVsPortfolioHintedRel` | 42.7 | S1_primary | candidate | portfolio_hinted | pi | relative difference of means (-) | `results/cobar/confirmatory/confirmatory_analysis.json` |
+| `\SOneCandidateVsPortfolioHintedWL` | 40/0 | S1_primary | candidate | portfolio_hinted | pi | streams won/lost by algorithm | `results/cobar/confirmatory/confirmatory_analysis.json` |
+| `\SOneCandidateVsRandomRoundsRel` | 17.7 | S1_primary | candidate | random_rounds | pi | relative difference of means (-) | `results/cobar/confirmatory/confirmatory_analysis.json` |
+| `\SOneCandidateVsRandomRoundsWL` | 38/2 | S1_primary | candidate | random_rounds | pi | streams won/lost by algorithm | `results/cobar/confirmatory/confirmatory_analysis.json` |
+| `\SOneDeltaArrivalVsIaipSrRel` | 25.4 | S1_primary arrival | candidate | iaip_sr | pi | relative difference of means (-) | `results/cobar/confirmatory/S1_breakdowns.json` |
+| `\SOneDeltaArrivalVsIaipSrSign` | - | S1_primary arrival | candidate | iaip_sr | pi | sign of the relative difference | `results/cobar/confirmatory/S1_breakdowns.json` |
+| `\SOneDeltaCancellationVsIaipSrRel` | 19.7 | S1_primary cancellation | candidate | iaip_sr | pi | relative difference of means (-) | `results/cobar/confirmatory/S1_breakdowns.json` |
+| `\SOneDeltaCancellationVsIaipSrSign` | - | S1_primary cancellation | candidate | iaip_sr | pi | sign of the relative difference | `results/cobar/confirmatory/S1_breakdowns.json` |
+| `\SOneDeltaDurationJitterVsIaipSrRel` | 25.8 | S1_primary duration_jitter | candidate | iaip_sr | pi | relative difference of means (-) | `results/cobar/confirmatory/S1_breakdowns.json` |
+| `\SOneDeltaDurationJitterVsIaipSrSign` | - | S1_primary duration_jitter | candidate | iaip_sr | pi | sign of the relative difference | `results/cobar/confirmatory/S1_breakdowns.json` |
+| `\SOneDeltaOutageVsIaipSrRel` | 24.2 | S1_primary outage | candidate | iaip_sr | pi | relative difference of means (-) | `results/cobar/confirmatory/S1_breakdowns.json` |
+| `\SOneDeltaOutageVsIaipSrSign` | - | S1_primary outage | candidate | iaip_sr | pi | sign of the relative difference | `results/cobar/confirmatory/S1_breakdowns.json` |
 | `\SOneLocalS` | 1.03 | S1_primary | candidate |  |  | mean local-window time (s) | `results/cobar/confirmatory/S1_primary/runs` |
-| `\SOneRandomRoundsVsIaipSrRel` | 8.6 | S1_primary | random_rounds | iaip_sr | pi | relative difference of means (-) | `results/cobar/confirmatory/confirmatory_analysis_S1_primary.json` |
-| `\SOneRandomRoundsVsIaipSrWL` | 34/6 | S1_primary | random_rounds | iaip_sr | pi | streams won/lost by algorithm | `results/cobar/confirmatory/confirmatory_analysis_S1_primary.json` |
-| `\SOneRecords` | 8{,}800 | S1_primary |  |  |  | run records | `results/cobar/confirmatory/confirmatory_analysis_S1_primary.json` |
+| `\SOneRandomRoundsVsIaipSrRel` | 8.6 | S1_primary | random_rounds | iaip_sr | pi | relative difference of means (-) | `results/cobar/confirmatory/confirmatory_analysis.json` |
+| `\SOneRandomRoundsVsIaipSrWL` | 34/6 | S1_primary | random_rounds | iaip_sr | pi | streams won/lost by algorithm | `results/cobar/confirmatory/confirmatory_analysis.json` |
+| `\SOneRecords` | 8{,}800 | S1_primary |  |  |  | run records | `results/cobar/confirmatory/confirmatory_analysis.json` |
 | `\SOneRoundsImproving` | 2.0 | S1_primary | candidate |  |  | improving extra rounds per instance (mean) | `results/cobar/confirmatory/S1_primary/runs` |
 | `\SOneRoundsMean` | 2.9 | S1_primary | candidate |  |  | extra rounds per instance (mean) | `results/cobar/confirmatory/S1_primary/runs` |
 | `\SOneSeedsMedian` | 35 | S1_primary | candidate |  |  | median seed operations per round | `results/cobar/confirmatory/S1_primary/runs` |
-| `\SThreeCandidateVsIaipSrCI` | [-0.0026, -0.0002] | S3_workers4 | candidate | iaip_sr | pi | stream-clustered bootstrap 95% CI of the mean difference | `results/cobar/confirmatory/confirmatory_analysis_S2_short_S3_workers4.json` |
-| `\SThreeCandidateVsIaipSrHolm` | 0.12 | S3_workers4 | candidate | iaip_sr | pi | Holm-adjusted exact sign-test p | `results/cobar/confirmatory/confirmatory_analysis_S2_short_S3_workers4.json` |
-| `\SThreeCandidateVsIaipSrRel` | 7.9 | S3_workers4 | candidate | iaip_sr | pi | relative difference of means (-) | `results/cobar/confirmatory/confirmatory_analysis_S2_short_S3_workers4.json` |
-| `\SThreeCandidateVsIaipSrWL` | 14/6 | S3_workers4 | candidate | iaip_sr | pi | streams won/lost by algorithm | `results/cobar/confirmatory/confirmatory_analysis_S2_short_S3_workers4.json` |
-| `\STwoCandidateVsIaipSrCI` | [-0.0081, -0.0029] | S2_short | candidate | iaip_sr | pi | stream-clustered bootstrap 95% CI of the mean difference | `results/cobar/confirmatory/confirmatory_analysis_S2_short_S3_workers4.json` |
-| `\STwoCandidateVsIaipSrRel` | 13.2 | S2_short | candidate | iaip_sr | pi | relative difference of means (-) | `results/cobar/confirmatory/confirmatory_analysis_S2_short_S3_workers4.json` |
-| `\STwoCandidateVsIaipSrWL` | 27/13 | S2_short | candidate | iaip_sr | pi | streams won/lost by algorithm | `results/cobar/confirmatory/confirmatory_analysis_S2_short_S3_workers4.json` |
+| `\SOneSizeOneFiveVsIaipSrRel` | 17.8 | S1_primary 15x15 | candidate | iaip_sr | pi | relative difference of means (-) | `results/cobar/confirmatory/S1_breakdowns.json` |
+| `\SOneSizeOneFiveVsIaipSrSign` | - | S1_primary 15x15 | candidate | iaip_sr | pi | sign of the relative difference | `results/cobar/confirmatory/S1_breakdowns.json` |
+| `\SOneSizeTwoZeroVsIaipSrRel` | 29.4 | S1_primary 20x20 | candidate | iaip_sr | pi | relative difference of means (-) | `results/cobar/confirmatory/S1_breakdowns.json` |
+| `\SOneSizeTwoZeroVsIaipSrSign` | - | S1_primary 20x20 | candidate | iaip_sr | pi | sign of the relative difference | `results/cobar/confirmatory/S1_breakdowns.json` |
+| `\SSevenCandidateVsIaipSrRel` | 22.4 | S7_benchmarks | candidate | iaip_sr | pi | relative difference of means (-) | `results/cobar/confirmatory/confirmatory_analysis.json` |
+| `\SSevenCandidateVsIaipSrSign` | - | S7_benchmarks | candidate | iaip_sr | pi | sign of the relative difference | `results/cobar/confirmatory/confirmatory_analysis.json` |
+| `\SSevenCandidateVsIaipSrWL` | 31/3 | S7_benchmarks | candidate | iaip_sr | pi | streams won/lost by algorithm | `results/cobar/confirmatory/confirmatory_analysis.json` |
+| `\SSixCandidateVsIaipSrRel` | 21.5 | S6_b30 | candidate | iaip_sr | pi | relative difference of means (-) | `results/cobar/confirmatory/confirmatory_analysis.json` |
+| `\SSixCandidateVsIaipSrSign` | - | S6_b30 | candidate | iaip_sr | pi | sign of the relative difference | `results/cobar/confirmatory/confirmatory_analysis.json` |
+| `\SSixCandidateVsIaipSrWL` | 19/1 | S6_b30 | candidate | iaip_sr | pi | streams won/lost by algorithm | `results/cobar/confirmatory/confirmatory_analysis.json` |
+| `\SThreeCandidateVsIaipSrCI` | [-0.0026, -0.0002] | S3_workers4 | candidate | iaip_sr | pi | stream-clustered bootstrap 95% CI of the mean difference | `results/cobar/confirmatory/confirmatory_analysis.json` |
+| `\SThreeCandidateVsIaipSrHolm` | 0.12 | S3_workers4 | candidate | iaip_sr | pi | Holm-adjusted exact sign-test p | `results/cobar/confirmatory/confirmatory_analysis.json` |
+| `\SThreeCandidateVsIaipSrRel` | 7.9 | S3_workers4 | candidate | iaip_sr | pi | relative difference of means (-) | `results/cobar/confirmatory/confirmatory_analysis.json` |
+| `\SThreeCandidateVsIaipSrWL` | 14/6 | S3_workers4 | candidate | iaip_sr | pi | streams won/lost by algorithm | `results/cobar/confirmatory/confirmatory_analysis.json` |
+| `\STwoCandidateVsIaipSrCI` | [-0.0081, -0.0029] | S2_short | candidate | iaip_sr | pi | stream-clustered bootstrap 95% CI of the mean difference | `results/cobar/confirmatory/confirmatory_analysis.json` |
+| `\STwoCandidateVsIaipSrRel` | 13.2 | S2_short | candidate | iaip_sr | pi | relative difference of means (-) | `results/cobar/confirmatory/confirmatory_analysis.json` |
+| `\STwoCandidateVsIaipSrWL` | 27/13 | S2_short | candidate | iaip_sr | pi | streams won/lost by algorithm | `results/cobar/confirmatory/confirmatory_analysis.json` |

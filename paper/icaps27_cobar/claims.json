@@ -1,25 +1,25 @@
 {
  "SOneUnits": {
   "value": "40",
-  "source": "results/cobar/confirmatory/confirmatory_analysis_S1_primary.json",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
   "setting": "S1_primary",
   "statistic": "number of units"
  },
  "SOneRecords": {
   "value": "8{,}800",
-  "source": "results/cobar/confirmatory/confirmatory_analysis_S1_primary.json",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
   "setting": "S1_primary",
   "statistic": "run records"
  },
  "SOneNotValidated": {
   "value": "0",
-  "source": "results/cobar/confirmatory/confirmatory_analysis_S1_primary.json",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
   "setting": "S1_primary",
   "statistic": "records not validated"
  },
  "SOneMeanCandidate": {
   "value": ".0255",
-  "source": "results/cobar/confirmatory/confirmatory_analysis_S1_primary.json",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
   "setting": "S1_primary",
   "algorithm": "candidate",
   "metric": "pi",
@@ -28,7 +28,7 @@
  },
  "SOneGapCandidate": {
   "value": ".0159",
-  "source": "results/cobar/confirmatory/confirmatory_analysis_S1_primary.json",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
   "setting": "S1_primary",
   "algorithm": "candidate",
   "metric": "gap_B",
@@ -37,7 +37,7 @@
  },
  "SOneMeanIaipSr": {
   "value": ".0340",
-  "source": "results/cobar/confirmatory/confirmatory_analysis_S1_primary.json",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
   "setting": "S1_primary",
   "algorithm": "iaip_sr",
   "metric": "pi",
@@ -46,7 +46,7 @@
  },
  "SOneGapIaipSr": {
   "value": ".0231",
-  "source": "results/cobar/confirmatory/confirmatory_analysis_S1_primary.json",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
   "setting": "S1_primary",
   "algorithm": "iaip_sr",
   "metric": "gap_B",
@@ -55,7 +55,7 @@
  },
  "SOneMeanPortfolioHinted": {
   "value": ".0446",
-  "source": "results/cobar/confirmatory/confirmatory_analysis_S1_primary.json",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
   "setting": "S1_primary",
   "algorithm": "portfolio_hinted",
   "metric": "pi",
@@ -64,7 +64,7 @@
  },
  "SOneGapPortfolioHinted": {
   "value": ".0287",
-  "source": "results/cobar/confirmatory/confirmatory_analysis_S1_primary.json",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
   "setting": "S1_primary",
   "algorithm": "portfolio_hinted",
   "metric": "gap_B",
@@ -73,7 +73,7 @@
  },
  "SOneMeanRandomRounds": {
   "value": ".0310",
-  "source": "results/cobar/confirmatory/confirmatory_analysis_S1_primary.json",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
   "setting": "S1_primary",
   "algorithm": "random_rounds",
   "metric": "pi",
@@ -82,7 +82,7 @@
  },
  "SOneGapRandomRounds": {
   "value": ".0206",
-  "source": "results/cobar/confirmatory/confirmatory_analysis_S1_primary.json",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
   "setting": "S1_primary",
   "algorithm": "random_rounds",
   "metric": "gap_B",
@@ -93,7 +93,7 @@
   "value": "24.8",
   "statistic": "relative difference of means (-)",
   "sign": "-",
-  "source": "results/cobar/confirmatory/confirmatory_analysis_S1_primary.json",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
   "setting": "S1_primary",
   "algorithm": "candidate",
   "comparator": "iaip_sr",
@@ -104,7 +104,7 @@
  "SOneCandidateVsIaipSrSign": {
   "value": "-",
   "statistic": "sign of the relative difference",
-  "source": "results/cobar/confirmatory/confirmatory_analysis_S1_primary.json",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
   "setting": "S1_primary",
   "algorithm": "candidate",
   "comparator": "iaip_sr",
@@ -115,7 +115,7 @@
  "SOneCandidateVsIaipSrWL": {
   "value": "39/1",
   "statistic": "streams won/lost by algorithm",
-  "source": "results/cobar/confirmatory/confirmatory_analysis_S1_primary.json",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
   "setting": "S1_primary",
   "algorithm": "candidate",
   "comparator": "iaip_sr",
@@ -126,7 +126,7 @@
  "SOneCandidateVsIaipSrCI": {
   "value": "[-0.0108, -0.0063]",
   "statistic": "stream-clustered bootstrap 95% CI of the mean difference",
-  "source": "results/cobar/confirmatory/confirmatory_analysis_S1_primary.json",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
   "setting": "S1_primary",
   "algorithm": "candidate",
   "comparator": "iaip_sr",
@@ -137,7 +137,7 @@
  "SOneCandidateVsIaipSrHolm": {
   "value": "2.2\\cdot10^{-10}",
   "statistic": "Holm-adjusted exact sign-test p",
-  "source": "results/cobar/confirmatory/confirmatory_analysis_S1_primary.json",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
   "setting": "S1_primary",
   "algorithm": "candidate",
   "comparator": "iaip_sr",
@@ -149,7 +149,7 @@
   "value": "31.1",
   "statistic": "relative difference of means (-)",
   "sign": "-",
-  "source": "results/cobar/confirmatory/confirmatory_analysis_S1_primary.json",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
   "setting": "S1_primary",
   "algorithm": "candidate",
   "comparator": "iaip_sr",
@@ -160,7 +160,7 @@
  "SOneCandidateVsIaipSrGapSign": {
   "value": "-",
   "statistic": "sign of the relative difference",
-  "source": "results/cobar/confirmatory/confirmatory_analysis_S1_primary.json",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
   "setting": "S1_primary",
   "algorithm": "candidate",
   "comparator": "iaip_sr",
@@ -171,7 +171,7 @@
  "SOneCandidateVsIaipSrGapWL": {
   "value": "37/3",
   "statistic": "streams won/lost by algorithm",
-  "source": "results/cobar/confirmatory/confirmatory_analysis_S1_primary.json",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
   "setting": "S1_primary",
   "algorithm": "candidate",
   "comparator": "iaip_sr",
@@ -182,7 +182,7 @@
  "SOneCandidateVsIaipSrGapCI": {
   "value": "[-0.0096, -0.0050]",
   "statistic": "stream-clustered bootstrap 95% CI of the mean difference",
-  "source": "results/cobar/confirmatory/confirmatory_analysis_S1_primary.json",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
   "setting": "S1_primary",
   "algorithm": "candidate",
   "comparator": "iaip_sr",
@@ -194,7 +194,7 @@
   "value": "42.7",
   "statistic": "relative difference of means (-)",
   "sign": "-",
-  "source": "results/cobar/confirmatory/confirmatory_analysis_S1_primary.json",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
   "setting": "S1_primary",
   "algorithm": "candidate",
   "comparator": "portfolio_hinted",
@@ -205,7 +205,7 @@
  "SOneCandidateVsPortfolioHintedSign": {
   "value": "-",
   "statistic": "sign of the relative difference",
-  "source": "results/cobar/confirmatory/confirmatory_analysis_S1_primary.json",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
   "setting": "S1_primary",
   "algorithm": "candidate",
   "comparator": "portfolio_hinted",
@@ -216,7 +216,7 @@
  "SOneCandidateVsPortfolioHintedWL": {
   "value": "40/0",
   "statistic": "streams won/lost by algorithm",
-  "source": "results/cobar/confirmatory/confirmatory_analysis_S1_primary.json",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
   "setting": "S1_primary",
   "algorithm": "candidate",
   "comparator": "portfolio_hinted",
@@ -227,7 +227,7 @@
  "SOneCandidateVsPortfolioHintedCI": {
   "value": "[-0.0222, -0.0161]",
   "statistic": "stream-clustered bootstrap 95% CI of the mean difference",
-  "source": "results/cobar/confirmatory/confirmatory_analysis_S1_primary.json",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
   "setting": "S1_primary",
   "algorithm": "candidate",
   "comparator": "portfolio_hinted",
@@ -238,7 +238,7 @@
  "SOneCandidateVsPortfolioHintedHolm": {
   "value": "7.3\\cdot10^{-12}",
   "statistic": "Holm-adjusted exact sign-test p",
-  "source": "results/cobar/confirmatory/confirmatory_analysis_S1_primary.json",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
   "setting": "S1_primary",
   "algorithm": "candidate",
   "comparator": "portfolio_hinted",
@@ -250,7 +250,7 @@
   "value": "44.5",
   "statistic": "relative difference of means (-)",
   "sign": "-",
-  "source": "results/cobar/confirmatory/confirmatory_analysis_S1_primary.json",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
   "setting": "S1_primary",
   "algorithm": "candidate",
   "comparator": "portfolio_hinted",
@@ -261,7 +261,7 @@
  "SOneCandidateVsPortfolioHintedGapSign": {
   "value": "-",
   "statistic": "sign of the relative difference",
-  "source": "results/cobar/confirmatory/confirmatory_analysis_S1_primary.json",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
   "setting": "S1_primary",
   "algorithm": "candidate",
   "comparator": "portfolio_hinted",
@@ -272,7 +272,7 @@
  "SOneCandidateVsPortfolioHintedGapWL": {
   "value": "38/2",
   "statistic": "streams won/lost by algorithm",
-  "source": "results/cobar/confirmatory/confirmatory_analysis_S1_primary.json",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
   "setting": "S1_primary",
   "algorithm": "candidate",
   "comparator": "portfolio_hinted",
@@ -283,7 +283,7 @@
  "SOneCandidateVsPortfolioHintedGapCI": {
   "value": "[-0.0159, -0.0099]",
   "statistic": "stream-clustered bootstrap 95% CI of the mean difference",
-  "source": "results/cobar/confirmatory/confirmatory_analysis_S1_primary.json",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
   "setting": "S1_primary",
   "algorithm": "candidate",
   "comparator": "portfolio_hinted",
@@ -295,7 +295,7 @@
   "value": "17.7",
   "statistic": "relative difference of means (-)",
   "sign": "-",
-  "source": "results/cobar/confirmatory/confirmatory_analysis_S1_primary.json",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
   "setting": "S1_primary",
   "algorithm": "candidate",
   "comparator": "random_rounds",
@@ -306,7 +306,7 @@
  "SOneCandidateVsRandomRoundsSign": {
   "value": "-",
   "statistic": "sign of the relative difference",
-  "source": "results/cobar/confirmatory/confirmatory_analysis_S1_primary.json",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
   "setting": "S1_primary",
   "algorithm": "candidate",
   "comparator": "random_rounds",
@@ -317,7 +317,7 @@
  "SOneCandidateVsRandomRoundsWL": {
   "value": "38/2",
   "statistic": "streams won/lost by algorithm",
-  "source": "results/cobar/confirmatory/confirmatory_analysis_S1_primary.json",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
   "setting": "S1_primary",
   "algorithm": "candidate",
   "comparator": "random_rounds",
@@ -328,7 +328,7 @@
  "SOneCandidateVsRandomRoundsCI": {
   "value": "[-0.0073, -0.0039]",
   "statistic": "stream-clustered bootstrap 95% CI of the mean difference",
-  "source": "results/cobar/confirmatory/confirmatory_analysis_S1_primary.json",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
   "setting": "S1_primary",
   "algorithm": "candidate",
   "comparator": "random_rounds",
@@ -339,7 +339,7 @@
  "SOneCandidateVsRandomRoundsHolm": {
   "value": "3.0\\cdot10^{-9}",
   "statistic": "Holm-adjusted exact sign-test p",
-  "source": "results/cobar/confirmatory/confirmatory_analysis_S1_primary.json",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
   "setting": "S1_primary",
   "algorithm": "candidate",
   "comparator": "random_rounds",
@@ -351,7 +351,7 @@
   "value": "22.7",
   "statistic": "relative difference of means (-)",
   "sign": "-",
-  "source": "results/cobar/confirmatory/confirmatory_analysis_S1_primary.json",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
   "setting": "S1_primary",
   "algorithm": "candidate",
   "comparator": "random_rounds",
@@ -362,7 +362,7 @@
  "SOneCandidateVsRandomRoundsGapSign": {
   "value": "-",
   "statistic": "sign of the relative difference",
-  "source": "results/cobar/confirmatory/confirmatory_analysis_S1_primary.json",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
   "setting": "S1_primary",
   "algorithm": "candidate",
   "comparator": "random_rounds",
@@ -373,7 +373,7 @@
  "SOneCandidateVsRandomRoundsGapWL": {
   "value": "34/6",
   "statistic": "streams won/lost by algorithm",
-  "source": "results/cobar/confirmatory/confirmatory_analysis_S1_primary.json",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
   "setting": "S1_primary",
   "algorithm": "candidate",
   "comparator": "random_rounds",
@@ -384,7 +384,7 @@
  "SOneCandidateVsRandomRoundsGapCI": {
   "value": "[-0.0066, -0.0029]",
   "statistic": "stream-clustered bootstrap 95% CI of the mean difference",
-  "source": "results/cobar/confirmatory/confirmatory_analysis_S1_primary.json",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
   "setting": "S1_primary",
   "algorithm": "candidate",
   "comparator": "random_rounds",
@@ -396,7 +396,7 @@
   "value": "8.6",
   "statistic": "relative difference of means (-)",
   "sign": "-",
-  "source": "results/cobar/confirmatory/confirmatory_analysis_S1_primary.json",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
   "setting": "S1_primary",
   "algorithm": "random_rounds",
   "comparator": "iaip_sr",
@@ -407,7 +407,7 @@
  "SOneRandomRoundsVsIaipSrSign": {
   "value": "-",
   "statistic": "sign of the relative difference",
-  "source": "results/cobar/confirmatory/confirmatory_analysis_S1_primary.json",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
   "setting": "S1_primary",
   "algorithm": "random_rounds",
   "comparator": "iaip_sr",
@@ -418,7 +418,7 @@
  "SOneRandomRoundsVsIaipSrWL": {
   "value": "34/6",
   "statistic": "streams won/lost by algorithm",
-  "source": "results/cobar/confirmatory/confirmatory_analysis_S1_primary.json",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
   "setting": "S1_primary",
   "algorithm": "random_rounds",
   "comparator": "iaip_sr",
@@ -429,7 +429,7 @@
  "SOneRandomRoundsVsIaipSrCI": {
   "value": "[-0.0045, -0.0015]",
   "statistic": "stream-clustered bootstrap 95% CI of the mean difference",
-  "source": "results/cobar/confirmatory/confirmatory_analysis_S1_primary.json",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
   "setting": "S1_primary",
   "algorithm": "random_rounds",
   "comparator": "iaip_sr",
@@ -440,7 +440,7 @@
  "SOneRandomRoundsVsIaipSrHolm": {
   "value": "8.4\\cdot10^{-6}",
   "statistic": "Holm-adjusted exact sign-test p",
-  "source": "results/cobar/confirmatory/confirmatory_analysis_S1_primary.json",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
   "setting": "S1_primary",
   "algorithm": "random_rounds",
   "comparator": "iaip_sr",
@@ -452,7 +452,7 @@
   "value": "10.9",
   "statistic": "relative difference of means (-)",
   "sign": "-",
-  "source": "results/cobar/confirmatory/confirmatory_analysis_S1_primary.json",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
   "setting": "S1_primary",
   "algorithm": "random_rounds",
   "comparator": "iaip_sr",
@@ -463,7 +463,7 @@
  "SOneRandomRoundsVsIaipSrGapSign": {
   "value": "-",
   "statistic": "sign of the relative difference",
-  "source": "results/cobar/confirmatory/confirmatory_analysis_S1_primary.json",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
   "setting": "S1_primary",
   "algorithm": "random_rounds",
   "comparator": "iaip_sr",
@@ -474,7 +474,7 @@
  "SOneRandomRoundsVsIaipSrGapWL": {
   "value": "31/9",
   "statistic": "streams won/lost by algorithm",
-  "source": "results/cobar/confirmatory/confirmatory_analysis_S1_primary.json",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
   "setting": "S1_primary",
   "algorithm": "random_rounds",
   "comparator": "iaip_sr",
@@ -485,7 +485,7 @@
  "SOneRandomRoundsVsIaipSrGapCI": {
   "value": "[-0.0040, -0.0012]",
   "statistic": "stream-clustered bootstrap 95% CI of the mean difference",
-  "source": "results/cobar/confirmatory/confirmatory_analysis_S1_primary.json",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
   "setting": "S1_primary",
   "algorithm": "random_rounds",
   "comparator": "iaip_sr",
@@ -495,31 +495,31 @@
  },
  "SOneNonInferior": {
   "value": "yes",
-  "source": "results/cobar/confirmatory/confirmatory_analysis_S1_primary.json",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
   "setting": "S1_primary",
   "statistic": "non-inferiority vs iaip_sr, 5% margin"
  },
  "STwoUnits": {
   "value": "40",
-  "source": "results/cobar/confirmatory/confirmatory_analysis_S2_short_S3_workers4.json",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
   "setting": "S2_short",
   "statistic": "number of units"
  },
  "STwoRecords": {
   "value": "6{,}600",
-  "source": "results/cobar/confirmatory/confirmatory_analysis_S2_short_S3_workers4.json",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
   "setting": "S2_short",
   "statistic": "run records"
  },
  "STwoNotValidated": {
   "value": "0",
-  "source": "results/cobar/confirmatory/confirmatory_analysis_S2_short_S3_workers4.json",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
   "setting": "S2_short",
   "statistic": "records not validated"
  },
  "STwoMeanCandidate": {
   "value": ".0351",
-  "source": "results/cobar/confirmatory/confirmatory_analysis_S2_short_S3_workers4.json",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
   "setting": "S2_short",
   "algorithm": "candidate",
   "metric": "pi",
@@ -528,7 +528,7 @@
  },
  "STwoGapCandidate": {
   "value": ".0193",
-  "source": "results/cobar/confirmatory/confirmatory_analysis_S2_short_S3_workers4.json",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
   "setting": "S2_short",
   "algorithm": "candidate",
   "metric": "gap_B",
@@ -537,7 +537,7 @@
  },
  "STwoMeanIaipSr": {
   "value": ".0405",
-  "source": "results/cobar/confirmatory/confirmatory_analysis_S2_short_S3_workers4.json",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
   "setting": "S2_short",
   "algorithm": "iaip_sr",
   "metric": "pi",
@@ -546,7 +546,7 @@
  },
  "STwoGapIaipSr": {
   "value": ".0238",
-  "source": "results/cobar/confirmatory/confirmatory_analysis_S2_short_S3_workers4.json",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
   "setting": "S2_short",
   "algorithm": "iaip_sr",
   "metric": "gap_B",
@@ -555,7 +555,7 @@
  },
  "STwoMeanPortfolioHinted": {
   "value": ".0480",
-  "source": "results/cobar/confirmatory/confirmatory_analysis_S2_short_S3_workers4.json",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
   "setting": "S2_short",
   "algorithm": "portfolio_hinted",
   "metric": "pi",
@@ -564,7 +564,7 @@
  },
  "STwoGapPortfolioHinted": {
   "value": ".0289",
-  "source": "results/cobar/confirmatory/confirmatory_analysis_S2_short_S3_workers4.json",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
   "setting": "S2_short",
   "algorithm": "portfolio_hinted",
   "metric": "gap_B",
@@ -575,7 +575,7 @@
   "value": "13.2",
   "statistic": "relative difference of means (-)",
   "sign": "-",
-  "source": "results/cobar/confirmatory/confirmatory_analysis_S2_short_S3_workers4.json",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
   "setting": "S2_short",
   "algorithm": "candidate",
   "comparator": "iaip_sr",
@@ -586,7 +586,7 @@
  "STwoCandidateVsIaipSrSign": {
   "value": "-",
   "statistic": "sign of the relative difference",
-  "source": "results/cobar/confirmatory/confirmatory_analysis_S2_short_S3_workers4.json",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
   "setting": "S2_short",
   "algorithm": "candidate",
   "comparator": "iaip_sr",
@@ -597,7 +597,7 @@
  "STwoCandidateVsIaipSrWL": {
   "value": "27/13",
   "statistic": "streams won/lost by algorithm",
-  "source": "results/cobar/confirmatory/confirmatory_analysis_S2_short_S3_workers4.json",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
   "setting": "S2_short",
   "algorithm": "candidate",
   "comparator": "iaip_sr",
@@ -608,7 +608,7 @@
  "STwoCandidateVsIaipSrCI": {
   "value": "[-0.0081, -0.0029]",
   "statistic": "stream-clustered bootstrap 95% CI of the mean difference",
-  "source": "results/cobar/confirmatory/confirmatory_analysis_S2_short_S3_workers4.json",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
   "setting": "S2_short",
   "algorithm": "candidate",
   "comparator": "iaip_sr",
@@ -619,7 +619,7 @@
  "STwoCandidateVsIaipSrHolm": {
   "value": "0.038",
   "statistic": "Holm-adjusted exact sign-test p",
-  "source": "results/cobar/confirmatory/confirmatory_analysis_S2_short_S3_workers4.json",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
   "setting": "S2_short",
   "algorithm": "candidate",
   "comparator": "iaip_sr",
@@ -631,7 +631,7 @@
   "value": "18.7",
   "statistic": "relative difference of means (-)",
   "sign": "-",
-  "source": "results/cobar/confirmatory/confirmatory_analysis_S2_short_S3_workers4.json",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
   "setting": "S2_short",
   "algorithm": "candidate",
   "comparator": "iaip_sr",
@@ -642,7 +642,7 @@
  "STwoCandidateVsIaipSrGapSign": {
   "value": "-",
   "statistic": "sign of the relative difference",
-  "source": "results/cobar/confirmatory/confirmatory_analysis_S2_short_S3_workers4.json",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
   "setting": "S2_short",
   "algorithm": "candidate",
   "comparator": "iaip_sr",
@@ -653,7 +653,7 @@
  "STwoCandidateVsIaipSrGapWL": {
   "value": "26/14",
   "statistic": "streams won/lost by algorithm",
-  "source": "results/cobar/confirmatory/confirmatory_analysis_S2_short_S3_workers4.json",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
   "setting": "S2_short",
   "algorithm": "candidate",
   "comparator": "iaip_sr",
@@ -664,7 +664,7 @@
  "STwoCandidateVsIaipSrGapCI": {
   "value": "[-0.0069, -0.0021]",
   "statistic": "stream-clustered bootstrap 95% CI of the mean difference",
-  "source": "results/cobar/confirmatory/confirmatory_analysis_S2_short_S3_workers4.json",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
   "setting": "S2_short",
   "algorithm": "candidate",
   "comparator": "iaip_sr",
@@ -676,7 +676,7 @@
   "value": "26.8",
   "statistic": "relative difference of means (-)",
   "sign": "-",
-  "source": "results/cobar/confirmatory/confirmatory_analysis_S2_short_S3_workers4.json",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
   "setting": "S2_short",
   "algorithm": "candidate",
   "comparator": "portfolio_hinted",
@@ -687,7 +687,7 @@
  "STwoCandidateVsPortfolioHintedSign": {
   "value": "-",
   "statistic": "sign of the relative difference",
-  "source": "results/cobar/confirmatory/confirmatory_analysis_S2_short_S3_workers4.json",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
   "setting": "S2_short",
   "algorithm": "candidate",
   "comparator": "portfolio_hinted",
@@ -698,7 +698,7 @@
  "STwoCandidateVsPortfolioHintedWL": {
   "value": "36/4",
   "statistic": "streams won/lost by algorithm",
-  "source": "results/cobar/confirmatory/confirmatory_analysis_S2_short_S3_workers4.json",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
   "setting": "S2_short",
   "algorithm": "candidate",
   "comparator": "portfolio_hinted",
@@ -709,7 +709,7 @@
  "STwoCandidateVsPortfolioHintedCI": {
   "value": "[-0.0158, -0.0100]",
   "statistic": "stream-clustered bootstrap 95% CI of the mean difference",
-  "source": "results/cobar/confirmatory/confirmatory_analysis_S2_short_S3_workers4.json",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
   "setting": "S2_short",
   "algorithm": "candidate",
   "comparator": "portfolio_hinted",
@@ -720,7 +720,7 @@
  "STwoCandidateVsPortfolioHintedHolm": {
   "value": "3.7\\cdot10^{-7}",
   "statistic": "Holm-adjusted exact sign-test p",
-  "source": "results/cobar/confirmatory/confirmatory_analysis_S2_short_S3_workers4.json",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
   "setting": "S2_short",
   "algorithm": "candidate",
   "comparator": "portfolio_hinted",
@@ -732,7 +732,7 @@
   "value": "33.2",
   "statistic": "relative difference of means (-)",
   "sign": "-",
-  "source": "results/cobar/confirmatory/confirmatory_analysis_S2_short_S3_workers4.json",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
   "setting": "S2_short",
   "algorithm": "candidate",
   "comparator": "portfolio_hinted",
@@ -743,7 +743,7 @@
  "STwoCandidateVsPortfolioHintedGapSign": {
   "value": "-",
   "statistic": "sign of the relative difference",
-  "source": "results/cobar/confirmatory/confirmatory_analysis_S2_short_S3_workers4.json",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
   "setting": "S2_short",
   "algorithm": "candidate",
   "comparator": "portfolio_hinted",
@@ -754,7 +754,7 @@
  "STwoCandidateVsPortfolioHintedGapWL": {
   "value": "34/6",
   "statistic": "streams won/lost by algorithm",
-  "source": "results/cobar/confirmatory/confirmatory_analysis_S2_short_S3_workers4.json",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
   "setting": "S2_short",
   "algorithm": "candidate",
   "comparator": "portfolio_hinted",
@@ -765,7 +765,7 @@
  "STwoCandidateVsPortfolioHintedGapCI": {
   "value": "[-0.0122, -0.0070]",
   "statistic": "stream-clustered bootstrap 95% CI of the mean difference",
-  "source": "results/cobar/confirmatory/confirmatory_analysis_S2_short_S3_workers4.json",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
   "setting": "S2_short",
   "algorithm": "candidate",
   "comparator": "portfolio_hinted",
@@ -775,31 +775,31 @@
  },
  "STwoNonInferior": {
   "value": "yes",
-  "source": "results/cobar/confirmatory/confirmatory_analysis_S2_short_S3_workers4.json",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
   "setting": "S2_short",
   "statistic": "non-inferiority vs iaip_sr, 5% margin"
  },
  "SThreeUnits": {
   "value": "20",
-  "source": "results/cobar/confirmatory/confirmatory_analysis_S2_short_S3_workers4.json",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
   "setting": "S3_workers4",
   "statistic": "number of units"
  },
  "SThreeRecords": {
   "value": "3{,}300",
-  "source": "results/cobar/confirmatory/confirmatory_analysis_S2_short_S3_workers4.json",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
   "setting": "S3_workers4",
   "statistic": "run records"
  },
  "SThreeNotValidated": {
   "value": "0",
-  "source": "results/cobar/confirmatory/confirmatory_analysis_S2_short_S3_workers4.json",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
   "setting": "S3_workers4",
   "statistic": "records not validated"
  },
  "SThreeMeanCandidate": {
   "value": ".0154",
-  "source": "results/cobar/confirmatory/confirmatory_analysis_S2_short_S3_workers4.json",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
   "setting": "S3_workers4",
   "algorithm": "candidate",
   "metric": "pi",
@@ -808,7 +808,7 @@
  },
  "SThreeGapCandidate": {
   "value": ".0071",
-  "source": "results/cobar/confirmatory/confirmatory_analysis_S2_short_S3_workers4.json",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
   "setting": "S3_workers4",
   "algorithm": "candidate",
   "metric": "gap_B",
@@ -817,7 +817,7 @@
  },
  "SThreeMeanIaipSr": {
   "value": ".0167",
-  "source": "results/cobar/confirmatory/confirmatory_analysis_S2_short_S3_workers4.json",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
   "setting": "S3_workers4",
   "algorithm": "iaip_sr",
   "metric": "pi",
@@ -826,7 +826,7 @@
  },
  "SThreeGapIaipSr": {
   "value": ".0087",
-  "source": "results/cobar/confirmatory/confirmatory_analysis_S2_short_S3_workers4.json",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
   "setting": "S3_workers4",
   "algorithm": "iaip_sr",
   "metric": "gap_B",
@@ -835,7 +835,7 @@
  },
  "SThreeMeanPortfolioHinted": {
   "value": ".0182",
-  "source": "results/cobar/confirmatory/confirmatory_analysis_S2_short_S3_workers4.json",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
   "setting": "S3_workers4",
   "algorithm": "portfolio_hinted",
   "metric": "pi",
@@ -844,7 +844,7 @@
  },
  "SThreeGapPortfolioHinted": {
   "value": ".0101",
-  "source": "results/cobar/confirmatory/confirmatory_analysis_S2_short_S3_workers4.json",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
   "setting": "S3_workers4",
   "algorithm": "portfolio_hinted",
   "metric": "gap_B",
@@ -855,7 +855,7 @@
   "value": "7.9",
   "statistic": "relative difference of means (-)",
   "sign": "-",
-  "source": "results/cobar/confirmatory/confirmatory_analysis_S2_short_S3_workers4.json",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
   "setting": "S3_workers4",
   "algorithm": "candidate",
   "comparator": "iaip_sr",
@@ -866,7 +866,7 @@
  "SThreeCandidateVsIaipSrSign": {
   "value": "-",
   "statistic": "sign of the relative difference",
-  "source": "results/cobar/confirmatory/confirmatory_analysis_S2_short_S3_workers4.json",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
   "setting": "S3_workers4",
   "algorithm": "candidate",
   "comparator": "iaip_sr",
@@ -877,7 +877,7 @@
  "SThreeCandidateVsIaipSrWL": {
   "value": "14/6",
   "statistic": "streams won/lost by algorithm",
-  "source": "results/cobar/confirmatory/confirmatory_analysis_S2_short_S3_workers4.json",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
   "setting": "S3_workers4",
   "algorithm": "candidate",
   "comparator": "iaip_sr",
@@ -888,7 +888,7 @@
  "SThreeCandidateVsIaipSrCI": {
   "value": "[-0.0026, -0.0002]",
   "statistic": "stream-clustered bootstrap 95% CI of the mean difference",
-  "source": "results/cobar/confirmatory/confirmatory_analysis_S2_short_S3_workers4.json",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
   "setting": "S3_workers4",
   "algorithm": "candidate",
   "comparator": "iaip_sr",
@@ -899,7 +899,7 @@
  "SThreeCandidateVsIaipSrHolm": {
   "value": "0.12",
   "statistic": "Holm-adjusted exact sign-test p",
-  "source": "results/cobar/confirmatory/confirmatory_analysis_S2_short_S3_workers4.json",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
   "setting": "S3_workers4",
   "algorithm": "candidate",
   "comparator": "iaip_sr",
@@ -911,7 +911,7 @@
   "value": "18.7",
   "statistic": "relative difference of means (-)",
   "sign": "-",
-  "source": "results/cobar/confirmatory/confirmatory_analysis_S2_short_S3_workers4.json",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
   "setting": "S3_workers4",
   "algorithm": "candidate",
   "comparator": "iaip_sr",
@@ -922,7 +922,7 @@
  "SThreeCandidateVsIaipSrGapSign": {
   "value": "-",
   "statistic": "sign of the relative difference",
-  "source": "results/cobar/confirmatory/confirmatory_analysis_S2_short_S3_workers4.json",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
   "setting": "S3_workers4",
   "algorithm": "candidate",
   "comparator": "iaip_sr",
@@ -933,7 +933,7 @@
  "SThreeCandidateVsIaipSrGapWL": {
   "value": "13/7",
   "statistic": "streams won/lost by algorithm",
-  "source": "results/cobar/confirmatory/confirmatory_analysis_S2_short_S3_workers4.json",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
   "setting": "S3_workers4",
   "algorithm": "candidate",
   "comparator": "iaip_sr",
@@ -944,7 +944,7 @@
  "SThreeCandidateVsIaipSrGapCI": {
   "value": "[-0.0028, -0.0006]",
   "statistic": "stream-clustered bootstrap 95% CI of the mean difference",
-  "source": "results/cobar/confirmatory/confirmatory_analysis_S2_short_S3_workers4.json",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
   "setting": "S3_workers4",
   "algorithm": "candidate",
   "comparator": "iaip_sr",
@@ -956,7 +956,7 @@
   "value": "15.6",
   "statistic": "relative difference of means (-)",
   "sign": "-",
-  "source": "results/cobar/confirmatory/confirmatory_analysis_S2_short_S3_workers4.json",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
   "setting": "S3_workers4",
   "algorithm": "candidate",
   "comparator": "portfolio_hinted",
@@ -967,7 +967,7 @@
  "SThreeCandidateVsPortfolioHintedSign": {
   "value": "-",
   "statistic": "sign of the relative difference",
-  "source": "results/cobar/confirmatory/confirmatory_analysis_S2_short_S3_workers4.json",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
   "setting": "S3_workers4",
   "algorithm": "candidate",
   "comparator": "portfolio_hinted",
@@ -978,7 +978,7 @@
  "SThreeCandidateVsPortfolioHintedWL": {
   "value": "16/4",
   "statistic": "streams won/lost by algorithm",
-  "source": "results/cobar/confirmatory/confirmatory_analysis_S2_short_S3_workers4.json",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
   "setting": "S3_workers4",
   "algorithm": "candidate",
   "comparator": "portfolio_hinted",
@@ -989,7 +989,7 @@
  "SThreeCandidateVsPortfolioHintedCI": {
   "value": "[-0.0045, -0.0014]",
   "statistic": "stream-clustered bootstrap 95% CI of the mean difference",
-  "source": "results/cobar/confirmatory/confirmatory_analysis_S2_short_S3_workers4.json",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
   "setting": "S3_workers4",
   "algorithm": "candidate",
   "comparator": "portfolio_hinted",
@@ -1000,7 +1000,7 @@
  "SThreeCandidateVsPortfolioHintedHolm": {
   "value": "0.024",
   "statistic": "Holm-adjusted exact sign-test p",
-  "source": "results/cobar/confirmatory/confirmatory_analysis_S2_short_S3_workers4.json",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
   "setting": "S3_workers4",
   "algorithm": "candidate",
   "comparator": "portfolio_hinted",
@@ -1012,7 +1012,7 @@
   "value": "29.6",
   "statistic": "relative difference of means (-)",
   "sign": "-",
-  "source": "results/cobar/confirmatory/confirmatory_analysis_S2_short_S3_workers4.json",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
   "setting": "S3_workers4",
   "algorithm": "candidate",
   "comparator": "portfolio_hinted",
@@ -1023,7 +1023,7 @@
  "SThreeCandidateVsPortfolioHintedGapSign": {
   "value": "-",
   "statistic": "sign of the relative difference",
-  "source": "results/cobar/confirmatory/confirmatory_analysis_S2_short_S3_workers4.json",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
   "setting": "S3_workers4",
   "algorithm": "candidate",
   "comparator": "portfolio_hinted",
@@ -1034,7 +1034,7 @@
  "SThreeCandidateVsPortfolioHintedGapWL": {
   "value": "15/5",
   "statistic": "streams won/lost by algorithm",
-  "source": "results/cobar/confirmatory/confirmatory_analysis_S2_short_S3_workers4.json",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
   "setting": "S3_workers4",
   "algorithm": "candidate",
   "comparator": "portfolio_hinted",
@@ -1045,7 +1045,7 @@
  "SThreeCandidateVsPortfolioHintedGapCI": {
   "value": "[-0.0046, -0.0015]",
   "statistic": "stream-clustered bootstrap 95% CI of the mean difference",
-  "source": "results/cobar/confirmatory/confirmatory_analysis_S2_short_S3_workers4.json",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
   "setting": "S3_workers4",
   "algorithm": "candidate",
   "comparator": "portfolio_hinted",
@@ -1055,8 +1055,1128 @@
  },
  "SThreeNonInferior": {
   "value": "yes",
-  "source": "results/cobar/confirmatory/confirmatory_analysis_S2_short_S3_workers4.json",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
   "setting": "S3_workers4",
+  "statistic": "non-inferiority vs iaip_sr, 5% margin"
+ },
+ "SFourUnits": {
+  "value": "20",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
+  "setting": "S4_arrival",
+  "statistic": "number of units"
+ },
+ "SFourRecords": {
+  "value": "3{,}300",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
+  "setting": "S4_arrival",
+  "statistic": "run records"
+ },
+ "SFourNotValidated": {
+  "value": "0",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
+  "setting": "S4_arrival",
+  "statistic": "records not validated"
+ },
+ "SFourMeanCandidate": {
+  "value": ".0253",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
+  "setting": "S4_arrival",
+  "algorithm": "candidate",
+  "metric": "pi",
+  "statistic": "mean of stream means",
+  "table": "tab:conf"
+ },
+ "SFourGapCandidate": {
+  "value": ".0135",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
+  "setting": "S4_arrival",
+  "algorithm": "candidate",
+  "metric": "gap_B",
+  "statistic": "mean of stream means",
+  "table": "tab:conf"
+ },
+ "SFourMeanIaipSr": {
+  "value": ".0428",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
+  "setting": "S4_arrival",
+  "algorithm": "iaip_sr",
+  "metric": "pi",
+  "statistic": "mean of stream means",
+  "table": "tab:conf"
+ },
+ "SFourGapIaipSr": {
+  "value": ".0309",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
+  "setting": "S4_arrival",
+  "algorithm": "iaip_sr",
+  "metric": "gap_B",
+  "statistic": "mean of stream means",
+  "table": "tab:conf"
+ },
+ "SFourMeanPortfolioHinted": {
+  "value": ".0719",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
+  "setting": "S4_arrival",
+  "algorithm": "portfolio_hinted",
+  "metric": "pi",
+  "statistic": "mean of stream means",
+  "table": "tab:conf"
+ },
+ "SFourGapPortfolioHinted": {
+  "value": ".0525",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
+  "setting": "S4_arrival",
+  "algorithm": "portfolio_hinted",
+  "metric": "gap_B",
+  "statistic": "mean of stream means",
+  "table": "tab:conf"
+ },
+ "SFourCandidateVsIaipSrRel": {
+  "value": "40.8",
+  "statistic": "relative difference of means (-)",
+  "sign": "-",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
+  "setting": "S4_arrival",
+  "algorithm": "candidate",
+  "comparator": "iaip_sr",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:conf"
+ },
+ "SFourCandidateVsIaipSrSign": {
+  "value": "-",
+  "statistic": "sign of the relative difference",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
+  "setting": "S4_arrival",
+  "algorithm": "candidate",
+  "comparator": "iaip_sr",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:conf"
+ },
+ "SFourCandidateVsIaipSrWL": {
+  "value": "20/0",
+  "statistic": "streams won/lost by algorithm",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
+  "setting": "S4_arrival",
+  "algorithm": "candidate",
+  "comparator": "iaip_sr",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:conf"
+ },
+ "SFourCandidateVsIaipSrCI": {
+  "value": "[-0.0225, -0.0130]",
+  "statistic": "stream-clustered bootstrap 95% CI of the mean difference",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
+  "setting": "S4_arrival",
+  "algorithm": "candidate",
+  "comparator": "iaip_sr",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:conf"
+ },
+ "SFourCandidateVsIaipSrHolm": {
+  "value": "3.8\\cdot10^{-6}",
+  "statistic": "Holm-adjusted exact sign-test p",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
+  "setting": "S4_arrival",
+  "algorithm": "candidate",
+  "comparator": "iaip_sr",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:conf"
+ },
+ "SFourCandidateVsIaipSrGapRel": {
+  "value": "56.3",
+  "statistic": "relative difference of means (-)",
+  "sign": "-",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
+  "setting": "S4_arrival",
+  "algorithm": "candidate",
+  "comparator": "iaip_sr",
+  "metric": "gap_B",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:conf"
+ },
+ "SFourCandidateVsIaipSrGapSign": {
+  "value": "-",
+  "statistic": "sign of the relative difference",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
+  "setting": "S4_arrival",
+  "algorithm": "candidate",
+  "comparator": "iaip_sr",
+  "metric": "gap_B",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:conf"
+ },
+ "SFourCandidateVsIaipSrGapWL": {
+  "value": "20/0",
+  "statistic": "streams won/lost by algorithm",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
+  "setting": "S4_arrival",
+  "algorithm": "candidate",
+  "comparator": "iaip_sr",
+  "metric": "gap_B",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:conf"
+ },
+ "SFourCandidateVsIaipSrGapCI": {
+  "value": "[-0.0227, -0.0127]",
+  "statistic": "stream-clustered bootstrap 95% CI of the mean difference",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
+  "setting": "S4_arrival",
+  "algorithm": "candidate",
+  "comparator": "iaip_sr",
+  "metric": "gap_B",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:conf"
+ },
+ "SFourCandidateVsPortfolioHintedRel": {
+  "value": "64.8",
+  "statistic": "relative difference of means (-)",
+  "sign": "-",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
+  "setting": "S4_arrival",
+  "algorithm": "candidate",
+  "comparator": "portfolio_hinted",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:conf"
+ },
+ "SFourCandidateVsPortfolioHintedSign": {
+  "value": "-",
+  "statistic": "sign of the relative difference",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
+  "setting": "S4_arrival",
+  "algorithm": "candidate",
+  "comparator": "portfolio_hinted",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:conf"
+ },
+ "SFourCandidateVsPortfolioHintedWL": {
+  "value": "20/0",
+  "statistic": "streams won/lost by algorithm",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
+  "setting": "S4_arrival",
+  "algorithm": "candidate",
+  "comparator": "portfolio_hinted",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:conf"
+ },
+ "SFourCandidateVsPortfolioHintedCI": {
+  "value": "[-0.0523, -0.0410]",
+  "statistic": "stream-clustered bootstrap 95% CI of the mean difference",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
+  "setting": "S4_arrival",
+  "algorithm": "candidate",
+  "comparator": "portfolio_hinted",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:conf"
+ },
+ "SFourCandidateVsPortfolioHintedHolm": {
+  "value": "3.8\\cdot10^{-6}",
+  "statistic": "Holm-adjusted exact sign-test p",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
+  "setting": "S4_arrival",
+  "algorithm": "candidate",
+  "comparator": "portfolio_hinted",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:conf"
+ },
+ "SFourCandidateVsPortfolioHintedGapRel": {
+  "value": "74.3",
+  "statistic": "relative difference of means (-)",
+  "sign": "-",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
+  "setting": "S4_arrival",
+  "algorithm": "candidate",
+  "comparator": "portfolio_hinted",
+  "metric": "gap_B",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:conf"
+ },
+ "SFourCandidateVsPortfolioHintedGapSign": {
+  "value": "-",
+  "statistic": "sign of the relative difference",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
+  "setting": "S4_arrival",
+  "algorithm": "candidate",
+  "comparator": "portfolio_hinted",
+  "metric": "gap_B",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:conf"
+ },
+ "SFourCandidateVsPortfolioHintedGapWL": {
+  "value": "20/0",
+  "statistic": "streams won/lost by algorithm",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
+  "setting": "S4_arrival",
+  "algorithm": "candidate",
+  "comparator": "portfolio_hinted",
+  "metric": "gap_B",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:conf"
+ },
+ "SFourCandidateVsPortfolioHintedGapCI": {
+  "value": "[-0.0459, -0.0324]",
+  "statistic": "stream-clustered bootstrap 95% CI of the mean difference",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
+  "setting": "S4_arrival",
+  "algorithm": "candidate",
+  "comparator": "portfolio_hinted",
+  "metric": "gap_B",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:conf"
+ },
+ "SFourNonInferior": {
+  "value": "yes",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
+  "setting": "S4_arrival",
+  "statistic": "non-inferiority vs iaip_sr, 5% margin"
+ },
+ "SFiveUnits": {
+  "value": "20",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
+  "setting": "S5_outage",
+  "statistic": "number of units"
+ },
+ "SFiveRecords": {
+  "value": "3{,}300",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
+  "setting": "S5_outage",
+  "statistic": "run records"
+ },
+ "SFiveNotValidated": {
+  "value": "0",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
+  "setting": "S5_outage",
+  "statistic": "records not validated"
+ },
+ "SFiveMeanCandidate": {
+  "value": ".0199",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
+  "setting": "S5_outage",
+  "algorithm": "candidate",
+  "metric": "pi",
+  "statistic": "mean of stream means",
+  "table": "tab:conf"
+ },
+ "SFiveGapCandidate": {
+  "value": ".0099",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
+  "setting": "S5_outage",
+  "algorithm": "candidate",
+  "metric": "gap_B",
+  "statistic": "mean of stream means",
+  "table": "tab:conf"
+ },
+ "SFiveMeanIaipSr": {
+  "value": ".0233",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
+  "setting": "S5_outage",
+  "algorithm": "iaip_sr",
+  "metric": "pi",
+  "statistic": "mean of stream means",
+  "table": "tab:conf"
+ },
+ "SFiveGapIaipSr": {
+  "value": ".0118",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
+  "setting": "S5_outage",
+  "algorithm": "iaip_sr",
+  "metric": "gap_B",
+  "statistic": "mean of stream means",
+  "table": "tab:conf"
+ },
+ "SFiveMeanPortfolioHinted": {
+  "value": ".0275",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
+  "setting": "S5_outage",
+  "algorithm": "portfolio_hinted",
+  "metric": "pi",
+  "statistic": "mean of stream means",
+  "table": "tab:conf"
+ },
+ "SFiveGapPortfolioHinted": {
+  "value": ".0134",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
+  "setting": "S5_outage",
+  "algorithm": "portfolio_hinted",
+  "metric": "gap_B",
+  "statistic": "mean of stream means",
+  "table": "tab:conf"
+ },
+ "SFiveCandidateVsIaipSrRel": {
+  "value": "14.7",
+  "statistic": "relative difference of means (-)",
+  "sign": "-",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
+  "setting": "S5_outage",
+  "algorithm": "candidate",
+  "comparator": "iaip_sr",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:conf"
+ },
+ "SFiveCandidateVsIaipSrSign": {
+  "value": "-",
+  "statistic": "sign of the relative difference",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
+  "setting": "S5_outage",
+  "algorithm": "candidate",
+  "comparator": "iaip_sr",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:conf"
+ },
+ "SFiveCandidateVsIaipSrWL": {
+  "value": "16/4",
+  "statistic": "streams won/lost by algorithm",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
+  "setting": "S5_outage",
+  "algorithm": "candidate",
+  "comparator": "iaip_sr",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:conf"
+ },
+ "SFiveCandidateVsIaipSrCI": {
+  "value": "[-0.0054, -0.0015]",
+  "statistic": "stream-clustered bootstrap 95% CI of the mean difference",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
+  "setting": "S5_outage",
+  "algorithm": "candidate",
+  "comparator": "iaip_sr",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:conf"
+ },
+ "SFiveCandidateVsIaipSrHolm": {
+  "value": "0.012",
+  "statistic": "Holm-adjusted exact sign-test p",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
+  "setting": "S5_outage",
+  "algorithm": "candidate",
+  "comparator": "iaip_sr",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:conf"
+ },
+ "SFiveCandidateVsIaipSrGapRel": {
+  "value": "16.3",
+  "statistic": "relative difference of means (-)",
+  "sign": "-",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
+  "setting": "S5_outage",
+  "algorithm": "candidate",
+  "comparator": "iaip_sr",
+  "metric": "gap_B",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:conf"
+ },
+ "SFiveCandidateVsIaipSrGapSign": {
+  "value": "-",
+  "statistic": "sign of the relative difference",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
+  "setting": "S5_outage",
+  "algorithm": "candidate",
+  "comparator": "iaip_sr",
+  "metric": "gap_B",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:conf"
+ },
+ "SFiveCandidateVsIaipSrGapWL": {
+  "value": "15/4",
+  "statistic": "streams won/lost by algorithm",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
+  "setting": "S5_outage",
+  "algorithm": "candidate",
+  "comparator": "iaip_sr",
+  "metric": "gap_B",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:conf"
+ },
+ "SFiveCandidateVsIaipSrGapCI": {
+  "value": "[-0.0035, -0.0003]",
+  "statistic": "stream-clustered bootstrap 95% CI of the mean difference",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
+  "setting": "S5_outage",
+  "algorithm": "candidate",
+  "comparator": "iaip_sr",
+  "metric": "gap_B",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:conf"
+ },
+ "SFiveCandidateVsPortfolioHintedRel": {
+  "value": "27.7",
+  "statistic": "relative difference of means (-)",
+  "sign": "-",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
+  "setting": "S5_outage",
+  "algorithm": "candidate",
+  "comparator": "portfolio_hinted",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:conf"
+ },
+ "SFiveCandidateVsPortfolioHintedSign": {
+  "value": "-",
+  "statistic": "sign of the relative difference",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
+  "setting": "S5_outage",
+  "algorithm": "candidate",
+  "comparator": "portfolio_hinted",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:conf"
+ },
+ "SFiveCandidateVsPortfolioHintedWL": {
+  "value": "20/0",
+  "statistic": "streams won/lost by algorithm",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
+  "setting": "S5_outage",
+  "algorithm": "candidate",
+  "comparator": "portfolio_hinted",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:conf"
+ },
+ "SFiveCandidateVsPortfolioHintedCI": {
+  "value": "[-0.0103, -0.0051]",
+  "statistic": "stream-clustered bootstrap 95% CI of the mean difference",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
+  "setting": "S5_outage",
+  "algorithm": "candidate",
+  "comparator": "portfolio_hinted",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:conf"
+ },
+ "SFiveCandidateVsPortfolioHintedHolm": {
+  "value": "3.8\\cdot10^{-6}",
+  "statistic": "Holm-adjusted exact sign-test p",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
+  "setting": "S5_outage",
+  "algorithm": "candidate",
+  "comparator": "portfolio_hinted",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:conf"
+ },
+ "SFiveCandidateVsPortfolioHintedGapRel": {
+  "value": "26.3",
+  "statistic": "relative difference of means (-)",
+  "sign": "-",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
+  "setting": "S5_outage",
+  "algorithm": "candidate",
+  "comparator": "portfolio_hinted",
+  "metric": "gap_B",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:conf"
+ },
+ "SFiveCandidateVsPortfolioHintedGapSign": {
+  "value": "-",
+  "statistic": "sign of the relative difference",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
+  "setting": "S5_outage",
+  "algorithm": "candidate",
+  "comparator": "portfolio_hinted",
+  "metric": "gap_B",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:conf"
+ },
+ "SFiveCandidateVsPortfolioHintedGapWL": {
+  "value": "17/2",
+  "statistic": "streams won/lost by algorithm",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
+  "setting": "S5_outage",
+  "algorithm": "candidate",
+  "comparator": "portfolio_hinted",
+  "metric": "gap_B",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:conf"
+ },
+ "SFiveCandidateVsPortfolioHintedGapCI": {
+  "value": "[-0.0052, -0.0020]",
+  "statistic": "stream-clustered bootstrap 95% CI of the mean difference",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
+  "setting": "S5_outage",
+  "algorithm": "candidate",
+  "comparator": "portfolio_hinted",
+  "metric": "gap_B",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:conf"
+ },
+ "SFiveNonInferior": {
+  "value": "yes",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
+  "setting": "S5_outage",
+  "statistic": "non-inferiority vs iaip_sr, 5% margin"
+ },
+ "SSixUnits": {
+  "value": "20",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
+  "setting": "S6_b30",
+  "statistic": "number of units"
+ },
+ "SSixRecords": {
+  "value": "1{,}980",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
+  "setting": "S6_b30",
+  "statistic": "run records"
+ },
+ "SSixNotValidated": {
+  "value": "0",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
+  "setting": "S6_b30",
+  "statistic": "records not validated"
+ },
+ "SSixMeanCandidate": {
+  "value": ".0164",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
+  "setting": "S6_b30",
+  "algorithm": "candidate",
+  "metric": "pi",
+  "statistic": "mean of stream means",
+  "table": "tab:conf"
+ },
+ "SSixGapCandidate": {
+  "value": ".0098",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
+  "setting": "S6_b30",
+  "algorithm": "candidate",
+  "metric": "gap_B",
+  "statistic": "mean of stream means",
+  "table": "tab:conf"
+ },
+ "SSixMeanIaipSr": {
+  "value": ".0209",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
+  "setting": "S6_b30",
+  "algorithm": "iaip_sr",
+  "metric": "pi",
+  "statistic": "mean of stream means",
+  "table": "tab:conf"
+ },
+ "SSixGapIaipSr": {
+  "value": ".0121",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
+  "setting": "S6_b30",
+  "algorithm": "iaip_sr",
+  "metric": "gap_B",
+  "statistic": "mean of stream means",
+  "table": "tab:conf"
+ },
+ "SSixMeanPortfolioHinted": {
+  "value": ".0305",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
+  "setting": "S6_b30",
+  "algorithm": "portfolio_hinted",
+  "metric": "pi",
+  "statistic": "mean of stream means",
+  "table": "tab:conf"
+ },
+ "SSixGapPortfolioHinted": {
+  "value": ".0159",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
+  "setting": "S6_b30",
+  "algorithm": "portfolio_hinted",
+  "metric": "gap_B",
+  "statistic": "mean of stream means",
+  "table": "tab:conf"
+ },
+ "SSixCandidateVsIaipSrRel": {
+  "value": "21.5",
+  "statistic": "relative difference of means (-)",
+  "sign": "-",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
+  "setting": "S6_b30",
+  "algorithm": "candidate",
+  "comparator": "iaip_sr",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:conf"
+ },
+ "SSixCandidateVsIaipSrSign": {
+  "value": "-",
+  "statistic": "sign of the relative difference",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
+  "setting": "S6_b30",
+  "algorithm": "candidate",
+  "comparator": "iaip_sr",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:conf"
+ },
+ "SSixCandidateVsIaipSrWL": {
+  "value": "19/1",
+  "statistic": "streams won/lost by algorithm",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
+  "setting": "S6_b30",
+  "algorithm": "candidate",
+  "comparator": "iaip_sr",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:conf"
+ },
+ "SSixCandidateVsIaipSrCI": {
+  "value": "[-0.0060, -0.0031]",
+  "statistic": "stream-clustered bootstrap 95% CI of the mean difference",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
+  "setting": "S6_b30",
+  "algorithm": "candidate",
+  "comparator": "iaip_sr",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:conf"
+ },
+ "SSixCandidateVsIaipSrHolm": {
+  "value": "4.0\\cdot10^{-5}",
+  "statistic": "Holm-adjusted exact sign-test p",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
+  "setting": "S6_b30",
+  "algorithm": "candidate",
+  "comparator": "iaip_sr",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:conf"
+ },
+ "SSixCandidateVsIaipSrGapRel": {
+  "value": "18.9",
+  "statistic": "relative difference of means (-)",
+  "sign": "-",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
+  "setting": "S6_b30",
+  "algorithm": "candidate",
+  "comparator": "iaip_sr",
+  "metric": "gap_B",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:conf"
+ },
+ "SSixCandidateVsIaipSrGapSign": {
+  "value": "-",
+  "statistic": "sign of the relative difference",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
+  "setting": "S6_b30",
+  "algorithm": "candidate",
+  "comparator": "iaip_sr",
+  "metric": "gap_B",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:conf"
+ },
+ "SSixCandidateVsIaipSrGapWL": {
+  "value": "17/3",
+  "statistic": "streams won/lost by algorithm",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
+  "setting": "S6_b30",
+  "algorithm": "candidate",
+  "comparator": "iaip_sr",
+  "metric": "gap_B",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:conf"
+ },
+ "SSixCandidateVsIaipSrGapCI": {
+  "value": "[-0.0036, -0.0010]",
+  "statistic": "stream-clustered bootstrap 95% CI of the mean difference",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
+  "setting": "S6_b30",
+  "algorithm": "candidate",
+  "comparator": "iaip_sr",
+  "metric": "gap_B",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:conf"
+ },
+ "SSixCandidateVsPortfolioHintedRel": {
+  "value": "46.0",
+  "statistic": "relative difference of means (-)",
+  "sign": "-",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
+  "setting": "S6_b30",
+  "algorithm": "candidate",
+  "comparator": "portfolio_hinted",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:conf"
+ },
+ "SSixCandidateVsPortfolioHintedSign": {
+  "value": "-",
+  "statistic": "sign of the relative difference",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
+  "setting": "S6_b30",
+  "algorithm": "candidate",
+  "comparator": "portfolio_hinted",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:conf"
+ },
+ "SSixCandidateVsPortfolioHintedWL": {
+  "value": "20/0",
+  "statistic": "streams won/lost by algorithm",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
+  "setting": "S6_b30",
+  "algorithm": "candidate",
+  "comparator": "portfolio_hinted",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:conf"
+ },
+ "SSixCandidateVsPortfolioHintedCI": {
+  "value": "[-0.0181, -0.0103]",
+  "statistic": "stream-clustered bootstrap 95% CI of the mean difference",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
+  "setting": "S6_b30",
+  "algorithm": "candidate",
+  "comparator": "portfolio_hinted",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:conf"
+ },
+ "SSixCandidateVsPortfolioHintedHolm": {
+  "value": "3.8\\cdot10^{-6}",
+  "statistic": "Holm-adjusted exact sign-test p",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
+  "setting": "S6_b30",
+  "algorithm": "candidate",
+  "comparator": "portfolio_hinted",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:conf"
+ },
+ "SSixCandidateVsPortfolioHintedGapRel": {
+  "value": "38.5",
+  "statistic": "relative difference of means (-)",
+  "sign": "-",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
+  "setting": "S6_b30",
+  "algorithm": "candidate",
+  "comparator": "portfolio_hinted",
+  "metric": "gap_B",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:conf"
+ },
+ "SSixCandidateVsPortfolioHintedGapSign": {
+  "value": "-",
+  "statistic": "sign of the relative difference",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
+  "setting": "S6_b30",
+  "algorithm": "candidate",
+  "comparator": "portfolio_hinted",
+  "metric": "gap_B",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:conf"
+ },
+ "SSixCandidateVsPortfolioHintedGapWL": {
+  "value": "17/3",
+  "statistic": "streams won/lost by algorithm",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
+  "setting": "S6_b30",
+  "algorithm": "candidate",
+  "comparator": "portfolio_hinted",
+  "metric": "gap_B",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:conf"
+ },
+ "SSixCandidateVsPortfolioHintedGapCI": {
+  "value": "[-0.0092, -0.0035]",
+  "statistic": "stream-clustered bootstrap 95% CI of the mean difference",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
+  "setting": "S6_b30",
+  "algorithm": "candidate",
+  "comparator": "portfolio_hinted",
+  "metric": "gap_B",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:conf"
+ },
+ "SSixNonInferior": {
+  "value": "yes",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
+  "setting": "S6_b30",
+  "statistic": "non-inferiority vs iaip_sr, 5% margin"
+ },
+ "SSevenUnits": {
+  "value": "34",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
+  "setting": "S7_benchmarks",
+  "statistic": "number of units"
+ },
+ "SSevenRecords": {
+  "value": "5{,}610",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
+  "setting": "S7_benchmarks",
+  "statistic": "run records"
+ },
+ "SSevenNotValidated": {
+  "value": "0",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
+  "setting": "S7_benchmarks",
+  "statistic": "records not validated"
+ },
+ "SSevenMeanCandidate": {
+  "value": ".0248",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
+  "setting": "S7_benchmarks",
+  "algorithm": "candidate",
+  "metric": "pi",
+  "statistic": "mean of stream means",
+  "table": "tab:conf"
+ },
+ "SSevenGapCandidate": {
+  "value": ".0141",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
+  "setting": "S7_benchmarks",
+  "algorithm": "candidate",
+  "metric": "gap_B",
+  "statistic": "mean of stream means",
+  "table": "tab:conf"
+ },
+ "SSevenMeanIaipSr": {
+  "value": ".0319",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
+  "setting": "S7_benchmarks",
+  "algorithm": "iaip_sr",
+  "metric": "pi",
+  "statistic": "mean of stream means",
+  "table": "tab:conf"
+ },
+ "SSevenGapIaipSr": {
+  "value": ".0188",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
+  "setting": "S7_benchmarks",
+  "algorithm": "iaip_sr",
+  "metric": "gap_B",
+  "statistic": "mean of stream means",
+  "table": "tab:conf"
+ },
+ "SSevenMeanPortfolioHinted": {
+  "value": ".0434",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
+  "setting": "S7_benchmarks",
+  "algorithm": "portfolio_hinted",
+  "metric": "pi",
+  "statistic": "mean of stream means",
+  "table": "tab:conf"
+ },
+ "SSevenGapPortfolioHinted": {
+  "value": ".0260",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
+  "setting": "S7_benchmarks",
+  "algorithm": "portfolio_hinted",
+  "metric": "gap_B",
+  "statistic": "mean of stream means",
+  "table": "tab:conf"
+ },
+ "SSevenCandidateVsIaipSrRel": {
+  "value": "22.4",
+  "statistic": "relative difference of means (-)",
+  "sign": "-",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
+  "setting": "S7_benchmarks",
+  "algorithm": "candidate",
+  "comparator": "iaip_sr",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:conf"
+ },
+ "SSevenCandidateVsIaipSrSign": {
+  "value": "-",
+  "statistic": "sign of the relative difference",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
+  "setting": "S7_benchmarks",
+  "algorithm": "candidate",
+  "comparator": "iaip_sr",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:conf"
+ },
+ "SSevenCandidateVsIaipSrWL": {
+  "value": "31/3",
+  "statistic": "streams won/lost by algorithm",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
+  "setting": "S7_benchmarks",
+  "algorithm": "candidate",
+  "comparator": "iaip_sr",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:conf"
+ },
+ "SSevenCandidateVsIaipSrCI": {
+  "value": "[-0.0094, -0.0050]",
+  "statistic": "stream-clustered bootstrap 95% CI of the mean difference",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
+  "setting": "S7_benchmarks",
+  "algorithm": "candidate",
+  "comparator": "iaip_sr",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:conf"
+ },
+ "SSevenCandidateVsIaipSrHolm": {
+  "value": "7.7\\cdot10^{-7}",
+  "statistic": "Holm-adjusted exact sign-test p",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
+  "setting": "S7_benchmarks",
+  "algorithm": "candidate",
+  "comparator": "iaip_sr",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:conf"
+ },
+ "SSevenCandidateVsIaipSrGapRel": {
+  "value": "25.0",
+  "statistic": "relative difference of means (-)",
+  "sign": "-",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
+  "setting": "S7_benchmarks",
+  "algorithm": "candidate",
+  "comparator": "iaip_sr",
+  "metric": "gap_B",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:conf"
+ },
+ "SSevenCandidateVsIaipSrGapSign": {
+  "value": "-",
+  "statistic": "sign of the relative difference",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
+  "setting": "S7_benchmarks",
+  "algorithm": "candidate",
+  "comparator": "iaip_sr",
+  "metric": "gap_B",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:conf"
+ },
+ "SSevenCandidateVsIaipSrGapWL": {
+  "value": "27/7",
+  "statistic": "streams won/lost by algorithm",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
+  "setting": "S7_benchmarks",
+  "algorithm": "candidate",
+  "comparator": "iaip_sr",
+  "metric": "gap_B",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:conf"
+ },
+ "SSevenCandidateVsIaipSrGapCI": {
+  "value": "[-0.0066, -0.0029]",
+  "statistic": "stream-clustered bootstrap 95% CI of the mean difference",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
+  "setting": "S7_benchmarks",
+  "algorithm": "candidate",
+  "comparator": "iaip_sr",
+  "metric": "gap_B",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:conf"
+ },
+ "SSevenCandidateVsPortfolioHintedRel": {
+  "value": "43.0",
+  "statistic": "relative difference of means (-)",
+  "sign": "-",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
+  "setting": "S7_benchmarks",
+  "algorithm": "candidate",
+  "comparator": "portfolio_hinted",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:conf"
+ },
+ "SSevenCandidateVsPortfolioHintedSign": {
+  "value": "-",
+  "statistic": "sign of the relative difference",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
+  "setting": "S7_benchmarks",
+  "algorithm": "candidate",
+  "comparator": "portfolio_hinted",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:conf"
+ },
+ "SSevenCandidateVsPortfolioHintedWL": {
+  "value": "34/0",
+  "statistic": "streams won/lost by algorithm",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
+  "setting": "S7_benchmarks",
+  "algorithm": "candidate",
+  "comparator": "portfolio_hinted",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:conf"
+ },
+ "SSevenCandidateVsPortfolioHintedCI": {
+  "value": "[-0.0228, -0.0147]",
+  "statistic": "stream-clustered bootstrap 95% CI of the mean difference",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
+  "setting": "S7_benchmarks",
+  "algorithm": "candidate",
+  "comparator": "portfolio_hinted",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:conf"
+ },
+ "SSevenCandidateVsPortfolioHintedHolm": {
+  "value": "2.3\\cdot10^{-10}",
+  "statistic": "Holm-adjusted exact sign-test p",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
+  "setting": "S7_benchmarks",
+  "algorithm": "candidate",
+  "comparator": "portfolio_hinted",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:conf"
+ },
+ "SSevenCandidateVsPortfolioHintedGapRel": {
+  "value": "46.0",
+  "statistic": "relative difference of means (-)",
+  "sign": "-",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
+  "setting": "S7_benchmarks",
+  "algorithm": "candidate",
+  "comparator": "portfolio_hinted",
+  "metric": "gap_B",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:conf"
+ },
+ "SSevenCandidateVsPortfolioHintedGapSign": {
+  "value": "-",
+  "statistic": "sign of the relative difference",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
+  "setting": "S7_benchmarks",
+  "algorithm": "candidate",
+  "comparator": "portfolio_hinted",
+  "metric": "gap_B",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:conf"
+ },
+ "SSevenCandidateVsPortfolioHintedGapWL": {
+  "value": "33/1",
+  "statistic": "streams won/lost by algorithm",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
+  "setting": "S7_benchmarks",
+  "algorithm": "candidate",
+  "comparator": "portfolio_hinted",
+  "metric": "gap_B",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:conf"
+ },
+ "SSevenCandidateVsPortfolioHintedGapCI": {
+  "value": "[-0.0156, -0.0086]",
+  "statistic": "stream-clustered bootstrap 95% CI of the mean difference",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
+  "setting": "S7_benchmarks",
+  "algorithm": "candidate",
+  "comparator": "portfolio_hinted",
+  "metric": "gap_B",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:conf"
+ },
+ "SSevenNonInferior": {
+  "value": "yes",
+  "source": "results/cobar/confirmatory/confirmatory_analysis.json",
+  "setting": "S7_benchmarks",
   "statistic": "non-inferiority vs iaip_sr, 5% margin"
  },
  "PilotOneATwoVsAOneRel": {
@@ -2284,5 +3404,285 @@
   "setting": "S1_primary",
   "algorithm": "candidate",
   "statistic": "median seed operations per round"
+ },
+ "SOneSizeOneFiveVsIaipSrRel": {
+  "value": "17.8",
+  "statistic": "relative difference of means (-)",
+  "sign": "-",
+  "source": "results/cobar/confirmatory/S1_breakdowns.json",
+  "setting": "S1_primary 15x15",
+  "algorithm": "candidate",
+  "comparator": "iaip_sr",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": null
+ },
+ "SOneSizeOneFiveVsIaipSrSign": {
+  "value": "-",
+  "statistic": "sign of the relative difference",
+  "source": "results/cobar/confirmatory/S1_breakdowns.json",
+  "setting": "S1_primary 15x15",
+  "algorithm": "candidate",
+  "comparator": "iaip_sr",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": null
+ },
+ "SOneSizeOneFiveVsIaipSrWL": {
+  "value": "20/0",
+  "statistic": "streams won/lost by algorithm",
+  "source": "results/cobar/confirmatory/S1_breakdowns.json",
+  "setting": "S1_primary 15x15",
+  "algorithm": "candidate",
+  "comparator": "iaip_sr",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": null
+ },
+ "SOneSizeOneFiveVsIaipSrCI": {
+  "value": "[-0.0060, -0.0036]",
+  "statistic": "stream-clustered bootstrap 95% CI of the mean difference",
+  "source": "results/cobar/confirmatory/S1_breakdowns.json",
+  "setting": "S1_primary 15x15",
+  "algorithm": "candidate",
+  "comparator": "iaip_sr",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": null
+ },
+ "SOneSizeTwoZeroVsIaipSrRel": {
+  "value": "29.4",
+  "statistic": "relative difference of means (-)",
+  "sign": "-",
+  "source": "results/cobar/confirmatory/S1_breakdowns.json",
+  "setting": "S1_primary 20x20",
+  "algorithm": "candidate",
+  "comparator": "iaip_sr",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": null
+ },
+ "SOneSizeTwoZeroVsIaipSrSign": {
+  "value": "-",
+  "statistic": "sign of the relative difference",
+  "source": "results/cobar/confirmatory/S1_breakdowns.json",
+  "setting": "S1_primary 20x20",
+  "algorithm": "candidate",
+  "comparator": "iaip_sr",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": null
+ },
+ "SOneSizeTwoZeroVsIaipSrWL": {
+  "value": "19/1",
+  "statistic": "streams won/lost by algorithm",
+  "source": "results/cobar/confirmatory/S1_breakdowns.json",
+  "setting": "S1_primary 20x20",
+  "algorithm": "candidate",
+  "comparator": "iaip_sr",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": null
+ },
+ "SOneSizeTwoZeroVsIaipSrCI": {
+  "value": "[-0.0159, -0.0083]",
+  "statistic": "stream-clustered bootstrap 95% CI of the mean difference",
+  "source": "results/cobar/confirmatory/S1_breakdowns.json",
+  "setting": "S1_primary 20x20",
+  "algorithm": "candidate",
+  "comparator": "iaip_sr",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": null
+ },
+ "SOneDeltaArrivalVsIaipSrRel": {
+  "value": "25.4",
+  "statistic": "relative difference of means (-)",
+  "sign": "-",
+  "source": "results/cobar/confirmatory/S1_breakdowns.json",
+  "setting": "S1_primary arrival",
+  "algorithm": "candidate",
+  "comparator": "iaip_sr",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": null
+ },
+ "SOneDeltaArrivalVsIaipSrSign": {
+  "value": "-",
+  "statistic": "sign of the relative difference",
+  "source": "results/cobar/confirmatory/S1_breakdowns.json",
+  "setting": "S1_primary arrival",
+  "algorithm": "candidate",
+  "comparator": "iaip_sr",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": null
+ },
+ "SOneDeltaArrivalVsIaipSrWL": {
+  "value": "38/2",
+  "statistic": "streams won/lost by algorithm",
+  "source": "results/cobar/confirmatory/S1_breakdowns.json",
+  "setting": "S1_primary arrival",
+  "algorithm": "candidate",
+  "comparator": "iaip_sr",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": null
+ },
+ "SOneDeltaArrivalVsIaipSrCI": {
+  "value": "[-0.0116, -0.0071]",
+  "statistic": "stream-clustered bootstrap 95% CI of the mean difference",
+  "source": "results/cobar/confirmatory/S1_breakdowns.json",
+  "setting": "S1_primary arrival",
+  "algorithm": "candidate",
+  "comparator": "iaip_sr",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": null
+ },
+ "SOneDeltaCancellationVsIaipSrRel": {
+  "value": "19.7",
+  "statistic": "relative difference of means (-)",
+  "sign": "-",
+  "source": "results/cobar/confirmatory/S1_breakdowns.json",
+  "setting": "S1_primary cancellation",
+  "algorithm": "candidate",
+  "comparator": "iaip_sr",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": null
+ },
+ "SOneDeltaCancellationVsIaipSrSign": {
+  "value": "-",
+  "statistic": "sign of the relative difference",
+  "source": "results/cobar/confirmatory/S1_breakdowns.json",
+  "setting": "S1_primary cancellation",
+  "algorithm": "candidate",
+  "comparator": "iaip_sr",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": null
+ },
+ "SOneDeltaCancellationVsIaipSrWL": {
+  "value": "28/7",
+  "statistic": "streams won/lost by algorithm",
+  "source": "results/cobar/confirmatory/S1_breakdowns.json",
+  "setting": "S1_primary cancellation",
+  "algorithm": "candidate",
+  "comparator": "iaip_sr",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": null
+ },
+ "SOneDeltaCancellationVsIaipSrCI": {
+  "value": "[-0.0093, -0.0033]",
+  "statistic": "stream-clustered bootstrap 95% CI of the mean difference",
+  "source": "results/cobar/confirmatory/S1_breakdowns.json",
+  "setting": "S1_primary cancellation",
+  "algorithm": "candidate",
+  "comparator": "iaip_sr",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": null
+ },
+ "SOneDeltaDurationJitterVsIaipSrRel": {
+  "value": "25.8",
+  "statistic": "relative difference of means (-)",
+  "sign": "-",
+  "source": "results/cobar/confirmatory/S1_breakdowns.json",
+  "setting": "S1_primary duration_jitter",
+  "algorithm": "candidate",
+  "comparator": "iaip_sr",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": null
+ },
+ "SOneDeltaDurationJitterVsIaipSrSign": {
+  "value": "-",
+  "statistic": "sign of the relative difference",
+  "source": "results/cobar/confirmatory/S1_breakdowns.json",
+  "setting": "S1_primary duration_jitter",
+  "algorithm": "candidate",
+  "comparator": "iaip_sr",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": null
+ },
+ "SOneDeltaDurationJitterVsIaipSrWL": {
+  "value": "35/4",
+  "statistic": "streams won/lost by algorithm",
+  "source": "results/cobar/confirmatory/S1_breakdowns.json",
+  "setting": "S1_primary duration_jitter",
+  "algorithm": "candidate",
+  "comparator": "iaip_sr",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": null
+ },
+ "SOneDeltaDurationJitterVsIaipSrCI": {
+  "value": "[-0.0110, -0.0053]",
+  "statistic": "stream-clustered bootstrap 95% CI of the mean difference",
+  "source": "results/cobar/confirmatory/S1_breakdowns.json",
+  "setting": "S1_primary duration_jitter",
+  "algorithm": "candidate",
+  "comparator": "iaip_sr",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": null
+ },
+ "SOneDeltaOutageVsIaipSrRel": {
+  "value": "24.2",
+  "statistic": "relative difference of means (-)",
+  "sign": "-",
+  "source": "results/cobar/confirmatory/S1_breakdowns.json",
+  "setting": "S1_primary outage",
+  "algorithm": "candidate",
+  "comparator": "iaip_sr",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": null
+ },
+ "SOneDeltaOutageVsIaipSrSign": {
+  "value": "-",
+  "statistic": "sign of the relative difference",
+  "source": "results/cobar/confirmatory/S1_breakdowns.json",
+  "setting": "S1_primary outage",
+  "algorithm": "candidate",
+  "comparator": "iaip_sr",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": null
+ },
+ "SOneDeltaOutageVsIaipSrWL": {
+  "value": "25/5",
+  "statistic": "streams won/lost by algorithm",
+  "source": "results/cobar/confirmatory/S1_breakdowns.json",
+  "setting": "S1_primary outage",
+  "algorithm": "candidate",
+  "comparator": "iaip_sr",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": null
+ },
+ "SOneDeltaOutageVsIaipSrCI": {
+  "value": "[-0.0117, -0.0035]",
+  "statistic": "stream-clustered bootstrap 95% CI of the mean difference",
+  "source": "results/cobar/confirmatory/S1_breakdowns.json",
+  "setting": "S1_primary outage",
+  "algorithm": "candidate",
+  "comparator": "iaip_sr",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": null
+ },
+ "AuditSolutions": {
+  "value": "977",
+  "source": "results/cobar/audit_intermediate.json",
+  "statistic": "intermediate CP-SAT solutions validated"
+ },
+ "AuditInvalid": {
+  "value": "0",
+  "source": "results/cobar/audit_intermediate.json",
+  "statistic": "invalid intermediate solutions"
  }
 }
