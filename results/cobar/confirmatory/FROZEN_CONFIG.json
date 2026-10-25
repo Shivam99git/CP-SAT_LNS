@@ -1,0 +1,187 @@
+{
+  "frozen_at": "2026-10-25T17:32:55+0530",
+  "git_revision": "3d1ddfb2dc2d65c2afd8a7b7cbb42e765e717acb",
+  "selection_basis": "COBAR development pilots P1-P10 on streams 301-310 only (docs/cobar/07_pilot_protocol.md)",
+  "roles": {
+    "candidate": "cobar|neighbourhood=iaip|use_certificate=0|skip_certified=0|global_certificate=0|policy=fixed|rounds=10|round_neighbourhood=critical+expand",
+    "iaip_sr": "iaip|portfolio=full|alpha=0.6|neighbourhood=N5|global_mode=hinted",
+    "portfolio_hinted": "iaip|portfolio=full|global_mode=hinted",
+    "random_rounds": "cobar|neighbourhood=iaip|use_certificate=0|skip_certified=0|global_certificate=0|policy=fixed|rounds=10|round_neighbourhood=random+expand"
+  },
+  "streams": {
+    "sizes": [
+      15,
+      20
+    ],
+    "stream_seeds": [
+      901,
+      902,
+      903,
+      904,
+      905,
+      906,
+      907,
+      908,
+      909,
+      910,
+      911,
+      912,
+      913,
+      914,
+      915,
+      916,
+      917,
+      918,
+      919,
+      920
+    ],
+    "stream_length": 10,
+    "generator": "full job shop, durations U[5,50], default delta weights, severity medium"
+  },
+  "solver_seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "settings": {
+    "S1_primary": {
+      "budget": 8.0,
+      "workers": 1,
+      "streams": "all 40",
+      "methods": [
+        "candidate",
+        "iaip_sr",
+        "portfolio_hinted",
+        "random_rounds"
+      ]
+    },
+    "S2_short": {
+      "budget": 2.0,
+      "workers": 1,
+      "streams": "all 40",
+      "methods": [
+        "candidate",
+        "iaip_sr",
+        "portfolio_hinted"
+      ]
+    },
+    "S3_workers4": {
+      "budget": 8.0,
+      "workers": 4,
+      "streams": "stream seeds 901-910 (20 streams)",
+      "methods": [
+        "candidate",
+        "iaip_sr",
+        "portfolio_hinted"
+      ]
+    },
+    "S4_arrival": {
+      "budget": 8.0,
+      "workers": 1,
+      "delta_mix": "arrival",
+      "streams": "901-910 (20)",
+      "methods": [
+        "candidate",
+        "iaip_sr",
+        "portfolio_hinted"
+      ]
+    },
+    "S5_outage": {
+      "budget": 8.0,
+      "workers": 1,
+      "delta_mix": "outage",
+      "streams": "901-910 (20)",
+      "methods": [
+        "candidate",
+        "iaip_sr",
+        "portfolio_hinted"
+      ]
+    },
+    "S6_b30": {
+      "budget": 30.0,
+      "workers": 1,
+      "streams": "901-910 (20)",
+      "solver_seeds": [
+        0,
+        1,
+        2
+      ],
+      "methods": [
+        "candidate",
+        "iaip_sr",
+        "portfolio_hinted"
+      ]
+    },
+    "S7_benchmarks": {
+      "budget": 8.0,
+      "workers": 1,
+      "streams": "34 published bases (ta01-20, dmu01-05, swv01-05, yn1-4) x stream seed 901; unit = base instance",
+      "methods": [
+        "candidate",
+        "iaip_sr",
+        "portfolio_hinted"
+      ]
+    }
+  },
+  "run_order": [
+    "S1_primary",
+    "S2_short",
+    "S3_workers4",
+    "S4_arrival",
+    "S5_outage",
+    "S6_b30",
+    "S7_benchmarks"
+  ],
+  "settings_S4_to_S7": "secondary; run in this order after S1-S3; every setting that is run is reported whatever it shows",
+  "primary_endpoint": "stream mean of pi over steps 1..10 and solver seeds, shared z* per physical instance",
+  "family_S1": [
+    [
+      "candidate",
+      "iaip_sr"
+    ],
+    [
+      "candidate",
+      "portfolio_hinted"
+    ],
+    [
+      "candidate",
+      "random_rounds"
+    ],
+    [
+      "random_rounds",
+      "iaip_sr"
+    ]
+  ],
+  "criteria": {
+    "primary_target": "candidate vs iaip_sr in S1: mean PI reduction >= 5%, stream-bootstrap 95% CI upper bound < 0, Holm p < 0.05",
+    "stronger_target": "candidate vs portfolio_hinted in S1: reduction >= 10%, CI upper bound < 0",
+    "location_matters": "candidate vs random_rounds in S1: CI upper bound < 0",
+    "non_inferiority_margin": 0.05,
+    "non_inferiority": "S2 and S3: upper 95% CI bound of mean(candidate - iaip_sr) < 0.05 * mean(iaip_sr)",
+    "no_final_gap_regression": "S1: gap_B CI lower bound <= 0 or mean diff <= 0",
+    "all_outputs_validated": true
+  },
+  "classification": {
+    "GO": "primary target, stronger target, location_matters, non-inferiority in S2 and S3, validated, no gap regression, AND a component credited to a new mechanism",
+    "CONDITIONAL_GO": "the performance criteria hold, but the credited mechanism is not new (e.g. critical-path-seeded rounds), or the certificate adds no measurable value",
+    "NO_GO": "the primary target fails"
+  },
+  "cpus": {
+    "single_worker": [
+      0,
+      2,
+      4,
+      6,
+      8,
+      10,
+      12,
+      14
+    ],
+    "four_workers": [
+      "0,2,4,6",
+      "8,10,12,14"
+    ]
+  }
+}
