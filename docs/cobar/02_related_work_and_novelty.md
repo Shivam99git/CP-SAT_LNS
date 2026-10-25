@@ -74,3 +74,19 @@ The complete proposed mechanism was not found in prior work:
 **Must-cite for any manuscript:** Lin & Yang 2026; Sun et al. 2026; L-RHO 2025; Graph-RHO (preprint); Balas 1969; van Laarhoven et al. 1992; Nowicki & Smutnicki 1996.
 
 **Must-read before submission:** the full texts of Lin & Yang 2026 and Sun et al. 2026.
+
+## 6. Final classification (after the confirmatory study, 2026-10-26)
+
+| Ingredient | Outcome | Classification |
+|---|---|---|
+| certificate L(N, R), no-improvement test, global certificate | sound: 5,500 oracle cases, 0 violations; no measurable effect on decisions | known lemma, adapted; **negative empirical result** |
+| min-cut release of obstructing chains | correct and minimum: 1,000 cases; no measurable effect as release or as round seeds | possibly new procedure in this setting; **not credited** |
+| certificate-aware budget allocation | no measurable effect | **not credited** |
+| budget-only skip rule | harmful in development | **negative result** |
+| repeated restricted rounds seeded at the critical region | held-out vs IAIP-SR: S1 −24.8% (39/1) and better in S2–S7; vs random seeds −17.7% | **known idea** (critical-path neighbourhoods); new **empirical** finding about its value under a deadline in this pipeline |
+
+**Distinction from the closest work:**
+- SLR2 learns the kept/released split.
+- The candidate uses a structural, per-instance critical region and is evaluated by anytime PI under one end-to-end deadline against fresh-incumbent and IAIP-SR baselines.
+
+This is a difference in method and evaluation, not a claim of superiority over SLR2: they were never compared, and SLR2 targets flexible job shops.
