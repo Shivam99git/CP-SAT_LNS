@@ -1,0 +1,36 @@
+{
+ "enumeration": {
+  "cases": 2000,
+  "decisive": 808,
+  "violations": 0,
+  "tight": 1776
+ },
+ "cpsat": {
+  "cases": 1000,
+  "decisive": 358,
+  "violations": 0,
+  "tight": 840
+ },
+ "global": {
+  "cases": 500,
+  "decisive": 82,
+  "violations": 0
+ },
+ "cut": {
+  "cases": 1000,
+  "finite": 699,
+  "miss_chain": 0,
+  "not_minimum": 0
+ },
+ "release_loop": {
+  "cases": 1000,
+  "violations": 0,
+  "status": {
+   "unreleasable": 314,
+   "released": 578,
+   "machine_obstructed": 108
+  }
+ },
+ "failures": [],
+ "seconds": 7.1
+}
