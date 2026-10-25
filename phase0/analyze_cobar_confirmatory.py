@@ -3,6 +3,7 @@ FROZEN_CONFIG.json (refuses to run if the file changed after freezing).
 
     .venv/bin/python -m phase0.analyze_cobar_confirmatory results/cobar/confirmatory
 Setting directories are <root>/S1_primary, <root>/S2_short, ... .
+    --only S1_primary [S2_short ...]   analyse only these (finished) settings
 """
 
 from __future__ import annotations
@@ -19,6 +20,7 @@ from .analyze_gate1 import compare, holm
 
 def main() -> None:
     root = Path(sys.argv[1])
+    only = sys.argv[sys.argv.index("--only") + 1:] if "--only" in sys.argv else None  # restrict to finished settings
     raw = (root / "FROZEN_CONFIG.json").read_bytes()
     cfg = json.loads(raw)
     sha = (root / "FROZEN_CONFIG.sha256").read_text().split()[0]
@@ -27,6 +29,8 @@ def main() -> None:
     crit = cfg["criteria"]
     out = {"frozen_sha256": sha, "settings": {}}
     for name in sorted(p.name for p in root.iterdir() if p.is_dir() and (p / "runs").exists()):
+        if only and name not in only:
+            continue
         df = load(root / name)
         tabs = {}
         for m in ("pi", "gap_B", "pi_late", "t_first"):
@@ -68,7 +72,7 @@ def main() -> None:
             if k in out["settings"]:
                 verdict[f"non_inferiority_{k}"] = out["settings"][k]["non_inferiority_vs_iaip_sr"]
     out["criteria"] = verdict
-    (root / "confirmatory_analysis.json").write_text(json.dumps(out, indent=2, default=float))
+    (root / ("confirmatory_analysis.json" if not only else f"confirmatory_analysis_{'_'.join(only)}.json")).write_text(json.dumps(out, indent=2, default=float))
     for name, s in out["settings"].items():
         print(f"\n{name}: {s['n_units']} {s['unit']}s, seeds {s['solver_seeds']}", json.dumps(s["integrity"]))
         for r, mm in sorted(s["means"].items(), key=lambda x: x[1]["pi"]):
