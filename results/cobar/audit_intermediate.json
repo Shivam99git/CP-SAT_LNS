@@ -1,0 +1,6850 @@
+{
+ "solutions_checked": 977,
+ "invalid": 0,
+ "by_model": {
+  "global": 945,
+  "restricted": 32
+ },
+ "instances": 24,
+ "rows": [
+  {
+   "instance": "15x15_s301_t1",
+   "model": "global",
+   "objective": 758,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t1",
+   "model": "global",
+   "objective": 757,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t1",
+   "model": "global",
+   "objective": 756,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t1",
+   "model": "global",
+   "objective": 755,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t1",
+   "model": "global",
+   "objective": 754,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t1",
+   "model": "global",
+   "objective": 752,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t1",
+   "model": "global",
+   "objective": 751,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t1",
+   "model": "global",
+   "objective": 750,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t1",
+   "model": "global",
+   "objective": 749,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t1",
+   "model": "global",
+   "objective": 748,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t1",
+   "model": "global",
+   "objective": 747,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t1",
+   "model": "global",
+   "objective": 746,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t1",
+   "model": "global",
+   "objective": 745,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t1",
+   "model": "global",
+   "objective": 744,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t1",
+   "model": "global",
+   "objective": 741,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t1",
+   "model": "global",
+   "objective": 740,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t1",
+   "model": "global",
+   "objective": 739,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t1",
+   "model": "global",
+   "objective": 738,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t1",
+   "model": "global",
+   "objective": 731,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t1",
+   "model": "global",
+   "objective": 728,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t1",
+   "model": "global",
+   "objective": 727,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t1",
+   "model": "global",
+   "objective": 726,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t1",
+   "model": "global",
+   "objective": 725,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t1",
+   "model": "global",
+   "objective": 724,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t1",
+   "model": "global",
+   "objective": 722,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t1",
+   "model": "global",
+   "objective": 721,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t1",
+   "model": "global",
+   "objective": 720,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t1",
+   "model": "global",
+   "objective": 719,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t1",
+   "model": "global",
+   "objective": 718,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t1",
+   "model": "global",
+   "objective": 717,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t1",
+   "model": "global",
+   "objective": 716,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t1",
+   "model": "global",
+   "objective": 715,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t1",
+   "model": "global",
+   "objective": 714,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t1",
+   "model": "global",
+   "objective": 713,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t1",
+   "model": "global",
+   "objective": 712,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t1",
+   "model": "global",
+   "objective": 711,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t1",
+   "model": "global",
+   "objective": 710,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t1",
+   "model": "global",
+   "objective": 709,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t1",
+   "model": "global",
+   "objective": 708,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t1",
+   "model": "global",
+   "objective": 707,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t1",
+   "model": "global",
+   "objective": 706,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t1",
+   "model": "global",
+   "objective": 705,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t1",
+   "model": "global",
+   "objective": 704,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t1",
+   "model": "global",
+   "objective": 703,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t1",
+   "model": "global",
+   "objective": 702,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t2",
+   "model": "global",
+   "objective": 792,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t2",
+   "model": "global",
+   "objective": 782,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t2",
+   "model": "global",
+   "objective": 777,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t2",
+   "model": "global",
+   "objective": 775,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t2",
+   "model": "global",
+   "objective": 772,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t2",
+   "model": "global",
+   "objective": 771,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t2",
+   "model": "global",
+   "objective": 770,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t2",
+   "model": "global",
+   "objective": 769,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t2",
+   "model": "global",
+   "objective": 768,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t2",
+   "model": "global",
+   "objective": 767,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t2",
+   "model": "global",
+   "objective": 765,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t2",
+   "model": "global",
+   "objective": 764,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t2",
+   "model": "global",
+   "objective": 761,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t2",
+   "model": "global",
+   "objective": 760,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t2",
+   "model": "global",
+   "objective": 759,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t2",
+   "model": "global",
+   "objective": 758,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t2",
+   "model": "global",
+   "objective": 757,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t3",
+   "model": "global",
+   "objective": 783,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t3",
+   "model": "global",
+   "objective": 781,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t3",
+   "model": "global",
+   "objective": 780,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t3",
+   "model": "global",
+   "objective": 779,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t3",
+   "model": "global",
+   "objective": 778,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t3",
+   "model": "global",
+   "objective": 777,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t3",
+   "model": "global",
+   "objective": 776,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t3",
+   "model": "global",
+   "objective": 775,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t3",
+   "model": "global",
+   "objective": 774,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t3",
+   "model": "global",
+   "objective": 773,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t3",
+   "model": "global",
+   "objective": 772,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t3",
+   "model": "global",
+   "objective": 771,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t3",
+   "model": "global",
+   "objective": 770,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t3",
+   "model": "global",
+   "objective": 768,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t3",
+   "model": "global",
+   "objective": 767,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t3",
+   "model": "global",
+   "objective": 766,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t3",
+   "model": "global",
+   "objective": 765,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t3",
+   "model": "global",
+   "objective": 764,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t3",
+   "model": "global",
+   "objective": 763,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t3",
+   "model": "global",
+   "objective": 762,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t3",
+   "model": "global",
+   "objective": 761,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t3",
+   "model": "global",
+   "objective": 760,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t3",
+   "model": "global",
+   "objective": 759,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t3",
+   "model": "global",
+   "objective": 758,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t3",
+   "model": "global",
+   "objective": 757,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t3",
+   "model": "global",
+   "objective": 756,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t3",
+   "model": "global",
+   "objective": 755,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t3",
+   "model": "global",
+   "objective": 754,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t3",
+   "model": "global",
+   "objective": 753,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t3",
+   "model": "global",
+   "objective": 752,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t3",
+   "model": "global",
+   "objective": 751,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t3",
+   "model": "global",
+   "objective": 750,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t3",
+   "model": "global",
+   "objective": 749,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t3",
+   "model": "global",
+   "objective": 748,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t3",
+   "model": "global",
+   "objective": 747,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t3",
+   "model": "global",
+   "objective": 746,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t3",
+   "model": "global",
+   "objective": 745,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t4",
+   "model": "global",
+   "objective": 830,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t4",
+   "model": "global",
+   "objective": 828,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t4",
+   "model": "global",
+   "objective": 826,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t4",
+   "model": "global",
+   "objective": 825,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t4",
+   "model": "global",
+   "objective": 824,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t4",
+   "model": "global",
+   "objective": 822,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t4",
+   "model": "global",
+   "objective": 814,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t4",
+   "model": "global",
+   "objective": 813,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t4",
+   "model": "global",
+   "objective": 812,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t4",
+   "model": "global",
+   "objective": 811,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t4",
+   "model": "global",
+   "objective": 810,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t4",
+   "model": "global",
+   "objective": 809,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t4",
+   "model": "global",
+   "objective": 808,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t4",
+   "model": "global",
+   "objective": 806,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t4",
+   "model": "global",
+   "objective": 805,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t4",
+   "model": "global",
+   "objective": 804,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t4",
+   "model": "global",
+   "objective": 801,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t4",
+   "model": "global",
+   "objective": 798,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t4",
+   "model": "global",
+   "objective": 796,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t4",
+   "model": "global",
+   "objective": 795,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t4",
+   "model": "global",
+   "objective": 794,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t4",
+   "model": "global",
+   "objective": 793,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t4",
+   "model": "global",
+   "objective": 792,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t4",
+   "model": "global",
+   "objective": 791,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t4",
+   "model": "global",
+   "objective": 790,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t4",
+   "model": "global",
+   "objective": 789,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t4",
+   "model": "global",
+   "objective": 788,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t4",
+   "model": "global",
+   "objective": 787,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t4",
+   "model": "global",
+   "objective": 786,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t4",
+   "model": "global",
+   "objective": 785,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t4",
+   "model": "global",
+   "objective": 784,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t4",
+   "model": "restricted",
+   "objective": 829,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t4",
+   "model": "restricted",
+   "objective": 808,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t4",
+   "model": "restricted",
+   "objective": 807,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t5",
+   "model": "global",
+   "objective": 849,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t5",
+   "model": "global",
+   "objective": 848,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t5",
+   "model": "global",
+   "objective": 847,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t5",
+   "model": "global",
+   "objective": 846,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t5",
+   "model": "global",
+   "objective": 844,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t5",
+   "model": "global",
+   "objective": 843,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t5",
+   "model": "global",
+   "objective": 840,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t5",
+   "model": "global",
+   "objective": 839,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t5",
+   "model": "global",
+   "objective": 836,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t5",
+   "model": "global",
+   "objective": 835,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t5",
+   "model": "global",
+   "objective": 834,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t5",
+   "model": "global",
+   "objective": 833,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t5",
+   "model": "global",
+   "objective": 832,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t5",
+   "model": "global",
+   "objective": 831,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t5",
+   "model": "global",
+   "objective": 830,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t5",
+   "model": "global",
+   "objective": 829,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t5",
+   "model": "global",
+   "objective": 827,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t5",
+   "model": "global",
+   "objective": 824,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t5",
+   "model": "global",
+   "objective": 823,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t5",
+   "model": "global",
+   "objective": 818,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t5",
+   "model": "global",
+   "objective": 815,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t5",
+   "model": "global",
+   "objective": 814,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t5",
+   "model": "global",
+   "objective": 813,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t5",
+   "model": "global",
+   "objective": 812,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t5",
+   "model": "global",
+   "objective": 811,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t5",
+   "model": "global",
+   "objective": 808,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t5",
+   "model": "global",
+   "objective": 807,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t5",
+   "model": "global",
+   "objective": 806,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t5",
+   "model": "global",
+   "objective": 805,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t5",
+   "model": "global",
+   "objective": 804,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t5",
+   "model": "global",
+   "objective": 799,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t5",
+   "model": "global",
+   "objective": 798,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t5",
+   "model": "global",
+   "objective": 797,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t5",
+   "model": "global",
+   "objective": 796,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t5",
+   "model": "global",
+   "objective": 795,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t5",
+   "model": "global",
+   "objective": 794,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t5",
+   "model": "global",
+   "objective": 793,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t5",
+   "model": "global",
+   "objective": 792,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t5",
+   "model": "global",
+   "objective": 791,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t5",
+   "model": "global",
+   "objective": 790,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t5",
+   "model": "global",
+   "objective": 789,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t5",
+   "model": "global",
+   "objective": 788,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t5",
+   "model": "global",
+   "objective": 787,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t5",
+   "model": "global",
+   "objective": 786,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t5",
+   "model": "global",
+   "objective": 785,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t5",
+   "model": "global",
+   "objective": 784,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t5",
+   "model": "global",
+   "objective": 783,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t5",
+   "model": "global",
+   "objective": 782,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t5",
+   "model": "global",
+   "objective": 781,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t5",
+   "model": "global",
+   "objective": 779,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t5",
+   "model": "global",
+   "objective": 778,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t5",
+   "model": "global",
+   "objective": 777,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t5",
+   "model": "global",
+   "objective": 776,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t5",
+   "model": "global",
+   "objective": 775,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t5",
+   "model": "global",
+   "objective": 774,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t5",
+   "model": "global",
+   "objective": 773,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t5",
+   "model": "global",
+   "objective": 772,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t5",
+   "model": "global",
+   "objective": 771,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t5",
+   "model": "global",
+   "objective": 770,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t5",
+   "model": "global",
+   "objective": 769,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t5",
+   "model": "global",
+   "objective": 768,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t5",
+   "model": "global",
+   "objective": 767,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t5",
+   "model": "global",
+   "objective": 766,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t5",
+   "model": "global",
+   "objective": 765,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t6",
+   "model": "global",
+   "objective": 832,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t6",
+   "model": "global",
+   "objective": 830,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t6",
+   "model": "global",
+   "objective": 829,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t6",
+   "model": "global",
+   "objective": 828,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t6",
+   "model": "global",
+   "objective": 827,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t6",
+   "model": "global",
+   "objective": 824,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t6",
+   "model": "global",
+   "objective": 823,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t6",
+   "model": "global",
+   "objective": 822,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t6",
+   "model": "global",
+   "objective": 821,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t6",
+   "model": "global",
+   "objective": 820,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t6",
+   "model": "global",
+   "objective": 819,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t6",
+   "model": "global",
+   "objective": 818,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t6",
+   "model": "global",
+   "objective": 817,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t6",
+   "model": "global",
+   "objective": 815,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t6",
+   "model": "global",
+   "objective": 814,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t6",
+   "model": "global",
+   "objective": 813,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t6",
+   "model": "global",
+   "objective": 812,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t6",
+   "model": "global",
+   "objective": 811,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t6",
+   "model": "global",
+   "objective": 810,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t6",
+   "model": "global",
+   "objective": 809,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t6",
+   "model": "global",
+   "objective": 808,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t6",
+   "model": "global",
+   "objective": 807,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t6",
+   "model": "global",
+   "objective": 806,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t6",
+   "model": "global",
+   "objective": 805,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t6",
+   "model": "global",
+   "objective": 804,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t6",
+   "model": "global",
+   "objective": 803,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t6",
+   "model": "global",
+   "objective": 802,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t6",
+   "model": "global",
+   "objective": 801,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t6",
+   "model": "global",
+   "objective": 800,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t6",
+   "model": "global",
+   "objective": 799,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t6",
+   "model": "global",
+   "objective": 798,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t6",
+   "model": "global",
+   "objective": 797,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t6",
+   "model": "global",
+   "objective": 796,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t6",
+   "model": "global",
+   "objective": 795,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t6",
+   "model": "global",
+   "objective": 794,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t6",
+   "model": "global",
+   "objective": 793,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t6",
+   "model": "global",
+   "objective": 792,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t6",
+   "model": "global",
+   "objective": 791,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t6",
+   "model": "global",
+   "objective": 790,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t6",
+   "model": "global",
+   "objective": 789,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t6",
+   "model": "global",
+   "objective": 788,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t6",
+   "model": "global",
+   "objective": 787,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t6",
+   "model": "global",
+   "objective": 786,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t6",
+   "model": "global",
+   "objective": 785,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t6",
+   "model": "global",
+   "objective": 784,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t6",
+   "model": "global",
+   "objective": 782,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t6",
+   "model": "global",
+   "objective": 781,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t6",
+   "model": "global",
+   "objective": 780,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t6",
+   "model": "global",
+   "objective": 779,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t6",
+   "model": "global",
+   "objective": 778,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t6",
+   "model": "global",
+   "objective": 777,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t6",
+   "model": "global",
+   "objective": 776,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t6",
+   "model": "global",
+   "objective": 775,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t6",
+   "model": "restricted",
+   "objective": 831,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s301_t6",
+   "model": "restricted",
+   "objective": 825,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t1",
+   "model": "global",
+   "objective": 990,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t1",
+   "model": "global",
+   "objective": 989,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t1",
+   "model": "global",
+   "objective": 988,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t1",
+   "model": "global",
+   "objective": 987,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t1",
+   "model": "global",
+   "objective": 983,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t1",
+   "model": "global",
+   "objective": 982,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t1",
+   "model": "global",
+   "objective": 981,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t1",
+   "model": "global",
+   "objective": 980,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t1",
+   "model": "global",
+   "objective": 977,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t1",
+   "model": "global",
+   "objective": 976,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t1",
+   "model": "global",
+   "objective": 975,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t1",
+   "model": "global",
+   "objective": 974,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t1",
+   "model": "global",
+   "objective": 973,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t1",
+   "model": "global",
+   "objective": 972,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t1",
+   "model": "global",
+   "objective": 971,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t1",
+   "model": "global",
+   "objective": 970,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t1",
+   "model": "global",
+   "objective": 969,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t1",
+   "model": "global",
+   "objective": 968,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t1",
+   "model": "global",
+   "objective": 967,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t1",
+   "model": "global",
+   "objective": 966,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t1",
+   "model": "global",
+   "objective": 965,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t1",
+   "model": "global",
+   "objective": 964,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t1",
+   "model": "global",
+   "objective": 963,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t1",
+   "model": "global",
+   "objective": 962,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t1",
+   "model": "global",
+   "objective": 961,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t1",
+   "model": "global",
+   "objective": 960,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t1",
+   "model": "global",
+   "objective": 959,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t1",
+   "model": "global",
+   "objective": 958,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t1",
+   "model": "global",
+   "objective": 957,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t1",
+   "model": "global",
+   "objective": 956,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t1",
+   "model": "global",
+   "objective": 955,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t1",
+   "model": "global",
+   "objective": 954,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t1",
+   "model": "global",
+   "objective": 953,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t1",
+   "model": "global",
+   "objective": 952,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t1",
+   "model": "global",
+   "objective": 951,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t2",
+   "model": "global",
+   "objective": 970,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t2",
+   "model": "global",
+   "objective": 966,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t2",
+   "model": "global",
+   "objective": 965,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t2",
+   "model": "global",
+   "objective": 964,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t2",
+   "model": "global",
+   "objective": 961,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t2",
+   "model": "global",
+   "objective": 958,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t2",
+   "model": "global",
+   "objective": 956,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t2",
+   "model": "global",
+   "objective": 955,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t2",
+   "model": "global",
+   "objective": 954,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t2",
+   "model": "global",
+   "objective": 953,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t2",
+   "model": "global",
+   "objective": 952,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t2",
+   "model": "global",
+   "objective": 951,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t2",
+   "model": "global",
+   "objective": 950,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t2",
+   "model": "global",
+   "objective": 949,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t2",
+   "model": "global",
+   "objective": 948,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t2",
+   "model": "global",
+   "objective": 947,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t2",
+   "model": "global",
+   "objective": 946,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t2",
+   "model": "global",
+   "objective": 945,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t2",
+   "model": "global",
+   "objective": 944,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t2",
+   "model": "global",
+   "objective": 943,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t2",
+   "model": "global",
+   "objective": 942,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t2",
+   "model": "global",
+   "objective": 940,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t2",
+   "model": "global",
+   "objective": 939,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t2",
+   "model": "global",
+   "objective": 938,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t2",
+   "model": "global",
+   "objective": 937,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t2",
+   "model": "global",
+   "objective": 936,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t2",
+   "model": "global",
+   "objective": 935,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t2",
+   "model": "global",
+   "objective": 934,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t2",
+   "model": "global",
+   "objective": 933,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t2",
+   "model": "global",
+   "objective": 928,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t2",
+   "model": "global",
+   "objective": 927,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t2",
+   "model": "global",
+   "objective": 926,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t2",
+   "model": "global",
+   "objective": 925,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t3",
+   "model": "global",
+   "objective": 958,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t3",
+   "model": "global",
+   "objective": 957,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t3",
+   "model": "global",
+   "objective": 956,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t3",
+   "model": "global",
+   "objective": 955,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t3",
+   "model": "global",
+   "objective": 952,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t3",
+   "model": "global",
+   "objective": 951,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t3",
+   "model": "global",
+   "objective": 950,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t3",
+   "model": "global",
+   "objective": 949,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t3",
+   "model": "global",
+   "objective": 948,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t3",
+   "model": "global",
+   "objective": 947,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t3",
+   "model": "global",
+   "objective": 946,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t3",
+   "model": "global",
+   "objective": 945,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t3",
+   "model": "global",
+   "objective": 944,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t3",
+   "model": "global",
+   "objective": 943,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t3",
+   "model": "global",
+   "objective": 942,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t3",
+   "model": "global",
+   "objective": 941,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t3",
+   "model": "global",
+   "objective": 940,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t3",
+   "model": "global",
+   "objective": 939,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t3",
+   "model": "global",
+   "objective": 938,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t3",
+   "model": "restricted",
+   "objective": 957,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t3",
+   "model": "restricted",
+   "objective": 956,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t3",
+   "model": "restricted",
+   "objective": 954,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t4",
+   "model": "global",
+   "objective": 1010,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t4",
+   "model": "global",
+   "objective": 1008,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t4",
+   "model": "global",
+   "objective": 1007,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t4",
+   "model": "global",
+   "objective": 1005,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t4",
+   "model": "global",
+   "objective": 1004,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t4",
+   "model": "global",
+   "objective": 1003,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t4",
+   "model": "global",
+   "objective": 1002,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t4",
+   "model": "global",
+   "objective": 1001,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t4",
+   "model": "global",
+   "objective": 1000,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t4",
+   "model": "global",
+   "objective": 999,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t4",
+   "model": "global",
+   "objective": 998,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t4",
+   "model": "global",
+   "objective": 996,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t4",
+   "model": "global",
+   "objective": 995,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t4",
+   "model": "global",
+   "objective": 994,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t4",
+   "model": "global",
+   "objective": 993,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t4",
+   "model": "global",
+   "objective": 992,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t4",
+   "model": "global",
+   "objective": 991,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t4",
+   "model": "global",
+   "objective": 990,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t4",
+   "model": "global",
+   "objective": 989,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t4",
+   "model": "global",
+   "objective": 988,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t4",
+   "model": "global",
+   "objective": 987,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t4",
+   "model": "global",
+   "objective": 985,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t4",
+   "model": "global",
+   "objective": 984,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t4",
+   "model": "global",
+   "objective": 983,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t4",
+   "model": "global",
+   "objective": 982,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t4",
+   "model": "global",
+   "objective": 981,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t4",
+   "model": "global",
+   "objective": 977,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t4",
+   "model": "global",
+   "objective": 976,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t4",
+   "model": "global",
+   "objective": 975,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t4",
+   "model": "restricted",
+   "objective": 1009,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t4",
+   "model": "restricted",
+   "objective": 1008,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t4",
+   "model": "restricted",
+   "objective": 1007,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t4",
+   "model": "restricted",
+   "objective": 1006,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t4",
+   "model": "restricted",
+   "objective": 1004,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t5",
+   "model": "global",
+   "objective": 1020,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t5",
+   "model": "global",
+   "objective": 1019,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t5",
+   "model": "global",
+   "objective": 1018,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t5",
+   "model": "global",
+   "objective": 1017,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t5",
+   "model": "global",
+   "objective": 1016,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t5",
+   "model": "global",
+   "objective": 1015,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t5",
+   "model": "global",
+   "objective": 1014,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t5",
+   "model": "global",
+   "objective": 1011,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t5",
+   "model": "global",
+   "objective": 1010,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t5",
+   "model": "global",
+   "objective": 1009,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t5",
+   "model": "global",
+   "objective": 1008,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t5",
+   "model": "global",
+   "objective": 1007,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t5",
+   "model": "global",
+   "objective": 1006,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t5",
+   "model": "global",
+   "objective": 1005,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t5",
+   "model": "global",
+   "objective": 1004,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t5",
+   "model": "global",
+   "objective": 1003,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t5",
+   "model": "global",
+   "objective": 1002,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t5",
+   "model": "global",
+   "objective": 1001,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t5",
+   "model": "global",
+   "objective": 1000,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t5",
+   "model": "global",
+   "objective": 999,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t5",
+   "model": "global",
+   "objective": 998,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t5",
+   "model": "global",
+   "objective": 997,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t5",
+   "model": "global",
+   "objective": 996,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t5",
+   "model": "global",
+   "objective": 995,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t5",
+   "model": "global",
+   "objective": 994,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t5",
+   "model": "global",
+   "objective": 993,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t5",
+   "model": "global",
+   "objective": 992,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t5",
+   "model": "global",
+   "objective": 991,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t5",
+   "model": "global",
+   "objective": 990,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t6",
+   "model": "global",
+   "objective": 1063,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t6",
+   "model": "global",
+   "objective": 1061,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t6",
+   "model": "global",
+   "objective": 1057,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t6",
+   "model": "global",
+   "objective": 1056,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t6",
+   "model": "global",
+   "objective": 1055,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t6",
+   "model": "global",
+   "objective": 1054,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t6",
+   "model": "global",
+   "objective": 1052,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t6",
+   "model": "global",
+   "objective": 1051,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t6",
+   "model": "global",
+   "objective": 1046,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t6",
+   "model": "global",
+   "objective": 1044,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t6",
+   "model": "global",
+   "objective": 1042,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t6",
+   "model": "global",
+   "objective": 1038,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t6",
+   "model": "global",
+   "objective": 1033,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t6",
+   "model": "global",
+   "objective": 1032,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t6",
+   "model": "global",
+   "objective": 1031,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t6",
+   "model": "global",
+   "objective": 1030,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t6",
+   "model": "global",
+   "objective": 1029,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t6",
+   "model": "global",
+   "objective": 1028,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t6",
+   "model": "global",
+   "objective": 1027,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t6",
+   "model": "global",
+   "objective": 1026,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t6",
+   "model": "global",
+   "objective": 1025,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t6",
+   "model": "global",
+   "objective": 1024,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t6",
+   "model": "global",
+   "objective": 1023,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t6",
+   "model": "global",
+   "objective": 1022,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t6",
+   "model": "global",
+   "objective": 1021,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t6",
+   "model": "global",
+   "objective": 1020,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t6",
+   "model": "global",
+   "objective": 1019,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t6",
+   "model": "global",
+   "objective": 1018,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s301_t6",
+   "model": "global",
+   "objective": 1017,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t1",
+   "model": "global",
+   "objective": 829,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t1",
+   "model": "global",
+   "objective": 828,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t1",
+   "model": "global",
+   "objective": 822,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t1",
+   "model": "global",
+   "objective": 820,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t1",
+   "model": "global",
+   "objective": 819,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t1",
+   "model": "global",
+   "objective": 818,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t1",
+   "model": "global",
+   "objective": 814,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t1",
+   "model": "global",
+   "objective": 813,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t1",
+   "model": "global",
+   "objective": 810,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t1",
+   "model": "global",
+   "objective": 809,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t1",
+   "model": "global",
+   "objective": 807,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t1",
+   "model": "global",
+   "objective": 806,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t1",
+   "model": "global",
+   "objective": 805,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t1",
+   "model": "global",
+   "objective": 804,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t1",
+   "model": "global",
+   "objective": 803,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t1",
+   "model": "global",
+   "objective": 802,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t1",
+   "model": "global",
+   "objective": 799,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t1",
+   "model": "global",
+   "objective": 798,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t1",
+   "model": "global",
+   "objective": 797,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t1",
+   "model": "global",
+   "objective": 796,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t1",
+   "model": "global",
+   "objective": 795,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t1",
+   "model": "global",
+   "objective": 793,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t1",
+   "model": "global",
+   "objective": 792,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t1",
+   "model": "global",
+   "objective": 791,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t1",
+   "model": "global",
+   "objective": 790,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t1",
+   "model": "global",
+   "objective": 789,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t1",
+   "model": "global",
+   "objective": 788,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t1",
+   "model": "global",
+   "objective": 787,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t1",
+   "model": "global",
+   "objective": 786,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t1",
+   "model": "global",
+   "objective": 784,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t1",
+   "model": "global",
+   "objective": 783,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t1",
+   "model": "global",
+   "objective": 782,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t1",
+   "model": "global",
+   "objective": 780,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t1",
+   "model": "global",
+   "objective": 779,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t1",
+   "model": "restricted",
+   "objective": 828,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t1",
+   "model": "restricted",
+   "objective": 824,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t1",
+   "model": "restricted",
+   "objective": 822,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t2",
+   "model": "global",
+   "objective": 877,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t2",
+   "model": "global",
+   "objective": 874,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t2",
+   "model": "global",
+   "objective": 873,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t2",
+   "model": "global",
+   "objective": 871,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t2",
+   "model": "global",
+   "objective": 870,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t2",
+   "model": "global",
+   "objective": 868,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t2",
+   "model": "global",
+   "objective": 866,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t2",
+   "model": "global",
+   "objective": 865,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t2",
+   "model": "global",
+   "objective": 864,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t2",
+   "model": "global",
+   "objective": 863,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t2",
+   "model": "global",
+   "objective": 861,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t2",
+   "model": "global",
+   "objective": 860,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t2",
+   "model": "global",
+   "objective": 859,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t2",
+   "model": "global",
+   "objective": 858,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t2",
+   "model": "global",
+   "objective": 857,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t2",
+   "model": "global",
+   "objective": 856,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t2",
+   "model": "global",
+   "objective": 855,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t2",
+   "model": "global",
+   "objective": 853,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t2",
+   "model": "global",
+   "objective": 852,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t2",
+   "model": "global",
+   "objective": 851,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t2",
+   "model": "global",
+   "objective": 850,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t2",
+   "model": "global",
+   "objective": 849,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t2",
+   "model": "global",
+   "objective": 848,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t2",
+   "model": "global",
+   "objective": 847,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t2",
+   "model": "global",
+   "objective": 846,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t2",
+   "model": "global",
+   "objective": 845,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t2",
+   "model": "global",
+   "objective": 844,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t2",
+   "model": "global",
+   "objective": 843,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t2",
+   "model": "global",
+   "objective": 842,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t2",
+   "model": "global",
+   "objective": 841,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t2",
+   "model": "global",
+   "objective": 840,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t2",
+   "model": "global",
+   "objective": 839,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t2",
+   "model": "global",
+   "objective": 838,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t2",
+   "model": "global",
+   "objective": 837,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t2",
+   "model": "global",
+   "objective": 836,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t2",
+   "model": "global",
+   "objective": 835,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t2",
+   "model": "global",
+   "objective": 830,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t2",
+   "model": "global",
+   "objective": 825,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t2",
+   "model": "global",
+   "objective": 824,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t2",
+   "model": "global",
+   "objective": 822,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t2",
+   "model": "global",
+   "objective": 821,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t2",
+   "model": "global",
+   "objective": 818,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t2",
+   "model": "global",
+   "objective": 816,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t2",
+   "model": "global",
+   "objective": 815,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t2",
+   "model": "global",
+   "objective": 814,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t2",
+   "model": "global",
+   "objective": 813,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t2",
+   "model": "global",
+   "objective": 812,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t2",
+   "model": "global",
+   "objective": 811,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t2",
+   "model": "global",
+   "objective": 810,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t2",
+   "model": "global",
+   "objective": 809,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t2",
+   "model": "global",
+   "objective": 808,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t2",
+   "model": "global",
+   "objective": 807,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t2",
+   "model": "global",
+   "objective": 806,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t2",
+   "model": "global",
+   "objective": 805,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t2",
+   "model": "global",
+   "objective": 804,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t2",
+   "model": "global",
+   "objective": 803,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t2",
+   "model": "global",
+   "objective": 802,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t2",
+   "model": "global",
+   "objective": 801,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t2",
+   "model": "global",
+   "objective": 800,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t2",
+   "model": "global",
+   "objective": 799,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t2",
+   "model": "global",
+   "objective": 798,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t2",
+   "model": "global",
+   "objective": 797,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t2",
+   "model": "global",
+   "objective": 796,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t2",
+   "model": "global",
+   "objective": 795,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t2",
+   "model": "global",
+   "objective": 794,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t2",
+   "model": "global",
+   "objective": 789,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t2",
+   "model": "global",
+   "objective": 788,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t3",
+   "model": "global",
+   "objective": 840,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t3",
+   "model": "global",
+   "objective": 839,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t3",
+   "model": "global",
+   "objective": 835,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t3",
+   "model": "global",
+   "objective": 834,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t3",
+   "model": "global",
+   "objective": 832,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t3",
+   "model": "global",
+   "objective": 831,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t3",
+   "model": "global",
+   "objective": 830,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t3",
+   "model": "global",
+   "objective": 829,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t3",
+   "model": "global",
+   "objective": 828,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t3",
+   "model": "global",
+   "objective": 825,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t3",
+   "model": "global",
+   "objective": 824,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t3",
+   "model": "global",
+   "objective": 821,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t3",
+   "model": "global",
+   "objective": 818,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t3",
+   "model": "global",
+   "objective": 816,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t3",
+   "model": "global",
+   "objective": 815,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t3",
+   "model": "global",
+   "objective": 812,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t3",
+   "model": "global",
+   "objective": 811,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t3",
+   "model": "global",
+   "objective": 810,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t3",
+   "model": "global",
+   "objective": 809,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t3",
+   "model": "global",
+   "objective": 808,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t3",
+   "model": "global",
+   "objective": 807,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t3",
+   "model": "global",
+   "objective": 806,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t3",
+   "model": "global",
+   "objective": 805,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t3",
+   "model": "global",
+   "objective": 804,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t3",
+   "model": "global",
+   "objective": 802,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t3",
+   "model": "global",
+   "objective": 801,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t3",
+   "model": "global",
+   "objective": 800,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t3",
+   "model": "global",
+   "objective": 799,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t3",
+   "model": "global",
+   "objective": 798,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t3",
+   "model": "global",
+   "objective": 797,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t3",
+   "model": "global",
+   "objective": 796,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t3",
+   "model": "restricted",
+   "objective": 839,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t3",
+   "model": "restricted",
+   "objective": 834,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t3",
+   "model": "restricted",
+   "objective": 829,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t3",
+   "model": "restricted",
+   "objective": 827,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t3",
+   "model": "restricted",
+   "objective": 821,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t4",
+   "model": "global",
+   "objective": 899,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t4",
+   "model": "global",
+   "objective": 897,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t4",
+   "model": "global",
+   "objective": 896,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t4",
+   "model": "global",
+   "objective": 894,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t4",
+   "model": "global",
+   "objective": 892,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t4",
+   "model": "global",
+   "objective": 891,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t4",
+   "model": "global",
+   "objective": 890,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t4",
+   "model": "global",
+   "objective": 888,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t4",
+   "model": "global",
+   "objective": 887,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t4",
+   "model": "global",
+   "objective": 884,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t4",
+   "model": "global",
+   "objective": 883,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t4",
+   "model": "global",
+   "objective": 882,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t4",
+   "model": "global",
+   "objective": 881,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t4",
+   "model": "global",
+   "objective": 880,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t4",
+   "model": "global",
+   "objective": 879,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t4",
+   "model": "global",
+   "objective": 878,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t4",
+   "model": "global",
+   "objective": 877,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t4",
+   "model": "global",
+   "objective": 876,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t4",
+   "model": "global",
+   "objective": 875,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t4",
+   "model": "global",
+   "objective": 874,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t4",
+   "model": "global",
+   "objective": 873,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t4",
+   "model": "global",
+   "objective": 872,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t4",
+   "model": "global",
+   "objective": 871,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t4",
+   "model": "global",
+   "objective": 870,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t4",
+   "model": "global",
+   "objective": 869,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t4",
+   "model": "global",
+   "objective": 868,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t4",
+   "model": "global",
+   "objective": 867,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t4",
+   "model": "global",
+   "objective": 865,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t4",
+   "model": "global",
+   "objective": 864,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t4",
+   "model": "global",
+   "objective": 863,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t4",
+   "model": "global",
+   "objective": 861,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t4",
+   "model": "global",
+   "objective": 860,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t4",
+   "model": "global",
+   "objective": 859,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t4",
+   "model": "global",
+   "objective": 858,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t4",
+   "model": "global",
+   "objective": 857,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t4",
+   "model": "global",
+   "objective": 856,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t4",
+   "model": "global",
+   "objective": 855,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t4",
+   "model": "global",
+   "objective": 854,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t4",
+   "model": "global",
+   "objective": 853,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t4",
+   "model": "global",
+   "objective": 852,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t4",
+   "model": "global",
+   "objective": 850,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t4",
+   "model": "global",
+   "objective": 846,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t4",
+   "model": "global",
+   "objective": 845,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t4",
+   "model": "global",
+   "objective": 844,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t4",
+   "model": "global",
+   "objective": 842,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t4",
+   "model": "global",
+   "objective": 841,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t4",
+   "model": "restricted",
+   "objective": 898,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t4",
+   "model": "restricted",
+   "objective": 897,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t4",
+   "model": "restricted",
+   "objective": 896,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t4",
+   "model": "restricted",
+   "objective": 895,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t4",
+   "model": "restricted",
+   "objective": 894,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t4",
+   "model": "restricted",
+   "objective": 893,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t4",
+   "model": "restricted",
+   "objective": 890,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t5",
+   "model": "global",
+   "objective": 865,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t5",
+   "model": "global",
+   "objective": 863,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t5",
+   "model": "global",
+   "objective": 861,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t5",
+   "model": "global",
+   "objective": 860,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t5",
+   "model": "global",
+   "objective": 856,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t5",
+   "model": "global",
+   "objective": 854,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t5",
+   "model": "global",
+   "objective": 851,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t5",
+   "model": "global",
+   "objective": 850,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t5",
+   "model": "global",
+   "objective": 849,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t5",
+   "model": "global",
+   "objective": 848,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t5",
+   "model": "global",
+   "objective": 847,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t5",
+   "model": "global",
+   "objective": 846,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t5",
+   "model": "global",
+   "objective": 845,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t5",
+   "model": "global",
+   "objective": 844,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t5",
+   "model": "global",
+   "objective": 843,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t5",
+   "model": "global",
+   "objective": 842,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t5",
+   "model": "global",
+   "objective": 841,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t5",
+   "model": "global",
+   "objective": 840,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t5",
+   "model": "global",
+   "objective": 839,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t5",
+   "model": "global",
+   "objective": 838,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t5",
+   "model": "global",
+   "objective": 837,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t5",
+   "model": "global",
+   "objective": 836,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t5",
+   "model": "global",
+   "objective": 835,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t5",
+   "model": "global",
+   "objective": 834,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t5",
+   "model": "global",
+   "objective": 833,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t5",
+   "model": "global",
+   "objective": 832,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t5",
+   "model": "global",
+   "objective": 831,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t5",
+   "model": "global",
+   "objective": 830,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t5",
+   "model": "global",
+   "objective": 829,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t5",
+   "model": "global",
+   "objective": 828,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t5",
+   "model": "global",
+   "objective": 827,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t5",
+   "model": "global",
+   "objective": 826,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t5",
+   "model": "global",
+   "objective": 824,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t5",
+   "model": "global",
+   "objective": 823,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t5",
+   "model": "global",
+   "objective": 822,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t5",
+   "model": "global",
+   "objective": 821,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t5",
+   "model": "global",
+   "objective": 820,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t5",
+   "model": "global",
+   "objective": 819,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t5",
+   "model": "global",
+   "objective": 818,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t5",
+   "model": "global",
+   "objective": 817,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t5",
+   "model": "global",
+   "objective": 816,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t5",
+   "model": "global",
+   "objective": 815,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t5",
+   "model": "global",
+   "objective": 814,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t5",
+   "model": "global",
+   "objective": 813,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t5",
+   "model": "global",
+   "objective": 812,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t6",
+   "model": "global",
+   "objective": 865,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t6",
+   "model": "global",
+   "objective": 864,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t6",
+   "model": "global",
+   "objective": 859,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "15x15_s302_t6",
+   "model": "global",
+   "objective": 858,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t1",
+   "model": "global",
+   "objective": 986,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t1",
+   "model": "global",
+   "objective": 985,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t1",
+   "model": "global",
+   "objective": 984,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t1",
+   "model": "global",
+   "objective": 983,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t1",
+   "model": "global",
+   "objective": 982,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t1",
+   "model": "global",
+   "objective": 980,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t1",
+   "model": "global",
+   "objective": 977,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t1",
+   "model": "global",
+   "objective": 976,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t1",
+   "model": "global",
+   "objective": 975,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t1",
+   "model": "global",
+   "objective": 974,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t1",
+   "model": "global",
+   "objective": 973,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t1",
+   "model": "global",
+   "objective": 972,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t1",
+   "model": "global",
+   "objective": 971,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t1",
+   "model": "global",
+   "objective": 970,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t1",
+   "model": "global",
+   "objective": 969,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t1",
+   "model": "global",
+   "objective": 968,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t1",
+   "model": "global",
+   "objective": 966,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t1",
+   "model": "global",
+   "objective": 963,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t1",
+   "model": "global",
+   "objective": 962,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t1",
+   "model": "global",
+   "objective": 961,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t1",
+   "model": "global",
+   "objective": 960,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t1",
+   "model": "global",
+   "objective": 958,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t1",
+   "model": "global",
+   "objective": 957,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t1",
+   "model": "global",
+   "objective": 956,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t1",
+   "model": "global",
+   "objective": 954,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t1",
+   "model": "global",
+   "objective": 949,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t1",
+   "model": "global",
+   "objective": 945,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t1",
+   "model": "global",
+   "objective": 944,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t2",
+   "model": "global",
+   "objective": 1006,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t2",
+   "model": "global",
+   "objective": 1004,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t2",
+   "model": "global",
+   "objective": 1003,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t2",
+   "model": "global",
+   "objective": 1000,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t2",
+   "model": "global",
+   "objective": 998,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t2",
+   "model": "global",
+   "objective": 997,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t2",
+   "model": "global",
+   "objective": 995,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t2",
+   "model": "global",
+   "objective": 994,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t2",
+   "model": "global",
+   "objective": 993,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t2",
+   "model": "global",
+   "objective": 992,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t2",
+   "model": "global",
+   "objective": 991,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t2",
+   "model": "global",
+   "objective": 989,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t2",
+   "model": "global",
+   "objective": 988,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t2",
+   "model": "global",
+   "objective": 987,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t2",
+   "model": "global",
+   "objective": 986,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t2",
+   "model": "global",
+   "objective": 985,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t2",
+   "model": "global",
+   "objective": 984,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t2",
+   "model": "global",
+   "objective": 983,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t2",
+   "model": "global",
+   "objective": 982,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t2",
+   "model": "global",
+   "objective": 981,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t2",
+   "model": "global",
+   "objective": 980,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t2",
+   "model": "global",
+   "objective": 979,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t2",
+   "model": "global",
+   "objective": 978,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t2",
+   "model": "global",
+   "objective": 977,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t2",
+   "model": "global",
+   "objective": 976,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t2",
+   "model": "global",
+   "objective": 975,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t2",
+   "model": "global",
+   "objective": 974,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t2",
+   "model": "global",
+   "objective": 973,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t2",
+   "model": "global",
+   "objective": 972,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t2",
+   "model": "global",
+   "objective": 971,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t2",
+   "model": "global",
+   "objective": 970,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t2",
+   "model": "global",
+   "objective": 969,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t2",
+   "model": "global",
+   "objective": 968,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t2",
+   "model": "global",
+   "objective": 967,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t2",
+   "model": "global",
+   "objective": 966,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t2",
+   "model": "global",
+   "objective": 965,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t2",
+   "model": "global",
+   "objective": 964,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t2",
+   "model": "global",
+   "objective": 963,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t2",
+   "model": "global",
+   "objective": 962,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t2",
+   "model": "global",
+   "objective": 961,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t2",
+   "model": "global",
+   "objective": 960,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t2",
+   "model": "global",
+   "objective": 959,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t2",
+   "model": "global",
+   "objective": 958,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t2",
+   "model": "global",
+   "objective": 957,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t2",
+   "model": "global",
+   "objective": 956,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t2",
+   "model": "global",
+   "objective": 955,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t2",
+   "model": "global",
+   "objective": 954,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t2",
+   "model": "global",
+   "objective": 953,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t2",
+   "model": "global",
+   "objective": 952,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t2",
+   "model": "global",
+   "objective": 951,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t2",
+   "model": "global",
+   "objective": 950,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t2",
+   "model": "global",
+   "objective": 949,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t2",
+   "model": "global",
+   "objective": 948,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t2",
+   "model": "global",
+   "objective": 947,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t3",
+   "model": "global",
+   "objective": 993,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t3",
+   "model": "global",
+   "objective": 990,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t3",
+   "model": "global",
+   "objective": 989,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t3",
+   "model": "global",
+   "objective": 988,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t3",
+   "model": "global",
+   "objective": 987,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t3",
+   "model": "global",
+   "objective": 986,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t3",
+   "model": "global",
+   "objective": 984,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t3",
+   "model": "global",
+   "objective": 983,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t3",
+   "model": "global",
+   "objective": 981,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t3",
+   "model": "global",
+   "objective": 980,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t3",
+   "model": "global",
+   "objective": 978,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t3",
+   "model": "global",
+   "objective": 977,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t3",
+   "model": "global",
+   "objective": 976,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t3",
+   "model": "global",
+   "objective": 975,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t3",
+   "model": "global",
+   "objective": 974,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t3",
+   "model": "global",
+   "objective": 973,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t3",
+   "model": "global",
+   "objective": 971,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t3",
+   "model": "global",
+   "objective": 970,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t3",
+   "model": "global",
+   "objective": 969,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t3",
+   "model": "global",
+   "objective": 968,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t3",
+   "model": "global",
+   "objective": 967,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t3",
+   "model": "global",
+   "objective": 966,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t3",
+   "model": "global",
+   "objective": 965,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t3",
+   "model": "global",
+   "objective": 964,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t3",
+   "model": "global",
+   "objective": 963,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t3",
+   "model": "global",
+   "objective": 962,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t3",
+   "model": "global",
+   "objective": 961,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t3",
+   "model": "global",
+   "objective": 959,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t3",
+   "model": "global",
+   "objective": 957,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t3",
+   "model": "global",
+   "objective": 956,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t3",
+   "model": "global",
+   "objective": 955,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t3",
+   "model": "global",
+   "objective": 954,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t3",
+   "model": "global",
+   "objective": 953,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t3",
+   "model": "global",
+   "objective": 952,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t3",
+   "model": "global",
+   "objective": 951,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t3",
+   "model": "global",
+   "objective": 950,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t3",
+   "model": "global",
+   "objective": 949,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t3",
+   "model": "global",
+   "objective": 948,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t3",
+   "model": "global",
+   "objective": 947,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t3",
+   "model": "global",
+   "objective": 946,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t3",
+   "model": "global",
+   "objective": 945,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t3",
+   "model": "global",
+   "objective": 944,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t3",
+   "model": "global",
+   "objective": 943,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t3",
+   "model": "global",
+   "objective": 942,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t3",
+   "model": "global",
+   "objective": 941,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t3",
+   "model": "global",
+   "objective": 940,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t3",
+   "model": "global",
+   "objective": 939,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t3",
+   "model": "global",
+   "objective": 938,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t3",
+   "model": "global",
+   "objective": 937,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t3",
+   "model": "global",
+   "objective": 936,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t3",
+   "model": "global",
+   "objective": 935,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t3",
+   "model": "global",
+   "objective": 934,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t4",
+   "model": "global",
+   "objective": 1001,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t4",
+   "model": "global",
+   "objective": 1000,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t4",
+   "model": "global",
+   "objective": 999,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t4",
+   "model": "global",
+   "objective": 998,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t4",
+   "model": "global",
+   "objective": 997,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t4",
+   "model": "global",
+   "objective": 996,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t4",
+   "model": "global",
+   "objective": 995,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t4",
+   "model": "global",
+   "objective": 990,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t4",
+   "model": "global",
+   "objective": 989,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t4",
+   "model": "global",
+   "objective": 988,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t4",
+   "model": "global",
+   "objective": 987,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t4",
+   "model": "global",
+   "objective": 986,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t4",
+   "model": "global",
+   "objective": 985,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t4",
+   "model": "global",
+   "objective": 984,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t4",
+   "model": "global",
+   "objective": 983,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t4",
+   "model": "global",
+   "objective": 982,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t4",
+   "model": "global",
+   "objective": 981,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t4",
+   "model": "global",
+   "objective": 980,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t4",
+   "model": "global",
+   "objective": 979,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t4",
+   "model": "global",
+   "objective": 978,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t4",
+   "model": "global",
+   "objective": 977,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t4",
+   "model": "global",
+   "objective": 976,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t4",
+   "model": "global",
+   "objective": 975,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t4",
+   "model": "global",
+   "objective": 974,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t4",
+   "model": "global",
+   "objective": 972,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t4",
+   "model": "global",
+   "objective": 970,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t4",
+   "model": "global",
+   "objective": 967,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t4",
+   "model": "global",
+   "objective": 966,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t4",
+   "model": "global",
+   "objective": 965,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t4",
+   "model": "restricted",
+   "objective": 1000,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t4",
+   "model": "restricted",
+   "objective": 999,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t4",
+   "model": "restricted",
+   "objective": 998,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t5",
+   "model": "global",
+   "objective": 1042,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t5",
+   "model": "global",
+   "objective": 1041,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t5",
+   "model": "global",
+   "objective": 1040,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t5",
+   "model": "global",
+   "objective": 1036,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t5",
+   "model": "global",
+   "objective": 1030,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t5",
+   "model": "global",
+   "objective": 1029,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t5",
+   "model": "global",
+   "objective": 1026,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t5",
+   "model": "global",
+   "objective": 1025,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t5",
+   "model": "global",
+   "objective": 1020,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t5",
+   "model": "global",
+   "objective": 1019,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t5",
+   "model": "global",
+   "objective": 1018,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t5",
+   "model": "global",
+   "objective": 1017,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t5",
+   "model": "global",
+   "objective": 1016,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t5",
+   "model": "global",
+   "objective": 1015,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t5",
+   "model": "global",
+   "objective": 1014,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t5",
+   "model": "global",
+   "objective": 1012,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t5",
+   "model": "global",
+   "objective": 1011,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t5",
+   "model": "global",
+   "objective": 1010,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t5",
+   "model": "global",
+   "objective": 1009,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t5",
+   "model": "global",
+   "objective": 1008,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t5",
+   "model": "global",
+   "objective": 1007,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t5",
+   "model": "global",
+   "objective": 1006,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t5",
+   "model": "global",
+   "objective": 1001,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t5",
+   "model": "global",
+   "objective": 1000,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t5",
+   "model": "global",
+   "objective": 999,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t5",
+   "model": "global",
+   "objective": 998,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t5",
+   "model": "global",
+   "objective": 997,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t5",
+   "model": "global",
+   "objective": 996,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t5",
+   "model": "global",
+   "objective": 995,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t5",
+   "model": "global",
+   "objective": 994,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t5",
+   "model": "global",
+   "objective": 993,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t5",
+   "model": "global",
+   "objective": 992,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t5",
+   "model": "global",
+   "objective": 991,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t5",
+   "model": "global",
+   "objective": 990,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t5",
+   "model": "global",
+   "objective": 989,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t5",
+   "model": "global",
+   "objective": 988,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t5",
+   "model": "global",
+   "objective": 987,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t5",
+   "model": "global",
+   "objective": 986,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t5",
+   "model": "global",
+   "objective": 985,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t5",
+   "model": "global",
+   "objective": 984,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t5",
+   "model": "global",
+   "objective": 983,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t5",
+   "model": "global",
+   "objective": 982,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t5",
+   "model": "global",
+   "objective": 981,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t5",
+   "model": "global",
+   "objective": 980,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t5",
+   "model": "global",
+   "objective": 979,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t5",
+   "model": "global",
+   "objective": 978,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t5",
+   "model": "global",
+   "objective": 977,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t5",
+   "model": "global",
+   "objective": 976,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t5",
+   "model": "global",
+   "objective": 975,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t5",
+   "model": "global",
+   "objective": 974,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t5",
+   "model": "global",
+   "objective": 973,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t5",
+   "model": "global",
+   "objective": 972,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t5",
+   "model": "global",
+   "objective": 971,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t5",
+   "model": "global",
+   "objective": 970,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t5",
+   "model": "global",
+   "objective": 969,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t5",
+   "model": "global",
+   "objective": 968,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t5",
+   "model": "global",
+   "objective": 967,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t5",
+   "model": "global",
+   "objective": 966,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t5",
+   "model": "global",
+   "objective": 965,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t5",
+   "model": "global",
+   "objective": 964,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t5",
+   "model": "global",
+   "objective": 963,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t5",
+   "model": "global",
+   "objective": 962,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t5",
+   "model": "global",
+   "objective": 961,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t5",
+   "model": "global",
+   "objective": 960,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t5",
+   "model": "global",
+   "objective": 959,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t5",
+   "model": "global",
+   "objective": 958,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t5",
+   "model": "global",
+   "objective": 957,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t5",
+   "model": "global",
+   "objective": 956,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t5",
+   "model": "global",
+   "objective": 955,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t5",
+   "model": "global",
+   "objective": 954,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t5",
+   "model": "global",
+   "objective": 953,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t5",
+   "model": "global",
+   "objective": 952,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t5",
+   "model": "global",
+   "objective": 951,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t5",
+   "model": "global",
+   "objective": 950,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t5",
+   "model": "global",
+   "objective": 949,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t5",
+   "model": "global",
+   "objective": 947,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t5",
+   "model": "global",
+   "objective": 946,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t5",
+   "model": "restricted",
+   "objective": 1041,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t6",
+   "model": "global",
+   "objective": 1067,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t6",
+   "model": "global",
+   "objective": 1065,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t6",
+   "model": "global",
+   "objective": 1063,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t6",
+   "model": "global",
+   "objective": 1062,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t6",
+   "model": "global",
+   "objective": 1059,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t6",
+   "model": "global",
+   "objective": 1056,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t6",
+   "model": "global",
+   "objective": 1055,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t6",
+   "model": "global",
+   "objective": 1054,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t6",
+   "model": "global",
+   "objective": 1053,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t6",
+   "model": "global",
+   "objective": 1052,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t6",
+   "model": "global",
+   "objective": 1051,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t6",
+   "model": "global",
+   "objective": 1050,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t6",
+   "model": "global",
+   "objective": 1047,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t6",
+   "model": "global",
+   "objective": 1046,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t6",
+   "model": "global",
+   "objective": 1045,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t6",
+   "model": "global",
+   "objective": 1044,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t6",
+   "model": "global",
+   "objective": 1043,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t6",
+   "model": "global",
+   "objective": 1042,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t6",
+   "model": "global",
+   "objective": 1041,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t6",
+   "model": "global",
+   "objective": 1040,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t6",
+   "model": "global",
+   "objective": 1039,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t6",
+   "model": "global",
+   "objective": 1038,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t6",
+   "model": "global",
+   "objective": 1037,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t6",
+   "model": "global",
+   "objective": 1036,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t6",
+   "model": "global",
+   "objective": 1035,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t6",
+   "model": "global",
+   "objective": 1034,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t6",
+   "model": "global",
+   "objective": 1033,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t6",
+   "model": "global",
+   "objective": 1032,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t6",
+   "model": "global",
+   "objective": 1031,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t6",
+   "model": "global",
+   "objective": 1030,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t6",
+   "model": "global",
+   "objective": 1029,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t6",
+   "model": "global",
+   "objective": 1025,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t6",
+   "model": "global",
+   "objective": 1024,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t6",
+   "model": "global",
+   "objective": 1023,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t6",
+   "model": "global",
+   "objective": 1022,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t6",
+   "model": "global",
+   "objective": 1021,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t6",
+   "model": "global",
+   "objective": 1020,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t6",
+   "model": "global",
+   "objective": 1019,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t6",
+   "model": "global",
+   "objective": 1018,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t6",
+   "model": "global",
+   "objective": 1017,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t6",
+   "model": "global",
+   "objective": 1016,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t6",
+   "model": "global",
+   "objective": 1015,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t6",
+   "model": "global",
+   "objective": 1014,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t6",
+   "model": "global",
+   "objective": 1013,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t6",
+   "model": "global",
+   "objective": 1012,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t6",
+   "model": "global",
+   "objective": 1011,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t6",
+   "model": "global",
+   "objective": 1010,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t6",
+   "model": "global",
+   "objective": 1009,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t6",
+   "model": "global",
+   "objective": 1008,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t6",
+   "model": "global",
+   "objective": 1007,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t6",
+   "model": "global",
+   "objective": 1006,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t6",
+   "model": "global",
+   "objective": 1005,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t6",
+   "model": "global",
+   "objective": 1004,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t6",
+   "model": "global",
+   "objective": 1003,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t6",
+   "model": "global",
+   "objective": 1002,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t6",
+   "model": "global",
+   "objective": 1001,
+   "valid": true,
+   "error": null
+  },
+  {
+   "instance": "20x20_s302_t6",
+   "model": "global",
+   "objective": 1000,
+   "valid": true,
+   "error": null
+  }
+ ]
+}
