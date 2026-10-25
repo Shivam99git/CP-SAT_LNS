@@ -22,14 +22,13 @@ from pathlib import Path
 HERE = Path(__file__).resolve().parent
 reg = json.loads((HERE / "claims.json").read_text())
 tex = (HERE / "manuscript.tex").read_text()
-body = "\n".join(line.split("%")[0] if not line.strip().startswith("\\%") else line
-                 for line in tex.splitlines())
+body = "\n".join(re.sub(r"(?<!\\)%.*", "", line) for line in tex.splitlines())  # unescaped % starts a comment
 body = re.sub(r"\\begin\{comment\}.*?\\end\{comment\}", "", body, flags=re.S)
 
 ALLOWED = set(json.loads((HERE / "allowed_literals.json").read_text())) if (HERE / "allowed_literals.json").exists() else set()
 
 used = set(re.findall(r"\\([A-Z][A-Za-z]+)", body))
-claim_like = {m for m in used if re.match(r"(SOne|STwo|SThree|SFour|SFive|SSix|SSeven|Pilot|Gate|Diag|Iaip)", m)}
+claim_like = {m for m in used if re.match(r"(SOne|STwo|SThree|SFour|SFive|SSix|SSeven|Pilot|Gate|Diag|Iaip|Oracle)", m)}
 undefined = sorted(m for m in claim_like if m not in reg)
 
 patterns = [r"\d+\.\d+\\?%", r"\d+\\?%", r"(?<![\w.])\.\d{3,}", r"\b\d+/\d+\b", r"\d\.\d+\\cdot10\^"]

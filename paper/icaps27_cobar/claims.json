@@ -1,0 +1,2288 @@
+{
+ "SOneUnits": {
+  "value": "40",
+  "source": "results/cobar/confirmatory/confirmatory_analysis_S1_primary.json",
+  "setting": "S1_primary",
+  "statistic": "number of units"
+ },
+ "SOneRecords": {
+  "value": "8{,}800",
+  "source": "results/cobar/confirmatory/confirmatory_analysis_S1_primary.json",
+  "setting": "S1_primary",
+  "statistic": "run records"
+ },
+ "SOneNotValidated": {
+  "value": "0",
+  "source": "results/cobar/confirmatory/confirmatory_analysis_S1_primary.json",
+  "setting": "S1_primary",
+  "statistic": "records not validated"
+ },
+ "SOneMeanCandidate": {
+  "value": ".0255",
+  "source": "results/cobar/confirmatory/confirmatory_analysis_S1_primary.json",
+  "setting": "S1_primary",
+  "algorithm": "candidate",
+  "metric": "pi",
+  "statistic": "mean of stream means",
+  "table": "tab:conf"
+ },
+ "SOneGapCandidate": {
+  "value": ".0159",
+  "source": "results/cobar/confirmatory/confirmatory_analysis_S1_primary.json",
+  "setting": "S1_primary",
+  "algorithm": "candidate",
+  "metric": "gap_B",
+  "statistic": "mean of stream means",
+  "table": "tab:conf"
+ },
+ "SOneMeanIaipSr": {
+  "value": ".0340",
+  "source": "results/cobar/confirmatory/confirmatory_analysis_S1_primary.json",
+  "setting": "S1_primary",
+  "algorithm": "iaip_sr",
+  "metric": "pi",
+  "statistic": "mean of stream means",
+  "table": "tab:conf"
+ },
+ "SOneGapIaipSr": {
+  "value": ".0231",
+  "source": "results/cobar/confirmatory/confirmatory_analysis_S1_primary.json",
+  "setting": "S1_primary",
+  "algorithm": "iaip_sr",
+  "metric": "gap_B",
+  "statistic": "mean of stream means",
+  "table": "tab:conf"
+ },
+ "SOneMeanPortfolioHinted": {
+  "value": ".0446",
+  "source": "results/cobar/confirmatory/confirmatory_analysis_S1_primary.json",
+  "setting": "S1_primary",
+  "algorithm": "portfolio_hinted",
+  "metric": "pi",
+  "statistic": "mean of stream means",
+  "table": "tab:conf"
+ },
+ "SOneGapPortfolioHinted": {
+  "value": ".0287",
+  "source": "results/cobar/confirmatory/confirmatory_analysis_S1_primary.json",
+  "setting": "S1_primary",
+  "algorithm": "portfolio_hinted",
+  "metric": "gap_B",
+  "statistic": "mean of stream means",
+  "table": "tab:conf"
+ },
+ "SOneMeanRandomRounds": {
+  "value": ".0310",
+  "source": "results/cobar/confirmatory/confirmatory_analysis_S1_primary.json",
+  "setting": "S1_primary",
+  "algorithm": "random_rounds",
+  "metric": "pi",
+  "statistic": "mean of stream means",
+  "table": "tab:conf"
+ },
+ "SOneGapRandomRounds": {
+  "value": ".0206",
+  "source": "results/cobar/confirmatory/confirmatory_analysis_S1_primary.json",
+  "setting": "S1_primary",
+  "algorithm": "random_rounds",
+  "metric": "gap_B",
+  "statistic": "mean of stream means",
+  "table": "tab:conf"
+ },
+ "SOneCandidateVsIaipSrRel": {
+  "value": "24.8",
+  "statistic": "relative difference of means (-)",
+  "sign": "-",
+  "source": "results/cobar/confirmatory/confirmatory_analysis_S1_primary.json",
+  "setting": "S1_primary",
+  "algorithm": "candidate",
+  "comparator": "iaip_sr",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:conf"
+ },
+ "SOneCandidateVsIaipSrSign": {
+  "value": "-",
+  "statistic": "sign of the relative difference",
+  "source": "results/cobar/confirmatory/confirmatory_analysis_S1_primary.json",
+  "setting": "S1_primary",
+  "algorithm": "candidate",
+  "comparator": "iaip_sr",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:conf"
+ },
+ "SOneCandidateVsIaipSrWL": {
+  "value": "39/1",
+  "statistic": "streams won/lost by algorithm",
+  "source": "results/cobar/confirmatory/confirmatory_analysis_S1_primary.json",
+  "setting": "S1_primary",
+  "algorithm": "candidate",
+  "comparator": "iaip_sr",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:conf"
+ },
+ "SOneCandidateVsIaipSrCI": {
+  "value": "[-0.0108, -0.0063]",
+  "statistic": "stream-clustered bootstrap 95% CI of the mean difference",
+  "source": "results/cobar/confirmatory/confirmatory_analysis_S1_primary.json",
+  "setting": "S1_primary",
+  "algorithm": "candidate",
+  "comparator": "iaip_sr",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:conf"
+ },
+ "SOneCandidateVsIaipSrHolm": {
+  "value": "2.2\\cdot10^{-10}",
+  "statistic": "Holm-adjusted exact sign-test p",
+  "source": "results/cobar/confirmatory/confirmatory_analysis_S1_primary.json",
+  "setting": "S1_primary",
+  "algorithm": "candidate",
+  "comparator": "iaip_sr",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:conf"
+ },
+ "SOneCandidateVsIaipSrGapRel": {
+  "value": "31.1",
+  "statistic": "relative difference of means (-)",
+  "sign": "-",
+  "source": "results/cobar/confirmatory/confirmatory_analysis_S1_primary.json",
+  "setting": "S1_primary",
+  "algorithm": "candidate",
+  "comparator": "iaip_sr",
+  "metric": "gap_B",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:conf"
+ },
+ "SOneCandidateVsIaipSrGapSign": {
+  "value": "-",
+  "statistic": "sign of the relative difference",
+  "source": "results/cobar/confirmatory/confirmatory_analysis_S1_primary.json",
+  "setting": "S1_primary",
+  "algorithm": "candidate",
+  "comparator": "iaip_sr",
+  "metric": "gap_B",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:conf"
+ },
+ "SOneCandidateVsIaipSrGapWL": {
+  "value": "37/3",
+  "statistic": "streams won/lost by algorithm",
+  "source": "results/cobar/confirmatory/confirmatory_analysis_S1_primary.json",
+  "setting": "S1_primary",
+  "algorithm": "candidate",
+  "comparator": "iaip_sr",
+  "metric": "gap_B",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:conf"
+ },
+ "SOneCandidateVsIaipSrGapCI": {
+  "value": "[-0.0096, -0.0050]",
+  "statistic": "stream-clustered bootstrap 95% CI of the mean difference",
+  "source": "results/cobar/confirmatory/confirmatory_analysis_S1_primary.json",
+  "setting": "S1_primary",
+  "algorithm": "candidate",
+  "comparator": "iaip_sr",
+  "metric": "gap_B",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:conf"
+ },
+ "SOneCandidateVsPortfolioHintedRel": {
+  "value": "42.7",
+  "statistic": "relative difference of means (-)",
+  "sign": "-",
+  "source": "results/cobar/confirmatory/confirmatory_analysis_S1_primary.json",
+  "setting": "S1_primary",
+  "algorithm": "candidate",
+  "comparator": "portfolio_hinted",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:conf"
+ },
+ "SOneCandidateVsPortfolioHintedSign": {
+  "value": "-",
+  "statistic": "sign of the relative difference",
+  "source": "results/cobar/confirmatory/confirmatory_analysis_S1_primary.json",
+  "setting": "S1_primary",
+  "algorithm": "candidate",
+  "comparator": "portfolio_hinted",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:conf"
+ },
+ "SOneCandidateVsPortfolioHintedWL": {
+  "value": "40/0",
+  "statistic": "streams won/lost by algorithm",
+  "source": "results/cobar/confirmatory/confirmatory_analysis_S1_primary.json",
+  "setting": "S1_primary",
+  "algorithm": "candidate",
+  "comparator": "portfolio_hinted",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:conf"
+ },
+ "SOneCandidateVsPortfolioHintedCI": {
+  "value": "[-0.0222, -0.0161]",
+  "statistic": "stream-clustered bootstrap 95% CI of the mean difference",
+  "source": "results/cobar/confirmatory/confirmatory_analysis_S1_primary.json",
+  "setting": "S1_primary",
+  "algorithm": "candidate",
+  "comparator": "portfolio_hinted",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:conf"
+ },
+ "SOneCandidateVsPortfolioHintedHolm": {
+  "value": "7.3\\cdot10^{-12}",
+  "statistic": "Holm-adjusted exact sign-test p",
+  "source": "results/cobar/confirmatory/confirmatory_analysis_S1_primary.json",
+  "setting": "S1_primary",
+  "algorithm": "candidate",
+  "comparator": "portfolio_hinted",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:conf"
+ },
+ "SOneCandidateVsPortfolioHintedGapRel": {
+  "value": "44.5",
+  "statistic": "relative difference of means (-)",
+  "sign": "-",
+  "source": "results/cobar/confirmatory/confirmatory_analysis_S1_primary.json",
+  "setting": "S1_primary",
+  "algorithm": "candidate",
+  "comparator": "portfolio_hinted",
+  "metric": "gap_B",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:conf"
+ },
+ "SOneCandidateVsPortfolioHintedGapSign": {
+  "value": "-",
+  "statistic": "sign of the relative difference",
+  "source": "results/cobar/confirmatory/confirmatory_analysis_S1_primary.json",
+  "setting": "S1_primary",
+  "algorithm": "candidate",
+  "comparator": "portfolio_hinted",
+  "metric": "gap_B",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:conf"
+ },
+ "SOneCandidateVsPortfolioHintedGapWL": {
+  "value": "38/2",
+  "statistic": "streams won/lost by algorithm",
+  "source": "results/cobar/confirmatory/confirmatory_analysis_S1_primary.json",
+  "setting": "S1_primary",
+  "algorithm": "candidate",
+  "comparator": "portfolio_hinted",
+  "metric": "gap_B",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:conf"
+ },
+ "SOneCandidateVsPortfolioHintedGapCI": {
+  "value": "[-0.0159, -0.0099]",
+  "statistic": "stream-clustered bootstrap 95% CI of the mean difference",
+  "source": "results/cobar/confirmatory/confirmatory_analysis_S1_primary.json",
+  "setting": "S1_primary",
+  "algorithm": "candidate",
+  "comparator": "portfolio_hinted",
+  "metric": "gap_B",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:conf"
+ },
+ "SOneCandidateVsRandomRoundsRel": {
+  "value": "17.7",
+  "statistic": "relative difference of means (-)",
+  "sign": "-",
+  "source": "results/cobar/confirmatory/confirmatory_analysis_S1_primary.json",
+  "setting": "S1_primary",
+  "algorithm": "candidate",
+  "comparator": "random_rounds",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:conf"
+ },
+ "SOneCandidateVsRandomRoundsSign": {
+  "value": "-",
+  "statistic": "sign of the relative difference",
+  "source": "results/cobar/confirmatory/confirmatory_analysis_S1_primary.json",
+  "setting": "S1_primary",
+  "algorithm": "candidate",
+  "comparator": "random_rounds",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:conf"
+ },
+ "SOneCandidateVsRandomRoundsWL": {
+  "value": "38/2",
+  "statistic": "streams won/lost by algorithm",
+  "source": "results/cobar/confirmatory/confirmatory_analysis_S1_primary.json",
+  "setting": "S1_primary",
+  "algorithm": "candidate",
+  "comparator": "random_rounds",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:conf"
+ },
+ "SOneCandidateVsRandomRoundsCI": {
+  "value": "[-0.0073, -0.0039]",
+  "statistic": "stream-clustered bootstrap 95% CI of the mean difference",
+  "source": "results/cobar/confirmatory/confirmatory_analysis_S1_primary.json",
+  "setting": "S1_primary",
+  "algorithm": "candidate",
+  "comparator": "random_rounds",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:conf"
+ },
+ "SOneCandidateVsRandomRoundsHolm": {
+  "value": "3.0\\cdot10^{-9}",
+  "statistic": "Holm-adjusted exact sign-test p",
+  "source": "results/cobar/confirmatory/confirmatory_analysis_S1_primary.json",
+  "setting": "S1_primary",
+  "algorithm": "candidate",
+  "comparator": "random_rounds",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:conf"
+ },
+ "SOneCandidateVsRandomRoundsGapRel": {
+  "value": "22.7",
+  "statistic": "relative difference of means (-)",
+  "sign": "-",
+  "source": "results/cobar/confirmatory/confirmatory_analysis_S1_primary.json",
+  "setting": "S1_primary",
+  "algorithm": "candidate",
+  "comparator": "random_rounds",
+  "metric": "gap_B",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:conf"
+ },
+ "SOneCandidateVsRandomRoundsGapSign": {
+  "value": "-",
+  "statistic": "sign of the relative difference",
+  "source": "results/cobar/confirmatory/confirmatory_analysis_S1_primary.json",
+  "setting": "S1_primary",
+  "algorithm": "candidate",
+  "comparator": "random_rounds",
+  "metric": "gap_B",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:conf"
+ },
+ "SOneCandidateVsRandomRoundsGapWL": {
+  "value": "34/6",
+  "statistic": "streams won/lost by algorithm",
+  "source": "results/cobar/confirmatory/confirmatory_analysis_S1_primary.json",
+  "setting": "S1_primary",
+  "algorithm": "candidate",
+  "comparator": "random_rounds",
+  "metric": "gap_B",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:conf"
+ },
+ "SOneCandidateVsRandomRoundsGapCI": {
+  "value": "[-0.0066, -0.0029]",
+  "statistic": "stream-clustered bootstrap 95% CI of the mean difference",
+  "source": "results/cobar/confirmatory/confirmatory_analysis_S1_primary.json",
+  "setting": "S1_primary",
+  "algorithm": "candidate",
+  "comparator": "random_rounds",
+  "metric": "gap_B",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:conf"
+ },
+ "SOneRandomRoundsVsIaipSrRel": {
+  "value": "8.6",
+  "statistic": "relative difference of means (-)",
+  "sign": "-",
+  "source": "results/cobar/confirmatory/confirmatory_analysis_S1_primary.json",
+  "setting": "S1_primary",
+  "algorithm": "random_rounds",
+  "comparator": "iaip_sr",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:conf"
+ },
+ "SOneRandomRoundsVsIaipSrSign": {
+  "value": "-",
+  "statistic": "sign of the relative difference",
+  "source": "results/cobar/confirmatory/confirmatory_analysis_S1_primary.json",
+  "setting": "S1_primary",
+  "algorithm": "random_rounds",
+  "comparator": "iaip_sr",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:conf"
+ },
+ "SOneRandomRoundsVsIaipSrWL": {
+  "value": "34/6",
+  "statistic": "streams won/lost by algorithm",
+  "source": "results/cobar/confirmatory/confirmatory_analysis_S1_primary.json",
+  "setting": "S1_primary",
+  "algorithm": "random_rounds",
+  "comparator": "iaip_sr",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:conf"
+ },
+ "SOneRandomRoundsVsIaipSrCI": {
+  "value": "[-0.0045, -0.0015]",
+  "statistic": "stream-clustered bootstrap 95% CI of the mean difference",
+  "source": "results/cobar/confirmatory/confirmatory_analysis_S1_primary.json",
+  "setting": "S1_primary",
+  "algorithm": "random_rounds",
+  "comparator": "iaip_sr",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:conf"
+ },
+ "SOneRandomRoundsVsIaipSrHolm": {
+  "value": "8.4\\cdot10^{-6}",
+  "statistic": "Holm-adjusted exact sign-test p",
+  "source": "results/cobar/confirmatory/confirmatory_analysis_S1_primary.json",
+  "setting": "S1_primary",
+  "algorithm": "random_rounds",
+  "comparator": "iaip_sr",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:conf"
+ },
+ "SOneRandomRoundsVsIaipSrGapRel": {
+  "value": "10.9",
+  "statistic": "relative difference of means (-)",
+  "sign": "-",
+  "source": "results/cobar/confirmatory/confirmatory_analysis_S1_primary.json",
+  "setting": "S1_primary",
+  "algorithm": "random_rounds",
+  "comparator": "iaip_sr",
+  "metric": "gap_B",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:conf"
+ },
+ "SOneRandomRoundsVsIaipSrGapSign": {
+  "value": "-",
+  "statistic": "sign of the relative difference",
+  "source": "results/cobar/confirmatory/confirmatory_analysis_S1_primary.json",
+  "setting": "S1_primary",
+  "algorithm": "random_rounds",
+  "comparator": "iaip_sr",
+  "metric": "gap_B",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:conf"
+ },
+ "SOneRandomRoundsVsIaipSrGapWL": {
+  "value": "31/9",
+  "statistic": "streams won/lost by algorithm",
+  "source": "results/cobar/confirmatory/confirmatory_analysis_S1_primary.json",
+  "setting": "S1_primary",
+  "algorithm": "random_rounds",
+  "comparator": "iaip_sr",
+  "metric": "gap_B",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:conf"
+ },
+ "SOneRandomRoundsVsIaipSrGapCI": {
+  "value": "[-0.0040, -0.0012]",
+  "statistic": "stream-clustered bootstrap 95% CI of the mean difference",
+  "source": "results/cobar/confirmatory/confirmatory_analysis_S1_primary.json",
+  "setting": "S1_primary",
+  "algorithm": "random_rounds",
+  "comparator": "iaip_sr",
+  "metric": "gap_B",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:conf"
+ },
+ "SOneNonInferior": {
+  "value": "yes",
+  "source": "results/cobar/confirmatory/confirmatory_analysis_S1_primary.json",
+  "setting": "S1_primary",
+  "statistic": "non-inferiority vs iaip_sr, 5% margin"
+ },
+ "STwoUnits": {
+  "value": "40",
+  "source": "results/cobar/confirmatory/confirmatory_analysis_S2_short_S3_workers4.json",
+  "setting": "S2_short",
+  "statistic": "number of units"
+ },
+ "STwoRecords": {
+  "value": "6{,}600",
+  "source": "results/cobar/confirmatory/confirmatory_analysis_S2_short_S3_workers4.json",
+  "setting": "S2_short",
+  "statistic": "run records"
+ },
+ "STwoNotValidated": {
+  "value": "0",
+  "source": "results/cobar/confirmatory/confirmatory_analysis_S2_short_S3_workers4.json",
+  "setting": "S2_short",
+  "statistic": "records not validated"
+ },
+ "STwoMeanCandidate": {
+  "value": ".0351",
+  "source": "results/cobar/confirmatory/confirmatory_analysis_S2_short_S3_workers4.json",
+  "setting": "S2_short",
+  "algorithm": "candidate",
+  "metric": "pi",
+  "statistic": "mean of stream means",
+  "table": "tab:conf"
+ },
+ "STwoGapCandidate": {
+  "value": ".0193",
+  "source": "results/cobar/confirmatory/confirmatory_analysis_S2_short_S3_workers4.json",
+  "setting": "S2_short",
+  "algorithm": "candidate",
+  "metric": "gap_B",
+  "statistic": "mean of stream means",
+  "table": "tab:conf"
+ },
+ "STwoMeanIaipSr": {
+  "value": ".0405",
+  "source": "results/cobar/confirmatory/confirmatory_analysis_S2_short_S3_workers4.json",
+  "setting": "S2_short",
+  "algorithm": "iaip_sr",
+  "metric": "pi",
+  "statistic": "mean of stream means",
+  "table": "tab:conf"
+ },
+ "STwoGapIaipSr": {
+  "value": ".0238",
+  "source": "results/cobar/confirmatory/confirmatory_analysis_S2_short_S3_workers4.json",
+  "setting": "S2_short",
+  "algorithm": "iaip_sr",
+  "metric": "gap_B",
+  "statistic": "mean of stream means",
+  "table": "tab:conf"
+ },
+ "STwoMeanPortfolioHinted": {
+  "value": ".0480",
+  "source": "results/cobar/confirmatory/confirmatory_analysis_S2_short_S3_workers4.json",
+  "setting": "S2_short",
+  "algorithm": "portfolio_hinted",
+  "metric": "pi",
+  "statistic": "mean of stream means",
+  "table": "tab:conf"
+ },
+ "STwoGapPortfolioHinted": {
+  "value": ".0289",
+  "source": "results/cobar/confirmatory/confirmatory_analysis_S2_short_S3_workers4.json",
+  "setting": "S2_short",
+  "algorithm": "portfolio_hinted",
+  "metric": "gap_B",
+  "statistic": "mean of stream means",
+  "table": "tab:conf"
+ },
+ "STwoCandidateVsIaipSrRel": {
+  "value": "13.2",
+  "statistic": "relative difference of means (-)",
+  "sign": "-",
+  "source": "results/cobar/confirmatory/confirmatory_analysis_S2_short_S3_workers4.json",
+  "setting": "S2_short",
+  "algorithm": "candidate",
+  "comparator": "iaip_sr",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:conf"
+ },
+ "STwoCandidateVsIaipSrSign": {
+  "value": "-",
+  "statistic": "sign of the relative difference",
+  "source": "results/cobar/confirmatory/confirmatory_analysis_S2_short_S3_workers4.json",
+  "setting": "S2_short",
+  "algorithm": "candidate",
+  "comparator": "iaip_sr",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:conf"
+ },
+ "STwoCandidateVsIaipSrWL": {
+  "value": "27/13",
+  "statistic": "streams won/lost by algorithm",
+  "source": "results/cobar/confirmatory/confirmatory_analysis_S2_short_S3_workers4.json",
+  "setting": "S2_short",
+  "algorithm": "candidate",
+  "comparator": "iaip_sr",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:conf"
+ },
+ "STwoCandidateVsIaipSrCI": {
+  "value": "[-0.0081, -0.0029]",
+  "statistic": "stream-clustered bootstrap 95% CI of the mean difference",
+  "source": "results/cobar/confirmatory/confirmatory_analysis_S2_short_S3_workers4.json",
+  "setting": "S2_short",
+  "algorithm": "candidate",
+  "comparator": "iaip_sr",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:conf"
+ },
+ "STwoCandidateVsIaipSrHolm": {
+  "value": "0.038",
+  "statistic": "Holm-adjusted exact sign-test p",
+  "source": "results/cobar/confirmatory/confirmatory_analysis_S2_short_S3_workers4.json",
+  "setting": "S2_short",
+  "algorithm": "candidate",
+  "comparator": "iaip_sr",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:conf"
+ },
+ "STwoCandidateVsIaipSrGapRel": {
+  "value": "18.7",
+  "statistic": "relative difference of means (-)",
+  "sign": "-",
+  "source": "results/cobar/confirmatory/confirmatory_analysis_S2_short_S3_workers4.json",
+  "setting": "S2_short",
+  "algorithm": "candidate",
+  "comparator": "iaip_sr",
+  "metric": "gap_B",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:conf"
+ },
+ "STwoCandidateVsIaipSrGapSign": {
+  "value": "-",
+  "statistic": "sign of the relative difference",
+  "source": "results/cobar/confirmatory/confirmatory_analysis_S2_short_S3_workers4.json",
+  "setting": "S2_short",
+  "algorithm": "candidate",
+  "comparator": "iaip_sr",
+  "metric": "gap_B",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:conf"
+ },
+ "STwoCandidateVsIaipSrGapWL": {
+  "value": "26/14",
+  "statistic": "streams won/lost by algorithm",
+  "source": "results/cobar/confirmatory/confirmatory_analysis_S2_short_S3_workers4.json",
+  "setting": "S2_short",
+  "algorithm": "candidate",
+  "comparator": "iaip_sr",
+  "metric": "gap_B",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:conf"
+ },
+ "STwoCandidateVsIaipSrGapCI": {
+  "value": "[-0.0069, -0.0021]",
+  "statistic": "stream-clustered bootstrap 95% CI of the mean difference",
+  "source": "results/cobar/confirmatory/confirmatory_analysis_S2_short_S3_workers4.json",
+  "setting": "S2_short",
+  "algorithm": "candidate",
+  "comparator": "iaip_sr",
+  "metric": "gap_B",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:conf"
+ },
+ "STwoCandidateVsPortfolioHintedRel": {
+  "value": "26.8",
+  "statistic": "relative difference of means (-)",
+  "sign": "-",
+  "source": "results/cobar/confirmatory/confirmatory_analysis_S2_short_S3_workers4.json",
+  "setting": "S2_short",
+  "algorithm": "candidate",
+  "comparator": "portfolio_hinted",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:conf"
+ },
+ "STwoCandidateVsPortfolioHintedSign": {
+  "value": "-",
+  "statistic": "sign of the relative difference",
+  "source": "results/cobar/confirmatory/confirmatory_analysis_S2_short_S3_workers4.json",
+  "setting": "S2_short",
+  "algorithm": "candidate",
+  "comparator": "portfolio_hinted",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:conf"
+ },
+ "STwoCandidateVsPortfolioHintedWL": {
+  "value": "36/4",
+  "statistic": "streams won/lost by algorithm",
+  "source": "results/cobar/confirmatory/confirmatory_analysis_S2_short_S3_workers4.json",
+  "setting": "S2_short",
+  "algorithm": "candidate",
+  "comparator": "portfolio_hinted",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:conf"
+ },
+ "STwoCandidateVsPortfolioHintedCI": {
+  "value": "[-0.0158, -0.0100]",
+  "statistic": "stream-clustered bootstrap 95% CI of the mean difference",
+  "source": "results/cobar/confirmatory/confirmatory_analysis_S2_short_S3_workers4.json",
+  "setting": "S2_short",
+  "algorithm": "candidate",
+  "comparator": "portfolio_hinted",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:conf"
+ },
+ "STwoCandidateVsPortfolioHintedHolm": {
+  "value": "3.7\\cdot10^{-7}",
+  "statistic": "Holm-adjusted exact sign-test p",
+  "source": "results/cobar/confirmatory/confirmatory_analysis_S2_short_S3_workers4.json",
+  "setting": "S2_short",
+  "algorithm": "candidate",
+  "comparator": "portfolio_hinted",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:conf"
+ },
+ "STwoCandidateVsPortfolioHintedGapRel": {
+  "value": "33.2",
+  "statistic": "relative difference of means (-)",
+  "sign": "-",
+  "source": "results/cobar/confirmatory/confirmatory_analysis_S2_short_S3_workers4.json",
+  "setting": "S2_short",
+  "algorithm": "candidate",
+  "comparator": "portfolio_hinted",
+  "metric": "gap_B",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:conf"
+ },
+ "STwoCandidateVsPortfolioHintedGapSign": {
+  "value": "-",
+  "statistic": "sign of the relative difference",
+  "source": "results/cobar/confirmatory/confirmatory_analysis_S2_short_S3_workers4.json",
+  "setting": "S2_short",
+  "algorithm": "candidate",
+  "comparator": "portfolio_hinted",
+  "metric": "gap_B",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:conf"
+ },
+ "STwoCandidateVsPortfolioHintedGapWL": {
+  "value": "34/6",
+  "statistic": "streams won/lost by algorithm",
+  "source": "results/cobar/confirmatory/confirmatory_analysis_S2_short_S3_workers4.json",
+  "setting": "S2_short",
+  "algorithm": "candidate",
+  "comparator": "portfolio_hinted",
+  "metric": "gap_B",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:conf"
+ },
+ "STwoCandidateVsPortfolioHintedGapCI": {
+  "value": "[-0.0122, -0.0070]",
+  "statistic": "stream-clustered bootstrap 95% CI of the mean difference",
+  "source": "results/cobar/confirmatory/confirmatory_analysis_S2_short_S3_workers4.json",
+  "setting": "S2_short",
+  "algorithm": "candidate",
+  "comparator": "portfolio_hinted",
+  "metric": "gap_B",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:conf"
+ },
+ "STwoNonInferior": {
+  "value": "yes",
+  "source": "results/cobar/confirmatory/confirmatory_analysis_S2_short_S3_workers4.json",
+  "setting": "S2_short",
+  "statistic": "non-inferiority vs iaip_sr, 5% margin"
+ },
+ "SThreeUnits": {
+  "value": "20",
+  "source": "results/cobar/confirmatory/confirmatory_analysis_S2_short_S3_workers4.json",
+  "setting": "S3_workers4",
+  "statistic": "number of units"
+ },
+ "SThreeRecords": {
+  "value": "3{,}300",
+  "source": "results/cobar/confirmatory/confirmatory_analysis_S2_short_S3_workers4.json",
+  "setting": "S3_workers4",
+  "statistic": "run records"
+ },
+ "SThreeNotValidated": {
+  "value": "0",
+  "source": "results/cobar/confirmatory/confirmatory_analysis_S2_short_S3_workers4.json",
+  "setting": "S3_workers4",
+  "statistic": "records not validated"
+ },
+ "SThreeMeanCandidate": {
+  "value": ".0154",
+  "source": "results/cobar/confirmatory/confirmatory_analysis_S2_short_S3_workers4.json",
+  "setting": "S3_workers4",
+  "algorithm": "candidate",
+  "metric": "pi",
+  "statistic": "mean of stream means",
+  "table": "tab:conf"
+ },
+ "SThreeGapCandidate": {
+  "value": ".0071",
+  "source": "results/cobar/confirmatory/confirmatory_analysis_S2_short_S3_workers4.json",
+  "setting": "S3_workers4",
+  "algorithm": "candidate",
+  "metric": "gap_B",
+  "statistic": "mean of stream means",
+  "table": "tab:conf"
+ },
+ "SThreeMeanIaipSr": {
+  "value": ".0167",
+  "source": "results/cobar/confirmatory/confirmatory_analysis_S2_short_S3_workers4.json",
+  "setting": "S3_workers4",
+  "algorithm": "iaip_sr",
+  "metric": "pi",
+  "statistic": "mean of stream means",
+  "table": "tab:conf"
+ },
+ "SThreeGapIaipSr": {
+  "value": ".0087",
+  "source": "results/cobar/confirmatory/confirmatory_analysis_S2_short_S3_workers4.json",
+  "setting": "S3_workers4",
+  "algorithm": "iaip_sr",
+  "metric": "gap_B",
+  "statistic": "mean of stream means",
+  "table": "tab:conf"
+ },
+ "SThreeMeanPortfolioHinted": {
+  "value": ".0182",
+  "source": "results/cobar/confirmatory/confirmatory_analysis_S2_short_S3_workers4.json",
+  "setting": "S3_workers4",
+  "algorithm": "portfolio_hinted",
+  "metric": "pi",
+  "statistic": "mean of stream means",
+  "table": "tab:conf"
+ },
+ "SThreeGapPortfolioHinted": {
+  "value": ".0101",
+  "source": "results/cobar/confirmatory/confirmatory_analysis_S2_short_S3_workers4.json",
+  "setting": "S3_workers4",
+  "algorithm": "portfolio_hinted",
+  "metric": "gap_B",
+  "statistic": "mean of stream means",
+  "table": "tab:conf"
+ },
+ "SThreeCandidateVsIaipSrRel": {
+  "value": "7.9",
+  "statistic": "relative difference of means (-)",
+  "sign": "-",
+  "source": "results/cobar/confirmatory/confirmatory_analysis_S2_short_S3_workers4.json",
+  "setting": "S3_workers4",
+  "algorithm": "candidate",
+  "comparator": "iaip_sr",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:conf"
+ },
+ "SThreeCandidateVsIaipSrSign": {
+  "value": "-",
+  "statistic": "sign of the relative difference",
+  "source": "results/cobar/confirmatory/confirmatory_analysis_S2_short_S3_workers4.json",
+  "setting": "S3_workers4",
+  "algorithm": "candidate",
+  "comparator": "iaip_sr",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:conf"
+ },
+ "SThreeCandidateVsIaipSrWL": {
+  "value": "14/6",
+  "statistic": "streams won/lost by algorithm",
+  "source": "results/cobar/confirmatory/confirmatory_analysis_S2_short_S3_workers4.json",
+  "setting": "S3_workers4",
+  "algorithm": "candidate",
+  "comparator": "iaip_sr",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:conf"
+ },
+ "SThreeCandidateVsIaipSrCI": {
+  "value": "[-0.0026, -0.0002]",
+  "statistic": "stream-clustered bootstrap 95% CI of the mean difference",
+  "source": "results/cobar/confirmatory/confirmatory_analysis_S2_short_S3_workers4.json",
+  "setting": "S3_workers4",
+  "algorithm": "candidate",
+  "comparator": "iaip_sr",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:conf"
+ },
+ "SThreeCandidateVsIaipSrHolm": {
+  "value": "0.12",
+  "statistic": "Holm-adjusted exact sign-test p",
+  "source": "results/cobar/confirmatory/confirmatory_analysis_S2_short_S3_workers4.json",
+  "setting": "S3_workers4",
+  "algorithm": "candidate",
+  "comparator": "iaip_sr",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:conf"
+ },
+ "SThreeCandidateVsIaipSrGapRel": {
+  "value": "18.7",
+  "statistic": "relative difference of means (-)",
+  "sign": "-",
+  "source": "results/cobar/confirmatory/confirmatory_analysis_S2_short_S3_workers4.json",
+  "setting": "S3_workers4",
+  "algorithm": "candidate",
+  "comparator": "iaip_sr",
+  "metric": "gap_B",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:conf"
+ },
+ "SThreeCandidateVsIaipSrGapSign": {
+  "value": "-",
+  "statistic": "sign of the relative difference",
+  "source": "results/cobar/confirmatory/confirmatory_analysis_S2_short_S3_workers4.json",
+  "setting": "S3_workers4",
+  "algorithm": "candidate",
+  "comparator": "iaip_sr",
+  "metric": "gap_B",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:conf"
+ },
+ "SThreeCandidateVsIaipSrGapWL": {
+  "value": "13/7",
+  "statistic": "streams won/lost by algorithm",
+  "source": "results/cobar/confirmatory/confirmatory_analysis_S2_short_S3_workers4.json",
+  "setting": "S3_workers4",
+  "algorithm": "candidate",
+  "comparator": "iaip_sr",
+  "metric": "gap_B",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:conf"
+ },
+ "SThreeCandidateVsIaipSrGapCI": {
+  "value": "[-0.0028, -0.0006]",
+  "statistic": "stream-clustered bootstrap 95% CI of the mean difference",
+  "source": "results/cobar/confirmatory/confirmatory_analysis_S2_short_S3_workers4.json",
+  "setting": "S3_workers4",
+  "algorithm": "candidate",
+  "comparator": "iaip_sr",
+  "metric": "gap_B",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:conf"
+ },
+ "SThreeCandidateVsPortfolioHintedRel": {
+  "value": "15.6",
+  "statistic": "relative difference of means (-)",
+  "sign": "-",
+  "source": "results/cobar/confirmatory/confirmatory_analysis_S2_short_S3_workers4.json",
+  "setting": "S3_workers4",
+  "algorithm": "candidate",
+  "comparator": "portfolio_hinted",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:conf"
+ },
+ "SThreeCandidateVsPortfolioHintedSign": {
+  "value": "-",
+  "statistic": "sign of the relative difference",
+  "source": "results/cobar/confirmatory/confirmatory_analysis_S2_short_S3_workers4.json",
+  "setting": "S3_workers4",
+  "algorithm": "candidate",
+  "comparator": "portfolio_hinted",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:conf"
+ },
+ "SThreeCandidateVsPortfolioHintedWL": {
+  "value": "16/4",
+  "statistic": "streams won/lost by algorithm",
+  "source": "results/cobar/confirmatory/confirmatory_analysis_S2_short_S3_workers4.json",
+  "setting": "S3_workers4",
+  "algorithm": "candidate",
+  "comparator": "portfolio_hinted",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:conf"
+ },
+ "SThreeCandidateVsPortfolioHintedCI": {
+  "value": "[-0.0045, -0.0014]",
+  "statistic": "stream-clustered bootstrap 95% CI of the mean difference",
+  "source": "results/cobar/confirmatory/confirmatory_analysis_S2_short_S3_workers4.json",
+  "setting": "S3_workers4",
+  "algorithm": "candidate",
+  "comparator": "portfolio_hinted",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:conf"
+ },
+ "SThreeCandidateVsPortfolioHintedHolm": {
+  "value": "0.024",
+  "statistic": "Holm-adjusted exact sign-test p",
+  "source": "results/cobar/confirmatory/confirmatory_analysis_S2_short_S3_workers4.json",
+  "setting": "S3_workers4",
+  "algorithm": "candidate",
+  "comparator": "portfolio_hinted",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:conf"
+ },
+ "SThreeCandidateVsPortfolioHintedGapRel": {
+  "value": "29.6",
+  "statistic": "relative difference of means (-)",
+  "sign": "-",
+  "source": "results/cobar/confirmatory/confirmatory_analysis_S2_short_S3_workers4.json",
+  "setting": "S3_workers4",
+  "algorithm": "candidate",
+  "comparator": "portfolio_hinted",
+  "metric": "gap_B",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:conf"
+ },
+ "SThreeCandidateVsPortfolioHintedGapSign": {
+  "value": "-",
+  "statistic": "sign of the relative difference",
+  "source": "results/cobar/confirmatory/confirmatory_analysis_S2_short_S3_workers4.json",
+  "setting": "S3_workers4",
+  "algorithm": "candidate",
+  "comparator": "portfolio_hinted",
+  "metric": "gap_B",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:conf"
+ },
+ "SThreeCandidateVsPortfolioHintedGapWL": {
+  "value": "15/5",
+  "statistic": "streams won/lost by algorithm",
+  "source": "results/cobar/confirmatory/confirmatory_analysis_S2_short_S3_workers4.json",
+  "setting": "S3_workers4",
+  "algorithm": "candidate",
+  "comparator": "portfolio_hinted",
+  "metric": "gap_B",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:conf"
+ },
+ "SThreeCandidateVsPortfolioHintedGapCI": {
+  "value": "[-0.0046, -0.0015]",
+  "statistic": "stream-clustered bootstrap 95% CI of the mean difference",
+  "source": "results/cobar/confirmatory/confirmatory_analysis_S2_short_S3_workers4.json",
+  "setting": "S3_workers4",
+  "algorithm": "candidate",
+  "comparator": "portfolio_hinted",
+  "metric": "gap_B",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:conf"
+ },
+ "SThreeNonInferior": {
+  "value": "yes",
+  "source": "results/cobar/confirmatory/confirmatory_analysis_S2_short_S3_workers4.json",
+  "setting": "S3_workers4",
+  "statistic": "non-inferiority vs iaip_sr, 5% margin"
+ },
+ "PilotOneATwoVsAOneRel": {
+  "value": "1.4",
+  "statistic": "relative difference of means (-)",
+  "sign": "-",
+  "source": "results/cobar/pilot/p1_b8/analysis.json",
+  "setting": "p1_b8",
+  "algorithm": "A2",
+  "comparator": "A1",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:dev"
+ },
+ "PilotOneATwoVsAOneSign": {
+  "value": "-",
+  "statistic": "sign of the relative difference",
+  "source": "results/cobar/pilot/p1_b8/analysis.json",
+  "setting": "p1_b8",
+  "algorithm": "A2",
+  "comparator": "A1",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:dev"
+ },
+ "PilotOneATwoVsAOneWL": {
+  "value": "8/12",
+  "statistic": "streams won/lost by algorithm",
+  "source": "results/cobar/pilot/p1_b8/analysis.json",
+  "setting": "p1_b8",
+  "algorithm": "A2",
+  "comparator": "A1",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:dev"
+ },
+ "PilotOneATwoVsAOneCI": {
+  "value": "[-0.0013, +0.0003]",
+  "statistic": "stream-clustered bootstrap 95% CI of the mean difference",
+  "source": "results/cobar/pilot/p1_b8/analysis.json",
+  "setting": "p1_b8",
+  "algorithm": "A2",
+  "comparator": "A1",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:dev"
+ },
+ "PilotOneATwoVsAOneHolm": {
+  "value": "1.00",
+  "statistic": "Holm-adjusted exact sign-test p",
+  "source": "results/cobar/pilot/p1_b8/analysis.json",
+  "setting": "p1_b8",
+  "algorithm": "A2",
+  "comparator": "A1",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:dev"
+ },
+ "PilotOneAThreeVsAOneRel": {
+  "value": "0.4",
+  "statistic": "relative difference of means (-)",
+  "sign": "-",
+  "source": "results/cobar/pilot/p1_b8/analysis.json",
+  "setting": "p1_b8",
+  "algorithm": "A3",
+  "comparator": "A1",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:dev"
+ },
+ "PilotOneAThreeVsAOneSign": {
+  "value": "-",
+  "statistic": "sign of the relative difference",
+  "source": "results/cobar/pilot/p1_b8/analysis.json",
+  "setting": "p1_b8",
+  "algorithm": "A3",
+  "comparator": "A1",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:dev"
+ },
+ "PilotOneAThreeVsAOneWL": {
+  "value": "10/10",
+  "statistic": "streams won/lost by algorithm",
+  "source": "results/cobar/pilot/p1_b8/analysis.json",
+  "setting": "p1_b8",
+  "algorithm": "A3",
+  "comparator": "A1",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:dev"
+ },
+ "PilotOneAThreeVsAOneCI": {
+  "value": "[-0.0009, +0.0008]",
+  "statistic": "stream-clustered bootstrap 95% CI of the mean difference",
+  "source": "results/cobar/pilot/p1_b8/analysis.json",
+  "setting": "p1_b8",
+  "algorithm": "A3",
+  "comparator": "A1",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:dev"
+ },
+ "PilotOneAThreeVsAOneHolm": {
+  "value": "1.00",
+  "statistic": "Holm-adjusted exact sign-test p",
+  "source": "results/cobar/pilot/p1_b8/analysis.json",
+  "setting": "p1_b8",
+  "algorithm": "A3",
+  "comparator": "A1",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:dev"
+ },
+ "PilotOneAFourVsAOneRel": {
+  "value": "4.1",
+  "statistic": "relative difference of means (-)",
+  "sign": "-",
+  "source": "results/cobar/pilot/p1_b8/analysis.json",
+  "setting": "p1_b8",
+  "algorithm": "A4",
+  "comparator": "A1",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:dev"
+ },
+ "PilotOneAFourVsAOneSign": {
+  "value": "-",
+  "statistic": "sign of the relative difference",
+  "source": "results/cobar/pilot/p1_b8/analysis.json",
+  "setting": "p1_b8",
+  "algorithm": "A4",
+  "comparator": "A1",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:dev"
+ },
+ "PilotOneAFourVsAOneWL": {
+  "value": "11/9",
+  "statistic": "streams won/lost by algorithm",
+  "source": "results/cobar/pilot/p1_b8/analysis.json",
+  "setting": "p1_b8",
+  "algorithm": "A4",
+  "comparator": "A1",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:dev"
+ },
+ "PilotOneAFourVsAOneCI": {
+  "value": "[-0.0023, +0.0000]",
+  "statistic": "stream-clustered bootstrap 95% CI of the mean difference",
+  "source": "results/cobar/pilot/p1_b8/analysis.json",
+  "setting": "p1_b8",
+  "algorithm": "A4",
+  "comparator": "A1",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:dev"
+ },
+ "PilotOneAFourVsAOneHolm": {
+  "value": "1.00",
+  "statistic": "Holm-adjusted exact sign-test p",
+  "source": "results/cobar/pilot/p1_b8/analysis.json",
+  "setting": "p1_b8",
+  "algorithm": "A4",
+  "comparator": "A1",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:dev"
+ },
+ "PilotOneAFiveVsAFourRel": {
+  "value": "2.2",
+  "statistic": "relative difference of means (+)",
+  "sign": "+",
+  "source": "results/cobar/pilot/p1_b8/analysis.json",
+  "setting": "p1_b8",
+  "algorithm": "A5",
+  "comparator": "A4",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:dev"
+ },
+ "PilotOneAFiveVsAFourSign": {
+  "value": "+",
+  "statistic": "sign of the relative difference",
+  "source": "results/cobar/pilot/p1_b8/analysis.json",
+  "setting": "p1_b8",
+  "algorithm": "A5",
+  "comparator": "A4",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:dev"
+ },
+ "PilotOneAFiveVsAFourWL": {
+  "value": "11/9",
+  "statistic": "streams won/lost by algorithm",
+  "source": "results/cobar/pilot/p1_b8/analysis.json",
+  "setting": "p1_b8",
+  "algorithm": "A5",
+  "comparator": "A4",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:dev"
+ },
+ "PilotOneAFiveVsAFourCI": {
+  "value": "[-0.0010, +0.0021]",
+  "statistic": "stream-clustered bootstrap 95% CI of the mean difference",
+  "source": "results/cobar/pilot/p1_b8/analysis.json",
+  "setting": "p1_b8",
+  "algorithm": "A5",
+  "comparator": "A4",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:dev"
+ },
+ "PilotOneAFiveVsAFourHolm": {
+  "value": "1.00",
+  "statistic": "Holm-adjusted exact sign-test p",
+  "source": "results/cobar/pilot/p1_b8/analysis.json",
+  "setting": "p1_b8",
+  "algorithm": "A5",
+  "comparator": "A4",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:dev"
+ },
+ "PilotOneASixVsAFourRel": {
+  "value": "2.4",
+  "statistic": "relative difference of means (+)",
+  "sign": "+",
+  "source": "results/cobar/pilot/p1_b8/analysis.json",
+  "setting": "p1_b8",
+  "algorithm": "A6",
+  "comparator": "A4",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:dev"
+ },
+ "PilotOneASixVsAFourSign": {
+  "value": "+",
+  "statistic": "sign of the relative difference",
+  "source": "results/cobar/pilot/p1_b8/analysis.json",
+  "setting": "p1_b8",
+  "algorithm": "A6",
+  "comparator": "A4",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:dev"
+ },
+ "PilotOneASixVsAFourWL": {
+  "value": "12/8",
+  "statistic": "streams won/lost by algorithm",
+  "source": "results/cobar/pilot/p1_b8/analysis.json",
+  "setting": "p1_b8",
+  "algorithm": "A6",
+  "comparator": "A4",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:dev"
+ },
+ "PilotOneASixVsAFourCI": {
+  "value": "[-0.0011, +0.0022]",
+  "statistic": "stream-clustered bootstrap 95% CI of the mean difference",
+  "source": "results/cobar/pilot/p1_b8/analysis.json",
+  "setting": "p1_b8",
+  "algorithm": "A6",
+  "comparator": "A4",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:dev"
+ },
+ "PilotOneASixVsAFourHolm": {
+  "value": "1.00",
+  "statistic": "Holm-adjusted exact sign-test p",
+  "source": "results/cobar/pilot/p1_b8/analysis.json",
+  "setting": "p1_b8",
+  "algorithm": "A6",
+  "comparator": "A4",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:dev"
+ },
+ "PilotOneASixrVsAOneRel": {
+  "value": "26.2",
+  "statistic": "relative difference of means (-)",
+  "sign": "-",
+  "source": "results/cobar/pilot/p1_b8/analysis.json",
+  "setting": "p1_b8",
+  "algorithm": "A6r",
+  "comparator": "A1",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:dev"
+ },
+ "PilotOneASixrVsAOneSign": {
+  "value": "-",
+  "statistic": "sign of the relative difference",
+  "source": "results/cobar/pilot/p1_b8/analysis.json",
+  "setting": "p1_b8",
+  "algorithm": "A6r",
+  "comparator": "A1",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:dev"
+ },
+ "PilotOneASixrVsAOneWL": {
+  "value": "14/6",
+  "statistic": "streams won/lost by algorithm",
+  "source": "results/cobar/pilot/p1_b8/analysis.json",
+  "setting": "p1_b8",
+  "algorithm": "A6r",
+  "comparator": "A1",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:dev"
+ },
+ "PilotOneASixrVsAOneCI": {
+  "value": "[-0.0095, -0.0029]",
+  "statistic": "stream-clustered bootstrap 95% CI of the mean difference",
+  "source": "results/cobar/pilot/p1_b8/analysis.json",
+  "setting": "p1_b8",
+  "algorithm": "A6r",
+  "comparator": "A1",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:dev"
+ },
+ "PilotOneASixrVsAOneHolm": {
+  "value": "1.00",
+  "statistic": "Holm-adjusted exact sign-test p",
+  "source": "results/cobar/pilot/p1_b8/analysis.json",
+  "setting": "p1_b8",
+  "algorithm": "A6r",
+  "comparator": "A1",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:dev"
+ },
+ "PilotOneANineVsAZeroRel": {
+  "value": "1.4",
+  "statistic": "relative difference of means (-)",
+  "sign": "-",
+  "source": "results/cobar/pilot/p1_b8/analysis.json",
+  "setting": "p1_b8",
+  "algorithm": "A9",
+  "comparator": "A0",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:dev"
+ },
+ "PilotOneANineVsAZeroSign": {
+  "value": "-",
+  "statistic": "sign of the relative difference",
+  "source": "results/cobar/pilot/p1_b8/analysis.json",
+  "setting": "p1_b8",
+  "algorithm": "A9",
+  "comparator": "A0",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:dev"
+ },
+ "PilotOneANineVsAZeroWL": {
+  "value": "9/11",
+  "statistic": "streams won/lost by algorithm",
+  "source": "results/cobar/pilot/p1_b8/analysis.json",
+  "setting": "p1_b8",
+  "algorithm": "A9",
+  "comparator": "A0",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:dev"
+ },
+ "PilotOneANineVsAZeroCI": {
+  "value": "[-0.0033, +0.0023]",
+  "statistic": "stream-clustered bootstrap 95% CI of the mean difference",
+  "source": "results/cobar/pilot/p1_b8/analysis.json",
+  "setting": "p1_b8",
+  "algorithm": "A9",
+  "comparator": "A0",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:dev"
+ },
+ "PilotOneANineVsAZeroHolm": {
+  "value": "1.00",
+  "statistic": "Holm-adjusted exact sign-test p",
+  "source": "results/cobar/pilot/p1_b8/analysis.json",
+  "setting": "p1_b8",
+  "algorithm": "A9",
+  "comparator": "A0",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:dev"
+ },
+ "PilotEightCOneVsAOneRel": {
+  "value": "9.9",
+  "statistic": "relative difference of means (-)",
+  "sign": "-",
+  "source": "results/cobar/pilot/p8_b8_seed1/analysis.json",
+  "setting": "p8_b8_seed1",
+  "algorithm": "C1",
+  "comparator": "A1",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:dev"
+ },
+ "PilotEightCOneVsAOneSign": {
+  "value": "-",
+  "statistic": "sign of the relative difference",
+  "source": "results/cobar/pilot/p8_b8_seed1/analysis.json",
+  "setting": "p8_b8_seed1",
+  "algorithm": "C1",
+  "comparator": "A1",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:dev"
+ },
+ "PilotEightCOneVsAOneWL": {
+  "value": "10/10",
+  "statistic": "streams won/lost by algorithm",
+  "source": "results/cobar/pilot/p8_b8_seed1/analysis.json",
+  "setting": "p8_b8_seed1",
+  "algorithm": "C1",
+  "comparator": "A1",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:dev"
+ },
+ "PilotEightCOneVsAOneCI": {
+  "value": "[-0.0059, +0.0011]",
+  "statistic": "stream-clustered bootstrap 95% CI of the mean difference",
+  "source": "results/cobar/pilot/p8_b8_seed1/analysis.json",
+  "setting": "p8_b8_seed1",
+  "algorithm": "C1",
+  "comparator": "A1",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:dev"
+ },
+ "PilotEightCOneVsAOneHolm": {
+  "value": "1.00",
+  "statistic": "Holm-adjusted exact sign-test p",
+  "source": "results/cobar/pilot/p8_b8_seed1/analysis.json",
+  "setting": "p8_b8_seed1",
+  "algorithm": "C1",
+  "comparator": "A1",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:dev"
+ },
+ "PilotEightCOneVsCThreeRel": {
+  "value": "8.8",
+  "statistic": "relative difference of means (-)",
+  "sign": "-",
+  "source": "results/cobar/pilot/p8_b8_seed1/analysis.json",
+  "setting": "p8_b8_seed1",
+  "algorithm": "C1",
+  "comparator": "C3",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:dev"
+ },
+ "PilotEightCOneVsCThreeSign": {
+  "value": "-",
+  "statistic": "sign of the relative difference",
+  "source": "results/cobar/pilot/p8_b8_seed1/analysis.json",
+  "setting": "p8_b8_seed1",
+  "algorithm": "C1",
+  "comparator": "C3",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:dev"
+ },
+ "PilotEightCOneVsCThreeWL": {
+  "value": "11/9",
+  "statistic": "streams won/lost by algorithm",
+  "source": "results/cobar/pilot/p8_b8_seed1/analysis.json",
+  "setting": "p8_b8_seed1",
+  "algorithm": "C1",
+  "comparator": "C3",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:dev"
+ },
+ "PilotEightCOneVsCThreeCI": {
+  "value": "[-0.0059, +0.0017]",
+  "statistic": "stream-clustered bootstrap 95% CI of the mean difference",
+  "source": "results/cobar/pilot/p8_b8_seed1/analysis.json",
+  "setting": "p8_b8_seed1",
+  "algorithm": "C1",
+  "comparator": "C3",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:dev"
+ },
+ "PilotEightCOneVsCThreeHolm": {
+  "value": "1.00",
+  "statistic": "Holm-adjusted exact sign-test p",
+  "source": "results/cobar/pilot/p8_b8_seed1/analysis.json",
+  "setting": "p8_b8_seed1",
+  "algorithm": "C1",
+  "comparator": "C3",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:dev"
+ },
+ "PilotEightCTwoVsAOneRel": {
+  "value": "33.5",
+  "statistic": "relative difference of means (-)",
+  "sign": "-",
+  "source": "results/cobar/pilot/p8_b8_seed1/analysis.json",
+  "setting": "p8_b8_seed1",
+  "algorithm": "C2",
+  "comparator": "A1",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:dev"
+ },
+ "PilotEightCTwoVsAOneSign": {
+  "value": "-",
+  "statistic": "sign of the relative difference",
+  "source": "results/cobar/pilot/p8_b8_seed1/analysis.json",
+  "setting": "p8_b8_seed1",
+  "algorithm": "C2",
+  "comparator": "A1",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:dev"
+ },
+ "PilotEightCTwoVsAOneWL": {
+  "value": "16/4",
+  "statistic": "streams won/lost by algorithm",
+  "source": "results/cobar/pilot/p8_b8_seed1/analysis.json",
+  "setting": "p8_b8_seed1",
+  "algorithm": "C2",
+  "comparator": "A1",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:dev"
+ },
+ "PilotEightCTwoVsAOneCI": {
+  "value": "[-0.0124, -0.0036]",
+  "statistic": "stream-clustered bootstrap 95% CI of the mean difference",
+  "source": "results/cobar/pilot/p8_b8_seed1/analysis.json",
+  "setting": "p8_b8_seed1",
+  "algorithm": "C2",
+  "comparator": "A1",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:dev"
+ },
+ "PilotEightCTwoVsAOneHolm": {
+  "value": "0.095",
+  "statistic": "Holm-adjusted exact sign-test p",
+  "source": "results/cobar/pilot/p8_b8_seed1/analysis.json",
+  "setting": "p8_b8_seed1",
+  "algorithm": "C2",
+  "comparator": "A1",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:dev"
+ },
+ "PilotEightCTwoVsCThreeRel": {
+  "value": "32.7",
+  "statistic": "relative difference of means (-)",
+  "sign": "-",
+  "source": "results/cobar/pilot/p8_b8_seed1/analysis.json",
+  "setting": "p8_b8_seed1",
+  "algorithm": "C2",
+  "comparator": "C3",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:dev"
+ },
+ "PilotEightCTwoVsCThreeSign": {
+  "value": "-",
+  "statistic": "sign of the relative difference",
+  "source": "results/cobar/pilot/p8_b8_seed1/analysis.json",
+  "setting": "p8_b8_seed1",
+  "algorithm": "C2",
+  "comparator": "C3",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:dev"
+ },
+ "PilotEightCTwoVsCThreeWL": {
+  "value": "16/4",
+  "statistic": "streams won/lost by algorithm",
+  "source": "results/cobar/pilot/p8_b8_seed1/analysis.json",
+  "setting": "p8_b8_seed1",
+  "algorithm": "C2",
+  "comparator": "C3",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:dev"
+ },
+ "PilotEightCTwoVsCThreeCI": {
+  "value": "[-0.0121, -0.0036]",
+  "statistic": "stream-clustered bootstrap 95% CI of the mean difference",
+  "source": "results/cobar/pilot/p8_b8_seed1/analysis.json",
+  "setting": "p8_b8_seed1",
+  "algorithm": "C2",
+  "comparator": "C3",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:dev"
+ },
+ "PilotEightCTwoVsCThreeHolm": {
+  "value": "0.095",
+  "statistic": "Holm-adjusted exact sign-test p",
+  "source": "results/cobar/pilot/p8_b8_seed1/analysis.json",
+  "setting": "p8_b8_seed1",
+  "algorithm": "C2",
+  "comparator": "C3",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:dev"
+ },
+ "PilotEightCThreeVsAOneRel": {
+  "value": "1.2",
+  "statistic": "relative difference of means (-)",
+  "sign": "-",
+  "source": "results/cobar/pilot/p8_b8_seed1/analysis.json",
+  "setting": "p8_b8_seed1",
+  "algorithm": "C3",
+  "comparator": "A1",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:dev"
+ },
+ "PilotEightCThreeVsAOneSign": {
+  "value": "-",
+  "statistic": "sign of the relative difference",
+  "source": "results/cobar/pilot/p8_b8_seed1/analysis.json",
+  "setting": "p8_b8_seed1",
+  "algorithm": "C3",
+  "comparator": "A1",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:dev"
+ },
+ "PilotEightCThreeVsAOneWL": {
+  "value": "10/10",
+  "statistic": "streams won/lost by algorithm",
+  "source": "results/cobar/pilot/p8_b8_seed1/analysis.json",
+  "setting": "p8_b8_seed1",
+  "algorithm": "C3",
+  "comparator": "A1",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:dev"
+ },
+ "PilotEightCThreeVsAOneCI": {
+  "value": "[-0.0031, +0.0024]",
+  "statistic": "stream-clustered bootstrap 95% CI of the mean difference",
+  "source": "results/cobar/pilot/p8_b8_seed1/analysis.json",
+  "setting": "p8_b8_seed1",
+  "algorithm": "C3",
+  "comparator": "A1",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:dev"
+ },
+ "PilotEightCThreeVsAOneHolm": {
+  "value": "1.00",
+  "statistic": "Holm-adjusted exact sign-test p",
+  "source": "results/cobar/pilot/p8_b8_seed1/analysis.json",
+  "setting": "p8_b8_seed1",
+  "algorithm": "C3",
+  "comparator": "A1",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:dev"
+ },
+ "PilotEightASixrVsAOneRel": {
+  "value": "11.1",
+  "statistic": "relative difference of means (-)",
+  "sign": "-",
+  "source": "results/cobar/pilot/p8_b8_seed1/analysis.json",
+  "setting": "p8_b8_seed1",
+  "algorithm": "A6r",
+  "comparator": "A1",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:dev"
+ },
+ "PilotEightASixrVsAOneSign": {
+  "value": "-",
+  "statistic": "sign of the relative difference",
+  "source": "results/cobar/pilot/p8_b8_seed1/analysis.json",
+  "setting": "p8_b8_seed1",
+  "algorithm": "A6r",
+  "comparator": "A1",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:dev"
+ },
+ "PilotEightASixrVsAOneWL": {
+  "value": "9/11",
+  "statistic": "streams won/lost by algorithm",
+  "source": "results/cobar/pilot/p8_b8_seed1/analysis.json",
+  "setting": "p8_b8_seed1",
+  "algorithm": "A6r",
+  "comparator": "A1",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:dev"
+ },
+ "PilotEightASixrVsAOneCI": {
+  "value": "[-0.0060, +0.0005]",
+  "statistic": "stream-clustered bootstrap 95% CI of the mean difference",
+  "source": "results/cobar/pilot/p8_b8_seed1/analysis.json",
+  "setting": "p8_b8_seed1",
+  "algorithm": "A6r",
+  "comparator": "A1",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:dev"
+ },
+ "PilotEightASixrVsAOneHolm": {
+  "value": "1.00",
+  "statistic": "Holm-adjusted exact sign-test p",
+  "source": "results/cobar/pilot/p8_b8_seed1/analysis.json",
+  "setting": "p8_b8_seed1",
+  "algorithm": "A6r",
+  "comparator": "A1",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:dev"
+ },
+ "PilotTenCTwoVsAOneRel": {
+  "value": "28.3",
+  "statistic": "relative difference of means (-)",
+  "sign": "-",
+  "source": "results/cobar/pilot/p10a_b8_seed2/analysis.json",
+  "setting": "p10a_b8_seed2",
+  "algorithm": "C2",
+  "comparator": "A1",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:dev"
+ },
+ "PilotTenCTwoVsAOneSign": {
+  "value": "-",
+  "statistic": "sign of the relative difference",
+  "source": "results/cobar/pilot/p10a_b8_seed2/analysis.json",
+  "setting": "p10a_b8_seed2",
+  "algorithm": "C2",
+  "comparator": "A1",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:dev"
+ },
+ "PilotTenCTwoVsAOneWL": {
+  "value": "16/4",
+  "statistic": "streams won/lost by algorithm",
+  "source": "results/cobar/pilot/p10a_b8_seed2/analysis.json",
+  "setting": "p10a_b8_seed2",
+  "algorithm": "C2",
+  "comparator": "A1",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:dev"
+ },
+ "PilotTenCTwoVsAOneCI": {
+  "value": "[-0.0101, -0.0029]",
+  "statistic": "stream-clustered bootstrap 95% CI of the mean difference",
+  "source": "results/cobar/pilot/p10a_b8_seed2/analysis.json",
+  "setting": "p10a_b8_seed2",
+  "algorithm": "C2",
+  "comparator": "A1",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:dev"
+ },
+ "PilotTenCTwoVsAOneHolm": {
+  "value": "0.047",
+  "statistic": "Holm-adjusted exact sign-test p",
+  "source": "results/cobar/pilot/p10a_b8_seed2/analysis.json",
+  "setting": "p10a_b8_seed2",
+  "algorithm": "C2",
+  "comparator": "A1",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:dev"
+ },
+ "PilotTenCTwoVsCThreeRel": {
+  "value": "26.7",
+  "statistic": "relative difference of means (-)",
+  "sign": "-",
+  "source": "results/cobar/pilot/p10a_b8_seed2/analysis.json",
+  "setting": "p10a_b8_seed2",
+  "algorithm": "C2",
+  "comparator": "C3",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:dev"
+ },
+ "PilotTenCTwoVsCThreeSign": {
+  "value": "-",
+  "statistic": "sign of the relative difference",
+  "source": "results/cobar/pilot/p10a_b8_seed2/analysis.json",
+  "setting": "p10a_b8_seed2",
+  "algorithm": "C2",
+  "comparator": "C3",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:dev"
+ },
+ "PilotTenCTwoVsCThreeWL": {
+  "value": "15/5",
+  "statistic": "streams won/lost by algorithm",
+  "source": "results/cobar/pilot/p10a_b8_seed2/analysis.json",
+  "setting": "p10a_b8_seed2",
+  "algorithm": "C2",
+  "comparator": "C3",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:dev"
+ },
+ "PilotTenCTwoVsCThreeCI": {
+  "value": "[-0.0103, -0.0021]",
+  "statistic": "stream-clustered bootstrap 95% CI of the mean difference",
+  "source": "results/cobar/pilot/p10a_b8_seed2/analysis.json",
+  "setting": "p10a_b8_seed2",
+  "algorithm": "C2",
+  "comparator": "C3",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:dev"
+ },
+ "PilotTenCTwoVsCThreeHolm": {
+  "value": "0.12",
+  "statistic": "Holm-adjusted exact sign-test p",
+  "source": "results/cobar/pilot/p10a_b8_seed2/analysis.json",
+  "setting": "p10a_b8_seed2",
+  "algorithm": "C2",
+  "comparator": "C3",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:dev"
+ },
+ "PilotTwoAFourVsAOneRel": {
+  "value": "41.0",
+  "statistic": "relative difference of means (+)",
+  "sign": "+",
+  "source": "results/cobar/pilot/regimes_analysis.json",
+  "setting": "p2_b2",
+  "algorithm": "A4",
+  "comparator": "A1",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:dev"
+ },
+ "PilotTwoAFourVsAOneSign": {
+  "value": "+",
+  "statistic": "sign of the relative difference",
+  "source": "results/cobar/pilot/regimes_analysis.json",
+  "setting": "p2_b2",
+  "algorithm": "A4",
+  "comparator": "A1",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:dev"
+ },
+ "PilotTwoAFourVsAOneWL": {
+  "value": "3/7",
+  "statistic": "streams won/lost by algorithm",
+  "source": "results/cobar/pilot/regimes_analysis.json",
+  "setting": "p2_b2",
+  "algorithm": "A4",
+  "comparator": "A1",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:dev"
+ },
+ "PilotTwoAFourVsAOneCI": {
+  "value": "[+0.0023, +0.0181]",
+  "statistic": "stream-clustered bootstrap 95% CI of the mean difference",
+  "source": "results/cobar/pilot/regimes_analysis.json",
+  "setting": "p2_b2",
+  "algorithm": "A4",
+  "comparator": "A1",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:dev"
+ },
+ "PilotTwoAFourVsAOneHolm": {
+  "value": "1.00",
+  "statistic": "Holm-adjusted exact sign-test p",
+  "source": "results/cobar/pilot/regimes_analysis.json",
+  "setting": "p2_b2",
+  "algorithm": "A4",
+  "comparator": "A1",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:dev"
+ },
+ "PilotTwoAOneVsAZeroRel": {
+  "value": "31.3",
+  "statistic": "relative difference of means (-)",
+  "sign": "-",
+  "source": "results/cobar/pilot/regimes_analysis.json",
+  "setting": "p2_b2",
+  "algorithm": "A1",
+  "comparator": "A0",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:dev"
+ },
+ "PilotTwoAOneVsAZeroSign": {
+  "value": "-",
+  "statistic": "sign of the relative difference",
+  "source": "results/cobar/pilot/regimes_analysis.json",
+  "setting": "p2_b2",
+  "algorithm": "A1",
+  "comparator": "A0",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:dev"
+ },
+ "PilotTwoAOneVsAZeroWL": {
+  "value": "8/2",
+  "statistic": "streams won/lost by algorithm",
+  "source": "results/cobar/pilot/regimes_analysis.json",
+  "setting": "p2_b2",
+  "algorithm": "A1",
+  "comparator": "A0",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:dev"
+ },
+ "PilotTwoAOneVsAZeroCI": {
+  "value": "[-0.0185, -0.0040]",
+  "statistic": "stream-clustered bootstrap 95% CI of the mean difference",
+  "source": "results/cobar/pilot/regimes_analysis.json",
+  "setting": "p2_b2",
+  "algorithm": "A1",
+  "comparator": "A0",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:dev"
+ },
+ "PilotTwoAOneVsAZeroHolm": {
+  "value": "0.88",
+  "statistic": "Holm-adjusted exact sign-test p",
+  "source": "results/cobar/pilot/regimes_analysis.json",
+  "setting": "p2_b2",
+  "algorithm": "A1",
+  "comparator": "A0",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:dev"
+ },
+ "PilotFourAFourVsAOneRel": {
+  "value": "23.7",
+  "statistic": "relative difference of means (+)",
+  "sign": "+",
+  "source": "results/cobar/pilot/regimes_analysis.json",
+  "setting": "p4_w4",
+  "algorithm": "A4",
+  "comparator": "A1",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:dev"
+ },
+ "PilotFourAFourVsAOneSign": {
+  "value": "+",
+  "statistic": "sign of the relative difference",
+  "source": "results/cobar/pilot/regimes_analysis.json",
+  "setting": "p4_w4",
+  "algorithm": "A4",
+  "comparator": "A1",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:dev"
+ },
+ "PilotFourAFourVsAOneWL": {
+  "value": "2/8",
+  "statistic": "streams won/lost by algorithm",
+  "source": "results/cobar/pilot/regimes_analysis.json",
+  "setting": "p4_w4",
+  "algorithm": "A4",
+  "comparator": "A1",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:dev"
+ },
+ "PilotFourAFourVsAOneCI": {
+  "value": "[-0.0005, +0.0056]",
+  "statistic": "stream-clustered bootstrap 95% CI of the mean difference",
+  "source": "results/cobar/pilot/regimes_analysis.json",
+  "setting": "p4_w4",
+  "algorithm": "A4",
+  "comparator": "A1",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:dev"
+ },
+ "PilotFourAFourVsAOneHolm": {
+  "value": "0.55",
+  "statistic": "Holm-adjusted exact sign-test p",
+  "source": "results/cobar/pilot/regimes_analysis.json",
+  "setting": "p4_w4",
+  "algorithm": "A4",
+  "comparator": "A1",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:dev"
+ },
+ "PilotFourAOneVsAZeroRel": {
+  "value": "27.5",
+  "statistic": "relative difference of means (-)",
+  "sign": "-",
+  "source": "results/cobar/pilot/regimes_analysis.json",
+  "setting": "p4_w4",
+  "algorithm": "A1",
+  "comparator": "A0",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:dev"
+ },
+ "PilotFourAOneVsAZeroSign": {
+  "value": "-",
+  "statistic": "sign of the relative difference",
+  "source": "results/cobar/pilot/regimes_analysis.json",
+  "setting": "p4_w4",
+  "algorithm": "A1",
+  "comparator": "A0",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:dev"
+ },
+ "PilotFourAOneVsAZeroWL": {
+  "value": "9/1",
+  "statistic": "streams won/lost by algorithm",
+  "source": "results/cobar/pilot/regimes_analysis.json",
+  "setting": "p4_w4",
+  "algorithm": "A1",
+  "comparator": "A0",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:dev"
+ },
+ "PilotFourAOneVsAZeroCI": {
+  "value": "[-0.0069, -0.0020]",
+  "statistic": "stream-clustered bootstrap 95% CI of the mean difference",
+  "source": "results/cobar/pilot/regimes_analysis.json",
+  "setting": "p4_w4",
+  "algorithm": "A1",
+  "comparator": "A0",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:dev"
+ },
+ "PilotFourAOneVsAZeroHolm": {
+  "value": "0.13",
+  "statistic": "Holm-adjusted exact sign-test p",
+  "source": "results/cobar/pilot/regimes_analysis.json",
+  "setting": "p4_w4",
+  "algorithm": "A1",
+  "comparator": "A0",
+  "metric": "pi",
+  "aggregation": "stream mean over steps 1-10 and solver seeds; paired over streams",
+  "table": "tab:dev"
+ },
+ "PilotCertSteps": {
+  "value": "200",
+  "source": "results/cobar/pilot/p1_b8/analysis.json",
+  "setting": "p1_b8",
+  "algorithm": "A2",
+  "statistic": "steps"
+ },
+ "PilotCertDecisive": {
+  "value": "13",
+  "source": "results/cobar/pilot/p1_b8/analysis.json",
+  "setting": "p1_b8",
+  "algorithm": "A2",
+  "statistic": "IAIP-SR neighbourhoods certified non-improving"
+ },
+ "PilotReleaseNeeded": {
+  "value": "17",
+  "source": "results/cobar/pilot/p1_b8/analysis.json",
+  "setting": "p1_b8",
+  "algorithm": "A6",
+  "statistic": "steps in which arcs were released"
+ },
+ "PilotShortStage": {
+  "value": "62",
+  "source": "results/cobar/pilot/p1_b8/analysis.json",
+  "setting": "p1_b8",
+  "algorithm": "A6",
+  "statistic": "steps given a short local stage by the certificate rule"
+ },
+ "PilotCertMs": {
+  "value": "1.3",
+  "source": "results/cobar/pilot/p1_b8/analysis.json",
+  "setting": "p1_b8",
+  "algorithm": "A6",
+  "statistic": "mean certificate time (ms)"
+ },
+ "PilotReleaseMs": {
+  "value": "1.5",
+  "source": "results/cobar/pilot/p1_b8/analysis.json",
+  "setting": "p1_b8",
+  "algorithm": "A6",
+  "statistic": "mean release time (ms)"
+ },
+ "PilotLocalMeanS": {
+  "value": "0.48",
+  "source": "results/cobar/pilot/p1_b8/analysis.json",
+  "setting": "p1_b8",
+  "algorithm": "A6",
+  "statistic": "mean local-stage time (s)"
+ },
+ "DiagSteps": {
+  "value": "120",
+  "source": "results/research_extension/dev_e5c/cobar_certificate_diagnostic.jsonl",
+  "statistic": "replayed IAIP-SR local stages"
+ },
+ "DiagDecisive": {
+  "value": "3",
+  "source": "results/research_extension/dev_e5c/cobar_certificate_diagnostic.jsonl",
+  "statistic": "certificate decisive"
+ },
+ "DiagInfeasible": {
+  "value": "29",
+  "source": "results/research_extension/dev_e5c/cobar_certificate_diagnostic.jsonl",
+  "statistic": "CP-SAT INFEASIBLE local stages"
+ },
+ "DiagExplained": {
+  "value": "3",
+  "source": "results/research_extension/dev_e5c/cobar_certificate_diagnostic.jsonl",
+  "statistic": "INFEASIBLE stages with a decisive certificate"
+ },
+ "DiagInfeasibleMs": {
+  "value": "21",
+  "source": "results/research_extension/dev_e5c/cobar_certificate_diagnostic.jsonl",
+  "statistic": "median time of INFEASIBLE local stages (ms)"
+ },
+ "DiagOptimalS": {
+  "value": "0.52",
+  "source": "results/research_extension/dev_e5c/cobar_certificate_diagnostic.jsonl",
+  "statistic": "median time of OPTIMAL local stages (s)"
+ },
+ "OracleEnumCases": {
+  "value": "2{,}000",
+  "source": "results/cobar/oracle_campaign.json",
+  "statistic": "enumeration oracle cases"
+ },
+ "OracleEnumDecisive": {
+  "value": "808",
+  "source": "results/cobar/oracle_campaign.json",
+  "statistic": "enumeration decisive certificates"
+ },
+ "OracleEnumViolations": {
+  "value": "0",
+  "source": "results/cobar/oracle_campaign.json",
+  "statistic": "enumeration violations"
+ },
+ "OracleCpsatCases": {
+  "value": "1{,}000",
+  "source": "results/cobar/oracle_campaign.json",
+  "statistic": "cpsat oracle cases"
+ },
+ "OracleCpsatDecisive": {
+  "value": "358",
+  "source": "results/cobar/oracle_campaign.json",
+  "statistic": "cpsat decisive certificates"
+ },
+ "OracleCpsatViolations": {
+  "value": "0",
+  "source": "results/cobar/oracle_campaign.json",
+  "statistic": "cpsat violations"
+ },
+ "OracleGlobalCases": {
+  "value": "500",
+  "source": "results/cobar/oracle_campaign.json",
+  "statistic": "global oracle cases"
+ },
+ "OracleGlobalDecisive": {
+  "value": "82",
+  "source": "results/cobar/oracle_campaign.json",
+  "statistic": "global decisive certificates"
+ },
+ "OracleGlobalViolations": {
+  "value": "0",
+  "source": "results/cobar/oracle_campaign.json",
+  "statistic": "global violations"
+ },
+ "OracleCutCases": {
+  "value": "1{,}000",
+  "source": "results/cobar/oracle_campaign.json",
+  "statistic": "decisive cases for the cut check"
+ },
+ "OracleCutMisses": {
+  "value": "0",
+  "source": "results/cobar/oracle_campaign.json",
+  "statistic": "cuts that miss a chain or are not minimum"
+ },
+ "SOneRoundsMean": {
+  "value": "2.9",
+  "source": "results/cobar/confirmatory/S1_primary/runs",
+  "setting": "S1_primary",
+  "algorithm": "candidate",
+  "statistic": "extra rounds per instance (mean)"
+ },
+ "SOneRoundsImproving": {
+  "value": "2.0",
+  "source": "results/cobar/confirmatory/S1_primary/runs",
+  "setting": "S1_primary",
+  "algorithm": "candidate",
+  "statistic": "improving extra rounds per instance (mean)"
+ },
+ "SOneLocalS": {
+  "value": "1.03",
+  "source": "results/cobar/confirmatory/S1_primary/runs",
+  "setting": "S1_primary",
+  "algorithm": "candidate",
+  "statistic": "mean local-window time (s)"
+ },
+ "SOneSeedsMedian": {
+  "value": "35",
+  "source": "results/cobar/confirmatory/S1_primary/runs",
+  "setting": "S1_primary",
+  "algorithm": "candidate",
+  "statistic": "median seed operations per round"
+ }
+}
