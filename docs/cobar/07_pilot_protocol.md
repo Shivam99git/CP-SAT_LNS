@@ -155,3 +155,27 @@ C2 emerged from round 2 rather than from the plan, so it is replicated on a new 
 - (b) no regime shows a clear regression of C2 vs A1, where clear means a point estimate worse by more than 10% *and* a CI excluding 0.
 
 Otherwise freeze IAIP-SR unchanged and report COBAR as NO-GO.
+
+## Round 3 results (solver seed 2)
+
+Source: `results/cobar/pilot/p10a_b8_seed2/analysis.json`, `p10_regimes_analysis.json`.
+
+| Setting | C2 vs A1 | W/L | CI | C2 vs A0 |
+|---|---|---|---|---|
+| **8 s (20 streams)** | **−28.3%** | 16/4 | **[−0.0101, −0.0029]** | −48.0% (20/0) |
+| 8 s: C2 vs C3 | −26.7% | 15/5 | [−0.0103, −0.0021] | |
+| 8 s: C3 vs A1 | −2.2% | 11/9 | includes 0 | |
+| 2 s | −30.2% | 7/3 | [−0.0191, −0.0013] | −46.3% |
+| 4 workers | −12.7% | 6/4 | [−0.0050, +0.0017] | −16.1% |
+| 30 s | −12.8% | 7/3 | [−0.0035, −0.0004] | −38.4% |
+| outage-only | −5.7% | 6/4 | [−0.0054, +0.0026] | −19.0% |
+
+**Freeze rule outcome:**
+- (a) met: the 8 s CI excludes 0;
+- (b) met: no regime with a point estimate worse than A1.
+
+C2 is frozen as the confirmatory candidate (`docs/cobar/08_confirmatory_protocol.md`).
+
+**What the candidate is.** IAIP-SR (portfolio; disruption-centred restricted stage; hinted global stage) plus up to 9 further restricted rounds inside the same α·B window. Each round uses a 25% breadth-first neighbourhood seeded at every operation on the incumbent's longest binding chains, which is the calendar-aware critical structure.
+- **Not credited:** the certificate's no-improvement test, the min-cut release, and the certificate-aware allocation. None showed a measurable effect.
+- **What the credited mechanism is:** critical-region-seeded repeated restricted search, which is a known idea.
