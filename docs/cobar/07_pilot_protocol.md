@@ -112,3 +112,46 @@ All share `cobar|neighbourhood=iaip|use_certificate=0|skip_certified=0|global_ce
 
 1. If C1 does not beat C3 at 8 s, the certificate is not credited. The candidate for confirmation is then the simplest variant that beats A1.
 2. If C1 is clearly worse than A1 at 2 s or with 4 workers, the freeze must address it, and the reason is documented.
+
+## Round 2 results (solver seed 1)
+
+Source: `results/cobar/pilot/p8_b8_seed1/analysis.json`, `p9_analysis.json`.
+
+**P8 (B = 8 s, 20 streams)**
+
+| Comparison | ΔPI | W/L | CI |
+|---|---|---|---|
+| C1 vs A1 | −9.9% | 10/10 | [−0.0059, +0.0011] |
+| C1 vs C3 | −8.8% | 11/9 | [−0.0059, +0.0017] |
+| **C2 vs A1** | **−33.5%** | **16/4** | **[−0.0124, −0.0036]** |
+| C2 vs C3 | −32.7% | 16/4 | excludes 0 |
+| C1 vs C2 | +35.4% | 4/16 | excludes 0 |
+| C3 vs A1 | −1.2% | 10/10 | includes 0 |
+| A6r vs A1 | −11.1% | 9/11 | includes 0 (P1, seed 0: −26.2%) |
+
+**P9 (10 streams):** C1 vs A1 at 2 s +5.8% (5/5), at 4 workers +4.6% (5/5), at 30 s +2.9% (4/6). All intervals include 0.
+
+**Decision rule 1: the min-cut seeding is not credited.**
+- C1 does not beat C3.
+- The rounds help when seeded at *all* operations of the longest binding chains (C2). This is critical-path-based neighbourhood selection, which is known prior art.
+- The P1 effect of A6r did not replicate at its P1 size on solver seed 1.
+
+## Round 3 (written before it runs)
+
+C2 emerged from round 2 rather than from the plan, so it is replicated on a new solver seed before any freeze.
+
+**Runs** (solver seed 2):
+
+| Run | Setting | Streams | Methods |
+|---|---|---|---|
+| P10a | B = 8 s, 1 worker | 15/20 × 301–310 (20) | A0, A1, C2, C3 |
+| P10b | B = 2 s | 15/20 × 301–305 (10) | A0, A1, C2 |
+| P10c | 4 workers | 10 | A0, A1, C2 |
+| P10d | B = 30 s | 10 | A0, A1, C2 |
+| P10e | outage-only | 10 | A0, A1, C2 |
+
+**Freeze rule** (development only). Freeze C2 as the confirmatory candidate if both hold:
+- (a) C2 beats A1 in P10a with a stream-bootstrap CI excluding 0;
+- (b) no regime shows a clear regression of C2 vs A1, where clear means a point estimate worse by more than 10% *and* a CI excluding 0.
+
+Otherwise freeze IAIP-SR unchanged and report COBAR as NO-GO.
