@@ -6,6 +6,8 @@ Method names:
   iaip|key=value|...
       integrated method with an IAIPConfig, e.g.
       iaip|portfolio=full|alpha=0.2|neighbourhood=N5|global_mode=unhinted
+  cobar|key=value|...
+      COBAR with a COBARConfig (phase0/cobar.py)
   lns_prev_solution, fix_and_optimize_50, local_branching_prev
       archived reoptimization baselines (phase0/baselines.py), unchanged;
       their trajectories are re-validated and recorded the same way
@@ -32,6 +34,7 @@ from dataclasses import asdict, dataclass, fields
 from pathlib import Path
 
 from . import baselines as bl
+from .cobar import COBARConfig, run_cobar
 from .impact_aware_reoptimization import IAIPConfig, run_iaip
 from .reuse_methods import GATE1_METHODS, RunResult, run_method
 from .run_gate1 import StreamSpec, _init_worker, _write_atomic, git_rev, instance_to_dict
@@ -42,13 +45,21 @@ ARCHIVED = ("lns_prev_solution", "fix_and_optimize_50", "local_branching_prev")
 _CFG_FIELDS = {f.name: f.type for f in fields(IAIPConfig)}
 
 
-def parse_iaip(name: str) -> IAIPConfig:
+def _parse(name: str, cls):
     kw = {}
     for part in name.split("|")[1:]:
         k, v = part.split("=")
-        cur = getattr(IAIPConfig(), k)
+        cur = getattr(cls(), k)
         kw[k] = type(cur)(v) if not isinstance(cur, bool) else v in ("1", "true", "True")
-    return IAIPConfig(**kw)
+    return cls(**kw)
+
+
+def parse_iaip(name: str) -> IAIPConfig:
+    return _parse(name, IAIPConfig)
+
+
+def parse_cobar(name: str) -> COBARConfig:
+    return _parse(name, COBARConfig)
 
 
 def _archived(name, inst, prev, budget, workers, seed) -> RunResult:
@@ -158,6 +169,9 @@ def _run(task: Task):
             elif m.startswith("iaip|"):
                 res, meta = run_iaip(inst, prev[m], prev_inst if prev[m] is not None else None,
                                      task.budget, parse_iaip(m), task.workers, task.solver_seed, m)
+            elif m.startswith("cobar|") or m == "cobar":
+                res, meta = run_cobar(inst, prev[m], prev_inst if prev[m] is not None else None,
+                                      task.budget, parse_cobar(m), task.workers, task.solver_seed, m)
             else:
                 raise ValueError(m)
             d = asdict(res)
@@ -199,6 +213,8 @@ def main():
     for m in a.methods:
         if m.startswith("iaip|"):
             parse_iaip(m)
+        elif m.startswith("cobar|") or m == "cobar":
+            parse_cobar(m)
         elif m not in GATE1_METHODS and m not in ARCHIVED:
             raise SystemExit(f"unknown method {m}")
     out = Path(a.out)

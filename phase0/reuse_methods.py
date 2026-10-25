@@ -117,10 +117,16 @@ def _construct(res: RunResult, clock: Clock, instance: Instance, fn, source: str
 
 
 def run_cpsat(res: RunResult, clock: Clock, instance: Instance, hint: Solution | None,
-              workers: int, seed: int, source: str = "cpsat", built: BuiltModel | None = None) -> None:
+              workers: int, seed: int, source: str = "cpsat", built: BuiltModel | None = None,
+              params: dict | None = None, stall_s: float | None = None) -> None:
     """Unrestricted (or caller-built) CP-SAT solve for the remaining budget.
     Model construction counts against the deadline; the returned solution is
-    validated before it may replace the incumbent."""
+    validated before it may replace the incumbent.
+
+    params:  extra CP-SAT parameters (e.g. {"interleave_search": True});
+    stall_s: stop the search once no improving solution has been reported for
+             stall_s seconds (CpSolver.stop_search from a watchdog thread).
+    With both None (the default) the behaviour is the archived one."""
     t_b = clock.elapsed()
     if built is None:
         built = build_research_model(instance, hint=hint)
@@ -133,6 +139,8 @@ def run_cpsat(res: RunResult, clock: Clock, instance: Instance, hint: Solution |
     solver.parameters.max_time_in_seconds = limit
     solver.parameters.num_workers = workers
     solver.parameters.random_seed = seed
+    for k, v in (params or {}).items():
+        setattr(solver.parameters, k, v)
 
     pending: list[tuple[float, int]] = []
 
@@ -141,7 +149,24 @@ def run_cpsat(res: RunResult, clock: Clock, instance: Instance, hint: Solution |
             pending.append((clock.elapsed(), int(self.objective_value)))
 
     t_s = clock.elapsed()
+    watchdog = None
+    if stall_s is not None:
+        import threading
+        done = threading.Event()
+
+        def _watch():
+            while not done.wait(0.005):
+                last = pending[-1][0] if pending else t_s
+                if clock.elapsed() - last > stall_s:
+                    res.notes.append(f"{source}: stopped after {stall_s}s without improvement")
+                    solver.stop_search()
+                    return
+        watchdog = threading.Thread(target=_watch, daemon=True)
+        watchdog.start()
     status = solver.solve(built.model, _CB())
+    if watchdog is not None:
+        done.set()
+        watchdog.join()
     res.solver_s += clock.elapsed() - t_s
     res.solver_status = STATUS_NAME.get(status, str(status))
     if status not in (cp_model.OPTIMAL, cp_model.FEASIBLE):
