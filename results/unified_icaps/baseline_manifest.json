@@ -1,0 +1,166 @@
+{
+ "created": "2026-10-26",
+ "branch": "research/icaps-unified-critical-rounds",
+ "git_commit": "5302800015d51f7b9e2fc90bcac6ac731632c22b",
+ "python": "3.12.3",
+ "ortools": "9.15.6755",
+ "numpy": "2.5.1",
+ "pandas": "3.0.3",
+ "scipy": "1.18.0",
+ "os": "Ubuntu 24.04.4 LTS, Linux 7.0.0-34-generic x86_64",
+ "cpu": "Intel Core i7-12700 (8 P-cores = logical 0-15, 4 E-cores = 16-19)",
+ "memory_gb": 31,
+ "cobar_frozen_config_sha256": "7d3dec954b357ca7df2b0369945d1c566368391af14e8c0e70b75b2b78dbccef",
+ "campaigns": {
+  "results/cobar/confirmatory/S1_primary": {
+   "runs_sha256_file": "39c3352bc83c9bf23790494753b8574a87b7181195f8f04315f408668992c288",
+   "instances_combined_sha256": "2f523db4dfc0d5ac1237d63d7fd2b1ea72e12200141ca3ee8b819fbaae41f922",
+   "n_instance_files": 40
+  },
+  "results/cobar/confirmatory/S2_short": {
+   "runs_sha256_file": "dd7168d4ba05c666e178b22cfe0d338cadec19632675e5513bc8d454927aca6b",
+   "instances_combined_sha256": "2f523db4dfc0d5ac1237d63d7fd2b1ea72e12200141ca3ee8b819fbaae41f922",
+   "n_instance_files": 40
+  },
+  "results/cobar/confirmatory/S3_workers4": {
+   "runs_sha256_file": "a8c67de8267b0d4e73f44dd48ae58c3a16d10738363f5f957966f80d2194c09c",
+   "instances_combined_sha256": "49d1a9b2f9e241c3b8814d588e540ee3a6571297bc6f83f13886b54a7a84fb40",
+   "n_instance_files": 20
+  },
+  "results/cobar/confirmatory/S4_arrival": {
+   "runs_sha256_file": "0db0bb1845bfb35b1c01d57164d8546eb4e1c5b56814dfe35cf156c19e5d5e8c",
+   "instances_combined_sha256": "65763d70c8002541fa8692e1173a55ff28ac5efd92b631a45c66bf93937fb78d",
+   "n_instance_files": 20
+  },
+  "results/cobar/confirmatory/S5_outage": {
+   "runs_sha256_file": "ba712167e68c1b1cc05eb6ed820c5cda07ec25092585df84e0c2cd85747cf31d",
+   "instances_combined_sha256": "2143c1bf307441cedf8c012ca607ee573fd62deb9d0ad9e627c5f6d5d55c706d",
+   "n_instance_files": 20
+  },
+  "results/cobar/confirmatory/S6_b30": {
+   "runs_sha256_file": "da1834d7565c73d0ad4aa032ecc6e128454f7e7cdfebc1e531254d248cb92675",
+   "instances_combined_sha256": "49d1a9b2f9e241c3b8814d588e540ee3a6571297bc6f83f13886b54a7a84fb40",
+   "n_instance_files": 20
+  },
+  "results/cobar/confirmatory/S7_benchmarks": {
+   "runs_sha256_file": "39721cb3ed861f6a7e2729950b09c48faae8dae64abf360536abb96e55688bc6",
+   "instances_combined_sha256": "40dce83ffe0911e50ddb0c05c20a4bbe60ef5b4bfbcbb7cfbb8f05c06d693872",
+   "n_instance_files": 34
+  },
+  "results/research_extension/confirmatory": {
+   "runs_sha256_file": "5fba4463939a55c5b66d6946d5095bb08e5be4e18523d9801bf85f83ce9c1e1d",
+   "instances_combined_sha256": "232c334f51057e6597af3b66526e0f9436dc4f90a18ef51a789b306a9fb2c5fe",
+   "n_instance_files": 40
+  }
+ },
+ "verification_summary": {
+  "cobar/S1_primary": {
+   "records": 8800,
+   "solver_invocations": 26603,
+   "physical_instances": 440,
+   "grid_complete": true,
+   "infeasible_final_schedules": 0,
+   "objective_vs_own_makespan_mismatch": 0,
+   "duplicate_run_keys": 0,
+   "checksums": {
+    "files": 200,
+    "mismatch": 0
+   }
+  },
+  "cobar/S2_short": {
+   "records": 6600,
+   "solver_invocations": 16180,
+   "physical_instances": 440,
+   "grid_complete": true,
+   "infeasible_final_schedules": 0,
+   "objective_vs_own_makespan_mismatch": 0,
+   "duplicate_run_keys": 0,
+   "checksums": {
+    "files": 200,
+    "mismatch": 0
+   }
+  },
+  "cobar/S3_workers4": {
+   "records": 3300,
+   "solver_invocations": 8666,
+   "physical_instances": 220,
+   "grid_complete": true,
+   "infeasible_final_schedules": 0,
+   "objective_vs_own_makespan_mismatch": 0,
+   "duplicate_run_keys": 0,
+   "checksums": {
+    "files": 100,
+    "mismatch": 0
+   }
+  },
+  "cobar/S4_arrival": {
+   "records": 3300,
+   "solver_invocations": 9385,
+   "physical_instances": 220,
+   "grid_complete": true,
+   "infeasible_final_schedules": 0,
+   "objective_vs_own_makespan_mismatch": 0,
+   "duplicate_run_keys": 0,
+   "checksums": {
+    "files": 100,
+    "mismatch": 0
+   }
+  },
+  "cobar/S5_outage": {
+   "records": 3300,
+   "solver_invocations": 9187,
+   "physical_instances": 220,
+   "grid_complete": true,
+   "infeasible_final_schedules": 0,
+   "objective_vs_own_makespan_mismatch": 0,
+   "duplicate_run_keys": 0,
+   "checksums": {
+    "files": 100,
+    "mismatch": 0
+   }
+  },
+  "cobar/S6_b30": {
+   "records": 1980,
+   "solver_invocations": 5329,
+   "physical_instances": 220,
+   "grid_complete": true,
+   "infeasible_final_schedules": 0,
+   "objective_vs_own_makespan_mismatch": 0,
+   "duplicate_run_keys": 0,
+   "checksums": {
+    "files": 60,
+    "mismatch": 0
+   }
+  },
+  "cobar/S7_benchmarks": {
+   "records": 5610,
+   "solver_invocations": 16241,
+   "physical_instances": 374,
+   "grid_complete": true,
+   "infeasible_final_schedules": 0,
+   "objective_vs_own_makespan_mismatch": 0,
+   "duplicate_run_keys": 0,
+   "checksums": {
+    "files": 170,
+    "mismatch": 0
+   }
+  },
+  "iaip_sr/confirmatory": {
+   "records": 22000,
+   "solver_invocations": 26400,
+   "physical_instances": 440,
+   "grid_complete": true,
+   "infeasible_final_schedules": 0,
+   "objective_vs_own_makespan_mismatch": 0,
+   "duplicate_run_keys": 0,
+   "checksums": {
+    "files": 200,
+    "mismatch": 0
+   }
+  }
+ },
+ "tests_junit": [
+  "results/unified_icaps/baseline_fast.xml",
+  "results/unified_icaps/baseline_slow.xml"
+ ]
+}
