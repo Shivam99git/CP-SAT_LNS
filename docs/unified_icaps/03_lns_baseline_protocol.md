@@ -84,3 +84,64 @@ Nothing here is a claim.
 **Decision rule for the freeze** (written now):
 1. The candidate is `crit_expand` unless another critical variant beats it in D1 by more than its bootstrap interval half-width. If several qualify, the simplest is chosen.
 2. The confirmatory control set is fixed as B6, B0, B1b, B3, B4 and B5 (B5-1w at 1 worker, B5-4w at 4 workers), whatever their pilot results.
+
+---
+
+## 5. D1 results (8 s, 1 worker, 20 dev streams, solver seed 3; exploratory)
+
+Source: `results/unified_icaps/dev/d1_b8/analysis.json`. 2,860 records, all validated.
+
+Mean PI:
+
+| Method | PI |
+|---|---|
+| time_window | .0216 |
+| crit_onehop | .0226 |
+| crit_expand | .0227 |
+| crit_disr | .0234 |
+| crit_blocks | .0237 |
+| crit_onechain | .0270 |
+| crit_chain | .0279 |
+| random_bfs | .0300 |
+| random_matched | .0308 |
+| precedence | .0319 |
+| B0 | .0322 |
+| B6 | .0399 |
+| B5-1w | .0410 |
+
+| Comparison | ΔPI | W/L | CI | SD of stream differences |
+|---|---|---|---|---|
+| crit_expand vs B0 | −29.4% | 19/1 | [−0.0140, −0.0057] | 0.0098 |
+| crit_expand vs random_matched | −26.2% | 18/2 | [−0.0118, −0.0045] | 0.0086 |
+| crit_expand vs precedence | −28.7% | 17/3 | [−0.0129, −0.0057] | 0.0084 |
+| crit_expand vs random_bfs | −24.2% | 17/3 | [−0.0115, −0.0035] | 0.0095 |
+| **crit_expand vs time_window** | **+4.9%** | **10/10** | **[−0.0025, +0.0046]** | 0.0084 |
+| crit_expand vs B5-1w (native, 1 thread) | −44.5% | 20/0 | [−0.0245, −0.0126] | |
+| B5-1w vs B6 | +2.6% | 11/9 | — | — |
+| time_window vs B0 | −32.7% | 17/3 | — | — |
+| random_matched vs B0 | −4.3% | 10/10 | — | — |
+| precedence vs B0 | −1.0% | 9/11 | — | — |
+
+**Variants vs crit_expand:**
+
+| Variant | ΔPI | W/L |
+|---|---|---|
+| onehop | −0.3% | 11/9 |
+| blocks | +4.4% | 7/13 |
+| disruption | +3.0% | 10/10 |
+| onechain | +18.7% | 5/15 |
+| chain-only | +22.9% | 5/15 |
+
+**Size matching held:**
+- mean |N| per round: crit_expand 87.8, random_matched 84.8, time_window 85.9;
+- mean released machine relations: precedence 81.8 vs crit_expand 87.8.
+
+The small differences come from rounds starting on different incumbents. **Critical operations in N:** crit_expand 39.8, time_window 9.8, random 9.1.
+
+**Reading (exploratory):**
+- Critical targeting beats random and precedence neighbourhoods of the same size.
+- A *time-window* neighbourhood of the same size, which contains few critical operations, does as well. What these neighbourhoods share is locality in the incumbent's time line, not criticality as such.
+- Native single-thread LNS gives no gain over hinted search at 8 s.
+- **Freeze rule 1:** no critical variant beats crit_expand by more than its interval half-width, so the candidate remains crit_expand. The time-window control is not a candidate; it is a fixed control.
+
+**Power.** The SD of stream differences between crit_expand and time_window is about 0.0084 with one seed. With 5 seeds averaged and 40 streams, the standard error is about 0.0084/√40 ≈ 0.0013 or less. A difference of about 0.0037 (≈ 17% of the mean PI) is then detectable with 80% power at two-sided α = 0.05, so smaller differences may go undetected. An **equivalence margin** is therefore pre-specified for the confirmation (doc 06).
