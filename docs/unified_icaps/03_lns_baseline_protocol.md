@@ -145,3 +145,61 @@ The small differences come from rounds starting on different incumbents. **Criti
 - **Freeze rule 1:** no critical variant beats crit_expand by more than its interval half-width, so the candidate remains crit_expand. The time-window control is not a candidate; it is a fixed control.
 
 **Power.** The SD of stream differences between crit_expand and time_window is about 0.0084 with one seed. With 5 seeds averaged and 40 streams, the standard error is about 0.0084/√40 ≈ 0.0013 or less. A difference of about 0.0037 (≈ 17% of the mean PI) is then detectable with 80% power at two-sided α = 0.05, so smaller differences may go undetected. An **equivalence margin** is therefore pre-specified for the confirmation (doc 06).
+
+## 6. D2 results (mechanism protocol M2 and ablations; 20 dev streams, seed 3)
+
+Source: `results/unified_icaps/dev/d2_b8_mech/analysis.json`. 1,980 records, all validated.
+
+**M2** (6 rounds × 0.4 s, no stop on failure):
+
+| Method | PI |
+|---|---|
+| time_window@M2 | .0191 |
+| crit_expand@M2 | .0224 |
+| random_matched@M2 | .0277 |
+| precedence@M2 | .0283 |
+
+| Comparison | ΔPI | W/L | CI |
+|---|---|---|---|
+| crit vs random | −19.1% | 16/4 | [−0.0094, −0.0015] |
+| crit vs precedence | −20.8% | 17/3 | [−0.0102, −0.0022] |
+| **crit vs time window** | **+17.3%** | **6/14** | [−0.0011, +0.0075] |
+| time window vs random | −31.0% | 16/4 | [−0.0129, −0.0046] |
+
+Round improvement rate:
+
+| Strategy | Rate |
+|---|---|
+| crit | 0.34 |
+| time window | 0.38 |
+| random | 0.28 |
+| precedence | 0.19 |
+
+Mean \|N\| is 81.5 for all three N-based strategies; precedence releases 81.6 arcs.
+
+**Ablations** (M1), relative to crit_expand:
+
+| Ablation | ΔPI | W/L | Verdict |
+|---|---|---|---|
+| neighbourhood computed once | +40.2% | 4/16 | recomputation matters |
+| no initial IAIP-SR stage | +28.2% | 4/16 | the initial stage matters |
+| no final global stage | +119.2% | 1/19 | the global continuation is essential |
+| M2 vs M1 | +11.2% | 8/12 | not significant |
+
+## 7. D3 results (4 workers, native CP-SAT LNS active; 10 dev streams, seed 3)
+
+Source: `results/unified_icaps/dev/d3_w4/analysis.json`.
+
+| Comparison | ΔPI | W/L | CI |
+|---|---|---|---|
+| crit vs B6-4w (native LNS) | −29.3% | 7/3 | [−0.0091, −0.0009] |
+| crit vs B0 | −15.9% | 4/6 | [−0.0063, +0.0013] |
+| crit vs time window | −7.9% | 5/5 | [−0.0040, +0.0022] |
+| time window vs B6 | −23.2% | 7/3 | — |
+
+## 8. Development conclusion (before freezing)
+
+- Critical targeting beats size-matched random and precedence neighbourhoods. Time-window neighbourhoods of the same size match or beat it, with one worker (M1 +4.9%, M2 +17.3%; both CIs include 0).
+- Recomputing the region every round, the initial stage and the global continuation each matter.
+- With 4 workers, the pipeline with rounds is ahead of CP-SAT's native multi-worker LNS, on small samples.
+- **Expected verdict, if confirmation agrees:** CONDITIONAL GO, i.e. no superiority claim for critical targeting over time-window LNS. This is written down before the confirmatory run so that it cannot be adjusted afterwards.
