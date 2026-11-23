@@ -1,0 +1,45 @@
+........................................................................ [ 26%]
+........................................................F............... [ 53%]
+........................................................................ [ 80%]
+.....................................................                    [100%]
+=================================== FAILURES ===================================
+____________ test_checkpoint_partial_progress_then_resume_completes ____________
+
+tmp_path = PosixPath('/tmp/pytest-of-shivam-sharma/pytest-17/test_checkpoint_partial_progre0')
+
+    def test_checkpoint_partial_progress_then_resume_completes(tmp_path):
+        """Simulates a crash mid-campaign: run the CLI with a hard timeout so it's
+        killed partway through, then re-run with --resume --skip-existing and
+        confirm every (method, seed, step) row exists exactly once (no dropped
+        work, no duplicates from re-running an already-checkpointed config)."""
+        import subprocess
+        import sys
+    
+        import pandas as pd
+    
+        root = Path(__file__).parent.parent
+        out_dir = tmp_path / "runs"
+        common = [
+            sys.executable, "-m", "phase0.run_icaps_jssp_suite",
+            "--seeds", "1", "2", "3", "4", "5", "6",
+            "--sizes", "8x8", "--stream-length", "3", "--budgets", "2",
+            "--methods", "dispatch_spt", "repair_only", "cpsat_cold",
+            "--severity-levels", "medium", "--out-dir", str(out_dir), "--parallel", "1",
+        ]
+        try:
+            subprocess.run(common, cwd=root, timeout=2, capture_output=True, text=True)
+        except subprocess.TimeoutExpired:
+            pass  # expected: interrupted mid-run, checkpoint should still exist
+    
+        csv_path = out_dir / "custom.csv"
+>       assert csv_path.exists(), "checkpoint must exist after interruption"
+E       AssertionError: checkpoint must exist after interruption
+E       assert False
+E        +  where False = exists()
+E        +    where exists = PosixPath('/tmp/pytest-of-shivam-sharma/pytest-17/test_checkpoint_partial_progre0/runs/custom.csv').exists
+
+tests/test_icaps_runner_parallel.py:93: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_icaps_runner_parallel.py::test_checkpoint_partial_progress_then_resume_completes
+1 failed, 268 passed, 25 deselected in 101.76s (0:01:41)
+EXIT 1

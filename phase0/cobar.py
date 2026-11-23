@@ -83,7 +83,9 @@ class COBARConfig:
 def build_cobar_restricted_model(instance: Instance, incumbent: Solution, N: set[str], R: set,
                                  require_improvement: bool, incumbent_obj: int):
     """Full research model + kept arcs of (N, R) (cobar_certificates.kept_arcs)
-    + Cmax <= U - 1, hinted with the incumbent."""
+    + Cmax <= U - 1, hinted with the incumbent. With require_improvement the
+    incumbent itself is infeasible for this model (it lies in the base
+    neighbourhood only); the hint is a search hint, not a feasible start."""
     built = build_research_model(instance, hint=incumbent)
     ix = index_instance(instance)
     arcs = kept_arcs(instance, incumbent, N, R, ix)

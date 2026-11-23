@@ -223,3 +223,39 @@ def test_trajectory_reconstruction_matches_independent_integrator():
         z = r.objective - 3
         assert abs(per_run(rec, z)["pi"] - own_pi(rec["events"], z, r.budget)) < 1e-12
         prev, prev_inst = r.solution, inst
+
+
+@pytest.mark.parametrize("strategy", STRATEGIES)
+def test_strict_improvement_cutoff_excludes_the_incumbent(strategy):
+    """S is feasible for the base neighbourhood N(S) but NOT for the solved
+    strict-improvement model N_improve(S) (adds C_max <= U - 1, integer data).
+    An INFEASIBLE status of the solved model is therefore a proof that no
+    strictly better schedule exists inside N(S) -- not that S is infeasible."""
+    rng = random.Random(1000 + hash(strategy) % 1000)
+    done = 0
+    while done < 15:
+        inst = random_instance(rng, n_jobs=3, n_mach=3)
+        try:
+            S = random_feasible_schedule(rng, inst, slack=rng.choice([0, 2]))
+        except RuntimeError:
+            continue
+        U = check_schedule(inst, S)
+        N, R, _ = make_round_neighbourhood(strategy, inst, S, set(), 0.5, 0)
+        base = build_cobar_restricted_model(inst, S, N, R, False, U)[0]
+        imp = build_cobar_restricted_model(inst, S, N, R, True, U)[0]
+        for built in (base, imp):
+            for v, s in S.items():
+                built.model.add(built.starts[v] == s)
+        assert cp_model.CpSolver().solve(base.model) in (cp_model.OPTIMAL, cp_model.FEASIBLE)
+        assert cp_model.CpSolver().solve(imp.model) == cp_model.INFEASIBLE
+        # and the unpinned improvement model is INFEASIBLE exactly when the base optimum equals U
+        b2 = build_cobar_restricted_model(inst, S, N, R, False, U)[0]
+        i2 = build_cobar_restricted_model(inst, S, N, R, True, U)[0]
+        sb, si = cp_model.CpSolver(), cp_model.CpSolver()
+        assert sb.solve(b2.model) == cp_model.OPTIMAL
+        st = si.solve(i2.model)
+        if int(sb.objective_value) == U:
+            assert st == cp_model.INFEASIBLE
+        else:
+            assert st == cp_model.OPTIMAL and int(si.objective_value) == int(sb.objective_value) < U
+        done += 1

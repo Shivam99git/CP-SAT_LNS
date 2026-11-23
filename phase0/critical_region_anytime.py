@@ -18,9 +18,13 @@ outside N, minus the released arcs R, plus C_max <= U - 1; hinted with the
 incumbent. This is the restriction structure of CP-SAT's own
 scheduling_intervals_lns (relaxed intervals + incumbent precedences among the
 rest). The incumbent satisfies every added precedence (positive durations),
-so it belongs to every restricted problem; only validated strict
-improvements replace it (incumbent retention: the retained objective is
-non-increasing).
+so it belongs to the base neighbourhood N(S); it does NOT belong to the solved
+strict-improvement model N_improve(S), which adds C_max <= U - 1 (integer
+data). INFEASIBLE therefore proves no strictly better schedule exists in N(S);
+UNKNOWN/timeout proves nothing. The incumbent is retained externally and only
+validated strict improvements replace it (the retained objective is
+non-increasing). Tested in tests/unified/test_critical_region_anytime.py
+(test_strict_improvement_cutoff_excludes_the_incumbent).
 
 Strategies (all deterministic given the instance, the incumbent and the round):
   crit_expand          seeds = every operation on the longest binding chains of
