@@ -2,8 +2,39 @@
 
 | Macro | Value | Setting | Algorithm | Comparator | Metric | Statistic | Source |
 |---|---|---|---|---|---|---|---|
+| `\FigTwoOneFiveCritAt` | 1.0 | U1_primary (figure) |  |  |  | median gap % at t=8s, 15x15, SR+Crit | `paper/icaps27_unified_final/figures/figure2_numbers.json` |
+| `\FigTwoOneFiveSrAt` | 1.3 | U1_primary (figure) |  |  |  | median gap % at t=8s, 15x15, SR (IAIP-SR) | `paper/icaps27_unified_final/figures/figure2_numbers.json` |
+| `\FigTwoOneFiveTwAt` | 1.2 | U1_primary (figure) |  |  |  | median gap % at t=8s, 15x15, SR+TimeWin | `paper/icaps27_unified_final/figures/figure2_numbers.json` |
+| `\FigTwoTwoZeroCritAt` | 1.7 | U1_primary (figure) |  |  |  | median gap % at t=8s, 20x20, SR+Crit | `paper/icaps27_unified_final/figures/figure2_numbers.json` |
+| `\FigTwoTwoZeroSrAt` | 2.8 | U1_primary (figure) |  |  |  | median gap % at t=8s, 20x20, SR (IAIP-SR) | `paper/icaps27_unified_final/figures/figure2_numbers.json` |
+| `\FigTwoTwoZeroTwAt` | 2.0 | U1_primary (figure) |  |  |  | median gap % at t=8s, 20x20, SR+TimeWin | `paper/icaps27_unified_final/figures/figure2_numbers.json` |
+| `\MTwoRoundCritFeas` | 376 | U2_mechanism |  |  |  | round-level neighbourhood/solver diagnostic | `docs/final_icaps/03_critical_vs_timewindow.md` |
+| `\MTwoRoundCritInfeas` | 7988 | U2_mechanism |  |  |  | round-level neighbourhood/solver diagnostic | `docs/final_icaps/03_critical_vs_timewindow.md` |
+| `\MTwoRoundCritN` | 82.4 | U2_mechanism |  |  |  | round-level neighbourhood/solver diagnostic | `docs/final_icaps/03_critical_vs_timewindow.md` |
+| `\MTwoRoundCritSolverS` | 0.056 | U2_mechanism |  |  |  | round-level neighbourhood/solver diagnostic | `docs/final_icaps/03_critical_vs_timewindow.md` |
+| `\MTwoRoundTwFeas` | 901 | U2_mechanism |  |  |  | round-level neighbourhood/solver diagnostic | `docs/final_icaps/03_critical_vs_timewindow.md` |
+| `\MTwoRoundTwInfeas` | 7289 | U2_mechanism |  |  |  | round-level neighbourhood/solver diagnostic | `docs/final_icaps/03_critical_vs_timewindow.md` |
+| `\MTwoRoundTwN` | 82.3 | U2_mechanism |  |  |  | round-level neighbourhood/solver diagnostic | `docs/final_icaps/03_critical_vs_timewindow.md` |
+| `\MTwoRoundTwSolverS` | 0.080 | U2_mechanism |  |  |  | round-level neighbourhood/solver diagnostic | `docs/final_icaps/03_critical_vs_timewindow.md` |
+| `\MTwoRoundTwVsCritPct` | 43 | U2_mechanism |  |  |  | relative increase in mean per-round solver time, timewin vs crit | `docs/final_icaps/03_critical_vs_timewindow.md` |
+| `\MechTwoArrivalRel` | 8.9 | U2_mechanism |  |  | pi | M2 crit vs timewin relative diff (+ = crit worse), delta=arrival, exploratory | `docs/final_icaps/03_critical_vs_timewindow.md` |
+| `\MechTwoArrivalWL` | 13/27 | U2_mechanism |  |  |  | streams won/lost, delta=arrival | `docs/final_icaps/03_critical_vs_timewindow.md` |
+| `\MechTwoCancellationRel` | 18.5 | U2_mechanism |  |  | pi | M2 crit vs timewin relative diff (+ = crit worse), delta=cancellation, exploratory | `docs/final_icaps/03_critical_vs_timewindow.md` |
+| `\MechTwoCancellationWL` | 9/29 | U2_mechanism |  |  |  | streams won/lost, delta=cancellation | `docs/final_icaps/03_critical_vs_timewindow.md` |
+| `\MechTwoDurationRel` | 13.3 | U2_mechanism |  |  | pi | M2 crit vs timewin relative diff (+ = crit worse), delta=duration_jitter, exploratory | `docs/final_icaps/03_critical_vs_timewindow.md` |
+| `\MechTwoDurationWL` | 12/26 | U2_mechanism |  |  |  | streams won/lost, delta=duration_jitter | `docs/final_icaps/03_critical_vs_timewindow.md` |
+| `\MechTwoOutageRel` | 9.8 | U2_mechanism |  |  | pi | M2 crit vs timewin relative diff (+ = crit worse), delta=outage, exploratory | `docs/final_icaps/03_critical_vs_timewindow.md` |
+| `\MechTwoOutageWL` | 11/20 | U2_mechanism |  |  |  | streams won/lost, delta=outage | `docs/final_icaps/03_critical_vs_timewindow.md` |
 | `\OracleCpsatCases` | 1{,}000 |  |  |  |  | cpsat cases | `results/cobar/oracle_campaign.json` |
 | `\OracleEnumCases` | 2{,}000 |  |  |  |  | enum cases | `results/cobar/oracle_campaign.json` |
+| `\RoundsUOneArrivalCrit` | 3.15 | U1_primary |  |  |  | mean completed rounds per instance | `docs/final_icaps/03_critical_vs_timewindow.md` |
+| `\RoundsUOneArrivalTw` | 2.02 | U1_primary |  |  |  | mean completed rounds per instance | `docs/final_icaps/03_critical_vs_timewindow.md` |
+| `\RoundsUOneCancelCrit` | 2.40 | U1_primary |  |  |  | mean completed rounds per instance | `docs/final_icaps/03_critical_vs_timewindow.md` |
+| `\RoundsUOneCancelTw` | 1.85 | U1_primary |  |  |  | mean completed rounds per instance | `docs/final_icaps/03_critical_vs_timewindow.md` |
+| `\RoundsUOneDurationCrit` | 2.91 | U1_primary |  |  |  | mean completed rounds per instance | `docs/final_icaps/03_critical_vs_timewindow.md` |
+| `\RoundsUOneDurationTw` | 2.06 | U1_primary |  |  |  | mean completed rounds per instance | `docs/final_icaps/03_critical_vs_timewindow.md` |
+| `\RoundsUOneOutageCrit` | 2.95 | U1_primary |  |  |  | mean completed rounds per instance | `docs/final_icaps/03_critical_vs_timewindow.md` |
+| `\RoundsUOneOutageTw` | 1.88 | U1_primary |  |  |  | mean completed rounds per instance | `docs/final_icaps/03_critical_vs_timewindow.md` |
 | `\UEightBTwocritVsBThreetimewinRel` | 9.5 | U8_high |  |  | pi | relative difference (%) | `results/unified_icaps/confirmatory/confirmatory_analysis.json` |
 | `\UEightBTwocritVsBThreetimewinSign` | - | U8_high |  |  | pi | sign | `results/unified_icaps/confirmatory/confirmatory_analysis.json` |
 | `\UEightBTwocritVsBThreetimewinWL` | 14/6 | U8_high |  |  | pi | streams won/lost | `results/unified_icaps/confirmatory/confirmatory_analysis.json` |

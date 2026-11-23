@@ -28,7 +28,7 @@ body = re.sub(r"\\begin\{comment\}.*?\\end\{comment\}", "", body, flags=re.S)
 ALLOWED = set(json.loads((HERE / "allowed_literals.json").read_text())) if (HERE / "allowed_literals.json").exists() else set()
 
 used = set(re.findall(r"\\([A-Z][A-Za-z]+)", body))
-claim_like = {m for m in used if re.match(r"(UOne|UTwo|UThree|UFour|UFive|USix|USeven|UEight|UNine|Crit|Classification|DevOne|Oracle)", m)}
+claim_like = {m for m in used if re.match(r"(UOne|UTwo|UThree|UFour|UFive|USix|USeven|UEight|UNine|Crit|Classification|DevOne|Oracle|MechTwo|RoundsUOne|MTwoRound|FigTwo)", m)}
 undefined = sorted(m for m in claim_like if m not in reg)
 
 patterns = [r"\d+\.\d+\\?%", r"\d+\\?%", r"(?<![\w.])\.\d{3,}", r"\b\d+/\d+\b", r"\d\.\d+\\cdot10\^"]
@@ -49,9 +49,40 @@ for m in sorted(claim_like & set(reg)):
                  f"{r.get('metric', '')} | {r.get('statistic', '')} | `{r.get('source', '')}` |")
 (HERE / "claim_map.md").write_text("\n".join(lines) + "\n")
 
+# --- Phase 9.4 extensions: stale-output and sample-size consistency ---
+import subprocess
+stale = False
+rebuilt = subprocess.run([sys.executable, str(HERE / "make_numbers.py")], cwd=HERE, capture_output=True, text=True)
+if rebuilt.returncode == 0:
+    fresh_numbers = (HERE / "numbers.tex").read_text()
+    # numbers.tex was just overwritten by the rebuild; compare byte-for-byte
+    # against what is committed (git diff) to detect staleness.
+    diff = subprocess.run(["git", "diff", "--quiet", "--", "numbers.tex"], cwd=HERE)
+    stale = diff.returncode != 0
+else:
+    print("  WARNING: could not rebuild numbers.tex to check staleness:", rebuilt.stderr[-300:])
+
+sample_size_mismatches = []
+conf_path = HERE.parents[1] / "results/unified_icaps/confirmatory/confirmatory_analysis.json"
+if conf_path.exists():
+    conf = json.loads(conf_path.read_text())
+    for setting, sdata in conf["settings"].items():
+        tag = {"U1_primary": "UOne", "U2_mechanism": "UTwo", "U3_workers4": "UThree", "U4_b2": "UFour",
+               "U5_b30": "UFive", "U6_arrival": "USix", "U7_outage": "USeven", "U8_high": "UEight",
+               "U9_benchmarks": "UNine"}.get(setting)
+        if tag and f"{tag}N" in reg:
+            archived_n = sdata["n_units"]
+            macro_n = int(reg[f"{tag}N"]["value"])
+            if archived_n != macro_n:
+                sample_size_mismatches.append((setting, archived_n, macro_n))
+
 print(f"claim macros used: {len(claim_like)}; undefined: {len(undefined)}; hand-typed result literals: {len(literal_hits)}")
+print(f"numbers.tex stale (differs from a fresh rebuild): {stale}")
+print(f"sample-size (n_units) mismatches between archived analysis and manuscript macros: {len(sample_size_mismatches)}")
+for s_, a_, m_ in sample_size_mismatches:
+    print(f"  MISMATCH {s_}: archived n_units={a_} vs manuscript macro={m_}")
 for m in undefined:
     print("  UNDEFINED", m)
 for s, ctx in literal_hits:
     print(f"  LITERAL {s!r}: ...{ctx}...")
-sys.exit(1 if undefined or literal_hits else 0)
+sys.exit(1 if undefined or literal_hits or stale or sample_size_mismatches else 0)
