@@ -27,6 +27,7 @@ from matplotlib.ticker import FuncFormatter  # noqa: E402
 
 # math-mode minus is nearly invisible at tick size with sansmath; use a text minus
 SIGNED = FuncFormatter(lambda v, _: (r"\textminus " if v < 0 else "") + f"{abs(v):g}")
+sgn = lambda v: (r"\textminus " if v < 0 else "+") + f"{abs(v):.1f}"  # typographic minus in text labels
 import numpy as np  # noqa: E402
 
 ROOT = Path(__file__).resolve().parents[3]
@@ -74,7 +75,7 @@ for i in range(len(ROWS)):
     for j in range(len(COLS)):
         val = grid[i, j]
         sig = sig_grid[i, j]
-        txt = f"{val:+.1f}" + ("" if sig else "\n(n.s.)")
+        txt = f"{sgn(val)}" + ("" if sig else "\n(n.s.)")
         color = "white" if abs(val) > vmax * 0.55 else "black"
         if not sig:
             ax.add_patch(plt.Rectangle((j - 0.42, i - 0.42), 0.84, 0.84, fill=False, edgecolor="black",

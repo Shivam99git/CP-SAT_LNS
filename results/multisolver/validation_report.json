@@ -1,0 +1,39 @@
+{
+ "status_counts": {
+  "OK": 18660,
+  "schedule_revalidated": 17986,
+  "NOT_SUPPORTED": 2508,
+  "NO_SOLUTION": 432,
+  "OK_without_stored_schedule": 674
+ },
+ "by_experiment": {
+  "AB": {
+   "OK": 11346,
+   "schedule_revalidated": 11346,
+   "NOT_SUPPORTED": 2100,
+   "NO_SOLUTION": 384
+  },
+  "R2": {
+   "OK": 2988,
+   "schedule_revalidated": 2988,
+   "NO_SOLUTION": 12
+  },
+  "R30": {
+   "OK": 1440,
+   "schedule_revalidated": 1440
+  },
+  "W4": {
+   "OK": 1170,
+   "schedule_revalidated": 1170
+  },
+  "pilot": {
+   "OK": 1716,
+   "OK_without_stored_schedule": 674,
+   "NOT_SUPPORTED": 408,
+   "schedule_revalidated": 1042,
+   "NO_SOLUTION": 36
+  }
+ },
+ "n_violations": 0,
+ "violations": []
+}

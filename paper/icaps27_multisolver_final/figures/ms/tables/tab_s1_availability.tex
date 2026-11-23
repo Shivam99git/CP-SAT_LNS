@@ -1,0 +1,20 @@
+\begin{tabular}{lllllllll}
+\toprule
+Solver & Tech. & Version & Licence & Status & Warm start & Anytime & Threads & Interface \\
+\midrule
+CP-SAT & CP & 9.15.6755 & open source & executed & AddHint & callback & 1/4 & Python API \\
+CP Optimizer & CP & CE & free ed., $\le$1000 vars/1000 cons. & executed & set starting point & stream & 1/4 & Python API \\
+Gecode & CP & 6.4.0 & open source & executed & no & stream & 1/4 & MiniZinc \\
+Chuffed & CP & 0.14.0 & open source & executed & no & stream & 1 & MiniZinc \\
+Gurobi & MIP & 13.0.2 & free ed., $\le$2000 vars/2000 cons. & executed & Var.Start & callback & 1/4 & Python API \\
+CPLEX & MIP & 22.2.0.0 & free ed., $\le$1000 vars/1000 cons. & executed & MIP starts & callback & 1/4 & Python API \\
+SCIP & MIP & 10.0 & open source & executed & addSol & callback & 1 & Python API \\
+HiGHS & MIP & 1.16.0 & open source & executed & setSolution & callback & 1 & Python API \\
+CBC & MIP & Cbc 2.10.12 & open source & executed & SetHint & final only & 1/4 & OR-Tools \\
+GLPK & MIP & 5.0 & open source & executed & no & final only & 1 & Python API \\
+\midrule
+FICO Xpress & MIP & -- & commercial, no licence & not executed & -- & -- & -- & -- \\
+Hexaly & LS & -- & commercial, no licence & not executed & -- & -- & -- & -- \\
+Choco Solver & CP & -- & no Java runtime & not executed & -- & -- & -- & -- \\
+\bottomrule
+\end{tabular}

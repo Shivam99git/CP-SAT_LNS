@@ -1,0 +1,84 @@
+\begin{thebibliography}{16}
+\providecommand{\natexlab}[1]{#1}
+
+\bibitem[{Abumaizar and Svestka(1997)}]{abumaizar1997}
+Abumaizar, R.~J.; and Svestka, J.~A. 1997.
+\newblock Rescheduling Job Shops under Random Disruptions.
+\newblock \emph{International Journal of Production Research}, 35(7): 2065--2082.
+
+\bibitem[{Applegate and Cook(1991)}]{applegate1991}
+Applegate, D.; and Cook, W. 1991.
+\newblock A Computational Study of the Job-Shop Scheduling Problem.
+\newblock \emph{ORSA Journal on Computing}, 3(2): 149--156.
+
+\bibitem[{Balas(1969)}]{balas1969}
+Balas, E. 1969.
+\newblock Machine Sequencing via Disjunctive Graphs: An Implicit Enumeration Algorithm.
+\newblock \emph{Operations Research}, 17(6): 941--957.
+
+\bibitem[{Balas and Vazacopoulos(1998)}]{balas1998}
+Balas, E.; and Vazacopoulos, A. 1998.
+\newblock Guided Local Search with Shifting Bottleneck for Job Shop Scheduling.
+\newblock \emph{Management Science}, 44(2): 262--275.
+
+\bibitem[{Berthold(2013)}]{berthold2013}
+Berthold, T. 2013.
+\newblock Measuring the Impact of Primal Heuristics.
+\newblock \emph{Operations Research Letters}, 41(6): 611--614.
+
+\bibitem[{Godard, Laborie, and Nuijten(2005)}]{godard2005}
+Godard, D.; Laborie, P.; and Nuijten, W. 2005.
+\newblock Randomized Large Neighborhood Search for Cumulative Scheduling.
+\newblock In \emph{Proceedings of the Fifteenth International Conference on Automated Planning and Scheduling (ICAPS 2005)}, 81--89.
+
+\bibitem[{Gomes and Selman(2001)}]{gomes2001}
+Gomes, C.~P.; and Selman, B. 2001.
+\newblock Algorithm Portfolios.
+\newblock \emph{Artificial Intelligence}, 126(1--2): 43--62.
+
+\bibitem[{Lin and Yang(2026)}]{linyang2026}
+Lin, Z.; and Yang, M. 2026.
+\newblock An Incumbent-Aware Selective-Repair Framework for Dynamic Flexible Job Shop Scheduling.
+\newblock \emph{Computers \& Industrial Engineering}, 221: 112299.
+
+\bibitem[{Nowicki and Smutnicki(1996)}]{nowicki1996}
+Nowicki, E.; and Smutnicki, C. 1996.
+\newblock A Fast Taboo Search Algorithm for the Job Shop Problem.
+\newblock \emph{Management Science}, 42(6): 797--813.
+
+\bibitem[{Ouelhadj and Petrovic(2009)}]{ouelhadj2009}
+Ouelhadj, D.; and Petrovic, S. 2009.
+\newblock A Survey of Dynamic Scheduling in Manufacturing Systems.
+\newblock \emph{Journal of Scheduling}, 12(4): 417--431.
+
+\bibitem[{Pacino and Van~Hentenryck(2011)}]{pacino2011}
+Pacino, D.; and Van~Hentenryck, P. 2011.
+\newblock Large Neighborhood Search and Adaptive Randomized Decompositions for Flexible Jobshop Scheduling.
+\newblock In \emph{Proceedings of the Twenty-Second International Joint Conference on Artificial Intelligence (IJCAI 2011)}, 1997--2002.
+
+\bibitem[{Shaw(1998)}]{shaw1998}
+Shaw, P. 1998.
+\newblock Using Constraint Programming and Local Search Methods to Solve Vehicle Routing Problems.
+\newblock In \emph{Principles and Practice of Constraint Programming -- CP98}, Lecture Notes in Computer Science, 417--431. Springer.
+
+\bibitem[{Subramaniam and Raheja(2003)}]{subramaniam2003}
+Subramaniam, V.; and Raheja, A.~S. 2003.
+\newblock {mAOR}: A Heuristic-Based Reactive Repair Mechanism for Job Shop Schedules.
+\newblock \emph{The International Journal of Advanced Manufacturing Technology}, 22(9--10): 669--680.
+
+\bibitem[{Sun et~al.(2026)Sun, Cheng, Ding, and Zhao}]{sun2026}
+Sun, R.; Cheng, G.; Ding, Q.; and Zhao, X. 2026.
+\newblock Impact of Optimization Scope on Solution Quality and Stability in Dynamic Flexible Job Shop Rescheduling.
+\newblock \emph{Computers \& Industrial Engineering}, 215: 111943.
+
+\bibitem[{van Laarhoven, Aarts, and Lenstra(1992)}]{vanlaarhoven1992}
+van Laarhoven, P. J.~M.; Aarts, E. H.~L.; and Lenstra, J.~K. 1992.
+\newblock Job Shop Scheduling by Simulated Annealing.
+\newblock \emph{Operations Research}, 40(1): 113--125.
+
+\bibitem[{Vieira, Herrmann, and Lin(2003)}]{vieira2003}
+Vieira, G.~E.; Herrmann, J.~W.; and Lin, E. 2003.
+\newblock Rescheduling Manufacturing Systems: A Framework of Strategies, Policies, and Methods.
+\newblock \emph{Journal of Scheduling}, 6(1): 39--62.
+
+\end{thebibliography}

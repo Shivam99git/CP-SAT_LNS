@@ -225,12 +225,19 @@ def main():
     ap.add_argument("--phase", choices=["dev", "heldout"], required=True)
     ap.add_argument("--plan", default=None, help="frozen plan with comparison families")
     ap.add_argument("--out", required=True)
+    ap.add_argument("--min-cpu-per-wall", type=float, default=None,
+                    help="pre-declared contention sensitivity analysis: keep single-worker runs only if their "
+                         "CPU/wall ratio is at least this value (pairs are re-formed on the surviving instances)")
     a = ap.parse_args()
     phase_streams = {p.stem for p in (ROOT / "results/multisolver/instances" / a.phase).rglob("*.json")}
     recs = load(Path(a.runs), phase_streams)
     rows, z = summarize(recs)
+    if a.min_cpu_per_wall is not None:
+        before = len(rows)
+        rows = [r for r in rows if r["key"][5] != 1 or (r["cpu_per_wall"] or 0) >= a.min_cpu_per_wall]
+        print(f"contention filter cpu/wall >= {a.min_cpu_per_wall}: kept {len(rows)}/{before} rows")
     table = agg(rows)
-    fams = {}
+    fams, plan = {}, {}
     if a.plan:
         plan = json.loads(Path(a.plan).read_text())
         for fam, pairs in plan.get("families", {}).items():
@@ -243,6 +250,15 @@ def main():
     Path(a.out).write_text(json.dumps({
         "phase": a.phase, "n_records": len(recs), "n_instances_with_zstar": len(z),
         "status_counts": {"|".join(map(str, k)): v for k, v in sorted(status.items())},
+        "confirmatory_families": plan.get("confirmatory_families", []),
+        "exploratory_families": plan.get("exploratory_families", []),
+        "contention": {
+            "filter_min_cpu_per_wall": a.min_cpu_per_wall, "n_rows_analysed": len(rows),
+            "median_cpu_per_wall_1w": statistics.median(
+                [r["cpu_per_wall"] for r in rows if r["key"][5] == 1 and r["cpu_per_wall"] is not None] or [0]),
+            "share_1w_rows_below_0_8": (lambda xs: sum(x < 0.8 for x in xs) / len(xs) if xs else None)(
+                [r["cpu_per_wall"] for r in rows if r["key"][5] == 1 and r["cpu_per_wall"] is not None]),
+            "median_loadavg_1m": statistics.median([r["loadavg"] for r in rows if r["loadavg"] is not None] or [0])},
         "configs": table, "comparisons": comps}, indent=1))
     print(f"{len(recs)} records, {len(z)} physical instances, {len(table)} configurations -> {a.out}")
 

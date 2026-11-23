@@ -39,6 +39,7 @@ def main():
     ap.add_argument("--out", default=str(ROOT / "results/multisolver/validation_report.json"))
     a = ap.parse_args()
     viol, counts = [], Counter()
+    by_exp = defaultdict(Counter)
     hashes = defaultdict(set)
     for f in sorted(Path(a.runs).rglob("*.jsonl")):
         if f.name == "manifest.jsonl":
@@ -46,6 +47,7 @@ def main():
         for line in open(f):
             r = json.loads(line)
             counts[r.get("status")] += 1
+            by_exp[r.get("experiment")][r.get("status")] += 1
             if r.get("status") != "OK":
                 continue
             d, insts, _ = stream(r["stream"])
@@ -55,6 +57,7 @@ def main():
                 viol.append((r["task_id"], "instance hash differs from archive"))
             if r.get("final_starts") is None:
                 counts["OK_without_stored_schedule"] += 1
+                by_exp[r.get("experiment")]["OK_without_stored_schedule"] += 1
             else:
                 sol = {o.op_id: s for o, s in zip(inst.all_ops, r["final_starts"])}
                 try:
@@ -62,6 +65,7 @@ def main():
                     if v != r["objective"]:
                         viol.append((r["task_id"], f"makespan {v} != recorded {r['objective']}"))
                     counts["schedule_revalidated"] += 1
+                    by_exp[r.get("experiment")]["schedule_revalidated"] += 1
                 except ScheduleError as e:
                     viol.append((r["task_id"], f"invalid schedule: {e}"))
             ev = r.get("events", [])
@@ -75,7 +79,7 @@ def main():
     multi = [k for k, v in hashes.items() if len(v) > 1]
     for k in multi:
         viol.append((str(k), "records of one instance carry different hashes"))
-    rep = {"status_counts": dict(counts), "n_violations": len(viol), "violations": viol[:200]}
+    rep = {"status_counts": dict(counts), "by_experiment": {k: dict(v) for k, v in sorted(by_exp.items(), key=str)}, "n_violations": len(viol), "violations": viol[:200]}
     Path(a.out).write_text(json.dumps(rep, indent=1))
     print(json.dumps({k: v for k, v in rep.items() if k != "violations"}))
     for v in viol[:20]:

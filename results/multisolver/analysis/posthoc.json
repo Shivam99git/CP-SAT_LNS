@@ -1,0 +1,108 @@
+{
+ "post_hoc_exploratory": true,
+ "correction": "none",
+ "comparisons": [
+  {
+   "a": "AB|M20|gecode|S4|8|1",
+   "b": "AB|M20|cpsat|S4|8|1",
+   "n_streams": 5,
+   "n_paired_steps": 50,
+   "mean_a": 0.028914409156840303,
+   "mean_b": 0.020088825828659885,
+   "rel_diff_pct": 43.93279828027246,
+   "wins_a": 0,
+   "losses_a": 5,
+   "ties": 0,
+   "sign_p": 0.0625,
+   "ci95_rel_pct": [
+    32.09146483957277,
+    61.43678919820583
+   ]
+  },
+  {
+   "a": "AB|M20|chuffed|S4|8|1",
+   "b": "AB|M20|cpsat|S4|8|1",
+   "n_streams": 5,
+   "n_paired_steps": 50,
+   "mean_a": 0.01697808726915747,
+   "mean_b": 0.020088825828659885,
+   "rel_diff_pct": -15.484919756058888,
+   "wins_a": 3,
+   "losses_a": 2,
+   "ties": 0,
+   "sign_p": 1.0,
+   "ci95_rel_pct": [
+    -44.25652862644764,
+    13.332557591373806
+   ]
+  },
+  {
+   "a": "AB|M20|scip|S4|8|1",
+   "b": "AB|M20|cpsat|S4|8|1",
+   "n_streams": 5,
+   "n_paired_steps": 50,
+   "mean_a": 0.040674652807603906,
+   "mean_b": 0.020088825828659885,
+   "rel_diff_pct": 102.47401791684155,
+   "wins_a": 0,
+   "losses_a": 5,
+   "ties": 0,
+   "sign_p": 0.0625,
+   "ci95_rel_pct": [
+    64.34060000232878,
+    138.73830233071078
+   ]
+  },
+  {
+   "a": "AB|M20|highs|S4|8|1",
+   "b": "AB|M20|cpsat|S4|8|1",
+   "n_streams": 5,
+   "n_paired_steps": 50,
+   "mean_a": 0.04078418038482688,
+   "mean_b": 0.020088825828659885,
+   "rel_diff_pct": 103.01923433793628,
+   "wins_a": 0,
+   "losses_a": 5,
+   "ties": 0,
+   "sign_p": 0.0625,
+   "ci95_rel_pct": [
+    65.31386002655132,
+    140.72460864932128
+   ]
+  },
+  {
+   "a": "AB|M20|cbc|S4|8|1",
+   "b": "AB|M20|cpsat|S4|8|1",
+   "n_streams": 5,
+   "n_paired_steps": 50,
+   "mean_a": 0.047509684434258376,
+   "mean_b": 0.020088825828659885,
+   "rel_diff_pct": 136.4980653397786,
+   "wins_a": 0,
+   "losses_a": 5,
+   "ties": 0,
+   "sign_p": 0.0625,
+   "ci95_rel_pct": [
+    103.18913766718775,
+    161.32661970379462
+   ]
+  },
+  {
+   "a": "AB|M20|glpk|S4|8|1",
+   "b": "AB|M20|cpsat|S4|8|1",
+   "n_streams": 5,
+   "n_paired_steps": 50,
+   "mean_a": 0.04610850873139653,
+   "mean_b": 0.020088825828659885,
+   "rel_diff_pct": 129.52316439328902,
+   "wins_a": 0,
+   "losses_a": 5,
+   "ties": 0,
+   "sign_p": 0.0625,
+   "ci95_rel_pct": [
+    102.73686395516556,
+    154.97748514465692
+   ]
+  }
+ ]
+}

@@ -25,6 +25,7 @@ from matplotlib.ticker import FuncFormatter  # noqa: E402
 
 # math-mode minus is nearly invisible at tick size with sansmath; use a text minus
 SIGNED = FuncFormatter(lambda v, _: (r"\textminus " if v < 0 else "") + f"{abs(v):g}")
+sgn = lambda v: (r"\textminus " if v < 0 else "+") + f"{abs(v):.1f}"  # typographic minus in text labels
 
 ROOT = Path(__file__).resolve().parents[3]
 conf = json.loads((ROOT / "results/unified_icaps/confirmatory/confirmatory_analysis.json").read_text())
@@ -57,7 +58,7 @@ for y, (key, label) in zip(ys, ORDER):
     ax.plot([lo, hi], [y, y], color=color, lw=1.4, solid_capstyle="round")
     ax.plot([mean], [y], marker=marker, color=color, ms=5, mec="black", mew=0.4, zorder=3)
     tag = "" if sig else " (n.s.)"
-    ax.text(hi + 1.0, y, f"{mean:+.1f}\\%{tag}", va="center", fontsize=7.6)
+    ax.text(hi + 1.0, y, f"{sgn(mean)}\\%{tag}", va="center", fontsize=7.6)
 
 ax.axvline(0, color="black", lw=0.8, ls="-", zorder=0)
 ax.set_yticks(ys)

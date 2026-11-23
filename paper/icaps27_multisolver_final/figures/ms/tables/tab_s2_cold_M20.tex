@@ -1,0 +1,16 @@
+\begin{tabular}{lrrrrrrrr}
+\toprule
+Solver & PI & median PI & final gap & first feas.\ (s) & build (s) & runtime (s) & feasible & proven opt. \\
+\midrule
+CP-SAT & 0.0804 & 0.0799 & 4.66\% & 0.106 & 0.009 & 8.01 & 100\% & 0\% \\
+CP Optimizer & \multicolumn{8}{c}{not executed: model exceeds bundled licence} \\
+Gecode & 0.1739 & 0.1712 & 16.07\% & 0.298 & 0.003 & 8.06 & 100\% & 0\% \\
+Chuffed & 0.9050 & 0.9025 & 896.17\% & 0.474 & 0.004 & 8.11 & 100\% & 0\% \\
+Gurobi & \multicolumn{8}{c}{not executed: model exceeds bundled licence} \\
+CPLEX & \multicolumn{8}{c}{not executed: model exceeds bundled licence} \\
+SCIP & 0.6968 & 0.7031 & 121.18\% & 1.041 & 0.161 & 8.01 & 100\% & 0\% \\
+HiGHS & 0.9827 & 1.0000 & 56.23\% & 6.017 & 0.030 & 8.22 & 10\% & 0\% \\
+CBC$^\dagger$ & 0.9978 & 1.0000 & 621.78\% & 7.039 & 0.109 & 9.35 & 14\% & 0\% \\
+GLPK$^\dagger$ & 1.0000 & 1.0000 & -- & -- & 0.147 & 9.90 & 0\% & 0\% \\
+\bottomrule
+\end{tabular}
