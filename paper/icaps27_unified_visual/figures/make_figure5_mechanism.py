@@ -89,8 +89,8 @@ rounds_by_delta = [
     ("outage", 2.95, 1.88),
 ]
 
-fig = plt.figure(figsize=(5.2, 5.6))
-gs = fig.add_gridspec(3, 1, height_ratios=[1.0, 1.5, 0.95], hspace=0.95)
+fig = plt.figure(figsize=(9.8, 2.55))
+gs = fig.add_gridspec(1, 3, width_ratios=[1.0, 1.25, 0.95], wspace=0.55)
 
 # --- Panel A ---
 axA = fig.add_subplot(gs[0])
@@ -108,7 +108,7 @@ axA.set_yticklabels([lbl for lbl, _ in panelA], fontsize=7.6)
 axA.set_ylim(-0.7, len(panelA) - 0.3)
 axA.set_xlim(-58, 28)
 axA.set_xlabel(r"rel.\ PI diff.\ (\%); negative = \textsc{SR+Crit} better", fontsize=7.6)
-axA.set_title(r"\textbf{A.} End-to-end protocol (uncontrolled round count), confirmatory", fontsize=8.1, loc="left")
+axA.set_title(r"\textbf{A.} End-to-end protocol", fontsize=8.3, loc="left")
 axA.spines[["top", "right"]].set_visible(False)
 axA.grid(axis="x", alpha=0.25, linewidth=0.5)
 
@@ -138,7 +138,7 @@ axB.set_yticklabels([lbl for lbl, _, _ in rows], fontsize=7.6)
 axB.set_ylim(-0.7, len(rows) - 0.3)
 axB.set_xlim(-25, 33)
 axB.set_xlabel(r"rel.\ PI diff.\ (\%); negative = \textsc{SR+Crit} better; * = exploratory, no CI", fontsize=7.3)
-axB.set_title(r"\textbf{B.} Matched-round protocol (6 $\times$ 0.4s rounds, fixed)", fontsize=8.1, loc="left")
+axB.set_title(r"\textbf{B.} Matched-round protocol (M2)", fontsize=8.3, loc="left")
 axB.spines[["top", "right"]].set_visible(False)
 axB.grid(axis="x", alpha=0.25, linewidth=0.5)
 
@@ -149,15 +149,15 @@ w = 0.35
 axC.bar([x - w / 2 for x in xs], [r[1] for r in rounds_by_delta], width=w, color=GREEN, label="critical-region")
 axC.bar([x + w / 2 for x in xs], [r[2] for r in rounds_by_delta], width=w, color=GRAY, label="time-window")
 axC.set_xticks(xs)
-axC.set_xticklabels([r[0] for r in rounds_by_delta], fontsize=7.2)
-axC.set_ylabel("mean completed\nrounds", fontsize=7.4)
+short = {"arrival": "arrival", "cancellation": "cancel.", "duration_jitter": "dur.jit.", "outage": "outage"}
+axC.set_xticklabels([short[r[0]] for r in rounds_by_delta], fontsize=7.0)
+axC.set_ylabel("mean completed rounds", fontsize=7.4)
 axC.tick_params(axis="y", labelsize=7.2)
-axC.legend(fontsize=6.6, frameon=False, loc="upper center", ncol=2, handlelength=1.2, borderaxespad=0.1,
-           bbox_to_anchor=(0.5, 1.32))
-axC.set_title(r"\textbf{C.} Why A and B disagree: end-to-end round counts, by disruption type", fontsize=8.0, loc="left", pad=16)
+axC.legend(fontsize=6.6, frameon=False, loc="upper left", ncol=1, handlelength=1.2, borderaxespad=0.1)
+axC.set_title(r"\textbf{C.} Why A/B disagree", fontsize=8.3, loc="left", pad=6)
 axC.spines[["top", "right"]].set_visible(False)
 
-fig.subplots_adjust(left=0.30, right=0.97, top=0.95, bottom=0.07)
+fig.subplots_adjust(left=0.135, right=0.985, top=0.85, bottom=0.22)
 out = Path(__file__).with_name("mechanism_u2_u1.pdf")
 fig.savefig(out)
 print("wrote", out)

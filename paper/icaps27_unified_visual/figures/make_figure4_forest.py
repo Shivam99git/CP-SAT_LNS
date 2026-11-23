@@ -58,7 +58,7 @@ for y, (key, label) in zip(ys, ORDER):
 ax.axvline(0, color="black", lw=0.8, ls="-", zorder=0)
 ax.set_yticks(ys)
 ax.set_yticklabels([lbl for _, lbl in ORDER])
-ax.set_xlabel(r"relative PI difference (\%); negative = \textsc{SR+Crit} better")
+ax.set_xlabel(r"rel.\ PI diff.\ (\%); negative = \textsc{SR+Crit} better", fontsize=8.2)
 ax.set_xlim(-58, 25)
 ax.spines[["top", "right"]].set_visible(False)
 ax.grid(axis="x", alpha=0.25, linewidth=0.5)
