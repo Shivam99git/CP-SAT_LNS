@@ -1,0 +1,25 @@
+% Figure 1: unified pipeline, standalone TikZ source compiled inline in the
+% manuscript (no external image file -- keeps it vector and Type-1-font-safe
+% automatically, since it shares the manuscript's own font setup).
+\begin{tikzpicture}[
+  box/.style={draw, rounded corners, align=center, minimum height=0.6cm, font=\small, inner sep=3pt},
+  arr/.style={-{Stealth[length=1.8mm]}, thick},
+  node distance=0.35cm
+]
+\node[box, fill=gray!12] (dis) {Disruption};
+\node[box, fill=blue!8, right=of dis] (port) {Incumbent\\portfolio};
+\node[box, fill=blue!8, right=of port] (sel) {Selective\\stage};
+\node[box, fill=orange!12, right=of sel] (rnd) {Repeated\\rounds};
+\node[box, fill=blue!8, right=of rnd] (glob) {Global\\CP-SAT};
+\node[box, fill=gray!12, right=of glob] (out) {Best\\incumbent};
+\foreach \a/\b in {dis/port, port/sel, sel/rnd, rnd/glob, glob/out}
+  \draw[arr] (\a) -- (\b);
+\node[font=\scriptsize, below=0.15cm of rnd, align=center, text width=2.6cm]
+  {crit / rand / time-win /\\ prec. (this study)};
+\node[font=\scriptsize, above=0.6cm of dis, align=left, text width=11.5cm] (legend) {
+  \textbf{Stage presence by method:}\quad
+  \textsc{Port+Hint}: portfolio + global only (no selective stage, no rounds) $\quad$
+  \textsc{SR} (IAIP-SR): portfolio + selective stage + global (no repeated rounds) $\quad$
+  \textsc{SR+X} (this study): adds repeated rounds with neighbourhood strategy X between the selective stage and the global stage
+};
+\end{tikzpicture}

@@ -1,0 +1,1914 @@
+{
+ "UOneN": {
+  "value": "40",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U1_primary",
+  "statistic": "units"
+ },
+ "UOneRecords": {
+  "value": "15{,}400",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U1_primary",
+  "statistic": "records"
+ },
+ "UOneMeanBTwocrit": {
+  "value": ".0256",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U1_primary",
+  "statistic": "mean PI"
+ },
+ "UOneMeanBZeroiaip": {
+  "value": ".0330",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U1_primary",
+  "statistic": "mean PI"
+ },
+ "UOneMeanBSixporthint": {
+  "value": ".0447",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U1_primary",
+  "statistic": "mean PI"
+ },
+ "UOneMeanBOnerandom": {
+  "value": ".0322",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U1_primary",
+  "statistic": "mean PI"
+ },
+ "UOneMeanBThreetimewin": {
+  "value": ".0273",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U1_primary",
+  "statistic": "mean PI"
+ },
+ "UOneMeanBFourprec": {
+  "value": ".0340",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U1_primary",
+  "statistic": "mean PI"
+ },
+ "UOneMeanBFivenativeOnew": {
+  "value": ".0456",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U1_primary",
+  "statistic": "mean PI"
+ },
+ "UOneBTwocritVsBZeroiaipRel": {
+  "value": "22.4",
+  "statistic": "relative difference (%)",
+  "sign": "-",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U1_primary",
+  "metric": "pi"
+ },
+ "UOneBTwocritVsBZeroiaipSign": {
+  "value": "-",
+  "statistic": "sign",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U1_primary",
+  "metric": "pi"
+ },
+ "UOneBTwocritVsBZeroiaipWL": {
+  "value": "35/5",
+  "statistic": "streams won/lost",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U1_primary",
+  "metric": "pi"
+ },
+ "UOneBTwocritVsBZeroiaipCI": {
+  "value": "[-0.0097, -0.0053]",
+  "statistic": "95% bootstrap CI of mean difference",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U1_primary",
+  "metric": "pi"
+ },
+ "UOneBTwocritVsBZeroiaipHolm": {
+  "value": "8.3\\cdot10^{-6}",
+  "statistic": "Holm-adjusted sign-test p",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U1_primary",
+  "metric": "pi"
+ },
+ "UOneBTwocritVsBOnerandomRel": {
+  "value": "20.4",
+  "statistic": "relative difference (%)",
+  "sign": "-",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U1_primary",
+  "metric": "pi"
+ },
+ "UOneBTwocritVsBOnerandomSign": {
+  "value": "-",
+  "statistic": "sign",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U1_primary",
+  "metric": "pi"
+ },
+ "UOneBTwocritVsBOnerandomWL": {
+  "value": "35/5",
+  "statistic": "streams won/lost",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U1_primary",
+  "metric": "pi"
+ },
+ "UOneBTwocritVsBOnerandomCI": {
+  "value": "[-0.0088, -0.0046]",
+  "statistic": "95% bootstrap CI of mean difference",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U1_primary",
+  "metric": "pi"
+ },
+ "UOneBTwocritVsBOnerandomHolm": {
+  "value": "8.3\\cdot10^{-6}",
+  "statistic": "Holm-adjusted sign-test p",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U1_primary",
+  "metric": "pi"
+ },
+ "UOneBTwocritVsBThreetimewinRel": {
+  "value": "6.1",
+  "statistic": "relative difference (%)",
+  "sign": "-",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U1_primary",
+  "metric": "pi"
+ },
+ "UOneBTwocritVsBThreetimewinSign": {
+  "value": "-",
+  "statistic": "sign",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U1_primary",
+  "metric": "pi"
+ },
+ "UOneBTwocritVsBThreetimewinWL": {
+  "value": "26/14",
+  "statistic": "streams won/lost",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U1_primary",
+  "metric": "pi"
+ },
+ "UOneBTwocritVsBThreetimewinCI": {
+  "value": "[-0.0036, +0.0002]",
+  "statistic": "95% bootstrap CI of mean difference",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U1_primary",
+  "metric": "pi"
+ },
+ "UOneBTwocritVsBThreetimewinHolm": {
+  "value": "0.16",
+  "statistic": "Holm-adjusted sign-test p",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U1_primary",
+  "metric": "pi"
+ },
+ "UOneBTwocritVsBFourprecRel": {
+  "value": "24.5",
+  "statistic": "relative difference (%)",
+  "sign": "-",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U1_primary",
+  "metric": "pi"
+ },
+ "UOneBTwocritVsBFourprecSign": {
+  "value": "-",
+  "statistic": "sign",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U1_primary",
+  "metric": "pi"
+ },
+ "UOneBTwocritVsBFourprecWL": {
+  "value": "34/6",
+  "statistic": "streams won/lost",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U1_primary",
+  "metric": "pi"
+ },
+ "UOneBTwocritVsBFourprecCI": {
+  "value": "[-0.0109, -0.0060]",
+  "statistic": "95% bootstrap CI of mean difference",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U1_primary",
+  "metric": "pi"
+ },
+ "UOneBTwocritVsBFourprecHolm": {
+  "value": "3.3\\cdot10^{-5}",
+  "statistic": "Holm-adjusted sign-test p",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U1_primary",
+  "metric": "pi"
+ },
+ "UOneBTwocritVsBFivenativeOnewRel": {
+  "value": "43.8",
+  "statistic": "relative difference (%)",
+  "sign": "-",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U1_primary",
+  "metric": "pi"
+ },
+ "UOneBTwocritVsBFivenativeOnewSign": {
+  "value": "-",
+  "statistic": "sign",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U1_primary",
+  "metric": "pi"
+ },
+ "UOneBTwocritVsBFivenativeOnewWL": {
+  "value": "40/0",
+  "statistic": "streams won/lost",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U1_primary",
+  "metric": "pi"
+ },
+ "UOneBTwocritVsBFivenativeOnewCI": {
+  "value": "[-0.0239, -0.0162]",
+  "statistic": "95% bootstrap CI of mean difference",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U1_primary",
+  "metric": "pi"
+ },
+ "UOneBTwocritVsBFivenativeOnewHolm": {
+  "value": "1.5\\cdot10^{-11}",
+  "statistic": "Holm-adjusted sign-test p",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U1_primary",
+  "metric": "pi"
+ },
+ "UOneBTwocritVsBSixporthintRel": {
+  "value": "42.7",
+  "statistic": "relative difference (%)",
+  "sign": "-",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U1_primary",
+  "metric": "pi"
+ },
+ "UOneBTwocritVsBSixporthintSign": {
+  "value": "-",
+  "statistic": "sign",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U1_primary",
+  "metric": "pi"
+ },
+ "UOneBTwocritVsBSixporthintWL": {
+  "value": "40/0",
+  "statistic": "streams won/lost",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U1_primary",
+  "metric": "pi"
+ },
+ "UOneBTwocritVsBSixporthintCI": {
+  "value": "[-0.0230, -0.0154]",
+  "statistic": "95% bootstrap CI of mean difference",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U1_primary",
+  "metric": "pi"
+ },
+ "UOneBTwocritVsBSixporthintHolm": {
+  "value": "1.5\\cdot10^{-11}",
+  "statistic": "Holm-adjusted sign-test p",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U1_primary",
+  "metric": "pi"
+ },
+ "UOneBThreetimewinVsBZeroiaipRel": {
+  "value": "17.4",
+  "statistic": "relative difference (%)",
+  "sign": "-",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U1_primary",
+  "metric": "pi"
+ },
+ "UOneBThreetimewinVsBZeroiaipSign": {
+  "value": "-",
+  "statistic": "sign",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U1_primary",
+  "metric": "pi"
+ },
+ "UOneBThreetimewinVsBZeroiaipWL": {
+  "value": "32/8",
+  "statistic": "streams won/lost",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U1_primary",
+  "metric": "pi"
+ },
+ "UOneBThreetimewinVsBZeroiaipCI": {
+  "value": "[-0.0087, -0.0031]",
+  "statistic": "95% bootstrap CI of mean difference",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U1_primary",
+  "metric": "pi"
+ },
+ "UOneBThreetimewinVsBZeroiaipHolm": {
+  "value": "5.5\\cdot10^{-4}",
+  "statistic": "Holm-adjusted sign-test p",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U1_primary",
+  "metric": "pi"
+ },
+ "UOneBOnerandomVsBZeroiaipRel": {
+  "value": "2.5",
+  "statistic": "relative difference (%)",
+  "sign": "-",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U1_primary",
+  "metric": "pi"
+ },
+ "UOneBOnerandomVsBZeroiaipSign": {
+  "value": "-",
+  "statistic": "sign",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U1_primary",
+  "metric": "pi"
+ },
+ "UOneBOnerandomVsBZeroiaipWL": {
+  "value": "21/19",
+  "statistic": "streams won/lost",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U1_primary",
+  "metric": "pi"
+ },
+ "UOneBOnerandomVsBZeroiaipCI": {
+  "value": "[-0.0024, +0.0006]",
+  "statistic": "95% bootstrap CI of mean difference",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U1_primary",
+  "metric": "pi"
+ },
+ "UOneBOnerandomVsBZeroiaipHolm": {
+  "value": "0.87",
+  "statistic": "Holm-adjusted sign-test p",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U1_primary",
+  "metric": "pi"
+ },
+ "UTwoN": {
+  "value": "40",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U2_mechanism",
+  "statistic": "units"
+ },
+ "UTwoRecords": {
+  "value": "8{,}800",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U2_mechanism",
+  "statistic": "records"
+ },
+ "UTwoMeanMTwocrit": {
+  "value": ".0268",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U2_mechanism",
+  "statistic": "mean PI"
+ },
+ "UTwoMeanMTworandom": {
+  "value": ".0301",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U2_mechanism",
+  "statistic": "mean PI"
+ },
+ "UTwoMeanMTwotimewin": {
+  "value": ".0240",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U2_mechanism",
+  "statistic": "mean PI"
+ },
+ "UTwoMeanMTwoprec": {
+  "value": ".0301",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U2_mechanism",
+  "statistic": "mean PI"
+ },
+ "UTwoMTwocritVsMTworandomRel": {
+  "value": "10.8",
+  "statistic": "relative difference (%)",
+  "sign": "-",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U2_mechanism",
+  "metric": "pi"
+ },
+ "UTwoMTwocritVsMTworandomSign": {
+  "value": "-",
+  "statistic": "sign",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U2_mechanism",
+  "metric": "pi"
+ },
+ "UTwoMTwocritVsMTworandomWL": {
+  "value": "28/12",
+  "statistic": "streams won/lost",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U2_mechanism",
+  "metric": "pi"
+ },
+ "UTwoMTwocritVsMTworandomCI": {
+  "value": "[-0.0051, -0.0014]",
+  "statistic": "95% bootstrap CI of mean difference",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U2_mechanism",
+  "metric": "pi"
+ },
+ "UTwoMTwocritVsMTworandomHolm": {
+  "value": "0.033",
+  "statistic": "Holm-adjusted sign-test p",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U2_mechanism",
+  "metric": "pi"
+ },
+ "UTwoMTwocritVsMTwotimewinRel": {
+  "value": "11.4",
+  "statistic": "relative difference (%)",
+  "sign": "+",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U2_mechanism",
+  "metric": "pi"
+ },
+ "UTwoMTwocritVsMTwotimewinSign": {
+  "value": "+",
+  "statistic": "sign",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U2_mechanism",
+  "metric": "pi"
+ },
+ "UTwoMTwocritVsMTwotimewinWL": {
+  "value": "13/27",
+  "statistic": "streams won/lost",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U2_mechanism",
+  "metric": "pi"
+ },
+ "UTwoMTwocritVsMTwotimewinCI": {
+  "value": "[+0.0011, +0.0045]",
+  "statistic": "95% bootstrap CI of mean difference",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U2_mechanism",
+  "metric": "pi"
+ },
+ "UTwoMTwocritVsMTwotimewinHolm": {
+  "value": "0.038",
+  "statistic": "Holm-adjusted sign-test p",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U2_mechanism",
+  "metric": "pi"
+ },
+ "UTwoMTwocritVsMTwoprecRel": {
+  "value": "10.9",
+  "statistic": "relative difference (%)",
+  "sign": "-",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U2_mechanism",
+  "metric": "pi"
+ },
+ "UTwoMTwocritVsMTwoprecSign": {
+  "value": "-",
+  "statistic": "sign",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U2_mechanism",
+  "metric": "pi"
+ },
+ "UTwoMTwocritVsMTwoprecWL": {
+  "value": "31/9",
+  "statistic": "streams won/lost",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U2_mechanism",
+  "metric": "pi"
+ },
+ "UTwoMTwocritVsMTwoprecCI": {
+  "value": "[-0.0050, -0.0015]",
+  "statistic": "95% bootstrap CI of mean difference",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U2_mechanism",
+  "metric": "pi"
+ },
+ "UTwoMTwocritVsMTwoprecHolm": {
+  "value": "0.002",
+  "statistic": "Holm-adjusted sign-test p",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U2_mechanism",
+  "metric": "pi"
+ },
+ "UTwoMTwotimewinVsMTworandomRel": {
+  "value": "20.0",
+  "statistic": "relative difference (%)",
+  "sign": "-",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U2_mechanism",
+  "metric": "pi"
+ },
+ "UTwoMTwotimewinVsMTworandomSign": {
+  "value": "-",
+  "statistic": "sign",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U2_mechanism",
+  "metric": "pi"
+ },
+ "UTwoMTwotimewinVsMTworandomWL": {
+  "value": "34/6",
+  "statistic": "streams won/lost",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U2_mechanism",
+  "metric": "pi"
+ },
+ "UTwoMTwotimewinVsMTworandomCI": {
+  "value": "[-0.0080, -0.0042]",
+  "statistic": "95% bootstrap CI of mean difference",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U2_mechanism",
+  "metric": "pi"
+ },
+ "UTwoMTwotimewinVsMTworandomHolm": {
+  "value": "3.3\\cdot10^{-5}",
+  "statistic": "Holm-adjusted sign-test p",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U2_mechanism",
+  "metric": "pi"
+ },
+ "UThreeN": {
+  "value": "20",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U3_workers4",
+  "statistic": "units"
+ },
+ "UThreeRecords": {
+  "value": "4{,}400",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U3_workers4",
+  "statistic": "records"
+ },
+ "UThreeMeanBTwocrit": {
+  "value": ".0166",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U3_workers4",
+  "statistic": "mean PI"
+ },
+ "UThreeMeanBZeroiaip": {
+  "value": ".0166",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U3_workers4",
+  "statistic": "mean PI"
+ },
+ "UThreeMeanBSixporthint": {
+  "value": ".0182",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U3_workers4",
+  "statistic": "mean PI"
+ },
+ "UThreeMeanBThreetimewin": {
+  "value": ".0162",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U3_workers4",
+  "statistic": "mean PI"
+ },
+ "UThreeBTwocritVsBZeroiaipRel": {
+  "value": "0.0",
+  "statistic": "relative difference (%)",
+  "sign": "+",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U3_workers4",
+  "metric": "pi"
+ },
+ "UThreeBTwocritVsBZeroiaipSign": {
+  "value": "+",
+  "statistic": "sign",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U3_workers4",
+  "metric": "pi"
+ },
+ "UThreeBTwocritVsBZeroiaipWL": {
+  "value": "12/8",
+  "statistic": "streams won/lost",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U3_workers4",
+  "metric": "pi"
+ },
+ "UThreeBTwocritVsBZeroiaipCI": {
+  "value": "[-0.0012, +0.0012]",
+  "statistic": "95% bootstrap CI of mean difference",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U3_workers4",
+  "metric": "pi"
+ },
+ "UThreeBTwocritVsBZeroiaipHolm": {
+  "value": "1.00",
+  "statistic": "Holm-adjusted sign-test p",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U3_workers4",
+  "metric": "pi"
+ },
+ "UThreeBTwocritVsBSixporthintRel": {
+  "value": "9.1",
+  "statistic": "relative difference (%)",
+  "sign": "-",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U3_workers4",
+  "metric": "pi"
+ },
+ "UThreeBTwocritVsBSixporthintSign": {
+  "value": "-",
+  "statistic": "sign",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U3_workers4",
+  "metric": "pi"
+ },
+ "UThreeBTwocritVsBSixporthintWL": {
+  "value": "15/5",
+  "statistic": "streams won/lost",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U3_workers4",
+  "metric": "pi"
+ },
+ "UThreeBTwocritVsBSixporthintCI": {
+  "value": "[-0.0030, -0.0002]",
+  "statistic": "95% bootstrap CI of mean difference",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U3_workers4",
+  "metric": "pi"
+ },
+ "UThreeBTwocritVsBSixporthintHolm": {
+  "value": "0.12",
+  "statistic": "Holm-adjusted sign-test p",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U3_workers4",
+  "metric": "pi"
+ },
+ "UThreeBTwocritVsBThreetimewinRel": {
+  "value": "2.2",
+  "statistic": "relative difference (%)",
+  "sign": "+",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U3_workers4",
+  "metric": "pi"
+ },
+ "UThreeBTwocritVsBThreetimewinSign": {
+  "value": "+",
+  "statistic": "sign",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U3_workers4",
+  "metric": "pi"
+ },
+ "UThreeBTwocritVsBThreetimewinWL": {
+  "value": "10/10",
+  "statistic": "streams won/lost",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U3_workers4",
+  "metric": "pi"
+ },
+ "UThreeBTwocritVsBThreetimewinCI": {
+  "value": "[-0.0011, +0.0018]",
+  "statistic": "95% bootstrap CI of mean difference",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U3_workers4",
+  "metric": "pi"
+ },
+ "UThreeBTwocritVsBThreetimewinHolm": {
+  "value": "1.00",
+  "statistic": "Holm-adjusted sign-test p",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U3_workers4",
+  "metric": "pi"
+ },
+ "UFourN": {
+  "value": "40",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U4_b2",
+  "statistic": "units"
+ },
+ "UFourRecords": {
+  "value": "8{,}800",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U4_b2",
+  "statistic": "records"
+ },
+ "UFourMeanBTwocrit": {
+  "value": ".0392",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U4_b2",
+  "statistic": "mean PI"
+ },
+ "UFourMeanBZeroiaip": {
+  "value": ".0418",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U4_b2",
+  "statistic": "mean PI"
+ },
+ "UFourMeanBSixporthint": {
+  "value": ".0495",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U4_b2",
+  "statistic": "mean PI"
+ },
+ "UFourMeanBThreetimewin": {
+  "value": ".0397",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U4_b2",
+  "statistic": "mean PI"
+ },
+ "UFourBTwocritVsBZeroiaipRel": {
+  "value": "6.2",
+  "statistic": "relative difference (%)",
+  "sign": "-",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U4_b2",
+  "metric": "pi"
+ },
+ "UFourBTwocritVsBZeroiaipSign": {
+  "value": "-",
+  "statistic": "sign",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U4_b2",
+  "metric": "pi"
+ },
+ "UFourBTwocritVsBZeroiaipWL": {
+  "value": "23/17",
+  "statistic": "streams won/lost",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U4_b2",
+  "metric": "pi"
+ },
+ "UFourBTwocritVsBZeroiaipCI": {
+  "value": "[-0.0059, +0.0007]",
+  "statistic": "95% bootstrap CI of mean difference",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U4_b2",
+  "metric": "pi"
+ },
+ "UFourBTwocritVsBZeroiaipHolm": {
+  "value": "0.86",
+  "statistic": "Holm-adjusted sign-test p",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U4_b2",
+  "metric": "pi"
+ },
+ "UFourBTwocritVsBSixporthintRel": {
+  "value": "20.7",
+  "statistic": "relative difference (%)",
+  "sign": "-",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U4_b2",
+  "metric": "pi"
+ },
+ "UFourBTwocritVsBSixporthintSign": {
+  "value": "-",
+  "statistic": "sign",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U4_b2",
+  "metric": "pi"
+ },
+ "UFourBTwocritVsBSixporthintWL": {
+  "value": "31/9",
+  "statistic": "streams won/lost",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U4_b2",
+  "metric": "pi"
+ },
+ "UFourBTwocritVsBSixporthintCI": {
+  "value": "[-0.0147, -0.0057]",
+  "statistic": "95% bootstrap CI of mean difference",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U4_b2",
+  "metric": "pi"
+ },
+ "UFourBTwocritVsBSixporthintHolm": {
+  "value": "0.002",
+  "statistic": "Holm-adjusted sign-test p",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U4_b2",
+  "metric": "pi"
+ },
+ "UFourBTwocritVsBThreetimewinRel": {
+  "value": "1.3",
+  "statistic": "relative difference (%)",
+  "sign": "-",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U4_b2",
+  "metric": "pi"
+ },
+ "UFourBTwocritVsBThreetimewinSign": {
+  "value": "-",
+  "statistic": "sign",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U4_b2",
+  "metric": "pi"
+ },
+ "UFourBTwocritVsBThreetimewinWL": {
+  "value": "22/18",
+  "statistic": "streams won/lost",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U4_b2",
+  "metric": "pi"
+ },
+ "UFourBTwocritVsBThreetimewinCI": {
+  "value": "[-0.0035, +0.0025]",
+  "statistic": "95% bootstrap CI of mean difference",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U4_b2",
+  "metric": "pi"
+ },
+ "UFourBTwocritVsBThreetimewinHolm": {
+  "value": "0.86",
+  "statistic": "Holm-adjusted sign-test p",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U4_b2",
+  "metric": "pi"
+ },
+ "UFiveN": {
+  "value": "20",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U5_b30",
+  "statistic": "units"
+ },
+ "UFiveRecords": {
+  "value": "2{,}640",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U5_b30",
+  "statistic": "records"
+ },
+ "UFiveMeanBTwocrit": {
+  "value": ".0168",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U5_b30",
+  "statistic": "mean PI"
+ },
+ "UFiveMeanBZeroiaip": {
+  "value": ".0209",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U5_b30",
+  "statistic": "mean PI"
+ },
+ "UFiveMeanBSixporthint": {
+  "value": ".0293",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U5_b30",
+  "statistic": "mean PI"
+ },
+ "UFiveMeanBThreetimewin": {
+  "value": ".0181",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U5_b30",
+  "statistic": "mean PI"
+ },
+ "UFiveBTwocritVsBZeroiaipRel": {
+  "value": "19.2",
+  "statistic": "relative difference (%)",
+  "sign": "-",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U5_b30",
+  "metric": "pi"
+ },
+ "UFiveBTwocritVsBZeroiaipSign": {
+  "value": "-",
+  "statistic": "sign",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U5_b30",
+  "metric": "pi"
+ },
+ "UFiveBTwocritVsBZeroiaipWL": {
+  "value": "17/3",
+  "statistic": "streams won/lost",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U5_b30",
+  "metric": "pi"
+ },
+ "UFiveBTwocritVsBZeroiaipCI": {
+  "value": "[-0.0060, -0.0022]",
+  "statistic": "95% bootstrap CI of mean difference",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U5_b30",
+  "metric": "pi"
+ },
+ "UFiveBTwocritVsBZeroiaipHolm": {
+  "value": "0.005",
+  "statistic": "Holm-adjusted sign-test p",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U5_b30",
+  "metric": "pi"
+ },
+ "UFiveBTwocritVsBSixporthintRel": {
+  "value": "42.5",
+  "statistic": "relative difference (%)",
+  "sign": "-",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U5_b30",
+  "metric": "pi"
+ },
+ "UFiveBTwocritVsBSixporthintSign": {
+  "value": "-",
+  "statistic": "sign",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U5_b30",
+  "metric": "pi"
+ },
+ "UFiveBTwocritVsBSixporthintWL": {
+  "value": "20/0",
+  "statistic": "streams won/lost",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U5_b30",
+  "metric": "pi"
+ },
+ "UFiveBTwocritVsBSixporthintCI": {
+  "value": "[-0.0162, -0.0090]",
+  "statistic": "95% bootstrap CI of mean difference",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U5_b30",
+  "metric": "pi"
+ },
+ "UFiveBTwocritVsBSixporthintHolm": {
+  "value": "5.7\\cdot10^{-6}",
+  "statistic": "Holm-adjusted sign-test p",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U5_b30",
+  "metric": "pi"
+ },
+ "UFiveBTwocritVsBThreetimewinRel": {
+  "value": "7.0",
+  "statistic": "relative difference (%)",
+  "sign": "-",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U5_b30",
+  "metric": "pi"
+ },
+ "UFiveBTwocritVsBThreetimewinSign": {
+  "value": "-",
+  "statistic": "sign",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U5_b30",
+  "metric": "pi"
+ },
+ "UFiveBTwocritVsBThreetimewinWL": {
+  "value": "13/7",
+  "statistic": "streams won/lost",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U5_b30",
+  "metric": "pi"
+ },
+ "UFiveBTwocritVsBThreetimewinCI": {
+  "value": "[-0.0029, +0.0003]",
+  "statistic": "95% bootstrap CI of mean difference",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U5_b30",
+  "metric": "pi"
+ },
+ "UFiveBTwocritVsBThreetimewinHolm": {
+  "value": "0.26",
+  "statistic": "Holm-adjusted sign-test p",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U5_b30",
+  "metric": "pi"
+ },
+ "USixN": {
+  "value": "20",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U6_arrival",
+  "statistic": "units"
+ },
+ "USixRecords": {
+  "value": "4{,}400",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U6_arrival",
+  "statistic": "records"
+ },
+ "USixMeanBTwocrit": {
+  "value": ".0284",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U6_arrival",
+  "statistic": "mean PI"
+ },
+ "USixMeanBZeroiaip": {
+  "value": ".0513",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U6_arrival",
+  "statistic": "mean PI"
+ },
+ "USixMeanBSixporthint": {
+  "value": ".0779",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U6_arrival",
+  "statistic": "mean PI"
+ },
+ "USixMeanBThreetimewin": {
+  "value": ".0371",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U6_arrival",
+  "statistic": "mean PI"
+ },
+ "USixBTwocritVsBZeroiaipRel": {
+  "value": "44.8",
+  "statistic": "relative difference (%)",
+  "sign": "-",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U6_arrival",
+  "metric": "pi"
+ },
+ "USixBTwocritVsBZeroiaipSign": {
+  "value": "-",
+  "statistic": "sign",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U6_arrival",
+  "metric": "pi"
+ },
+ "USixBTwocritVsBZeroiaipWL": {
+  "value": "20/0",
+  "statistic": "streams won/lost",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U6_arrival",
+  "metric": "pi"
+ },
+ "USixBTwocritVsBZeroiaipCI": {
+  "value": "[-0.0296, -0.0177]",
+  "statistic": "95% bootstrap CI of mean difference",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U6_arrival",
+  "metric": "pi"
+ },
+ "USixBTwocritVsBZeroiaipHolm": {
+  "value": "5.7\\cdot10^{-6}",
+  "statistic": "Holm-adjusted sign-test p",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U6_arrival",
+  "metric": "pi"
+ },
+ "USixBTwocritVsBSixporthintRel": {
+  "value": "63.6",
+  "statistic": "relative difference (%)",
+  "sign": "-",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U6_arrival",
+  "metric": "pi"
+ },
+ "USixBTwocritVsBSixporthintSign": {
+  "value": "-",
+  "statistic": "sign",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U6_arrival",
+  "metric": "pi"
+ },
+ "USixBTwocritVsBSixporthintWL": {
+  "value": "20/0",
+  "statistic": "streams won/lost",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U6_arrival",
+  "metric": "pi"
+ },
+ "USixBTwocritVsBSixporthintCI": {
+  "value": "[-0.0542, -0.0450]",
+  "statistic": "95% bootstrap CI of mean difference",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U6_arrival",
+  "metric": "pi"
+ },
+ "USixBTwocritVsBSixporthintHolm": {
+  "value": "5.7\\cdot10^{-6}",
+  "statistic": "Holm-adjusted sign-test p",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U6_arrival",
+  "metric": "pi"
+ },
+ "USixBTwocritVsBThreetimewinRel": {
+  "value": "23.6",
+  "statistic": "relative difference (%)",
+  "sign": "-",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U6_arrival",
+  "metric": "pi"
+ },
+ "USixBTwocritVsBThreetimewinSign": {
+  "value": "-",
+  "statistic": "sign",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U6_arrival",
+  "metric": "pi"
+ },
+ "USixBTwocritVsBThreetimewinWL": {
+  "value": "18/2",
+  "statistic": "streams won/lost",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U6_arrival",
+  "metric": "pi"
+ },
+ "USixBTwocritVsBThreetimewinCI": {
+  "value": "[-0.0118, -0.0058]",
+  "statistic": "95% bootstrap CI of mean difference",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U6_arrival",
+  "metric": "pi"
+ },
+ "USixBTwocritVsBThreetimewinHolm": {
+  "value": "4.0\\cdot10^{-4}",
+  "statistic": "Holm-adjusted sign-test p",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U6_arrival",
+  "metric": "pi"
+ },
+ "USevenN": {
+  "value": "20",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U7_outage",
+  "statistic": "units"
+ },
+ "USevenRecords": {
+  "value": "4{,}400",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U7_outage",
+  "statistic": "records"
+ },
+ "USevenMeanBTwocrit": {
+  "value": ".0243",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U7_outage",
+  "statistic": "mean PI"
+ },
+ "USevenMeanBZeroiaip": {
+  "value": ".0269",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U7_outage",
+  "statistic": "mean PI"
+ },
+ "USevenMeanBSixporthint": {
+  "value": ".0302",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U7_outage",
+  "statistic": "mean PI"
+ },
+ "USevenMeanBThreetimewin": {
+  "value": ".0261",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U7_outage",
+  "statistic": "mean PI"
+ },
+ "USevenBTwocritVsBZeroiaipRel": {
+  "value": "9.9",
+  "statistic": "relative difference (%)",
+  "sign": "-",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U7_outage",
+  "metric": "pi"
+ },
+ "USevenBTwocritVsBZeroiaipSign": {
+  "value": "-",
+  "statistic": "sign",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U7_outage",
+  "metric": "pi"
+ },
+ "USevenBTwocritVsBZeroiaipWL": {
+  "value": "14/6",
+  "statistic": "streams won/lost",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U7_outage",
+  "metric": "pi"
+ },
+ "USevenBTwocritVsBZeroiaipCI": {
+  "value": "[-0.0046, -0.0009]",
+  "statistic": "95% bootstrap CI of mean difference",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U7_outage",
+  "metric": "pi"
+ },
+ "USevenBTwocritVsBZeroiaipHolm": {
+  "value": "0.23",
+  "statistic": "Holm-adjusted sign-test p",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U7_outage",
+  "metric": "pi"
+ },
+ "USevenBTwocritVsBSixporthintRel": {
+  "value": "19.6",
+  "statistic": "relative difference (%)",
+  "sign": "-",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U7_outage",
+  "metric": "pi"
+ },
+ "USevenBTwocritVsBSixporthintSign": {
+  "value": "-",
+  "statistic": "sign",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U7_outage",
+  "metric": "pi"
+ },
+ "USevenBTwocritVsBSixporthintWL": {
+  "value": "18/2",
+  "statistic": "streams won/lost",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U7_outage",
+  "metric": "pi"
+ },
+ "USevenBTwocritVsBSixporthintCI": {
+  "value": "[-0.0090, -0.0032]",
+  "statistic": "95% bootstrap CI of mean difference",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U7_outage",
+  "metric": "pi"
+ },
+ "USevenBTwocritVsBSixporthintHolm": {
+  "value": "0.001",
+  "statistic": "Holm-adjusted sign-test p",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U7_outage",
+  "metric": "pi"
+ },
+ "USevenBTwocritVsBThreetimewinRel": {
+  "value": "7.0",
+  "statistic": "relative difference (%)",
+  "sign": "-",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U7_outage",
+  "metric": "pi"
+ },
+ "USevenBTwocritVsBThreetimewinSign": {
+  "value": "-",
+  "statistic": "sign",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U7_outage",
+  "metric": "pi"
+ },
+ "USevenBTwocritVsBThreetimewinWL": {
+  "value": "14/6",
+  "statistic": "streams won/lost",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U7_outage",
+  "metric": "pi"
+ },
+ "USevenBTwocritVsBThreetimewinCI": {
+  "value": "[-0.0045, +0.0008]",
+  "statistic": "95% bootstrap CI of mean difference",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U7_outage",
+  "metric": "pi"
+ },
+ "USevenBTwocritVsBThreetimewinHolm": {
+  "value": "0.23",
+  "statistic": "Holm-adjusted sign-test p",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U7_outage",
+  "metric": "pi"
+ },
+ "UEightN": {
+  "value": "20",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U8_high",
+  "statistic": "units"
+ },
+ "UEightRecords": {
+  "value": "4{,}400",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U8_high",
+  "statistic": "records"
+ },
+ "UEightMeanBTwocrit": {
+  "value": ".0252",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U8_high",
+  "statistic": "mean PI"
+ },
+ "UEightMeanBZeroiaip": {
+  "value": ".0310",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U8_high",
+  "statistic": "mean PI"
+ },
+ "UEightMeanBSixporthint": {
+  "value": ".0441",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U8_high",
+  "statistic": "mean PI"
+ },
+ "UEightMeanBThreetimewin": {
+  "value": ".0278",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U8_high",
+  "statistic": "mean PI"
+ },
+ "UEightBTwocritVsBZeroiaipRel": {
+  "value": "18.8",
+  "statistic": "relative difference (%)",
+  "sign": "-",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U8_high",
+  "metric": "pi"
+ },
+ "UEightBTwocritVsBZeroiaipSign": {
+  "value": "-",
+  "statistic": "sign",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U8_high",
+  "metric": "pi"
+ },
+ "UEightBTwocritVsBZeroiaipWL": {
+  "value": "16/4",
+  "statistic": "streams won/lost",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U8_high",
+  "metric": "pi"
+ },
+ "UEightBTwocritVsBZeroiaipCI": {
+  "value": "[-0.0090, -0.0030]",
+  "statistic": "95% bootstrap CI of mean difference",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U8_high",
+  "metric": "pi"
+ },
+ "UEightBTwocritVsBZeroiaipHolm": {
+  "value": "0.024",
+  "statistic": "Holm-adjusted sign-test p",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U8_high",
+  "metric": "pi"
+ },
+ "UEightBTwocritVsBSixporthintRel": {
+  "value": "43.0",
+  "statistic": "relative difference (%)",
+  "sign": "-",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U8_high",
+  "metric": "pi"
+ },
+ "UEightBTwocritVsBSixporthintSign": {
+  "value": "-",
+  "statistic": "sign",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U8_high",
+  "metric": "pi"
+ },
+ "UEightBTwocritVsBSixporthintWL": {
+  "value": "20/0",
+  "statistic": "streams won/lost",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U8_high",
+  "metric": "pi"
+ },
+ "UEightBTwocritVsBSixporthintCI": {
+  "value": "[-0.0238, -0.0142]",
+  "statistic": "95% bootstrap CI of mean difference",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U8_high",
+  "metric": "pi"
+ },
+ "UEightBTwocritVsBSixporthintHolm": {
+  "value": "5.7\\cdot10^{-6}",
+  "statistic": "Holm-adjusted sign-test p",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U8_high",
+  "metric": "pi"
+ },
+ "UEightBTwocritVsBThreetimewinRel": {
+  "value": "9.5",
+  "statistic": "relative difference (%)",
+  "sign": "-",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U8_high",
+  "metric": "pi"
+ },
+ "UEightBTwocritVsBThreetimewinSign": {
+  "value": "-",
+  "statistic": "sign",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U8_high",
+  "metric": "pi"
+ },
+ "UEightBTwocritVsBThreetimewinWL": {
+  "value": "14/6",
+  "statistic": "streams won/lost",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U8_high",
+  "metric": "pi"
+ },
+ "UEightBTwocritVsBThreetimewinCI": {
+  "value": "[-0.0059, -0.0001]",
+  "statistic": "95% bootstrap CI of mean difference",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U8_high",
+  "metric": "pi"
+ },
+ "UEightBTwocritVsBThreetimewinHolm": {
+  "value": "0.12",
+  "statistic": "Holm-adjusted sign-test p",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U8_high",
+  "metric": "pi"
+ },
+ "UNineN": {
+  "value": "34",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U9_benchmarks",
+  "statistic": "units"
+ },
+ "UNineRecords": {
+  "value": "7{,}480",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U9_benchmarks",
+  "statistic": "records"
+ },
+ "UNineMeanBTwocrit": {
+  "value": ".0300",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U9_benchmarks",
+  "statistic": "mean PI"
+ },
+ "UNineMeanBZeroiaip": {
+  "value": ".0438",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U9_benchmarks",
+  "statistic": "mean PI"
+ },
+ "UNineMeanBSixporthint": {
+  "value": ".0641",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U9_benchmarks",
+  "statistic": "mean PI"
+ },
+ "UNineMeanBThreetimewin": {
+  "value": ".0322",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U9_benchmarks",
+  "statistic": "mean PI"
+ },
+ "UNineBTwocritVsBZeroiaipRel": {
+  "value": "31.5",
+  "statistic": "relative difference (%)",
+  "sign": "-",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U9_benchmarks",
+  "metric": "pi"
+ },
+ "UNineBTwocritVsBZeroiaipSign": {
+  "value": "-",
+  "statistic": "sign",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U9_benchmarks",
+  "metric": "pi"
+ },
+ "UNineBTwocritVsBZeroiaipWL": {
+  "value": "33/1",
+  "statistic": "streams won/lost",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U9_benchmarks",
+  "metric": "pi"
+ },
+ "UNineBTwocritVsBZeroiaipCI": {
+  "value": "[-0.0193, -0.0093]",
+  "statistic": "95% bootstrap CI of mean difference",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U9_benchmarks",
+  "metric": "pi"
+ },
+ "UNineBTwocritVsBZeroiaipHolm": {
+  "value": "8.1\\cdot10^{-9}",
+  "statistic": "Holm-adjusted sign-test p",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U9_benchmarks",
+  "metric": "pi"
+ },
+ "UNineBTwocritVsBSixporthintRel": {
+  "value": "53.2",
+  "statistic": "relative difference (%)",
+  "sign": "-",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U9_benchmarks",
+  "metric": "pi"
+ },
+ "UNineBTwocritVsBSixporthintSign": {
+  "value": "-",
+  "statistic": "sign",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U9_benchmarks",
+  "metric": "pi"
+ },
+ "UNineBTwocritVsBSixporthintWL": {
+  "value": "34/0",
+  "statistic": "streams won/lost",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U9_benchmarks",
+  "metric": "pi"
+ },
+ "UNineBTwocritVsBSixporthintCI": {
+  "value": "[-0.0402, -0.0285]",
+  "statistic": "95% bootstrap CI of mean difference",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U9_benchmarks",
+  "metric": "pi"
+ },
+ "UNineBTwocritVsBSixporthintHolm": {
+  "value": "3.5\\cdot10^{-10}",
+  "statistic": "Holm-adjusted sign-test p",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U9_benchmarks",
+  "metric": "pi"
+ },
+ "UNineBTwocritVsBThreetimewinRel": {
+  "value": "6.9",
+  "statistic": "relative difference (%)",
+  "sign": "-",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U9_benchmarks",
+  "metric": "pi"
+ },
+ "UNineBTwocritVsBThreetimewinSign": {
+  "value": "-",
+  "statistic": "sign",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U9_benchmarks",
+  "metric": "pi"
+ },
+ "UNineBTwocritVsBThreetimewinWL": {
+  "value": "21/13",
+  "statistic": "streams won/lost",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U9_benchmarks",
+  "metric": "pi"
+ },
+ "UNineBTwocritVsBThreetimewinCI": {
+  "value": "[-0.0057, +0.0014]",
+  "statistic": "95% bootstrap CI of mean difference",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U9_benchmarks",
+  "metric": "pi"
+ },
+ "UNineBTwocritVsBThreetimewinHolm": {
+  "value": "0.23",
+  "statistic": "Holm-adjusted sign-test p",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "setting": "U9_benchmarks",
+  "metric": "pi"
+ },
+ "CritCOne": {
+  "value": "True",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "statistic": "C1_replication"
+ },
+ "CritCTwo": {
+  "value": "True",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "statistic": "C2_vs_random"
+ },
+ "CritCThree": {
+  "value": "inconclusive",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "statistic": "C3_vs_timewin"
+ },
+ "CritCFour": {
+  "value": "True",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "statistic": "C4_vs_prec"
+ },
+ "CritCFive": {
+  "value": "True",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "statistic": "C5_vs_native1w"
+ },
+ "CritCSix": {
+  "value": "False",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "statistic": "C6_vs_native4w"
+ },
+ "Critvalidity": {
+  "value": "True",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "statistic": "validity"
+ },
+ "Classification": {
+  "value": "CONDITIONAL_GO",
+  "source": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+  "statistic": "overall verdict"
+ },
+ "DevOnecritexpandVsBZeroRel": {
+  "value": "29.4",
+  "statistic": "relative difference (%)",
+  "sign": "-",
+  "source": "results/unified_icaps/dev/d1_b8/analysis.json",
+  "setting": "d1_b8",
+  "metric": "pi"
+ },
+ "DevOnecritexpandVsBZeroSign": {
+  "value": "-",
+  "statistic": "sign",
+  "source": "results/unified_icaps/dev/d1_b8/analysis.json",
+  "setting": "d1_b8",
+  "metric": "pi"
+ },
+ "DevOnecritexpandVsBZeroWL": {
+  "value": "19/1",
+  "statistic": "streams won/lost",
+  "source": "results/unified_icaps/dev/d1_b8/analysis.json",
+  "setting": "d1_b8",
+  "metric": "pi"
+ },
+ "DevOnecritexpandVsBZeroCI": {
+  "value": "[-0.0140, -0.0057]",
+  "statistic": "95% bootstrap CI of mean difference",
+  "source": "results/unified_icaps/dev/d1_b8/analysis.json",
+  "setting": "d1_b8",
+  "metric": "pi"
+ },
+ "DevOnecritexpandVsBZeroHolm": {
+  "value": "6.0\\cdot10^{-4}",
+  "statistic": "Holm-adjusted sign-test p",
+  "source": "results/unified_icaps/dev/d1_b8/analysis.json",
+  "setting": "d1_b8",
+  "metric": "pi"
+ },
+ "DevOnecritexpandVstimewindowRel": {
+  "value": "4.9",
+  "statistic": "relative difference (%)",
+  "sign": "+",
+  "source": "results/unified_icaps/dev/d1_b8/analysis.json",
+  "setting": "d1_b8",
+  "metric": "pi"
+ },
+ "DevOnecritexpandVstimewindowSign": {
+  "value": "+",
+  "statistic": "sign",
+  "source": "results/unified_icaps/dev/d1_b8/analysis.json",
+  "setting": "d1_b8",
+  "metric": "pi"
+ },
+ "DevOnecritexpandVstimewindowWL": {
+  "value": "10/10",
+  "statistic": "streams won/lost",
+  "source": "results/unified_icaps/dev/d1_b8/analysis.json",
+  "setting": "d1_b8",
+  "metric": "pi"
+ },
+ "DevOnecritexpandVstimewindowCI": {
+  "value": "[-0.0025, +0.0046]",
+  "statistic": "95% bootstrap CI of mean difference",
+  "source": "results/unified_icaps/dev/d1_b8/analysis.json",
+  "setting": "d1_b8",
+  "metric": "pi"
+ },
+ "DevOnecritexpandVstimewindowHolm": {
+  "value": "1.00",
+  "statistic": "Holm-adjusted sign-test p",
+  "source": "results/unified_icaps/dev/d1_b8/analysis.json",
+  "setting": "d1_b8",
+  "metric": "pi"
+ },
+ "DevOnecritexpandVsBFiveRel": {
+  "value": "44.5",
+  "statistic": "relative difference (%)",
+  "sign": "-",
+  "source": "results/unified_icaps/dev/d1_b8/analysis.json",
+  "setting": "d1_b8",
+  "metric": "pi"
+ },
+ "DevOnecritexpandVsBFiveSign": {
+  "value": "-",
+  "statistic": "sign",
+  "source": "results/unified_icaps/dev/d1_b8/analysis.json",
+  "setting": "d1_b8",
+  "metric": "pi"
+ },
+ "DevOnecritexpandVsBFiveWL": {
+  "value": "20/0",
+  "statistic": "streams won/lost",
+  "source": "results/unified_icaps/dev/d1_b8/analysis.json",
+  "setting": "d1_b8",
+  "metric": "pi"
+ },
+ "DevOnecritexpandVsBFiveCI": {
+  "value": "[-0.0245, -0.0126]",
+  "statistic": "95% bootstrap CI of mean difference",
+  "source": "results/unified_icaps/dev/d1_b8/analysis.json",
+  "setting": "d1_b8",
+  "metric": "pi"
+ },
+ "DevOnecritexpandVsBFiveHolm": {
+  "value": "3.1\\cdot10^{-5}",
+  "statistic": "Holm-adjusted sign-test p",
+  "source": "results/unified_icaps/dev/d1_b8/analysis.json",
+  "setting": "d1_b8",
+  "metric": "pi"
+ },
+ "RoundCritRate": {
+  "value": "66",
+  "source": "results/unified_icaps/confirmatory/U1_rounds_diagnostic.json",
+  "statistic": "crit round improvement rate %"
+ },
+ "RoundTimewinRate": {
+  "value": "50",
+  "source": "results/unified_icaps/confirmatory/U1_rounds_diagnostic.json",
+  "statistic": "timewin round improvement rate %"
+ },
+ "OracleEnumCases": {
+  "value": "2{,}000",
+  "source": "results/cobar/oracle_campaign.json",
+  "statistic": "enum cases"
+ },
+ "OracleCpsatCases": {
+  "value": "1{,}000",
+  "source": "results/cobar/oracle_campaign.json",
+  "statistic": "cpsat cases"
+ },
+ "MechTwoArrivalRel": {
+  "value": "8.9",
+  "source": "docs/final_icaps/03_critical_vs_timewindow.md",
+  "setting": "U2_mechanism",
+  "metric": "pi",
+  "statistic": "M2 crit vs timewin relative diff (+ = crit worse), delta=arrival, exploratory"
+ },
+ "MechTwoArrivalWL": {
+  "value": "13/27",
+  "source": "docs/final_icaps/03_critical_vs_timewindow.md",
+  "setting": "U2_mechanism",
+  "statistic": "streams won/lost, delta=arrival"
+ },
+ "MechTwoArrivalN": {
+  "value": "40",
+  "source": "docs/final_icaps/03_critical_vs_timewindow.md",
+  "setting": "U2_mechanism",
+  "statistic": "n streams, delta=arrival"
+ },
+ "MechTwoCancellationRel": {
+  "value": "18.5",
+  "source": "docs/final_icaps/03_critical_vs_timewindow.md",
+  "setting": "U2_mechanism",
+  "metric": "pi",
+  "statistic": "M2 crit vs timewin relative diff (+ = crit worse), delta=cancellation, exploratory"
+ },
+ "MechTwoCancellationWL": {
+  "value": "9/29",
+  "source": "docs/final_icaps/03_critical_vs_timewindow.md",
+  "setting": "U2_mechanism",
+  "statistic": "streams won/lost, delta=cancellation"
+ },
+ "MechTwoCancellationN": {
+  "value": "38",
+  "source": "docs/final_icaps/03_critical_vs_timewindow.md",
+  "setting": "U2_mechanism",
+  "statistic": "n streams, delta=cancellation"
+ },
+ "MechTwoDurationRel": {
+  "value": "13.3",
+  "source": "docs/final_icaps/03_critical_vs_timewindow.md",
+  "setting": "U2_mechanism",
+  "metric": "pi",
+  "statistic": "M2 crit vs timewin relative diff (+ = crit worse), delta=duration_jitter, exploratory"
+ },
+ "MechTwoDurationWL": {
+  "value": "12/26",
+  "source": "docs/final_icaps/03_critical_vs_timewindow.md",
+  "setting": "U2_mechanism",
+  "statistic": "streams won/lost, delta=duration_jitter"
+ },
+ "MechTwoDurationN": {
+  "value": "38",
+  "source": "docs/final_icaps/03_critical_vs_timewindow.md",
+  "setting": "U2_mechanism",
+  "statistic": "n streams, delta=duration_jitter"
+ },
+ "MechTwoOutageRel": {
+  "value": "9.8",
+  "source": "docs/final_icaps/03_critical_vs_timewindow.md",
+  "setting": "U2_mechanism",
+  "metric": "pi",
+  "statistic": "M2 crit vs timewin relative diff (+ = crit worse), delta=outage, exploratory"
+ },
+ "MechTwoOutageWL": {
+  "value": "11/20",
+  "source": "docs/final_icaps/03_critical_vs_timewindow.md",
+  "setting": "U2_mechanism",
+  "statistic": "streams won/lost, delta=outage"
+ },
+ "MechTwoOutageN": {
+  "value": "31",
+  "source": "docs/final_icaps/03_critical_vs_timewindow.md",
+  "setting": "U2_mechanism",
+  "statistic": "n streams, delta=outage"
+ },
+ "RoundsUOneArrivalCrit": {
+  "value": "3.15",
+  "source": "docs/final_icaps/03_critical_vs_timewindow.md",
+  "setting": "U1_primary",
+  "statistic": "mean completed rounds per instance"
+ },
+ "RoundsUOneArrivalTw": {
+  "value": "2.02",
+  "source": "docs/final_icaps/03_critical_vs_timewindow.md",
+  "setting": "U1_primary",
+  "statistic": "mean completed rounds per instance"
+ },
+ "RoundsUOneCancelCrit": {
+  "value": "2.40",
+  "source": "docs/final_icaps/03_critical_vs_timewindow.md",
+  "setting": "U1_primary",
+  "statistic": "mean completed rounds per instance"
+ },
+ "RoundsUOneCancelTw": {
+  "value": "1.85",
+  "source": "docs/final_icaps/03_critical_vs_timewindow.md",
+  "setting": "U1_primary",
+  "statistic": "mean completed rounds per instance"
+ },
+ "RoundsUOneDurationCrit": {
+  "value": "2.91",
+  "source": "docs/final_icaps/03_critical_vs_timewindow.md",
+  "setting": "U1_primary",
+  "statistic": "mean completed rounds per instance"
+ },
+ "RoundsUOneDurationTw": {
+  "value": "2.06",
+  "source": "docs/final_icaps/03_critical_vs_timewindow.md",
+  "setting": "U1_primary",
+  "statistic": "mean completed rounds per instance"
+ },
+ "RoundsUOneOutageCrit": {
+  "value": "2.95",
+  "source": "docs/final_icaps/03_critical_vs_timewindow.md",
+  "setting": "U1_primary",
+  "statistic": "mean completed rounds per instance"
+ },
+ "RoundsUOneOutageTw": {
+  "value": "1.88",
+  "source": "docs/final_icaps/03_critical_vs_timewindow.md",
+  "setting": "U1_primary",
+  "statistic": "mean completed rounds per instance"
+ },
+ "MTwoRoundCritN": {
+  "value": "82.4",
+  "source": "docs/final_icaps/03_critical_vs_timewindow.md",
+  "setting": "U2_mechanism",
+  "statistic": "round-level neighbourhood/solver diagnostic"
+ },
+ "MTwoRoundTwN": {
+  "value": "82.3",
+  "source": "docs/final_icaps/03_critical_vs_timewindow.md",
+  "setting": "U2_mechanism",
+  "statistic": "round-level neighbourhood/solver diagnostic"
+ },
+ "MTwoRoundCritSolverS": {
+  "value": "0.056",
+  "source": "docs/final_icaps/03_critical_vs_timewindow.md",
+  "setting": "U2_mechanism",
+  "statistic": "round-level neighbourhood/solver diagnostic"
+ },
+ "MTwoRoundTwSolverS": {
+  "value": "0.080",
+  "source": "docs/final_icaps/03_critical_vs_timewindow.md",
+  "setting": "U2_mechanism",
+  "statistic": "round-level neighbourhood/solver diagnostic"
+ },
+ "MTwoRoundCritInfeas": {
+  "value": "7988",
+  "source": "docs/final_icaps/03_critical_vs_timewindow.md",
+  "setting": "U2_mechanism",
+  "statistic": "round-level neighbourhood/solver diagnostic"
+ },
+ "MTwoRoundTwInfeas": {
+  "value": "7289",
+  "source": "docs/final_icaps/03_critical_vs_timewindow.md",
+  "setting": "U2_mechanism",
+  "statistic": "round-level neighbourhood/solver diagnostic"
+ },
+ "MTwoRoundCritFeas": {
+  "value": "376",
+  "source": "docs/final_icaps/03_critical_vs_timewindow.md",
+  "setting": "U2_mechanism",
+  "statistic": "round-level neighbourhood/solver diagnostic"
+ },
+ "MTwoRoundTwFeas": {
+  "value": "901",
+  "source": "docs/final_icaps/03_critical_vs_timewindow.md",
+  "setting": "U2_mechanism",
+  "statistic": "round-level neighbourhood/solver diagnostic"
+ },
+ "MTwoRoundTwVsCritPct": {
+  "value": "43",
+  "source": "docs/final_icaps/03_critical_vs_timewindow.md",
+  "setting": "U2_mechanism",
+  "statistic": "relative increase in mean per-round solver time, timewin vs crit"
+ },
+ "FigTwoOneFiveCritAt": {
+  "value": "1.0",
+  "source": "paper/icaps27_unified_final/figures/figure2_numbers.json",
+  "setting": "U1_primary (figure)",
+  "statistic": "median gap % at t=8s, 15x15, SR+Crit"
+ },
+ "FigTwoOneFiveTwAt": {
+  "value": "1.2",
+  "source": "paper/icaps27_unified_final/figures/figure2_numbers.json",
+  "setting": "U1_primary (figure)",
+  "statistic": "median gap % at t=8s, 15x15, SR+TimeWin"
+ },
+ "FigTwoOneFiveSrAt": {
+  "value": "1.3",
+  "source": "paper/icaps27_unified_final/figures/figure2_numbers.json",
+  "setting": "U1_primary (figure)",
+  "statistic": "median gap % at t=8s, 15x15, SR (IAIP-SR)"
+ },
+ "FigTwoTwoZeroCritAt": {
+  "value": "1.7",
+  "source": "paper/icaps27_unified_final/figures/figure2_numbers.json",
+  "setting": "U1_primary (figure)",
+  "statistic": "median gap % at t=8s, 20x20, SR+Crit"
+ },
+ "FigTwoTwoZeroTwAt": {
+  "value": "2.0",
+  "source": "paper/icaps27_unified_final/figures/figure2_numbers.json",
+  "setting": "U1_primary (figure)",
+  "statistic": "median gap % at t=8s, 20x20, SR+TimeWin"
+ },
+ "FigTwoTwoZeroSrAt": {
+  "value": "2.8",
+  "source": "paper/icaps27_unified_final/figures/figure2_numbers.json",
+  "setting": "U1_primary (figure)",
+  "statistic": "median gap % at t=8s, 20x20, SR (IAIP-SR)"
+ }
+}

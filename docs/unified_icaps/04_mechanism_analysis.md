@@ -1,5 +1,15 @@
 # Unified study 04 — Mechanism analysis (Part V)
 
+> **SUPERSEDED FINDING NOTICE (added 2026-11-23, `docs/final_icaps/03_critical_vs_timewindow.md`):**
+> Section 3 below reports that the critical-region-vs-time-window advantage is "confined to one
+> disruption type" (arrivals, U6). Later reanalysis of the EXISTING U2 mechanism-isolation data,
+> broken out by disruption type, found this does **not** survive matched-round accounting: under
+> the fixed-round protocol, time-window beats critical in every disruption type including arrivals.
+> The apparent arrival-specific advantage below is an artifact of critical-region rounds completing
+> more total rounds under the end-to-end protocol, not of better neighbourhood content. This section
+> is left unedited below as a historical record of what the first-pass analysis found; the final,
+> accurate conclusion is in `docs/final_icaps/03_critical_vs_timewindow.md` and the final manuscript.
+
 All numbers here are from the frozen confirmatory campaign (`results/unified_icaps/confirmatory/`), analysed by `phase0.analyze_unified` and `phase0.analyze_unified_confirmatory`. Compared with development (`03_lns_baseline_protocol.md` §§6–8), these are confirmatory where marked, exploratory otherwise.
 
 ## 1. Do extra rounds alone explain the gain?
