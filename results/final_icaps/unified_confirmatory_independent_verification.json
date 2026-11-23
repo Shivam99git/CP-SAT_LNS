@@ -1,0 +1,1350 @@
+{
+ "frozen_sha256_verified": true,
+ "settings": {
+  "U1_primary": {
+   "setting": "U1_primary",
+   "records": 15400,
+   "solver_invocations": 17600,
+   "physical_instances": 440,
+   "grid_complete": true,
+   "missing_instance_file": 0,
+   "infeasible_final_schedules": 0,
+   "objective_vs_own_makespan_mismatch": 0,
+   "last_event_vs_objective_mismatch": 0,
+   "prev_source": {
+    "own": 15400
+   },
+   "has_prev_ok": true,
+   "budgets": [
+    8.0
+   ],
+   "overrun_by_method_ms": {
+    "crgar|strategy=precedence": [
+     2.57,
+     19.2
+    ],
+    "crgar|strategy=time_window": [
+     2.33,
+     15.5
+    ],
+    "cobar|neighbourhood=none|use_certificate=0|global_certificat": [
+     0.64,
+     9.6
+    ],
+    "iaip|portfolio=full|global_mode=hinted": [
+     2.82,
+     18.8
+    ],
+    "iaip|portfolio=full|alpha=0.6|neighbourhood=N5|global_mode=h": [
+     2.41,
+     18.7
+    ],
+    "crgar|strategy=crit_expand": [
+     2.28,
+     15.1
+    ],
+    "crgar|strategy=random_matched": [
+     2.46,
+     14.8
+    ]
+   },
+   "workers": [
+    1
+   ],
+   "duplicate_run_keys": 0,
+   "solver_seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "n_streams": 40,
+   "units": 40,
+   "unit_kind": "stream",
+   "means": {
+    "B2_crit": 0.025642022077296607,
+    "B0_iaip": 0.03304949125315841,
+    "B6_port_hint": 0.044717048444385135,
+    "B1_random": 0.03220726089375714,
+    "B3_timewin": 0.027315281854033813,
+    "B4_prec": 0.03396610632037637,
+    "B5_native1w": 0.04562624180002984
+   },
+   "comparisons": {
+    "B2_crit vs B0_iaip": {
+     "rel_diff": -0.22413262337749013,
+     "W": 35,
+     "L": 5,
+     "sign_p": 1.382612026645802e-06,
+     "ci95": [
+      -0.009617743638326447,
+      -0.005320025369449117
+     ],
+     "mean_diff": -0.0074074691758618085,
+     "holm": 8.295672159874812e-06
+    },
+    "B2_crit vs B1_random": {
+     "rel_diff": -0.20384343884807343,
+     "W": 35,
+     "L": 5,
+     "sign_p": 1.382612026645802e-06,
+     "ci95": [
+      -0.008770193107035714,
+      -0.004565109867174926
+     ],
+     "mean_diff": -0.00656523881646053,
+     "holm": 8.295672159874812e-06
+    },
+    "B2_crit vs B3_timewin": {
+     "rel_diff": -0.061257276629203224,
+     "W": 26,
+     "L": 14,
+     "sign_p": 0.0806904677519924,
+     "ci95": [
+      -0.0036831905091964903,
+      0.00023382652885013894
+     ],
+     "mean_diff": -0.0016732597767372044,
+     "holm": 0.1613809355039848
+    },
+    "B2_crit vs B4_prec": {
+     "rel_diff": -0.24507031110852165,
+     "W": 34,
+     "L": 6,
+     "sign_p": 8.364584573428147e-06,
+     "ci95": [
+      -0.010808965005969128,
+      -0.006026478879934017
+     ],
+     "mean_diff": -0.00832408424307976,
+     "holm": 3.3458338293712586e-05
+    },
+    "B2_crit vs B5_native1w": {
+     "rel_diff": -0.43799837405675096,
+     "W": 40,
+     "L": 0,
+     "sign_p": 1.8189894035458565e-12,
+     "ci95": [
+      -0.023937358905919373,
+      -0.016148065726372243
+     ],
+     "mean_diff": -0.019984219722733235,
+     "holm": 1.4551915228366852e-11
+    },
+    "B2_crit vs B6_port_hint": {
+     "rel_diff": -0.4265716774847574,
+     "W": 40,
+     "L": 0,
+     "sign_p": 1.8189894035458565e-12,
+     "ci95": [
+      -0.02290190835541066,
+      -0.015390486317595865
+     ],
+     "mean_diff": -0.019075026367088528,
+     "holm": 1.4551915228366852e-11
+    },
+    "B3_timewin vs B0_iaip": {
+     "rel_diff": -0.17350371160635059,
+     "W": 32,
+     "L": 8,
+     "sign_p": 0.0001821658297558315,
+     "ci95": [
+      -0.008627223635575349,
+      -0.0031077965392675867
+     ],
+     "mean_diff": -0.005734209399124603,
+     "holm": 0.0005464974892674945
+    },
+    "B1_random vs B0_iaip": {
+     "rel_diff": -0.025483912988245684,
+     "W": 21,
+     "L": 19,
+     "sign_p": 0.8746293123804207,
+     "ci95": [
+      -0.002356705104510836,
+      0.0005979962113070225
+     ],
+     "mean_diff": -0.0008422303594012758,
+     "holm": 0.8746293123804207
+    }
+   },
+   "agreement_with_archived": {
+    "max_mean_abs_err": 6.938893903907228e-18,
+    "comparisons": {
+     "B2_crit vs B0_iaip": {
+      "rel_diff_abs_err": 0.0,
+      "WL_equal": true,
+      "holm_equal": true,
+      "ci_max_abs_err": 4.359298073967552e-05
+     },
+     "B2_crit vs B1_random": {
+      "rel_diff_abs_err": 5.551115123125783e-17,
+      "WL_equal": true,
+      "holm_equal": true,
+      "ci_max_abs_err": 2.254649007254854e-05
+     },
+     "B2_crit vs B3_timewin": {
+      "rel_diff_abs_err": 3.469446951953614e-17,
+      "WL_equal": true,
+      "holm_equal": true,
+      "ci_max_abs_err": 5.0366105019794116e-05
+     },
+     "B2_crit vs B4_prec": {
+      "rel_diff_abs_err": 5.551115123125783e-17,
+      "WL_equal": true,
+      "holm_equal": true,
+      "ci_max_abs_err": 5.3364791352051785e-05
+     },
+     "B2_crit vs B5_native1w": {
+      "rel_diff_abs_err": 5.551115123125783e-17,
+      "WL_equal": true,
+      "holm_equal": true,
+      "ci_max_abs_err": 7.298109944888637e-05
+     },
+     "B2_crit vs B6_port_hint": {
+      "rel_diff_abs_err": 0.0,
+      "WL_equal": true,
+      "holm_equal": true,
+      "ci_max_abs_err": 6.796830331622442e-05
+     },
+     "B3_timewin vs B0_iaip": {
+      "rel_diff_abs_err": 0.0,
+      "WL_equal": true,
+      "holm_equal": true,
+      "ci_max_abs_err": 3.1939062974190024e-05
+     },
+     "B1_random vs B0_iaip": {
+      "rel_diff_abs_err": 1.0408340855860843e-17,
+      "WL_equal": true,
+      "holm_equal": true,
+      "ci_max_abs_err": 4.3379080734816475e-05
+     }
+    }
+   },
+   "infeasible_examples": [],
+   "checksums": {
+    "files": 200,
+    "mismatch": 0
+   },
+   "stream_seed_analysis": {
+    "n_physical_streams": 40,
+    "sizes": [
+     "15x15",
+     "20x20"
+    ],
+    "n_distinct_seed_values_per_size": {
+     "20x20": 20,
+     "15x15": 20
+    },
+    "seed_values_shared_across_sizes": true,
+    "note": "Seed numbers ARE reused across sizes (e.g. seed 1101 backs both a 15x15 and a 20x20 stream); this does not create non-independent units because (a) the unit of analysis is the full stream identifier '{size}_s{seed}', which denotes a genuinely different physical instance sequence per size (different job/machine counts change every size-dependent random draw after the shared PRNG seed), and (b) no analysis anywhere treats the bare seed number, or multiple solver seeds of the same stream, as separate independent units."
+   }
+  },
+  "U2_mechanism": {
+   "setting": "U2_mechanism",
+   "records": 8800,
+   "solver_invocations": 8800,
+   "physical_instances": 440,
+   "grid_complete": true,
+   "missing_instance_file": 0,
+   "infeasible_final_schedules": 0,
+   "objective_vs_own_makespan_mismatch": 0,
+   "last_event_vs_objective_mismatch": 0,
+   "prev_source": {
+    "own": 8800
+   },
+   "has_prev_ok": true,
+   "budgets": [
+    8.0
+   ],
+   "overrun_by_method_ms": {
+    "crgar|strategy=random_matched|stop_on_fail=0|round_time=0.4|": [
+     2.34,
+     16.9
+    ],
+    "crgar|strategy=time_window|stop_on_fail=0|round_time=0.4|max": [
+     2.3,
+     13.8
+    ],
+    "crgar|strategy=crit_expand|stop_on_fail=0|round_time=0.4|max": [
+     2.33,
+     15.1
+    ],
+    "crgar|strategy=precedence|stop_on_fail=0|round_time=0.4|max_": [
+     2.36,
+     15.9
+    ]
+   },
+   "workers": [
+    1
+   ],
+   "duplicate_run_keys": 0,
+   "solver_seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "n_streams": 40,
+   "units": 40,
+   "unit_kind": "stream",
+   "means": {
+    "M2_crit": 0.026797507623239413,
+    "M2_random": 0.03005484180467809,
+    "M2_timewin": 0.024046911736520953,
+    "M2_prec": 0.030069817455687525
+   },
+   "comparisons": {
+    "M2_crit vs M2_random": {
+     "rel_diff": -0.10837968147054645,
+     "W": 28,
+     "L": 12,
+     "sign_p": 0.01658900337497471,
+     "ci95": [
+      -0.0051064378741284095,
+      -0.0013479655786896587
+     ],
+     "mean_diff": -0.003257334181438675,
+     "holm": 0.03317800674994942
+    },
+    "M2_crit vs M2_timewin": {
+     "rel_diff": 0.11438457947766441,
+     "W": 13,
+     "L": 27,
+     "sign_p": 0.03847730828420026,
+     "ci95": [
+      0.0011513825798663976,
+      0.004583911774765231
+     ],
+     "mean_diff": 0.002750595886718462,
+     "holm": 0.03847730828420026
+    },
+    "M2_crit vs M2_prec": {
+     "rel_diff": -0.10882373453947161,
+     "W": 31,
+     "L": 9,
+     "sign_p": 0.0006795482549932785,
+     "ci95": [
+      -0.0050084138072783715,
+      -0.0015070721499906576
+     ],
+     "mean_diff": -0.003272309832448109,
+     "holm": 0.0020386447649798356
+    },
+    "M2_timewin vs M2_random": {
+     "rel_diff": -0.19989890837562127,
+     "W": 34,
+     "L": 6,
+     "sign_p": 8.364584573428147e-06,
+     "ci95": [
+      -0.00797383720496826,
+      -0.004207191855130027
+     ],
+     "mean_diff": -0.006007930068157138,
+     "holm": 3.3458338293712586e-05
+    }
+   },
+   "agreement_with_archived": {
+    "max_mean_abs_err": 0.0,
+    "comparisons": {
+     "M2_crit vs M2_random": {
+      "rel_diff_abs_err": 1.3877787807814457e-17,
+      "WL_equal": true,
+      "holm_equal": true,
+      "ci_max_abs_err": 2.8315478527804515e-05
+     },
+     "M2_crit vs M2_timewin": {
+      "rel_diff_abs_err": 1.3877787807814457e-17,
+      "WL_equal": true,
+      "holm_equal": true,
+      "ci_max_abs_err": 4.085439221870012e-05
+     },
+     "M2_crit vs M2_prec": {
+      "rel_diff_abs_err": 0.0,
+      "WL_equal": true,
+      "holm_equal": true,
+      "ci_max_abs_err": 8.343631069561257e-06
+     },
+     "M2_timewin vs M2_random": {
+      "rel_diff_abs_err": 2.7755575615628914e-17,
+      "WL_equal": true,
+      "holm_equal": true,
+      "ci_max_abs_err": 9.823922729474376e-06
+     }
+    }
+   },
+   "infeasible_examples": [],
+   "checksums": {
+    "files": 200,
+    "mismatch": 0
+   },
+   "stream_seed_analysis": {
+    "n_physical_streams": 40,
+    "sizes": [
+     "15x15",
+     "20x20"
+    ],
+    "n_distinct_seed_values_per_size": {
+     "20x20": 20,
+     "15x15": 20
+    },
+    "seed_values_shared_across_sizes": true,
+    "note": "Seed numbers ARE reused across sizes (e.g. seed 1101 backs both a 15x15 and a 20x20 stream); this does not create non-independent units because (a) the unit of analysis is the full stream identifier '{size}_s{seed}', which denotes a genuinely different physical instance sequence per size (different job/machine counts change every size-dependent random draw after the shared PRNG seed), and (b) no analysis anywhere treats the bare seed number, or multiple solver seeds of the same stream, as separate independent units."
+   }
+  },
+  "U3_workers4": {
+   "setting": "U3_workers4",
+   "records": 4400,
+   "solver_invocations": 5500,
+   "physical_instances": 220,
+   "grid_complete": true,
+   "missing_instance_file": 0,
+   "infeasible_final_schedules": 0,
+   "objective_vs_own_makespan_mismatch": 0,
+   "last_event_vs_objective_mismatch": 0,
+   "prev_source": {
+    "own": 4400
+   },
+   "has_prev_ok": true,
+   "budgets": [
+    8.0
+   ],
+   "overrun_by_method_ms": {
+    "iaip|portfolio=full|alpha=0.6|neighbourhood=N5|global_mode=h": [
+     4.41,
+     32.1
+    ],
+    "iaip|portfolio=full|global_mode=hinted": [
+     4.55,
+     34.6
+    ],
+    "crgar|strategy=crit_expand": [
+     4.46,
+     22.1
+    ],
+    "crgar|strategy=time_window": [
+     4.31,
+     19.6
+    ]
+   },
+   "workers": [
+    4
+   ],
+   "duplicate_run_keys": 0,
+   "solver_seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "n_streams": 20,
+   "units": 20,
+   "unit_kind": "stream",
+   "means": {
+    "B2_crit": 0.016565015600560916,
+    "B0_iaip": 0.016561729060728725,
+    "B6_port_hint": 0.01822779271876823,
+    "B3_timewin": 0.016208023079190365
+   },
+   "comparisons": {
+    "B2_crit vs B0_iaip": {
+     "rel_diff": 0.00019844183056872298,
+     "W": 12,
+     "L": 8,
+     "sign_p": 0.5034446716308594,
+     "ci95": [
+      -0.0012012938516647268,
+      0.001223575066287533
+     ],
+     "mean_diff": 3.286539832194225e-06,
+     "holm": 1.0
+    },
+    "B2_crit vs B6_port_hint": {
+     "rel_diff": -0.09122207739915943,
+     "W": 15,
+     "L": 5,
+     "sign_p": 0.04138946533203125,
+     "ci95": [
+      -0.0030051668696312343,
+      -0.00024585011324327477
+     ],
+     "mean_diff": -0.0016627771182073099,
+     "holm": 0.12416839599609375
+    },
+    "B2_crit vs B3_timewin": {
+     "rel_diff": 0.02202566714190447,
+     "W": 10,
+     "L": 10,
+     "sign_p": 1.0,
+     "ci95": [
+      -0.0010921081010369586,
+      0.0017877175180073827
+     ],
+     "mean_diff": 0.0003569925213705525,
+     "holm": 1.0
+    }
+   },
+   "agreement_with_archived": {
+    "max_mean_abs_err": 3.469446951953614e-18,
+    "comparisons": {
+     "B2_crit vs B0_iaip": {
+      "rel_diff_abs_err": 1.0489656018797255e-17,
+      "WL_equal": true,
+      "holm_equal": true,
+      "ci_max_abs_err": 1.9748403147747378e-05
+     },
+     "B2_crit vs B6_port_hint": {
+      "rel_diff_abs_err": 1.3877787807814457e-17,
+      "WL_equal": true,
+      "holm_equal": true,
+      "ci_max_abs_err": 3.798978411461524e-05
+     },
+     "B2_crit vs B3_timewin": {
+      "rel_diff_abs_err": 4.163336342344337e-17,
+      "WL_equal": true,
+      "holm_equal": true,
+      "ci_max_abs_err": 2.8116618883823e-05
+     }
+    }
+   },
+   "infeasible_examples": [],
+   "checksums": {
+    "files": 100,
+    "mismatch": 0
+   },
+   "stream_seed_analysis": {
+    "n_physical_streams": 20,
+    "sizes": [
+     "15x15",
+     "20x20"
+    ],
+    "n_distinct_seed_values_per_size": {
+     "15x15": 10,
+     "20x20": 10
+    },
+    "seed_values_shared_across_sizes": true,
+    "note": "Seed numbers ARE reused across sizes (e.g. seed 1101 backs both a 15x15 and a 20x20 stream); this does not create non-independent units because (a) the unit of analysis is the full stream identifier '{size}_s{seed}', which denotes a genuinely different physical instance sequence per size (different job/machine counts change every size-dependent random draw after the shared PRNG seed), and (b) no analysis anywhere treats the bare seed number, or multiple solver seeds of the same stream, as separate independent units."
+   }
+  },
+  "U4_b2": {
+   "setting": "U4_b2",
+   "records": 8800,
+   "solver_invocations": 11000,
+   "physical_instances": 440,
+   "grid_complete": true,
+   "missing_instance_file": 0,
+   "infeasible_final_schedules": 0,
+   "objective_vs_own_makespan_mismatch": 0,
+   "last_event_vs_objective_mismatch": 0,
+   "prev_source": {
+    "own": 8800
+   },
+   "has_prev_ok": true,
+   "budgets": [
+    2.0
+   ],
+   "overrun_by_method_ms": {
+    "iaip|portfolio=full|alpha=0.6|neighbourhood=N5|global_mode=h": [
+     1.42,
+     5.8
+    ],
+    "iaip|portfolio=full|global_mode=hinted": [
+     1.57,
+     7.7
+    ],
+    "crgar|strategy=crit_expand": [
+     1.34,
+     4.8
+    ],
+    "crgar|strategy=time_window": [
+     1.33,
+     5.2
+    ]
+   },
+   "workers": [
+    1
+   ],
+   "duplicate_run_keys": 0,
+   "solver_seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "n_streams": 40,
+   "units": 40,
+   "unit_kind": "stream",
+   "means": {
+    "B2_crit": 0.03921843599149326,
+    "B0_iaip": 0.04181796955569385,
+    "B6_port_hint": 0.04947813017418269,
+    "B3_timewin": 0.03972513549191833
+   },
+   "comparisons": {
+    "B2_crit vs B0_iaip": {
+     "rel_diff": -0.062163074673878875,
+     "W": 23,
+     "L": 17,
+     "sign_p": 0.42959050784338615,
+     "ci95": [
+      -0.005913491427792472,
+      0.0007971080648416038
+     ],
+     "mean_diff": -0.00259953356420059,
+     "holm": 0.8591810156867723
+    },
+    "B2_crit vs B6_port_hint": {
+     "rel_diff": -0.20735816302215215,
+     "W": 31,
+     "L": 9,
+     "sign_p": 0.0006795482549932785,
+     "ci95": [
+      -0.014664725221279994,
+      -0.005771587033986736
+     ],
+     "mean_diff": -0.01025969418268944,
+     "holm": 0.0020386447649798356
+    },
+    "B2_crit vs B3_timewin": {
+     "rel_diff": -0.012755135864247945,
+     "W": 22,
+     "L": 18,
+     "sign_p": 0.6358280026288412,
+     "ci95": [
+      -0.003453255931357451,
+      0.0024049696979683956
+     ],
+     "mean_diff": -0.0005066995004250764,
+     "holm": 0.8591810156867723
+    }
+   },
+   "agreement_with_archived": {
+    "max_mean_abs_err": 6.938893903907228e-18,
+    "comparisons": {
+     "B2_crit vs B0_iaip": {
+      "rel_diff_abs_err": 2.0816681711721685e-17,
+      "WL_equal": true,
+      "holm_equal": true,
+      "ci_max_abs_err": 8.514999670098896e-05
+     },
+     "B2_crit vs B6_port_hint": {
+      "rel_diff_abs_err": 2.7755575615628914e-17,
+      "WL_equal": true,
+      "holm_equal": true,
+      "ci_max_abs_err": 5.639062386186746e-05
+     },
+     "B2_crit vs B3_timewin": {
+      "rel_diff_abs_err": 2.0816681711721685e-17,
+      "WL_equal": true,
+      "holm_equal": true,
+      "ci_max_abs_err": 6.627420424681115e-05
+     }
+    }
+   },
+   "infeasible_examples": [],
+   "checksums": {
+    "files": 200,
+    "mismatch": 0
+   },
+   "stream_seed_analysis": {
+    "n_physical_streams": 40,
+    "sizes": [
+     "15x15",
+     "20x20"
+    ],
+    "n_distinct_seed_values_per_size": {
+     "20x20": 20,
+     "15x15": 20
+    },
+    "seed_values_shared_across_sizes": true,
+    "note": "Seed numbers ARE reused across sizes (e.g. seed 1101 backs both a 15x15 and a 20x20 stream); this does not create non-independent units because (a) the unit of analysis is the full stream identifier '{size}_s{seed}', which denotes a genuinely different physical instance sequence per size (different job/machine counts change every size-dependent random draw after the shared PRNG seed), and (b) no analysis anywhere treats the bare seed number, or multiple solver seeds of the same stream, as separate independent units."
+   }
+  },
+  "U5_b30": {
+   "setting": "U5_b30",
+   "records": 2640,
+   "solver_invocations": 3300,
+   "physical_instances": 220,
+   "grid_complete": true,
+   "missing_instance_file": 0,
+   "infeasible_final_schedules": 0,
+   "objective_vs_own_makespan_mismatch": 0,
+   "last_event_vs_objective_mismatch": 0,
+   "prev_source": {
+    "own": 2640
+   },
+   "has_prev_ok": true,
+   "budgets": [
+    30.0
+   ],
+   "overrun_by_method_ms": {
+    "iaip|portfolio=full|alpha=0.6|neighbourhood=N5|global_mode=h": [
+     4.94,
+     44.4
+    ],
+    "iaip|portfolio=full|global_mode=hinted": [
+     5.41,
+     49.7
+    ],
+    "crgar|strategy=crit_expand": [
+     5.04,
+     47.5
+    ],
+    "crgar|strategy=time_window": [
+     4.81,
+     46.3
+    ]
+   },
+   "workers": [
+    1
+   ],
+   "duplicate_run_keys": 0,
+   "solver_seeds": [
+    0,
+    1,
+    2
+   ],
+   "n_streams": 20,
+   "units": 20,
+   "unit_kind": "stream",
+   "means": {
+    "B2_crit": 0.01684747646277572,
+    "B0_iaip": 0.020855386972156175,
+    "B6_port_hint": 0.02931908673789136,
+    "B3_timewin": 0.018111077876842536
+   },
+   "comparisons": {
+    "B2_crit vs B0_iaip": {
+     "rel_diff": -0.19217627151830738,
+     "W": 17,
+     "L": 3,
+     "sign_p": 0.0025768280029296875,
+     "ci95": [
+      -0.006022582153619733,
+      -0.0021557570637999956
+     ],
+     "mean_diff": -0.004007910509380455,
+     "holm": 0.005153656005859375
+    },
+    "B2_crit vs B6_port_hint": {
+     "rel_diff": -0.4253751280389507,
+     "W": 20,
+     "L": 0,
+     "sign_p": 1.9073486328125e-06,
+     "ci95": [
+      -0.016256444521542634,
+      -0.009003602856721825
+     ],
+     "mean_diff": -0.01247161027511564,
+     "holm": 5.7220458984375e-06
+    },
+    "B2_crit vs B3_timewin": {
+     "rel_diff": -0.06976953125923539,
+     "W": 13,
+     "L": 7,
+     "sign_p": 0.26317596435546875,
+     "ci95": [
+      -0.0029364727783567517,
+      0.0002727199951399301
+     ],
+     "mean_diff": -0.001263601414066812,
+     "holm": 0.26317596435546875
+    }
+   },
+   "agreement_with_archived": {
+    "max_mean_abs_err": 3.469446951953614e-18,
+    "comparisons": {
+     "B2_crit vs B0_iaip": {
+      "rel_diff_abs_err": 0.0,
+      "WL_equal": true,
+      "holm_equal": true,
+      "ci_max_abs_err": 2.6673218827386394e-05
+     },
+     "B2_crit vs B6_port_hint": {
+      "rel_diff_abs_err": 5.551115123125783e-17,
+      "WL_equal": true,
+      "holm_equal": true,
+      "ci_max_abs_err": 3.631059604907935e-05
+     },
+     "B2_crit vs B3_timewin": {
+      "rel_diff_abs_err": 6.938893903907228e-17,
+      "WL_equal": true,
+      "holm_equal": true,
+      "ci_max_abs_err": 1.310263612916895e-05
+     }
+    }
+   },
+   "infeasible_examples": [],
+   "checksums": {
+    "files": 60,
+    "mismatch": 0
+   },
+   "stream_seed_analysis": {
+    "n_physical_streams": 20,
+    "sizes": [
+     "15x15",
+     "20x20"
+    ],
+    "n_distinct_seed_values_per_size": {
+     "15x15": 10,
+     "20x20": 10
+    },
+    "seed_values_shared_across_sizes": true,
+    "note": "Seed numbers ARE reused across sizes (e.g. seed 1101 backs both a 15x15 and a 20x20 stream); this does not create non-independent units because (a) the unit of analysis is the full stream identifier '{size}_s{seed}', which denotes a genuinely different physical instance sequence per size (different job/machine counts change every size-dependent random draw after the shared PRNG seed), and (b) no analysis anywhere treats the bare seed number, or multiple solver seeds of the same stream, as separate independent units."
+   }
+  },
+  "U6_arrival": {
+   "setting": "U6_arrival",
+   "records": 4400,
+   "solver_invocations": 5500,
+   "physical_instances": 220,
+   "grid_complete": true,
+   "missing_instance_file": 0,
+   "infeasible_final_schedules": 0,
+   "objective_vs_own_makespan_mismatch": 0,
+   "last_event_vs_objective_mismatch": 0,
+   "prev_source": {
+    "own": 4400
+   },
+   "has_prev_ok": true,
+   "budgets": [
+    8.0
+   ],
+   "overrun_by_method_ms": {
+    "crgar|strategy=time_window": [
+     2.29,
+     14.1
+    ],
+    "iaip|portfolio=full|alpha=0.6|neighbourhood=N5|global_mode=h": [
+     2.49,
+     18.9
+    ],
+    "crgar|strategy=crit_expand": [
+     2.3,
+     12.4
+    ],
+    "iaip|portfolio=full|global_mode=hinted": [
+     3.27,
+     22.9
+    ]
+   },
+   "workers": [
+    1
+   ],
+   "duplicate_run_keys": 0,
+   "solver_seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "n_streams": 20,
+   "units": 20,
+   "unit_kind": "stream",
+   "means": {
+    "B2_crit": 0.028352592243140885,
+    "B0_iaip": 0.05134599393722037,
+    "B6_port_hint": 0.07788729758165139,
+    "B3_timewin": 0.03711960706471901
+   },
+   "comparisons": {
+    "B2_crit vs B0_iaip": {
+     "rel_diff": -0.44781296321175573,
+     "W": 20,
+     "L": 0,
+     "sign_p": 1.9073486328125e-06,
+     "ci95": [
+      -0.02947471246462301,
+      -0.017843666568300075
+     ],
+     "mean_diff": -0.0229934016940795,
+     "holm": 5.7220458984375e-06
+    },
+    "B2_crit vs B6_port_hint": {
+     "rel_diff": -0.635979253055762,
+     "W": 20,
+     "L": 0,
+     "sign_p": 1.9073486328125e-06,
+     "ci95": [
+      -0.05406056898813927,
+      -0.045078272812640555
+     ],
+     "mean_diff": -0.0495347053385105,
+     "holm": 5.7220458984375e-06
+    },
+    "B2_crit vs B3_timewin": {
+     "rel_diff": -0.23618285630805858,
+     "W": 18,
+     "L": 2,
+     "sign_p": 0.0004024505615234375,
+     "ci95": [
+      -0.011824821254300523,
+      -0.005826489928917793
+     ],
+     "mean_diff": -0.008767014821578125,
+     "holm": 0.0004024505615234375
+    }
+   },
+   "agreement_with_archived": {
+    "max_mean_abs_err": 6.938893903907228e-18,
+    "comparisons": {
+     "B2_crit vs B0_iaip": {
+      "rel_diff_abs_err": 1.1102230246251565e-16,
+      "WL_equal": true,
+      "holm_equal": true,
+      "ci_max_abs_err": 0.00012762231269118976
+     },
+     "B2_crit vs B6_port_hint": {
+      "rel_diff_abs_err": 0.0,
+      "WL_equal": true,
+      "holm_equal": true,
+      "ci_max_abs_err": 0.00013316114835570242
+     },
+     "B2_crit vs B3_timewin": {
+      "rel_diff_abs_err": 5.551115123125783e-17,
+      "WL_equal": true,
+      "holm_equal": true,
+      "ci_max_abs_err": 5.18696233825916e-05
+     }
+    }
+   },
+   "infeasible_examples": [],
+   "checksums": {
+    "files": 100,
+    "mismatch": 0
+   },
+   "stream_seed_analysis": {
+    "n_physical_streams": 20,
+    "sizes": [
+     "15x15",
+     "20x20"
+    ],
+    "n_distinct_seed_values_per_size": {
+     "15x15": 10,
+     "20x20": 10
+    },
+    "seed_values_shared_across_sizes": true,
+    "note": "Seed numbers ARE reused across sizes (e.g. seed 1101 backs both a 15x15 and a 20x20 stream); this does not create non-independent units because (a) the unit of analysis is the full stream identifier '{size}_s{seed}', which denotes a genuinely different physical instance sequence per size (different job/machine counts change every size-dependent random draw after the shared PRNG seed), and (b) no analysis anywhere treats the bare seed number, or multiple solver seeds of the same stream, as separate independent units."
+   }
+  },
+  "U7_outage": {
+   "setting": "U7_outage",
+   "records": 4400,
+   "solver_invocations": 5500,
+   "physical_instances": 220,
+   "grid_complete": true,
+   "missing_instance_file": 0,
+   "infeasible_final_schedules": 0,
+   "objective_vs_own_makespan_mismatch": 0,
+   "last_event_vs_objective_mismatch": 0,
+   "prev_source": {
+    "own": 4400
+   },
+   "has_prev_ok": true,
+   "budgets": [
+    8.0
+   ],
+   "overrun_by_method_ms": {
+    "iaip|portfolio=full|alpha=0.6|neighbourhood=N5|global_mode=h": [
+     2.01,
+     18.4
+    ],
+    "crgar|strategy=time_window": [
+     1.93,
+     16.6
+    ],
+    "crgar|strategy=crit_expand": [
+     1.8,
+     14.3
+    ],
+    "iaip|portfolio=full|global_mode=hinted": [
+     2.1,
+     15.4
+    ]
+   },
+   "workers": [
+    1
+   ],
+   "duplicate_run_keys": 0,
+   "solver_seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "n_streams": 20,
+   "units": 20,
+   "unit_kind": "stream",
+   "means": {
+    "B2_crit": 0.024288039780350424,
+    "B0_iaip": 0.026945032813351717,
+    "B6_port_hint": 0.030211987751252133,
+    "B3_timewin": 0.026110476730668956
+   },
+   "comparisons": {
+    "B2_crit vs B0_iaip": {
+     "rel_diff": -0.09860789747061327,
+     "W": 14,
+     "L": 6,
+     "sign_p": 0.11531829833984375,
+     "ci95": [
+      -0.004627224248160428,
+      -0.0008918000474275904
+     ],
+     "mean_diff": -0.0026569930330012964,
+     "holm": 0.2306365966796875
+    },
+    "B2_crit vs B6_port_hint": {
+     "rel_diff": -0.19607938476859074,
+     "W": 18,
+     "L": 2,
+     "sign_p": 0.0004024505615234375,
+     "ci95": [
+      -0.00897501179514957,
+      -0.003136701950346987
+     ],
+     "mean_diff": -0.005923947970901717,
+     "holm": 0.0012073516845703125
+    },
+    "B2_crit vs B3_timewin": {
+     "rel_diff": -0.06979715342301389,
+     "W": 14,
+     "L": 6,
+     "sign_p": 0.11531829833984375,
+     "ci95": [
+      -0.004424551569225066,
+      0.0008241396864221602
+     ],
+     "mean_diff": -0.0018224369503185352,
+     "holm": 0.2306365966796875
+    }
+   },
+   "agreement_with_archived": {
+    "max_mean_abs_err": 3.469446951953614e-18,
+    "comparisons": {
+     "B2_crit vs B0_iaip": {
+      "rel_diff_abs_err": 2.7755575615628914e-17,
+      "WL_equal": true,
+      "holm_equal": true,
+      "ci_max_abs_err": 2.679239759836589e-05
+     },
+     "B2_crit vs B6_port_hint": {
+      "rel_diff_abs_err": 2.7755575615628914e-17,
+      "WL_equal": true,
+      "holm_equal": true,
+      "ci_max_abs_err": 2.111002471622903e-05
+     },
+     "B2_crit vs B3_timewin": {
+      "rel_diff_abs_err": 0.0,
+      "WL_equal": true,
+      "holm_equal": true,
+      "ci_max_abs_err": 5.17574209378778e-05
+     }
+    }
+   },
+   "infeasible_examples": [],
+   "checksums": {
+    "files": 100,
+    "mismatch": 0
+   },
+   "stream_seed_analysis": {
+    "n_physical_streams": 20,
+    "sizes": [
+     "15x15",
+     "20x20"
+    ],
+    "n_distinct_seed_values_per_size": {
+     "20x20": 10,
+     "15x15": 10
+    },
+    "seed_values_shared_across_sizes": true,
+    "note": "Seed numbers ARE reused across sizes (e.g. seed 1101 backs both a 15x15 and a 20x20 stream); this does not create non-independent units because (a) the unit of analysis is the full stream identifier '{size}_s{seed}', which denotes a genuinely different physical instance sequence per size (different job/machine counts change every size-dependent random draw after the shared PRNG seed), and (b) no analysis anywhere treats the bare seed number, or multiple solver seeds of the same stream, as separate independent units."
+   }
+  },
+  "U8_high": {
+   "setting": "U8_high",
+   "records": 4400,
+   "solver_invocations": 5500,
+   "physical_instances": 220,
+   "grid_complete": true,
+   "missing_instance_file": 0,
+   "infeasible_final_schedules": 0,
+   "objective_vs_own_makespan_mismatch": 0,
+   "last_event_vs_objective_mismatch": 0,
+   "prev_source": {
+    "own": 4400
+   },
+   "has_prev_ok": true,
+   "budgets": [
+    8.0
+   ],
+   "overrun_by_method_ms": {
+    "crgar|strategy=crit_expand": [
+     2.41,
+     15.2
+    ],
+    "iaip|portfolio=full|alpha=0.6|neighbourhood=N5|global_mode=h": [
+     2.42,
+     18.6
+    ],
+    "crgar|strategy=time_window": [
+     2.39,
+     15.9
+    ],
+    "iaip|portfolio=full|global_mode=hinted": [
+     2.89,
+     17.5
+    ]
+   },
+   "workers": [
+    1
+   ],
+   "duplicate_run_keys": 0,
+   "solver_seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "n_streams": 20,
+   "units": 20,
+   "unit_kind": "stream",
+   "means": {
+    "B2_crit": 0.025159201857272207,
+    "B0_iaip": 0.0309912488030686,
+    "B6_port_hint": 0.04412434268316322,
+    "B3_timewin": 0.027808446056891707
+   },
+   "comparisons": {
+    "B2_crit vs B0_iaip": {
+     "rel_diff": -0.1881836702630369,
+     "W": 16,
+     "L": 4,
+     "sign_p": 0.01181793212890625,
+     "ci95": [
+      -0.009002378209300102,
+      -0.0030424034601230017
+     ],
+     "mean_diff": -0.005832046945796398,
+     "holm": 0.0236358642578125
+    },
+    "B2_crit vs B6_port_hint": {
+     "rel_diff": -0.4298112940077328,
+     "W": 20,
+     "L": 0,
+     "sign_p": 1.9073486328125e-06,
+     "ci95": [
+      -0.023858783976217535,
+      -0.014216924572466951
+     ],
+     "mean_diff": -0.01896514082589102,
+     "holm": 5.7220458984375e-06
+    },
+    "B2_crit vs B3_timewin": {
+     "rel_diff": -0.09526761021452149,
+     "W": 14,
+     "L": 6,
+     "sign_p": 0.11531829833984375,
+     "ci95": [
+      -0.005876918727594335,
+      -9.332304533169933e-05
+     ],
+     "mean_diff": -0.002649244199619506,
+     "holm": 0.11531829833984375
+    }
+   },
+   "agreement_with_archived": {
+    "max_mean_abs_err": 6.938893903907228e-18,
+    "comparisons": {
+     "B2_crit vs B0_iaip": {
+      "rel_diff_abs_err": 2.7755575615628914e-17,
+      "WL_equal": true,
+      "holm_equal": true,
+      "ci_max_abs_err": 4.563448924388078e-05
+     },
+     "B2_crit vs B6_port_hint": {
+      "rel_diff_abs_err": 5.551115123125783e-17,
+      "WL_equal": true,
+      "holm_equal": true,
+      "ci_max_abs_err": 5.474839060492023e-05
+     },
+     "B2_crit vs B3_timewin": {
+      "rel_diff_abs_err": 2.7755575615628914e-17,
+      "WL_equal": true,
+      "holm_equal": true,
+      "ci_max_abs_err": 4.8172047672859095e-05
+     }
+    }
+   },
+   "infeasible_examples": [],
+   "checksums": {
+    "files": 100,
+    "mismatch": 0
+   },
+   "stream_seed_analysis": {
+    "n_physical_streams": 20,
+    "sizes": [
+     "15x15",
+     "20x20"
+    ],
+    "n_distinct_seed_values_per_size": {
+     "15x15": 10,
+     "20x20": 10
+    },
+    "seed_values_shared_across_sizes": true,
+    "note": "Seed numbers ARE reused across sizes (e.g. seed 1101 backs both a 15x15 and a 20x20 stream); this does not create non-independent units because (a) the unit of analysis is the full stream identifier '{size}_s{seed}', which denotes a genuinely different physical instance sequence per size (different job/machine counts change every size-dependent random draw after the shared PRNG seed), and (b) no analysis anywhere treats the bare seed number, or multiple solver seeds of the same stream, as separate independent units."
+   }
+  },
+  "U9_benchmarks": {
+   "setting": "U9_benchmarks",
+   "records": 7480,
+   "solver_invocations": 9350,
+   "physical_instances": 374,
+   "grid_complete": true,
+   "missing_instance_file": 0,
+   "infeasible_final_schedules": 0,
+   "objective_vs_own_makespan_mismatch": 0,
+   "last_event_vs_objective_mismatch": 0,
+   "prev_source": {
+    "own": 7480
+   },
+   "has_prev_ok": true,
+   "budgets": [
+    8.0
+   ],
+   "overrun_by_method_ms": {
+    "crgar|strategy=crit_expand": [
+     2.49,
+     14.2
+    ],
+    "iaip|portfolio=full|global_mode=hinted": [
+     3.18,
+     19.5
+    ],
+    "iaip|portfolio=full|alpha=0.6|neighbourhood=N5|global_mode=h": [
+     2.54,
+     18.5
+    ],
+    "crgar|strategy=time_window": [
+     2.46,
+     36.5
+    ]
+   },
+   "workers": [
+    1
+   ],
+   "duplicate_run_keys": 0,
+   "solver_seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "n_streams": 34,
+   "units": 34,
+   "unit_kind": "base instance",
+   "means": {
+    "B2_crit": 0.030010250471016162,
+    "B0_iaip": 0.04383702536037102,
+    "B6_port_hint": 0.06412335324740889,
+    "B3_timewin": 0.03223333107260574
+   },
+   "comparisons": {
+    "B2_crit vs B0_iaip": {
+     "rel_diff": -0.31541316445833384,
+     "W": 33,
+     "L": 1,
+     "sign_p": 4.0745362639427185e-09,
+     "ci95": [
+      -0.019404140858881692,
+      -0.009222327270323525
+     ],
+     "mean_diff": -0.013826774889354855,
+     "holm": 8.149072527885437e-09
+    },
+    "B2_crit vs B6_port_hint": {
+     "rel_diff": -0.5319918726766083,
+     "W": 34,
+     "L": 0,
+     "sign_p": 1.1641532182693481e-10,
+     "ci95": [
+      -0.03993840292954178,
+      -0.02845217035164343
+     ],
+     "mean_diff": -0.03411310277639273,
+     "holm": 3.4924596548080444e-10
+    },
+    "B2_crit vs B3_timewin": {
+     "rel_diff": -0.06896837924017457,
+     "W": 21,
+     "L": 13,
+     "sign_p": 0.22948101302608848,
+     "ci95": [
+      -0.005664360200544506,
+      0.0014101080324233962
+     ],
+     "mean_diff": -0.0022230806015895756,
+     "holm": 0.22948101302608848
+    }
+   },
+   "agreement_with_archived": {
+    "max_mean_abs_err": 6.938893903907228e-18,
+    "comparisons": {
+     "B2_crit vs B0_iaip": {
+      "rel_diff_abs_err": 1.1102230246251565e-16,
+      "WL_equal": true,
+      "holm_equal": true,
+      "ci_max_abs_err": 0.00011652867186911359
+     },
+     "B2_crit vs B6_port_hint": {
+      "rel_diff_abs_err": 1.1102230246251565e-16,
+      "WL_equal": true,
+      "holm_equal": true,
+      "ci_max_abs_err": 0.0002161856210938437
+     },
+     "B2_crit vs B3_timewin": {
+      "rel_diff_abs_err": 0.0,
+      "WL_equal": true,
+      "holm_equal": true,
+      "ci_max_abs_err": 5.381860607149222e-05
+     }
+    }
+   },
+   "infeasible_examples": [],
+   "checksums": {
+    "files": 170,
+    "mismatch": 0
+   },
+   "stream_seed_analysis": {
+    "n_physical_streams": 34,
+    "sizes": [
+     "10x20",
+     "15x15",
+     "15x20",
+     "20x20"
+    ],
+    "n_distinct_seed_values_per_size": {
+     "15x20": 1,
+     "20x20": 1,
+     "15x15": 1,
+     "10x20": 1
+    },
+    "seed_values_shared_across_sizes": true,
+    "note": "Seed numbers ARE reused across sizes (e.g. seed 1101 backs both a 15x15 and a 20x20 stream); this does not create non-independent units because (a) the unit of analysis is the full stream identifier '{size}_s{seed}', which denotes a genuinely different physical instance sequence per size (different job/machine counts change every size-dependent random draw after the shared PRNG seed), and (b) no analysis anywhere treats the bare seed number, or multiple solver seeds of the same stream, as separate independent units."
+   }
+  }
+ },
+ "totals": {
+  "records": 60720,
+  "infeasible": 0,
+  "objective_mismatches": 0
+ }
+}

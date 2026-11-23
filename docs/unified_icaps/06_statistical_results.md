@@ -71,7 +71,7 @@ These are the frozen file's text.
 
 ## 2. Results
 
-Source: `results/unified_icaps/confirmatory/confirmatory_analysis.json`. All 9 settings ran; 46,720 records total; **0 not validated, 0 without a solution** in every setting.
+Source: `results/unified_icaps/confirmatory/confirmatory_analysis.json`. All 9 settings ran; 60,720 records total; **0 not validated, 0 without a solution** in every setting.
 
 ### U1 primary (40 streams x 5 seeds, 8 s, 1 worker)
 

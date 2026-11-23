@@ -83,7 +83,7 @@ One shared monotonic deadline for every method; all controls use identical initi
 
 ## 18. Multi-seed confirmatory results
 
-`docs/unified_icaps/06_statistical_results.md`. 46,720 records across 9 settings, 5 solver seeds (U5 and some U9 use 3; declared in advance), 40 held-out streams (U1/U2/U4) or 20 (U3,U6-U8) or 34 base instances (U9), stream seeds 1101-1120, confirmed unused anywhere in this project's history before this run.
+`docs/unified_icaps/06_statistical_results.md`. 60,720 records across 9 settings, 5 solver seeds (U5 and some U9 use 3; declared in advance), 40 held-out streams (U1/U2/U4) or 20 (U3,U6-U8) or 34 base instances (U9), stream seeds 1101-1120, confirmed unused anywhere in this project's history before this run.
 
 ## 19. Clustered statistical analysis
 
