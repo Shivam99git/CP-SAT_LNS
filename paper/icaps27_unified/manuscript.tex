@@ -1,0 +1,195 @@
+\documentclass[letterpaper]{article} % DO NOT CHANGE THIS
+\usepackage[submission]{aaai2027}  % DO NOT CHANGE THIS
+\usepackage[hyphens]{url}  % DO NOT CHANGE THIS
+\usepackage{graphicx} % DO NOT CHANGE THIS
+\urlstyle{rm} % DO NOT CHANGE THIS
+\def\UrlFont{\rm}  % DO NOT CHANGE THIS
+\usepackage{natbib}  % DO NOT CHANGE THIS AND DO NOT ADD ANY OPTIONS TO IT
+\usepackage{caption} % DO NOT CHANGE THIS AND DO NOT ADD ANY OPTIONS TO IT
+\frenchspacing  % DO NOT CHANGE THIS
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage{booktabs}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\pdfinfo{
+/TemplateVersion (2027.1)
+}
+\input{numbers.tex}
+
+\newtheorem{proposition}{Proposition}
+\newcommand{\base}{\textsc{SR}}
+\newcommand{\crit}{\textsc{SR+Crit}}
+\newcommand{\rnd}{\textsc{SR+Rand}}
+\newcommand{\tw}{\textsc{SR+TimeWin}}
+\newcommand{\precn}{\textsc{SR+Prec}}
+\newcommand{\ph}{\textsc{Port+Hint}}
+\newcommand{\native}{\textsc{Port+Hint-ILS}}
+
+\setcounter{secnumdepth}{0}
+
+\title{When Does Repeated Restricted Reoptimization Help? An Empirical Study of Anytime Dynamic Job-Shop Rescheduling}
+\author{
+    Anonymous Submission
+}
+\affiliations{
+}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+After a disruption, a job shop must be rescheduled within a wall-clock budget. A natural pipeline keeps a validated incumbent, selectively re-optimizes a neighbourhood of the operations the disruption affected, and continues with the unrestricted solver. We ask whether repeating the selective stage several times, with the neighbourhood recomputed around the incumbent's critical region after each round, improves anytime quality beyond this pipeline, beyond unstructured large neighbourhood search (LNS), and beyond the installed CP-SAT solver's own scheduling-aware search. Across a frozen, pre-registered confirmatory study on 40 held-out streams with five solver seeds (46{,}720 validated runs across nine settings), repeated critical-region rounds reduce the primal integral by \UOneBTwocritVsBZeroiaipRel\% against the one-round pipeline (\UOneBTwocritVsBZeroiaipWL\ streams, Holm $p=\UOneBTwocritVsBZeroiaipHolm$), by \UOneBTwocritVsBOnerandomRel\% against size-matched random rounds, and by \UOneBTwocritVsBFivenativeOnewRel\% against CP-SAT's own single-thread interleaved search. However, a size-matched \emph{time-window} neighbourhood --- itself an external analogue of one of CP-SAT's built-in LNS generators --- performs statistically indistinguishably from the critical-region variant overall, and significantly \emph{better} under a protocol that fixes the round count and per-round budget. The advantage of criticality over time-locality is confined to job-arrival disruptions, and disappears once CP-SAT is given four workers, where its own multi-worker LNS portfolio closes the gap. We report this as a \emph{conditional} result: repeated, recomputed, spatially-targeted restricted reoptimization reliably helps, but targeting by criticality specifically is not established as better than a substantially simpler targeting rule, and the entire family of external neighbourhoods we test loses its edge once the solver's native parallel search is engaged.
+\end{abstract}
+
+\section{Introduction}
+
+Rescheduling under disruption and a strict time budget is standard in dynamic job-shop scheduling \citep{vieira2003,ouelhadj2009}. A constraint-programming pipeline for this task typically (i) keeps a validated incumbent built from the previous schedule or from dispatching rules, (ii) selectively re-optimizes a restricted neighbourhood of the operations a disruption affects, and (iii) spends the remaining budget on the unrestricted problem, hinted with the current incumbent. Selective CP-SAT repair of this kind is used with a learned keep/release policy by recent work \citep{linyang2026}, and the choice of rescheduling scope has itself been studied directly \citep{sun2026}.
+
+A prior stage of this project found that a sound lower-bound certificate --- telling the solver when a restricted neighbourhood provably cannot be improved, and how to release machine-order constraints that block it --- changes almost no decisions in practice, because the installed CP-SAT solver already disposes of non-improving restricted neighbourhoods in milliseconds. We treat that as a completed negative result and do not revisit it here beyond \S\ref{sec:certificate}. What that study also found, as a byproduct, was that \emph{repeating} the restricted stage several times, each round re-centred on the incumbent's current critical region, substantially improved anytime quality. This paper asks the question that finding raises directly, and answers it with controls the earlier study lacked:
+
+\begin{quote}
+\emph{Does repeated critical-region-guided reoptimization provide a reproducible anytime scheduling advantage over standard local-neighbourhood search, native CP-SAT scheduling search, and incumbent-aware rescheduling, under identical computational budgets?}
+\end{quote}
+
+We do not assume the answer is positive. Our contributions are:
+\begin{itemize}
+\item an independently-verified integration of incumbent reuse, selective reoptimization and repeated critical-region rounds, sharing one monotonic deadline (\S\ref{sec:method});
+\item size-matched external analogues of three of CP-SAT's own scheduling LNS generators (random-interval, time-window, random-precedence), built from the installed solver's source so that comparisons are resource-fair and not simply one-worker-versus-four (\S\ref{sec:lns});
+\item a pre-registered, frozen confirmatory study on streams never used during development, separating the value of (a) repeated rounds alone, (b) critical targeting beyond random targeting, (c) critical targeting beyond time-window and precedence targeting, and (d) the whole pipeline beyond the solver's own native LNS, at one and at four workers (\S\ref{sec:results});
+\item the finding that (a)--(b) hold reproducibly, (c) does \emph{not} hold against time-window targeting, and (d) does not hold at four workers --- reported honestly rather than reframed as a novel algorithm.
+\end{itemize}
+
+\section{Related Work}
+
+\paragraph{Selective rescheduling.} Affected-operations rescheduling re-optimizes only the operations a disruption affects \citep{abumaizar1997,subramaniam2003}. \citet{sun2026} compare four hierarchical optimization scopes for dynamic flexible job shops and report that scope definition, not search algorithm, is decisive under strict time limits; we were able to access only the abstract. SLR2 \citep{linyang2026} encodes the incumbent and the disturbance in a heterogeneous graph and uses a graph neural network to learn a kept/released split, repairing the released neighbourhood with a reduced CP-SAT model; we likewise could not access the full text (ScienceDirect returned HTTP 403 to automated access, and the Elsevier text-mining API requires a key we do not have). Our release rule is structural rather than learned, and we evaluate anytime primal integral under one end-to-end deadline rather than final solution quality.
+
+\paragraph{Critical-path search and LNS.} In the disjunctive graph of a complete selection, the makespan equals the longest path \citep{balas1969}; neighbourhoods built from critical arcs or critical blocks are classical in job-shop local search \citep{vanlaarhoven1992,nowicki1996,balas1998}. Large neighbourhood search with constraint programming \citep{shaw1998,godard2005,pacino2011} descends from the shuffle heuristic for job shops \citep{applegate1991}. We do not claim critical-path targeting itself is new; \S\ref{sec:lns} asks whether it adds value over the alternatives CP-SAT already implements.
+
+\paragraph{CP-SAT's internal scheduling search.} Inspecting the OR-Tools v9.15 source (the version installed, \texttt{cp\_model\_lns.\{h,cc\}}, \texttt{cp\_model\_solver.cc}) shows that CP-SAT ships four scheduling-specific LNS generators: random-interval, time-window, resource-window and random-precedence, each restricting a no-overlap/cumulative model to a relaxed subset of intervals while keeping the incumbent's precedences among the rest --- the same restriction structure our restricted model uses. These generators are created only when the solver runs with more than one worker, or with the experimental \texttt{interleave\_search} flag on one worker (confirmed from solver logs on our model); per-generator selection and difficulty are internal and not exposed to callers, so we do not attempt to invoke them individually and instead build independent, matched external analogues (\S\ref{sec:lns}).
+
+\section{Problem Setting and Base Pipeline}
+
+A \emph{stream} is a sequence of job-shop instances $I_0,\dots,I_T$, with $I_t$ obtained from $I_{t-1}$ by an arrival, a cancellation, a duration change or a machine outage. Operations have integer durations, job precedence, machine no-overlap (including outage intervals) and optional release dates and commitments. Each instance is solved within a wall-clock budget $B$ covering construction, model building, solving and validation. With $z(\tau)$ the best makespan found by time $\tau$ and $z^*$ shared per instance across all compared methods, the gap is $g(\tau)=(z(\tau)-z^*)/z^*$ ($g=1$ before the first schedule) and the primal integral is $\mathrm{PI}=\frac1B\int_0^B g(\tau)\,d\tau$ \citep{berthold2013}.
+
+The base pipeline \base{} (reused unchanged from the project's earlier stage) (i) builds a portfolio of validated incumbents --- repairs of the previous schedule plus dispatching rules --- retaining each improving member as soon as it is built; (ii) restricts CP-SAT to a 25\%-of-operations breadth-first neighbourhood grown from the disrupted operations, with $C_{\max}\le U-1$, until $0.6B$ elapsed or a proof of optimality/infeasibility of the restricted problem; (iii) continues with unrestricted, hinted CP-SAT until $B$.
+
+\section{Critical-Region Guided Repeated Rounds}
+\label{sec:method}
+
+After \base's single restricted stage, our integration repeats the restricted solve while the local time window ($0.6B$) remains and the previous round improved the incumbent. Each round:
+\begin{enumerate}
+\item recomputes the incumbent's longest \emph{binding chains} --- the calendar-aware critical structure used by the earlier certificate study, computed from a lower-bound propagation that handles outages, release dates and commitments correctly (reused unchanged; see \S\ref{sec:certificate});
+\item takes every operation on those chains as seeds and grows a 25\%-of-operations breadth-first neighbourhood $N$ around them;
+\item solves the restricted model on $N$ (job precedence, no-overlap, outages, releases, commitments, plus the incumbent's machine order outside $N$, plus $C_{\max}\le U-1$), hinted with the incumbent;
+\item accepts the result only if it strictly improves the incumbent, and stops the round sequence otherwise (end-to-end protocol) or continues regardless for a fixed number of rounds (mechanism-isolation protocol, \S\ref{sec:lns}).
+\end{enumerate}
+One monotonic deadline covers the portfolio, every round, and the final unrestricted stage; a round's restricted model always contains the current incumbent as a feasible point (every added precedence is one the incumbent itself satisfies), so the retained objective is non-increasing by construction. We state this as an elementary property, not a theorem: an individual round may fail, time out, or return a non-improving feasible schedule, and none of this is excluded or hidden (\S\ref{sec:verify}).
+
+\section{Matched LNS Controls}
+\label{sec:lns}
+
+To isolate what repeated critical-region rounds add, every control below shares the identical initial incumbent, round policy, local window, global continuation and worker count as the critical-region method, differing only in how each round's neighbourhood is chosen.
+
+\begin{itemize}
+\item \textbf{\rnd:} the same breadth-first expansion, seeded at uniformly random operations, with $|N|$ matched exactly to the critical-region neighbourhood built on the same incumbent in the same round.
+\item \textbf{\tw:} $|N|$ operations consecutive in start-time order from a random index --- an external, size-matched analogue of CP-SAT's \texttt{SchedulingTime\-Window\-Neighborhood\-Generator}.
+\item \textbf{\precn:} no operations freed; instead a uniformly random subset of machine-order precedences is released, matched in count to the number \crit\ releases in the same round --- an analogue of \texttt{Random\-Precedence\-Scheduling\-Neighborhood\-Generator}.
+\item \textbf{\native:} \ph\ (portfolio + hinted global CP-SAT, no repeated rounds) run with \texttt{interleave\_search} on one worker, which solver logs confirm activates all four internal scheduling LNS generators on a single thread.
+\item \textbf{\ph\ at four workers:} CP-SAT's default multi-worker portfolio, confirmed from logs to include the same four generators among 13 interleaved subsolvers; this is the only setting where \emph{native}, unmodified, full-strength CP-SAT scheduling LNS is being compared against, and we compare it only at matched worker count (never 1-worker-ours vs.\ 4-worker-native).
+\end{itemize}
+We additionally run a \emph{mechanism-isolation} protocol (M2) alongside the default \emph{end-to-end} protocol (M1): M1 lets each method run until the local window or a stop-on-failure condition; M2 fixes every method to exactly 6 rounds of at most 0.4\,s each, removing the confound that a method which more often finds nothing to improve simply finishes its rounds sooner and banks more time for the global stage.
+
+\section{Correctness and the Certificate Result}
+\label{sec:certificate}
+\label{sec:verify}
+
+The neighbourhood-restriction machinery (kept-arc construction, the restricted model builder, the critical-chain computation) is reused unchanged from a prior stage of this project, where it was verified against two independent oracles --- full enumeration and an independently-built CP-SAT model --- on \OracleEnumCases\ and \OracleCpsatCases\ randomized cases respectively, with zero bound violations. For this study we additionally verified, on 250 randomized tiny instances across all ten neighbourhood strategies (with outages, release dates and commitments), that every restricted optimum lies between the full-problem optimum and the incumbent's value, and that the incumbent is always feasible for its own restricted model. A monotonic clock covers construction, every round, and the final stage; the first incumbent's timestamp is its true construction time, never zero; failed or non-improving rounds are recorded, not discarded; and campaign resumption reproduces byte-identical output. 269 fast and 25 slow tests pass, including 32 added for this study (full detail in supplementary material).
+
+A sound lower-bound \emph{certificate} for a restricted neighbourhood --- derived in the prior stage of this project from a calendar-aware longest-path relaxation, together with a minimum-cut procedure for releasing exactly the machine-order constraints that provably block improvement --- was checked against 5{,}500 independent oracle cases with zero violations. As a \emph{decision} device it added nothing: it was decisive for only 13 of 200 restricted neighbourhoods tested, CP-SAT itself already proves the same non-improvement in a median of 21\,ms, and certificate-gated skipping, releasing, or budget allocation produced no measurable change in primal integral. We report this as a completed negative result and do not revisit the certificate mechanism further; the repeated-rounds question this paper answers was what remained after that negative finding.
+
+\section{Experimental Methodology}
+
+Instances are full $m\times m$ job shops ($m\in\{15,20\}$), durations uniform in $[5,50]$, ten deltas per stream drawn with weights 0.4/0.2/0.25/0.15 (arrival/cancellation/duration-change/outage). CP-SAT (OR-Tools 9.15) runs with one worker and $B=8$\,s unless stated; each process is pinned to its own physical core (four cores per process for the four-worker setting); methods of a stream run sequentially, in shuffled order, in one process.
+
+\paragraph{Development and freeze.} All method and control design used development streams (seeds 301--310) across three rounds, each round's question and decision rule written down before it ran; the final configuration, comparator set, and GO/CONDITIONAL-GO/NO-GO criteria were frozen (with a file hash checked before any held-out run) \emph{before} any run on the confirmatory streams.
+
+\paragraph{Confirmation.} Held-out stream seeds 1101--1120 (40 streams, confirmed unused anywhere in the project's history), solver seeds 0--4. Nine settings run in a fixed order: \textbf{U1} primary (8\,s, 1 worker, all seven methods); \textbf{U2} mechanism-isolation (M2, four neighbourhood strategies); \textbf{U3} four workers (20 streams); \textbf{U4}--\textbf{U9} secondary (2\,s; 30\,s; arrival-only; outage-only; high severity; 34 published job-shop bases --- Taillard, DMU, SWV, YN --- as stream bases, one stream per base, the base instance as the unit of inference). The unit of inference is the stream (or base instance for U9); primal integral is averaged over steps 1--10 and solver seeds within a unit before any comparison; tests are the exact sign test over units with Holm correction within each setting's family, plus a stream-clustered bootstrap 95\% CI (10{,}000 resamples). An equivalence margin of $\pm10\%$ of the comparator's mean PI was fixed in advance for the critical-vs-time-window comparison, since a development power calculation showed differences below roughly 15--17\% of the mean PI would not reliably reach significance at this sample size.
+
+\paragraph{Criteria (fixed before the run).} C1: \crit\ beats \base\ by $\ge5\%$, CI upper $<0$, Holm $p<0.05$. C2: beats \rnd, CI upper $<0$. C3: vs.\ \tw, classified as superior/inferior/equivalent/inconclusive by the sign, significance and equivalence-margin rule above. C4: beats \precn. C5: beats \native\ (1 worker). C6: beats \ph\ at 4 workers. \textbf{STRONG GO} requires C1--C6 all favourable; \textbf{CONDITIONAL GO} requires C1 and validity but allows C3 non-superior or C6 to fail, in which case no claim of superior critical-region search is made; \textbf{NO-GO} if C1 fails or C3 is inferior.
+
+\section{Results}
+\label{sec:results}
+
+All 46{,}720 confirmatory runs across the nine settings returned a validated schedule (0 invalid, 0 unsolved).
+
+\begin{table*}[t]
+\centering
+\small
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{lrrrrrrr}
+\toprule
+Setting & $n$ & \crit & \base & \ph & vs.\ \base & vs.\ \tw & vs.\ \native/\ph(4w) \\
+\midrule
+U1: 8\,s, 1w & \UOneN & \UOneMeanBTwocrit & \UOneMeanBZeroiaip & \UOneMeanBSixporthint &
+  $\UOneBTwocritVsBZeroiaipSign\UOneBTwocritVsBZeroiaipRel$\% (\UOneBTwocritVsBZeroiaipWL) &
+  $\UOneBTwocritVsBThreetimewinSign\UOneBTwocritVsBThreetimewinRel$\% (\UOneBTwocritVsBThreetimewinWL) &
+  $\UOneBTwocritVsBFivenativeOnewSign\UOneBTwocritVsBFivenativeOnewRel$\% (\UOneBTwocritVsBFivenativeOnewWL) \\
+U3: 8\,s, 4w & \UThreeN & \UThreeMeanBTwocrit & \UThreeMeanBZeroiaip & \UThreeMeanBSixporthint &
+  $\UThreeBTwocritVsBZeroiaipSign\UThreeBTwocritVsBZeroiaipRel$\% (\UThreeBTwocritVsBZeroiaipWL) &
+  $\UThreeBTwocritVsBThreetimewinSign\UThreeBTwocritVsBThreetimewinRel$\% (\UThreeBTwocritVsBThreetimewinWL) &
+  $\UThreeBTwocritVsBSixporthintSign\UThreeBTwocritVsBSixporthintRel$\% (\UThreeBTwocritVsBSixporthintWL) \\
+U4: 2\,s, 1w & \UFourN & \UFourMeanBTwocrit & \UFourMeanBZeroiaip & \UFourMeanBSixporthint &
+  $\UFourBTwocritVsBZeroiaipSign\UFourBTwocritVsBZeroiaipRel$\% (\UFourBTwocritVsBZeroiaipWL) &
+  $\UFourBTwocritVsBThreetimewinSign\UFourBTwocritVsBThreetimewinRel$\% (\UFourBTwocritVsBThreetimewinWL) & -- \\
+U5: 30\,s, 1w & \UFiveN & \UFiveMeanBTwocrit & \UFiveMeanBZeroiaip & \UFiveMeanBSixporthint &
+  $\UFiveBTwocritVsBZeroiaipSign\UFiveBTwocritVsBZeroiaipRel$\% (\UFiveBTwocritVsBZeroiaipWL) &
+  $\UFiveBTwocritVsBThreetimewinSign\UFiveBTwocritVsBThreetimewinRel$\% (\UFiveBTwocritVsBThreetimewinWL) & -- \\
+U6: arrival-only & \USixN & \USixMeanBTwocrit & \USixMeanBZeroiaip & \USixMeanBSixporthint &
+  $\USixBTwocritVsBZeroiaipSign\USixBTwocritVsBZeroiaipRel$\% (\USixBTwocritVsBZeroiaipWL) &
+  $\USixBTwocritVsBThreetimewinSign\USixBTwocritVsBThreetimewinRel$\% (\USixBTwocritVsBThreetimewinWL) & -- \\
+U7: outage-only & \USevenN & \USevenMeanBTwocrit & \USevenMeanBZeroiaip & \USevenMeanBSixporthint &
+  $\USevenBTwocritVsBZeroiaipSign\USevenBTwocritVsBZeroiaipRel$\% (\USevenBTwocritVsBZeroiaipWL) &
+  $\USevenBTwocritVsBThreetimewinSign\USevenBTwocritVsBThreetimewinRel$\% (\USevenBTwocritVsBThreetimewinWL) & -- \\
+U8: high severity & \UEightN & \UEightMeanBTwocrit & \UEightMeanBZeroiaip & \UEightMeanBSixporthint &
+  $\UEightBTwocritVsBZeroiaipSign\UEightBTwocritVsBZeroiaipRel$\% (\UEightBTwocritVsBZeroiaipWL) &
+  $\UEightBTwocritVsBThreetimewinSign\UEightBTwocritVsBThreetimewinRel$\% (\UEightBTwocritVsBThreetimewinWL) & -- \\
+U9: 34 bases & \UNineN & \UNineMeanBTwocrit & \UNineMeanBZeroiaip & \UNineMeanBSixporthint &
+  $\UNineBTwocritVsBZeroiaipSign\UNineBTwocritVsBZeroiaipRel$\% (\UNineBTwocritVsBZeroiaipWL) &
+  $\UNineBTwocritVsBThreetimewinSign\UNineBTwocritVsBThreetimewinRel$\% (\UNineBTwocritVsBThreetimewinWL) & -- \\
+\bottomrule
+\end{tabular}
+\caption{Held-out confirmation (stream seeds 1101--1120, solver seeds 0--4 unless stated; U5 uses seeds 0--2). Mean PI per method ($n$: streams, or base instances for U9); relative PI difference and streams won/lost (\crit\ vs.\ each comparator). All figures are stream means; see \S\ref{sec:results} for significance.}
+\label{tab:conf}
+\end{table*}
+
+\paragraph{C1: repeated rounds beat the one-round pipeline.} \crit\ reduces mean PI by \UOneBTwocritVsBZeroiaipRel\% relative to \base\ in U1 (\UOneBTwocritVsBZeroiaipWL\ streams, 95\% CI $\UOneBTwocritVsBZeroiaipCI$, Holm $p=\UOneBTwocritVsBZeroiaipHolm$). \textbf{C1 holds.}
+
+\paragraph{C2: critical targeting beats random targeting.} \crit\ vs.\ \rnd: $\UOneBTwocritVsBOnerandomRel$\% (\UOneBTwocritVsBOnerandomWL, Holm $p=\UOneBTwocritVsBOnerandomHolm$). Notably, \rnd\ itself is \emph{not} significantly better than \base\ ($\UOneBOnerandomVsBZeroiaipRel$\%, \UOneBOnerandomVsBZeroiaipWL, Holm $p=\UOneBOnerandomVsBZeroiaipHolm$): repeated rounds with \emph{unstructured} neighbourhoods add almost nothing on their own. \textbf{C2 holds.}
+
+\paragraph{C3: critical targeting vs.\ time-window targeting --- the central finding.} In U1, \crit\ vs.\ \tw\ is $\UOneBTwocritVsBThreetimewinRel$\% (\UOneBTwocritVsBThreetimewinWL, Holm $p=\UOneBTwocritVsBThreetimewinHolm$) --- \textbf{not significant}, and under the fixed-round mechanism-isolation protocol (U2) the sign \emph{reverses}: \crit\ vs.\ \tw\ is $\UTwoMTwocritVsMTwotimewinSign\UTwoMTwocritVsMTwotimewinRel$\% (\UTwoMTwocritVsMTwotimewinWL, Holm $p=\UTwoMTwocritVsMTwotimewinHolm$), i.e.\ time-window rounds are significantly \emph{better} once round count and per-round budget are held fixed rather than letting each method finish early. Across the five secondary settings where both are tested (U4, U5, U7, U8, U9), the \crit\ vs.\ \tw\ difference is never significant; the one exception is \textbf{U6, arrival-only disruptions}, where \crit\ beats \tw\ by $\USixBTwocritVsBThreetimewinRel$\% (\USixBTwocritVsBThreetimewinWL, Holm $p=\USixBTwocritVsBThreetimewinHolm$). \textbf{C3: inconclusive overall, confined to one disruption type.}
+
+\paragraph{C4 and C5: critical targeting beats precedence-relaxation and native single-thread LNS.} \crit\ vs.\ \precn: $\UOneBTwocritVsBFourprecRel$\% (\UOneBTwocritVsBFourprecWL, Holm $p=\UOneBTwocritVsBFourprecHolm$). \crit\ vs.\ \native: $\UOneBTwocritVsBFivenativeOnewRel$\% (\UOneBTwocritVsBFivenativeOnewWL, Holm $p=\UOneBTwocritVsBFivenativeOnewHolm$). \textbf{Both hold.}
+
+\paragraph{C6: the advantage over native LNS does not survive four workers.} At four workers (U3), \crit\ vs.\ \ph\ is $\UThreeBTwocritVsBSixporthintRel$\% (\UThreeBTwocritVsBSixporthintWL, Holm $p=\UThreeBTwocritVsBSixporthintHolm$) --- \textbf{not significant}; \crit\ vs.\ \base\ is $\UThreeBTwocritVsBZeroiaipRel$\% ($\UThreeBTwocritVsBZeroiaipWL$), also not significant. With CP-SAT's own multi-worker scheduling LNS active, none of \base, \crit\ or \tw\ is distinguishable from the others. \textbf{C6 fails.}
+
+\paragraph{Robustness.} The advantage over \base\ (C1-style) is significant in every secondary setting except U4 (2\,s: $\UFourBTwocritVsBZeroiaipRel$\%, Holm $p=\UFourBTwocritVsBZeroiaipHolm$) and is strongest after arrivals ($\USixBTwocritVsBZeroiaipRel$\%) and on published bases ($\UNineBTwocritVsBZeroiaipRel$\%).
+
+\paragraph{Why time-window matches criticality.} Inspecting round diagnostics: critical rounds sustain a roughly \RoundCritRate\% per-round improvement rate (averaged over all round indices), versus \RoundTimewinRate\% for time-window rounds, yet the two converge to similar final PI. On job shops built from uniform-random durations, a schedule's critical chain and its temporally-late operations substantially overlap, so a purely temporal heuristic is nearly as good a proxy for ``the part of the schedule worth re-optimizing.'' Arrivals are the one disruption type that adds genuinely new operations rather than perturbing existing ones, and there criticality (which is pulled toward the new job once it is chained in) tracks the actual disruption better than a static time window.
+
+\section{Discussion}
+
+Per our pre-registered classification, this is a \textbf{CONDITIONAL GO}: C1, C2, C4 and C5 hold reproducibly; C3 is inconclusive (confined to one disruption type, reversed under matched-round accounting); C6 fails outright. We therefore do \emph{not} claim that critical-region search is a superior targeting mechanism for repeated restricted reoptimization. What the evidence supports is narrower and, we think, still useful: (1) repeating the restricted stage, with the neighbourhood \emph{recomputed} around the current incumbent after every round, substantially improves anytime quality over a single restricted stage, but only when the neighbourhood is targeted at some spatially/temporally coherent region of the schedule rather than chosen uniformly at random or as a random set of precedence relations; (2) which coherent region --- the critical chain or a time window of comparable size --- matters much less than whether one is used at all, except specifically after job arrivals; (3) all of this evidence is specific to a single CP-SAT worker, and evaporates once the solver's own multi-worker scheduling LNS is engaged, which on these instances is already a strong enough search that none of the external neighbourhood strategies we tried adds anything beyond it.
+
+\section{Limitations}
+
+Instances are synthetic full job shops from one generator; development and held-out streams share that generator. $z^*$ is the best value found in each setting, not a proven optimum. Only makespan is optimized; stability is not controlled. The equivalence classification for C3 depends on a pre-specified $\pm10\%$ margin and a development-derived power estimate; a non-significant difference under that margin is not proof of equivalence, only an absence of demonstrated superiority. CP-SAT's internal LNS generator selection and difficulty parameters are solver-version-specific and were inspected, not modified; a different OR-Tools release could show different four-worker behaviour. The full texts of \citet{sun2026} and \citet{linyang2026} were not accessible to us (automated access to the publisher was blocked); our comparison with them rests on their abstracts only.
+
+\section{Conclusion}
+
+Repeated restricted CP-SAT rounds, recomputed around a coherent region of the current incumbent after each round, reliably improve an incumbent-aware anytime rescheduling pipeline over a single restricted stage, over unstructured neighbourhood search, and over the installed solver's single-thread scheduling search. Whether that coherent region should be the schedule's critical chain specifically, rather than a comparably simple time window, is not established by this evidence except after job arrivals; and the entire advantage over native LNS disappears once the solver is allowed to use its own multiple workers. We report the positive and the negative findings together, as the more defensible outcome of this investigation.
+
+\bibliography{references}
+
+\end{document}

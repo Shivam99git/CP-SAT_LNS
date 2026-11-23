@@ -1,0 +1,315 @@
+{
+  "campaign": "U1_primary",
+  "unit": "stream",
+  "n_units": 40,
+  "solver_seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "budget": 8.0,
+  "workers": 1,
+  "integrity": {
+    "records": 15400,
+    "not_validated": 0,
+    "no_solution": 0,
+    "overrun_max_s": 0.019178380025550723,
+    "overrun_p99_s": 0.011614376481156796
+  },
+  "means": {
+    "B5": {
+      "pi": 0.045626241800029846,
+      "gap_B": 0.035391896350085716,
+      "pi_early": 0.07416632496088035,
+      "pi_late": 0.04154908706276548,
+      "t_first": 0.0007637521987780928,
+      "pi_median": 0.048638605827488766,
+      "pi_sd": 0.017725146134320583
+    },
+    "crit_expand": {
+      "pi": 0.025642022077296607,
+      "gap_B": 0.016275753415406692,
+      "pi_early": 0.05374758201094483,
+      "pi_late": 0.02162694208677543,
+      "t_first": 0.0007569746186491102,
+      "pi_median": 0.025423457087419526,
+      "pi_sd": 0.008837722575524431
+    },
+    "precedence": {
+      "pi": 0.03396610632037637,
+      "gap_B": 0.023318826489042113,
+      "pi_early": 0.060873807268780465,
+      "pi_late": 0.030122149042032927,
+      "t_first": 0.0007532956008799375,
+      "pi_median": 0.03501215370406978,
+      "pi_sd": 0.012656423604842398
+    },
+    "random_matched": {
+      "pi": 0.03220726089375714,
+      "gap_B": 0.021676050506077058,
+      "pi_early": 0.05930137713441867,
+      "pi_late": 0.02833667285937692,
+      "t_first": 0.0007604291322641074,
+      "pi_median": 0.03432241773665663,
+      "pi_sd": 0.01128580926482168
+    },
+    "time_window": {
+      "pi": 0.027315281854033813,
+      "gap_B": 0.017551411724816442,
+      "pi_early": 0.05562592810265121,
+      "pi_late": 0.02327090381851704,
+      "t_first": 0.0007551138794515282,
+      "pi_median": 0.02844192607191858,
+      "pi_sd": 0.009743069515199963
+    },
+    "B0": {
+      "pi": 0.03304949125315841,
+      "gap_B": 0.022359696033131343,
+      "pi_early": 0.060578743164052186,
+      "pi_late": 0.029116740980173583,
+      "t_first": 0.0007542442334815861,
+      "pi_median": 0.0350592259758353,
+      "pi_sd": 0.011522906505553933
+    },
+    "B6": {
+      "pi": 0.044717048444385135,
+      "gap_B": 0.028777392794361895,
+      "pi_early": 0.07401984662362908,
+      "pi_late": 0.040530934418778856,
+      "t_first": 0.0007528722163988277,
+      "pi_median": 0.04509014788120551,
+      "pi_sd": 0.01667629274674992
+    }
+  },
+  "comparisons": {},
+  "round_diagnostics": {
+    "crit_expand": {
+      "instances": 2000,
+      "rounds_per_instance": 2.904,
+      "improving_rounds_per_instance": 1.9275,
+      "round_improvement_rate": 0.6637396694214877,
+      "improvement_rate_by_round": {
+        "0": [
+          1996,
+          0.6828657314629258
+        ],
+        "1": [
+          1361,
+          0.6737692872887583
+        ],
+        "2": [
+          915,
+          0.6426229508196721
+        ],
+        "3": [
+          587,
+          0.666098807495741
+        ],
+        "4": [
+          389,
+          0.6041131105398457
+        ],
+        "5": [
+          235,
+          0.6851063829787234
+        ],
+        "6": [
+          161,
+          0.6832298136645962
+        ],
+        "7": [
+          108,
+          0.5185185185185185
+        ],
+        "8": [
+          56,
+          0.6071428571428571
+        ]
+      },
+      "released_ops_mean": 87.21177685950413,
+      "released_frac_mean": 0.2499846452702341,
+      "machine_arcs_released_mean": 87.20833333333333,
+      "critical_in_N_mean": 39.49431818181818,
+      "chain_ops_mean": 39.55595730027548,
+      "neighbourhood_ms_mean": 3.470432289479013,
+      "build_ms_mean": 4.507768099368152,
+      "round_time_s_mean": 0.10245494213331742,
+      "local_window_s_mean": 0.9768065695065307,
+      "status": {
+        "FEASIBLE": 7,
+        "UNKNOWN": 5,
+        "OPTIMAL": 3848,
+        "INFEASIBLE": 1948
+      },
+      "initial_stage_improved": 1538
+    },
+    "precedence": {
+      "instances": 2000,
+      "rounds_per_instance": 1.297,
+      "improving_rounds_per_instance": 0.3005,
+      "round_improvement_rate": 0.23168851195065535,
+      "improvement_rate_by_round": {
+        "0": [
+          1995,
+          0.21102756892230576
+        ],
+        "1": [
+          419,
+          0.29594272076372313
+        ],
+        "2": [
+          124,
+          0.3225806451612903
+        ],
+        "3": [
+          40,
+          0.35
+        ],
+        "4": [
+          14,
+          0.14285714285714285
+        ],
+        "5": [
+          2,
+          0.0
+        ]
+      },
+      "released_ops_mean": 0.0,
+      "released_frac_mean": 0.0,
+      "machine_arcs_released_mean": 84.38396299151889,
+      "critical_in_N_mean": 0.0,
+      "chain_ops_mean": 38.1017733230532,
+      "neighbourhood_ms_mean": 3.5695472951912386,
+      "build_ms_mean": 4.372674728845697,
+      "round_time_s_mean": 0.03468851794414409,
+      "local_window_s_mean": 0.685610615652171,
+      "status": {
+        "OPTIMAL": 601,
+        "INFEASIBLE": 1993
+      },
+      "initial_stage_improved": 1563
+    },
+    "random_matched": {
+      "instances": 2000,
+      "rounds_per_instance": 1.62,
+      "improving_rounds_per_instance": 0.6305,
+      "round_improvement_rate": 0.3891975308641975,
+      "improvement_rate_by_round": {
+        "0": [
+          1992,
+          0.3614457831325301
+        ],
+        "1": [
+          719,
+          0.39777468706536856
+        ],
+        "2": [
+          283,
+          0.45936395759717313
+        ],
+        "3": [
+          130,
+          0.46153846153846156
+        ],
+        "4": [
+          58,
+          0.5
+        ],
+        "5": [
+          29,
+          0.6206896551724138
+        ],
+        "6": [
+          17,
+          0.35294117647058826
+        ],
+        "7": [
+          6,
+          1.0
+        ],
+        "8": [
+          6,
+          1.0
+        ]
+      },
+      "released_ops_mean": 84.59320987654321,
+      "released_frac_mean": 0.24998318566602018,
+      "machine_arcs_released_mean": 84.59320987654321,
+      "critical_in_N_mean": 9.637962962962963,
+      "chain_ops_mean": 38.65679012345679,
+      "neighbourhood_ms_mean": 3.3661358791437963,
+      "build_ms_mean": 4.37362931717624,
+      "round_time_s_mean": 0.06699002735607074,
+      "local_window_s_mean": 0.7366673921885667,
+      "status": {
+        "FEASIBLE": 6,
+        "UNKNOWN": 1,
+        "OPTIMAL": 1255,
+        "INFEASIBLE": 1978
+      },
+      "initial_stage_improved": 1505
+    },
+    "time_window": {
+      "instances": 2000,
+      "rounds_per_instance": 1.973,
+      "improving_rounds_per_instance": 0.9895,
+      "round_improvement_rate": 0.5015205271160669,
+      "improvement_rate_by_round": {
+        "0": [
+          1987,
+          0.49622546552591845
+        ],
+        "1": [
+          986,
+          0.5223123732251521
+        ],
+        "2": [
+          507,
+          0.47731755424063116
+        ],
+        "3": [
+          238,
+          0.5378151260504201
+        ],
+        "4": [
+          126,
+          0.49206349206349204
+        ],
+        "5": [
+          59,
+          0.4406779661016949
+        ],
+        "6": [
+          26,
+          0.4230769230769231
+        ],
+        "7": [
+          11,
+          0.5454545454545454
+        ],
+        "8": [
+          6,
+          0.5
+        ]
+      },
+      "released_ops_mean": 87.0567663456665,
+      "released_frac_mean": 0.2500033332241753,
+      "machine_arcs_released_mean": 87.0567663456665,
+      "critical_in_N_mean": 10.015965534718703,
+      "chain_ops_mean": 41.373035985808414,
+      "neighbourhood_ms_mean": 3.5216638831246136,
+      "build_ms_mean": 4.489943984017017,
+      "round_time_s_mean": 0.1506824059111788,
+      "local_window_s_mean": 0.9642505406417186,
+      "status": {
+        "FEASIBLE": 15,
+        "UNKNOWN": 11,
+        "OPTIMAL": 1964,
+        "INFEASIBLE": 1956
+      },
+      "initial_stage_improved": 1565
+    }
+  }
+}

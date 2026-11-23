@@ -1,0 +1,496 @@
+% Every entry below was checked against a registry record, not written from
+% memory: Crossref (DOI resolves to the stated title/authors/venue/pages),
+% OpenAlex (conference papers without DOIs), or the vendor's own citation
+% page (software). Fields that sources disagreed on were omitted rather than
+% guessed (e.g. pages of yamada1992). See paper/icaps27/README.md.
+
+% ---------------- Software (vendor-recommended citations) ----------------
+
+@misc{cpsat,
+  author       = {Laurent Perron and Fr{\'e}d{\'e}ric Didier},
+  title        = {{CP-SAT}},
+  howpublished = {Google OR-Tools v9.15, \url{https://developers.google.com/optimization/cp/cp_solver/}},
+  year         = {2026}
+}
+
+@misc{gurobi,
+  author       = {{Gurobi Optimization, LLC}},
+  title        = {{Gurobi Optimizer Reference Manual}},
+  howpublished = {\url{https://www.gurobi.com}},
+  year         = {2026}
+}
+
+@misc{cplex,
+  author       = {{IBM}},
+  title        = {{IBM ILOG CPLEX Optimization Studio}},
+  howpublished = {Python package \texttt{cplex} 22.2, Community Edition, \url{https://www.ibm.com/products/ilog-cplex-optimization-studio}},
+  year         = {2026}
+}
+
+% ---------------- Rescheduling, reactive and project scheduling ----------------
+
+@article{bean1991,
+  author  = {Bean, James C. and Birge, John R. and Mittenthal, John and Noon, Charles E.},
+  title   = {Matchup Scheduling with Multiple Resources, Release Dates and Disruptions},
+  journal = {Operations Research},
+  volume  = {39},
+  number  = {3},
+  pages   = {470--483},
+  year    = {1991},
+  doi     = {10.1287/opre.39.3.470}
+}
+
+@article{vieira2003,
+  author  = {Vieira, Guilherme E. and Herrmann, Jeffrey W. and Lin, Edward},
+  title   = {Rescheduling Manufacturing Systems: A Framework of Strategies, Policies, and Methods},
+  journal = {Journal of Scheduling},
+  volume  = {6},
+  number  = {1},
+  pages   = {39--62},
+  year    = {2003},
+  doi     = {10.1023/A:1022235519958}
+}
+
+@article{ouelhadj2009,
+  author  = {Ouelhadj, Djamila and Petrovic, Sanja},
+  title   = {A Survey of Dynamic Scheduling in Manufacturing Systems},
+  journal = {Journal of Scheduling},
+  volume  = {12},
+  number  = {4},
+  pages   = {417--431},
+  year    = {2009},
+  doi     = {10.1007/s10951-008-0090-8}
+}
+
+@article{herroelen2005,
+  author  = {Herroelen, Willy and Leus, Roel},
+  title   = {Project Scheduling under Uncertainty: Survey and Research Potentials},
+  journal = {European Journal of Operational Research},
+  volume  = {165},
+  number  = {2},
+  pages   = {289--306},
+  year    = {2005},
+  doi     = {10.1016/j.ejor.2004.04.002}
+}
+
+@article{kolisch1996,
+  author  = {Kolisch, Rainer},
+  title   = {Serial and Parallel Resource-Constrained Project Scheduling Methods Revisited: Theory and Computation},
+  journal = {European Journal of Operational Research},
+  volume  = {90},
+  number  = {2},
+  pages   = {320--333},
+  year    = {1996},
+  doi     = {10.1016/0377-2217(95)00357-6}
+}
+
+% ---------------- Plan reuse, repair and stability ----------------
+
+@article{nebel1995,
+  author  = {Nebel, Bernhard and Koehler, Jana},
+  title   = {Plan Reuse versus Plan Generation: A Theoretical and Empirical Analysis},
+  journal = {Artificial Intelligence},
+  volume  = {76},
+  number  = {1--2},
+  pages   = {427--454},
+  year    = {1995},
+  doi     = {10.1016/0004-3702(94)00082-C}
+}
+
+@inproceedings{vanderkrogt2005,
+  author    = {van der Krogt, Roman and de Weerdt, Mathijs},
+  title     = {Plan Repair as an Extension of Planning},
+  booktitle = {Proceedings of the International Conference on Automated Planning and Scheduling (ICAPS)},
+  pages     = {161--170},
+  year      = {2005}
+}
+
+@inproceedings{fox2006,
+  author    = {Fox, Maria and Gerevini, Alfonso and Long, Derek and Serina, Ivan},
+  title     = {Plan Stability: Replanning versus Plan Repair},
+  booktitle = {Proceedings of the International Conference on Automated Planning and Scheduling (ICAPS)},
+  pages     = {212--221},
+  year      = {2006}
+}
+
+% ---------------- Anytime algorithms and anytime metrics ----------------
+
+@inproceedings{dean1988,
+  author    = {Dean, Thomas and Boddy, Mark},
+  title     = {An Analysis of Time-Dependent Planning},
+  booktitle = {Proceedings of the Seventh National Conference on Artificial Intelligence (AAAI)},
+  pages     = {49--54},
+  year      = {1988}
+}
+
+@article{zilberstein1996,
+  author  = {Zilberstein, Shlomo},
+  title   = {Using Anytime Algorithms in Intelligent Systems},
+  journal = {AI Magazine},
+  volume  = {17},
+  number  = {3},
+  pages   = {73--83},
+  year    = {1996},
+  doi     = {10.1609/aimag.v17i3.1232}
+}
+
+@article{berthold2013,
+  author  = {Berthold, Timo},
+  title   = {Measuring the Impact of Primal Heuristics},
+  journal = {Operations Research Letters},
+  volume  = {41},
+  number  = {6},
+  pages   = {611--614},
+  year    = {2013},
+  doi     = {10.1016/j.orl.2013.08.007}
+}
+
+% ---------------- Reoptimization, neighbourhood search ----------------
+
+@article{bolusani2024,
+  author  = {Bolusani, Suresh and Besan{\c{c}}on, Mathieu and Gleixner, Ambros and Berthold, Timo and D'Ambrosio, Claudia and Mu{\~n}oz, Gonzalo and Paat, Joseph and Thomopulos, Dimitri},
+  title   = {The {MIP} Workshop 2023 Computational Competition on Reoptimization},
+  journal = {Mathematical Programming Computation},
+  volume  = {16},
+  number  = {2},
+  pages   = {255--266},
+  year    = {2024},
+  doi     = {10.1007/s12532-024-00256-w}
+}
+
+@inproceedings{shaw1998,
+  author    = {Shaw, Paul},
+  title     = {Using Constraint Programming and Local Search Methods to Solve Vehicle Routing Problems},
+  booktitle = {Principles and Practice of Constraint Programming -- CP98},
+  series    = {Lecture Notes in Computer Science},
+  publisher = {Springer},
+  pages     = {417--431},
+  year      = {1998},
+  doi       = {10.1007/3-540-49481-2_30}
+}
+
+@article{fischetti2003,
+  author  = {Fischetti, Matteo and Lodi, Andrea},
+  title   = {Local Branching},
+  journal = {Mathematical Programming},
+  volume  = {98},
+  number  = {1--3},
+  pages   = {23--47},
+  year    = {2003},
+  doi     = {10.1007/s10107-003-0395-5}
+}
+
+@inproceedings{cai2025,
+  author    = {Cai, Junyang and Kad{\i}o{\u{g}}lu, Serdar and Dilkina, Bistra},
+  title     = {{BALANS}: Multi-Armed Bandits-based Adaptive Large Neighborhood Search for Mixed-Integer Programming Problems},
+  booktitle = {Proceedings of the Thirty-Fourth International Joint Conference on Artificial Intelligence (IJCAI)},
+  pages     = {2566--2574},
+  year      = {2025},
+  doi       = {10.24963/ijcai.2025/286}
+}
+
+% ---------------- MIP formulations of job-shop scheduling ----------------
+
+@article{manne1960,
+  author  = {Manne, Alan S.},
+  title   = {On the Job-Shop Scheduling Problem},
+  journal = {Operations Research},
+  volume  = {8},
+  number  = {2},
+  pages   = {219--223},
+  year    = {1960},
+  doi     = {10.1287/opre.8.2.219}
+}
+
+@article{ku2016,
+  author  = {Ku, Wen-Yang and Beck, J. Christopher},
+  title   = {Mixed Integer Programming Models for Job Shop Scheduling: A Computational Analysis},
+  journal = {Computers \& Operations Research},
+  volume  = {73},
+  pages   = {165--173},
+  year    = {2016},
+  doi     = {10.1016/j.cor.2016.04.006}
+}
+
+% ---------------- Benchmark instance sources ----------------
+
+@article{beasley1990,
+  author  = {Beasley, J. E.},
+  title   = {{OR-Library}: Distributing Test Problems by Electronic Mail},
+  journal = {Journal of the Operational Research Society},
+  volume  = {41},
+  number  = {11},
+  pages   = {1069--1072},
+  year    = {1990},
+  doi     = {10.1057/jors.1990.166}
+}
+
+@article{taillard1993,
+  author  = {Taillard, E.},
+  title   = {Benchmarks for Basic Scheduling Problems},
+  journal = {European Journal of Operational Research},
+  volume  = {64},
+  number  = {2},
+  pages   = {278--285},
+  year    = {1993},
+  doi     = {10.1016/0377-2217(93)90182-M}
+}
+
+@article{demirkol1998,
+  author  = {Demirkol, Ebru and Mehta, Sanjay and Uzsoy, Reha},
+  title   = {Benchmarks for Shop Scheduling Problems},
+  journal = {European Journal of Operational Research},
+  volume  = {109},
+  number  = {1},
+  pages   = {137--141},
+  year    = {1998},
+  doi     = {10.1016/S0377-2217(97)00019-2}
+}
+
+@article{storer1992,
+  author  = {Storer, Robert H. and Wu, S. David and Vaccari, Renzo},
+  title   = {New Search Spaces for Sequencing Problems with Application to Job Shop Scheduling},
+  journal = {Management Science},
+  volume  = {38},
+  number  = {10},
+  pages   = {1495--1509},
+  year    = {1992},
+  doi     = {10.1287/mnsc.38.10.1495}
+}
+
+@inproceedings{yamada1992,
+  author    = {Yamada, Takeshi and Nakano, Ryohei},
+  title     = {A Genetic Algorithm Applicable to Large-Scale Job-Shop Problems},
+  booktitle = {Parallel Problem Solving from Nature 2 (PPSN)},
+  year      = {1992}
+}
+
+@article{kolisch1997,
+  author  = {Kolisch, Rainer and Sprecher, Arno},
+  title   = {{PSPLIB} -- A Project Scheduling Problem Library},
+  journal = {European Journal of Operational Research},
+  volume  = {96},
+  number  = {1},
+  pages   = {205--216},
+  year    = {1997},
+  doi     = {10.1016/S0377-2217(96)00170-1}
+}
+
+% ---------------- Added for the revised manuscript (2026-10-24) ----------------
+% Journal entries: fields from Crossref records of the stated DOIs.
+% Proceedings without DOIs: authors/title/year from OpenAlex; pages from the
+% proceedings listings recorded in docs/research_extension/06_related_work_novelty.md.
+
+@article{abumaizar1997,
+  author  = {Abumaizar, R. J. and Svestka, J. A.},
+  title   = {Rescheduling Job Shops under Random Disruptions},
+  journal = {International Journal of Production Research},
+  volume  = {35},
+  number  = {7},
+  pages   = {2065--2082},
+  year    = {1997},
+  doi     = {10.1080/002075497195074}
+}
+
+@article{subramaniam2003,
+  author  = {Subramaniam, Velusamy and Raheja, Amritpal Singh},
+  title   = {{mAOR}: A Heuristic-Based Reactive Repair Mechanism for Job Shop Schedules},
+  journal = {The International Journal of Advanced Manufacturing Technology},
+  volume  = {22},
+  number  = {9--10},
+  pages   = {669--680},
+  year    = {2003},
+  doi     = {10.1007/s00170-003-1601-6}
+}
+
+@article{sun2026,
+  author  = {Sun, Ruirui and Cheng, Guanghe and Ding, Qingyan and Zhao, Xiaojie},
+  title   = {Impact of Optimization Scope on Solution Quality and Stability in Dynamic Flexible Job Shop Rescheduling},
+  journal = {Computers \& Industrial Engineering},
+  volume  = {215},
+  pages   = {111943},
+  year    = {2026},
+  doi     = {10.1016/j.cie.2026.111943}
+}
+
+@article{werner1995,
+  author  = {Werner, Frank and Winkler, Andreas},
+  title   = {Insertion Techniques for the Heuristic Solution of the Job Shop Problem},
+  journal = {Discrete Applied Mathematics},
+  volume  = {58},
+  number  = {2},
+  pages   = {191--211},
+  year    = {1995},
+  doi     = {10.1016/0166-218X(93)E0127-K}
+}
+
+@article{vanlaarhoven1992,
+  author  = {van Laarhoven, Peter J. M. and Aarts, Emile H. L. and Lenstra, Jan Karel},
+  title   = {Job Shop Scheduling by Simulated Annealing},
+  journal = {Operations Research},
+  volume  = {40},
+  number  = {1},
+  pages   = {113--125},
+  year    = {1992},
+  doi     = {10.1287/opre.40.1.113}
+}
+
+@article{nowicki1996,
+  author  = {Nowicki, Eugeniusz and Smutnicki, Czeslaw},
+  title   = {A Fast Taboo Search Algorithm for the Job Shop Problem},
+  journal = {Management Science},
+  volume  = {42},
+  number  = {6},
+  pages   = {797--813},
+  year    = {1996},
+  doi     = {10.1287/mnsc.42.6.797}
+}
+
+@article{feo1995,
+  author  = {Feo, Thomas A. and Resende, Mauricio G. C.},
+  title   = {Greedy Randomized Adaptive Search Procedures},
+  journal = {Journal of Global Optimization},
+  volume  = {6},
+  number  = {2},
+  pages   = {109--133},
+  year    = {1995},
+  doi     = {10.1007/BF01096763}
+}
+
+@article{gomes2001,
+  author  = {Gomes, Carla P. and Selman, Bart},
+  title   = {Algorithm Portfolios},
+  journal = {Artificial Intelligence},
+  volume  = {126},
+  number  = {1--2},
+  pages   = {43--62},
+  year    = {2001},
+  doi     = {10.1016/S0004-3702(00)00081-3}
+}
+
+@inproceedings{godard2005,
+  author    = {Godard, Daniel and Laborie, Philippe and Nuijten, Wim},
+  title     = {Randomized Large Neighborhood Search for Cumulative Scheduling},
+  booktitle = {Proceedings of the Fifteenth International Conference on Automated Planning and Scheduling (ICAPS 2005)},
+  pages     = {81--89},
+  year      = {2005}
+}
+
+@inproceedings{pacino2011,
+  author    = {Pacino, Dario and Van Hentenryck, Pascal},
+  title     = {Large Neighborhood Search and Adaptive Randomized Decompositions for Flexible Jobshop Scheduling},
+  booktitle = {Proceedings of the Twenty-Second International Joint Conference on Artificial Intelligence (IJCAI 2011)},
+  pages     = {1997--2002},
+  year      = {2011}
+}
+
+@inproceedings{verfaillie1994,
+  author    = {Verfaillie, G{\'e}rard and Schiex, Thomas},
+  title     = {Solution Reuse in Dynamic Constraint Satisfaction Problems},
+  booktitle = {Proceedings of the Twelfth National Conference on Artificial Intelligence (AAAI-94)},
+  pages     = {307--312},
+  year      = {1994}
+}
+
+% ---------------- Added for the COBAR manuscript (2026-10-25) ----------------
+% Crossref records of the stated DOIs (journals); OpenAlex/arXiv for the rest.
+
+@article{linyang2026,
+  author  = {Lin, Zikun and Yang, Mingqi},
+  title   = {An Incumbent-Aware Selective-Repair Framework for Dynamic Flexible Job Shop Scheduling},
+  journal = {Computers \& Industrial Engineering},
+  volume  = {221},
+  pages   = {112299},
+  year    = {2026},
+  doi     = {10.1016/j.cie.2026.112299}
+}
+
+@inproceedings{li2025lrho,
+  author    = {Li, Sirui and Ouyang, Wenbin and Ma, Yining and Wu, Cathy},
+  title     = {Learning-Guided Rolling Horizon Optimization for Long-Horizon Flexible Job-Shop Scheduling},
+  booktitle = {International Conference on Learning Representations (ICLR)},
+  year      = {2025}
+}
+
+@misc{li2026graphrho,
+  author       = {Li, Yujie and Wang, Jiuniu and Peng, Mugen and Li, Guangzuo and Xu, Wenjia},
+  title        = {{Graph-RHO}: Critical-Path-Aware Heterogeneous Graph Network for Long-Horizon Flexible Job-Shop Scheduling},
+  howpublished = {arXiv:2604.10073},
+  year         = {2026}
+}
+
+@article{balas1969,
+  author  = {Balas, Egon},
+  title   = {Machine Sequencing via Disjunctive Graphs: An Implicit Enumeration Algorithm},
+  journal = {Operations Research},
+  volume  = {17},
+  number  = {6},
+  pages   = {941--957},
+  year    = {1969},
+  doi     = {10.1287/opre.17.6.941}
+}
+
+@article{balas1998,
+  author  = {Balas, Egon and Vazacopoulos, Alkis},
+  title   = {Guided Local Search with Shifting Bottleneck for Job Shop Scheduling},
+  journal = {Management Science},
+  volume  = {44},
+  number  = {2},
+  pages   = {262--275},
+  year    = {1998},
+  doi     = {10.1287/mnsc.44.2.262}
+}
+
+@article{carlier1982,
+  author  = {Carlier, Jacques},
+  title   = {The One-Machine Sequencing Problem},
+  journal = {European Journal of Operational Research},
+  volume  = {11},
+  number  = {1},
+  pages   = {42--47},
+  year    = {1982},
+  doi     = {10.1016/S0377-2217(82)80007-6}
+}
+
+@article{fordfulkerson1956,
+  author  = {Ford, L. R. and Fulkerson, D. R.},
+  title   = {Maximal Flow Through a Network},
+  journal = {Canadian Journal of Mathematics},
+  volume  = {8},
+  pages   = {399--404},
+  year    = {1956},
+  doi     = {10.4153/CJM-1956-045-5}
+}
+
+@article{edmondskarp1972,
+  author  = {Edmonds, Jack and Karp, Richard M.},
+  title   = {Theoretical Improvements in Algorithmic Efficiency for Network Flow Problems},
+  journal = {Journal of the ACM},
+  volume  = {19},
+  number  = {2},
+  pages   = {248--264},
+  year    = {1972},
+  doi     = {10.1145/321694.321699}
+}
+
+@inproceedings{perron2023,
+  author    = {Perron, Laurent and Didier, Fr{\'e}d{\'e}ric and Gay, Steven},
+  title     = {The {CP-SAT-LP} Solver (Invited Talk)},
+  booktitle = {29th International Conference on Principles and Practice of Constraint Programming (CP 2023)},
+  series    = {LIPIcs},
+  volume    = {280},
+  pages     = {3:1--3:2},
+  year      = {2023},
+  doi       = {10.4230/LIPIcs.CP.2023.3}
+}
+
+@article{applegate1991,
+  author  = {Applegate, David and Cook, William},
+  title   = {A Computational Study of the Job-Shop Scheduling Problem},
+  journal = {ORSA Journal on Computing},
+  volume  = {3},
+  number  = {2},
+  pages   = {149--156},
+  year    = {1991},
+  doi     = {10.1287/ijoc.3.2.149}
+}
