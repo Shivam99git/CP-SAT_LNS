@@ -15,9 +15,13 @@ from __future__ import annotations
 
 import json
 import os
+import signal
 import subprocess
 import tempfile
+import threading
 import time
+
+import psutil
 from pathlib import Path
 
 from ..solver_independent_model import op_bounds
@@ -103,7 +107,32 @@ class MiniZincAdapter:
             if self.caps.seed_meaningful:
                 cmd += ["-r", str(req.seed)]
             t = time.monotonic()
-            proc = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True, env=mzn_env())
+            # own process group: killing must also stop the fzn-* backend MiniZinc spawned, otherwise
+            # it keeps running orphaned (stealing CPU from other runs, its CPU time unaccounted)
+            proc = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.DEVNULL, text=True, env=mzn_env(),
+                                    start_new_session=True)
+
+            ps_root = psutil.Process(proc.pid)
+            tree_cpu = {}
+
+            def sample_cpu():
+                try:
+                    for p_ in [ps_root] + ps_root.children(recursive=True):
+                        t_ = p_.cpu_times()
+                        tree_cpu[p_.pid] = t_.user + t_.system
+                except psutil.Error:
+                    pass
+
+            def kill_group():
+                sample_cpu()
+                try:
+                    os.killpg(proc.pid, signal.SIGKILL)
+                except ProcessLookupError:
+                    pass
+
+            # hard wall-clock enforcement: MiniZinc's own --time-limit can be overshot by a silent backend
+            killer = threading.Timer(max(0.0, remaining(req)) + 0.05, kill_group)
+            killer.start()
             status, best = "UNKNOWN", None
             try:
                 for line in proc.stdout:
@@ -113,6 +142,8 @@ class MiniZincAdapter:
                         msg = json.loads(line)
                     except json.JSONDecodeError:
                         continue
+                    if msg.get("type") in ("solution", "status"):
+                        sample_cpu()
                     if msg.get("type") == "solution":
                         out = json.loads(msg["output"]["default"]) if "default" in msg.get("output", {}) \
                             else json.loads(msg["output"]["raw"])
@@ -132,10 +163,11 @@ class MiniZincAdapter:
                         res.error = str(msg.get("message"))[:300]
                         status = "ERROR"
             finally:
-                if proc.poll() is None:
-                    proc.kill()
+                killer.cancel()
+                kill_group()      # also reaps a backend that outlived a normally-exiting driver
                 proc.wait()
             res.solve_s = time.monotonic() - t
+            res.subprocess_cpu_s = sum(tree_cpu.values())
         res.status = status
         if best is not None:
             res.objective, res.schedule = best

@@ -119,9 +119,16 @@ class CPOptimizerAdapter:
             raise
         finally:
             try:
-                solver.end_search()
+                import psutil
+                cp = [c for c in psutil.Process().children(recursive=True) if "cpoptimizer" in c.name()]
+                res.subprocess_cpu_s = sum(c.cpu_times().user + c.cpu_times().system for c in cp)
             except Exception:
                 pass
+            for stop in (solver.end_search, solver.end):   # end() terminates the cpoptimizer process
+                try:
+                    stop()
+                except Exception:
+                    pass
         res.solve_s = time.monotonic() - t
         res.status = status
         if last_sol is not None:

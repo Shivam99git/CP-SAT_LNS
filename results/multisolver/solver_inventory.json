@@ -1,0 +1,908 @@
+{
+ "host": "shivam-sharma-OptiPlex-7000",
+ "python": "3.12.3",
+ "smoke_oracle_optimum": 13,
+ "smoke_features": [
+  "outages",
+  "release dates",
+  "commitments"
+ ],
+ "solvers": {
+  "cpsat": {
+   "group": "A: constraint programming",
+   "technology": "CP",
+   "anytime_trajectory": "callback",
+   "warm_start": "AddHint",
+   "parallel_workers": true,
+   "seed_meaningful": true,
+   "objective_cutoff": true,
+   "restricted_neighbourhoods": true,
+   "time_limit": true,
+   "documented_size_limit": null,
+   "version": "9.15.6755",
+   "smoke": {
+    "status": "OPTIMAL",
+    "objective": 13,
+    "validated": true,
+    "total_s": 0.004,
+    "error": null
+   },
+   "status": "AVAILABLE",
+   "scale_probes": {
+    "6x8": {
+     "status": "OPTIMAL",
+     "objective": 305,
+     "vars": 97,
+     "binary": 0,
+     "constraints": 95,
+     "build_s": 0.001,
+     "error": "",
+     "n_ops": 48,
+     "n_jobs": 8,
+     "n_machines": 6,
+     "n_outages": 0,
+     "machine_pairs": 168,
+     "n_frozen": 0
+    },
+    "10x10": {
+     "status": "OPTIMAL",
+     "objective": 456,
+     "vars": 201,
+     "binary": 0,
+     "constraints": 201,
+     "build_s": 0.002,
+     "error": "",
+     "n_ops": 100,
+     "n_jobs": 10,
+     "n_machines": 10,
+     "n_outages": 0,
+     "machine_pairs": 450,
+     "n_frozen": 0
+    },
+    "15x15": {
+     "status": "FEASIBLE",
+     "objective": 745,
+     "vars": 451,
+     "binary": 0,
+     "constraints": 451,
+     "build_s": 0.005,
+     "error": "",
+     "n_ops": 225,
+     "n_jobs": 15,
+     "n_machines": 15,
+     "n_outages": 0,
+     "machine_pairs": 1575,
+     "n_frozen": 0
+    },
+    "20x20": {
+     "status": "FEASIBLE",
+     "objective": 965,
+     "vars": 801,
+     "binary": 0,
+     "constraints": 801,
+     "build_s": 0.004,
+     "error": "",
+     "n_ops": 400,
+     "n_jobs": 20,
+     "n_machines": 20,
+     "n_outages": 0,
+     "machine_pairs": 3800,
+     "n_frozen": 0
+    }
+   }
+  },
+  "cpoptimizer": {
+   "group": "A: constraint programming",
+   "technology": "CP",
+   "anytime_trajectory": "stream",
+   "warm_start": "set_starting_point",
+   "parallel_workers": true,
+   "seed_meaningful": true,
+   "objective_cutoff": true,
+   "restricted_neighbourhoods": true,
+   "time_limit": true,
+   "documented_size_limit": [
+    1000,
+    1000
+   ],
+   "version": "CE (docplex 2.32.264)",
+   "smoke": {
+    "status": "OPTIMAL",
+    "objective": 13,
+    "validated": true,
+    "total_s": 0.066,
+    "error": null
+   },
+   "status": "AVAILABLE",
+   "scale_probes": {
+    "6x8": {
+     "status": "OPTIMAL",
+     "objective": 305,
+     "vars": 54,
+     "binary": 0,
+     "constraints": 46,
+     "build_s": 0.001,
+     "error": "",
+     "n_ops": 48,
+     "n_jobs": 8,
+     "n_machines": 6,
+     "n_outages": 0,
+     "machine_pairs": 168,
+     "n_frozen": 0
+    },
+    "10x10": {
+     "status": "OPTIMAL",
+     "objective": 456,
+     "vars": 110,
+     "binary": 0,
+     "constraints": 100,
+     "build_s": 0.002,
+     "error": "",
+     "n_ops": 100,
+     "n_jobs": 10,
+     "n_machines": 10,
+     "n_outages": 0,
+     "machine_pairs": 450,
+     "n_frozen": 0
+    },
+    "15x15": {
+     "status": "LICENSE_LIMIT",
+     "objective": null,
+     "vars": null,
+     "binary": null,
+     "constraints": null,
+     "build_s": 0.003,
+     "error": "Solver error: Problem size limit exceeded.\nCP Optimizer Community Edition solves problems with search spaces up to 2^1000.\nUnrestricted version options (includi",
+     "n_ops": 225,
+     "n_jobs": 15,
+     "n_machines": 15,
+     "n_outages": 0,
+     "machine_pairs": 1575,
+     "n_frozen": 0
+    },
+    "20x20": {
+     "status": "LICENSE_LIMIT",
+     "objective": null,
+     "vars": null,
+     "binary": null,
+     "constraints": null,
+     "build_s": 0.005,
+     "error": "Solver error: Problem size limit exceeded.\nCP Optimizer Community Edition solves problems with search spaces up to 2^1000.\nUnrestricted version options (includi",
+     "n_ops": 400,
+     "n_jobs": 20,
+     "n_machines": 20,
+     "n_outages": 0,
+     "machine_pairs": 3800,
+     "n_frozen": 0
+    }
+   }
+  },
+  "gecode": {
+   "group": "A: constraint programming",
+   "technology": "CP",
+   "anytime_trajectory": "stream",
+   "warm_start": "none",
+   "parallel_workers": true,
+   "seed_meaningful": false,
+   "objective_cutoff": true,
+   "restricted_neighbourhoods": true,
+   "time_limit": true,
+   "documented_size_limit": null,
+   "version": "6.4.0 (MiniZinc 2.10.1)",
+   "smoke": {
+    "status": "OPTIMAL",
+    "objective": 13,
+    "validated": true,
+    "total_s": 0.166,
+    "error": null
+   },
+   "status": "AVAILABLE",
+   "scale_probes": {
+    "6x8": {
+     "status": "OPTIMAL",
+     "objective": 305,
+     "vars": 49,
+     "binary": 0,
+     "constraints": null,
+     "build_s": 0.0,
+     "error": "",
+     "n_ops": 48,
+     "n_jobs": 8,
+     "n_machines": 6,
+     "n_outages": 0,
+     "machine_pairs": 168,
+     "n_frozen": 0
+    },
+    "10x10": {
+     "status": "FEASIBLE",
+     "objective": 479,
+     "vars": 101,
+     "binary": 0,
+     "constraints": null,
+     "build_s": 0.0,
+     "error": "",
+     "n_ops": 100,
+     "n_jobs": 10,
+     "n_machines": 10,
+     "n_outages": 0,
+     "machine_pairs": 450,
+     "n_frozen": 0
+    },
+    "15x15": {
+     "status": "FEASIBLE",
+     "objective": 817,
+     "vars": 226,
+     "binary": 0,
+     "constraints": null,
+     "build_s": 0.001,
+     "error": "",
+     "n_ops": 225,
+     "n_jobs": 15,
+     "n_machines": 15,
+     "n_outages": 0,
+     "machine_pairs": 1575,
+     "n_frozen": 0
+    },
+    "20x20": {
+     "status": "FEASIBLE",
+     "objective": 1059,
+     "vars": 401,
+     "binary": 0,
+     "constraints": null,
+     "build_s": 0.001,
+     "error": "",
+     "n_ops": 400,
+     "n_jobs": 20,
+     "n_machines": 20,
+     "n_outages": 0,
+     "machine_pairs": 3800,
+     "n_frozen": 0
+    }
+   }
+  },
+  "chuffed": {
+   "group": "A: constraint programming",
+   "technology": "CP",
+   "anytime_trajectory": "stream",
+   "warm_start": "none",
+   "parallel_workers": false,
+   "seed_meaningful": false,
+   "objective_cutoff": true,
+   "restricted_neighbourhoods": true,
+   "time_limit": true,
+   "documented_size_limit": null,
+   "version": "0.14.0 (MiniZinc 2.10.1)",
+   "smoke": {
+    "status": "OPTIMAL",
+    "objective": 13,
+    "validated": true,
+    "total_s": 0.246,
+    "error": null
+   },
+   "status": "AVAILABLE",
+   "scale_probes": {
+    "6x8": {
+     "status": "FEASIBLE",
+     "objective": 652,
+     "vars": 49,
+     "binary": 0,
+     "constraints": null,
+     "build_s": 0.0,
+     "error": "",
+     "n_ops": 48,
+     "n_jobs": 8,
+     "n_machines": 6,
+     "n_outages": 0,
+     "machine_pairs": 168,
+     "n_frozen": 0
+    },
+    "10x10": {
+     "status": "FEASIBLE",
+     "objective": 1778,
+     "vars": 101,
+     "binary": 0,
+     "constraints": null,
+     "build_s": 0.001,
+     "error": "",
+     "n_ops": 100,
+     "n_jobs": 10,
+     "n_machines": 10,
+     "n_outages": 0,
+     "machine_pairs": 450,
+     "n_frozen": 0
+    },
+    "15x15": {
+     "status": "FEASIBLE",
+     "objective": 4844,
+     "vars": 226,
+     "binary": 0,
+     "constraints": null,
+     "build_s": 0.001,
+     "error": "",
+     "n_ops": 225,
+     "n_jobs": 15,
+     "n_machines": 15,
+     "n_outages": 0,
+     "machine_pairs": 1575,
+     "n_frozen": 0
+    },
+    "20x20": {
+     "status": "FEASIBLE",
+     "objective": 8878,
+     "vars": 401,
+     "binary": 0,
+     "constraints": null,
+     "build_s": 0.002,
+     "error": "",
+     "n_ops": 400,
+     "n_jobs": 20,
+     "n_machines": 20,
+     "n_outages": 0,
+     "machine_pairs": 3800,
+     "n_frozen": 0
+    }
+   }
+  },
+  "gurobi": {
+   "group": "B: mixed-integer",
+   "technology": "MIP",
+   "anytime_trajectory": "callback",
+   "warm_start": "Var.Start",
+   "parallel_workers": true,
+   "seed_meaningful": true,
+   "objective_cutoff": true,
+   "restricted_neighbourhoods": true,
+   "time_limit": true,
+   "documented_size_limit": [
+    2000,
+    2000
+   ],
+   "version": "13.0.2 (pip size-limited licence)",
+   "smoke": {
+    "status": "OPTIMAL",
+    "objective": 13,
+    "validated": true,
+    "total_s": 0.003,
+    "error": null
+   },
+   "status": "AVAILABLE",
+   "scale_probes": {
+    "6x8": {
+     "status": "OPTIMAL",
+     "objective": 305,
+     "vars": 217,
+     "binary": 168,
+     "constraints": 384,
+     "build_s": 0.006,
+     "error": "",
+     "n_ops": 48,
+     "n_jobs": 8,
+     "n_machines": 6,
+     "n_outages": 0,
+     "machine_pairs": 168,
+     "n_frozen": 0
+    },
+    "10x10": {
+     "status": "FEASIBLE",
+     "objective": 471,
+     "vars": 551,
+     "binary": 450,
+     "constraints": 1000,
+     "build_s": 0.013,
+     "error": "",
+     "n_ops": 100,
+     "n_jobs": 10,
+     "n_machines": 10,
+     "n_outages": 0,
+     "machine_pairs": 450,
+     "n_frozen": 0
+    },
+    "15x15": {
+     "status": "LICENSE_LIMIT",
+     "objective": null,
+     "vars": 1801,
+     "binary": 1575,
+     "constraints": 3375,
+     "build_s": 0.039,
+     "error": "Model too large for size-limited license; visit https://gurobi.com/unrestricted for more information",
+     "n_ops": 225,
+     "n_jobs": 15,
+     "n_machines": 15,
+     "n_outages": 0,
+     "machine_pairs": 1575,
+     "n_frozen": 0
+    },
+    "20x20": {
+     "status": "LICENSE_LIMIT",
+     "objective": null,
+     "vars": 4201,
+     "binary": 3800,
+     "constraints": 8000,
+     "build_s": 0.111,
+     "error": "Model too large for size-limited license; visit https://gurobi.com/unrestricted for more information",
+     "n_ops": 400,
+     "n_jobs": 20,
+     "n_machines": 20,
+     "n_outages": 0,
+     "machine_pairs": 3800,
+     "n_frozen": 0
+    }
+   }
+  },
+  "cplex": {
+   "group": "B: mixed-integer",
+   "technology": "MIP",
+   "anytime_trajectory": "callback",
+   "warm_start": "MIP_starts",
+   "parallel_workers": true,
+   "seed_meaningful": true,
+   "objective_cutoff": true,
+   "restricted_neighbourhoods": true,
+   "time_limit": true,
+   "documented_size_limit": [
+    1000,
+    1000
+   ],
+   "version": "22.2.0.0 (Community Edition)",
+   "smoke": {
+    "status": "OPTIMAL",
+    "objective": 13,
+    "validated": true,
+    "total_s": 0.003,
+    "error": null
+   },
+   "status": "AVAILABLE",
+   "scale_probes": {
+    "6x8": {
+     "status": "OPTIMAL",
+     "objective": 305,
+     "vars": 217,
+     "binary": 168,
+     "constraints": 384,
+     "build_s": 0.003,
+     "error": "",
+     "n_ops": 48,
+     "n_jobs": 8,
+     "n_machines": 6,
+     "n_outages": 0,
+     "machine_pairs": 168,
+     "n_frozen": 0
+    },
+    "10x10": {
+     "status": "FEASIBLE",
+     "objective": 476,
+     "vars": 551,
+     "binary": 450,
+     "constraints": 1000,
+     "build_s": 0.006,
+     "error": "",
+     "n_ops": 100,
+     "n_jobs": 10,
+     "n_machines": 10,
+     "n_outages": 0,
+     "machine_pairs": 450,
+     "n_frozen": 0
+    },
+    "15x15": {
+     "status": "LICENSE_LIMIT",
+     "objective": null,
+     "vars": 1801,
+     "binary": 1575,
+     "constraints": 3375,
+     "build_s": 0.017,
+     "error": "CPLEX Error  1016: Community Edition. Problem size limits exceeded. Purchase at http://ibm.biz/error1016.",
+     "n_ops": 225,
+     "n_jobs": 15,
+     "n_machines": 15,
+     "n_outages": 0,
+     "machine_pairs": 1575,
+     "n_frozen": 0
+    },
+    "20x20": {
+     "status": "LICENSE_LIMIT",
+     "objective": null,
+     "vars": 4201,
+     "binary": 3800,
+     "constraints": 8000,
+     "build_s": 0.037,
+     "error": "CPLEX Error  1016: Community Edition. Problem size limits exceeded. Purchase at http://ibm.biz/error1016.",
+     "n_ops": 400,
+     "n_jobs": 20,
+     "n_machines": 20,
+     "n_outages": 0,
+     "machine_pairs": 3800,
+     "n_frozen": 0
+    }
+   }
+  },
+  "scip": {
+   "group": "B: mixed-integer",
+   "technology": "MIP",
+   "anytime_trajectory": "callback",
+   "warm_start": "addSol",
+   "parallel_workers": false,
+   "seed_meaningful": true,
+   "objective_cutoff": true,
+   "restricted_neighbourhoods": true,
+   "time_limit": true,
+   "documented_size_limit": null,
+   "version": "10.0 (PySCIPOpt 6.3.0)",
+   "smoke": {
+    "status": "OPTIMAL",
+    "objective": 13,
+    "validated": true,
+    "total_s": 0.004,
+    "error": null
+   },
+   "status": "AVAILABLE",
+   "scale_probes": {
+    "6x8": {
+     "status": "OPTIMAL",
+     "objective": 305,
+     "vars": 217,
+     "binary": 168,
+     "constraints": 384,
+     "build_s": 0.008,
+     "error": "",
+     "n_ops": 48,
+     "n_jobs": 8,
+     "n_machines": 6,
+     "n_outages": 0,
+     "machine_pairs": 168,
+     "n_frozen": 0
+    },
+    "10x10": {
+     "status": "FEASIBLE",
+     "objective": 504,
+     "vars": 551,
+     "binary": 450,
+     "constraints": 1000,
+     "build_s": 0.017,
+     "error": "",
+     "n_ops": 100,
+     "n_jobs": 10,
+     "n_machines": 10,
+     "n_outages": 0,
+     "machine_pairs": 450,
+     "n_frozen": 0
+    },
+    "15x15": {
+     "status": "FEASIBLE",
+     "objective": 975,
+     "vars": 1801,
+     "binary": 1575,
+     "constraints": 3375,
+     "build_s": 0.043,
+     "error": "",
+     "n_ops": 225,
+     "n_jobs": 15,
+     "n_machines": 15,
+     "n_outages": 0,
+     "machine_pairs": 1575,
+     "n_frozen": 0
+    },
+    "20x20": {
+     "status": "FEASIBLE",
+     "objective": 1680,
+     "vars": 4201,
+     "binary": 3800,
+     "constraints": 8000,
+     "build_s": 0.065,
+     "error": "",
+     "n_ops": 400,
+     "n_jobs": 20,
+     "n_machines": 20,
+     "n_outages": 0,
+     "machine_pairs": 3800,
+     "n_frozen": 0
+    }
+   }
+  },
+  "highs": {
+   "group": "B: mixed-integer",
+   "technology": "MIP",
+   "anytime_trajectory": "callback",
+   "warm_start": "setSolution",
+   "parallel_workers": false,
+   "seed_meaningful": true,
+   "objective_cutoff": true,
+   "restricted_neighbourhoods": true,
+   "time_limit": true,
+   "documented_size_limit": null,
+   "version": "1.16.0",
+   "smoke": {
+    "status": "OPTIMAL",
+    "objective": 13,
+    "validated": true,
+    "total_s": 0.001,
+    "error": null
+   },
+   "status": "AVAILABLE",
+   "scale_probes": {
+    "6x8": {
+     "status": "OPTIMAL",
+     "objective": 305,
+     "vars": 217,
+     "binary": 168,
+     "constraints": 384,
+     "build_s": 0.001,
+     "error": "",
+     "n_ops": 48,
+     "n_jobs": 8,
+     "n_machines": 6,
+     "n_outages": 0,
+     "machine_pairs": 168,
+     "n_frozen": 0
+    },
+    "10x10": {
+     "status": "FEASIBLE",
+     "objective": 475,
+     "vars": 551,
+     "binary": 450,
+     "constraints": 1000,
+     "build_s": 0.002,
+     "error": "",
+     "n_ops": 100,
+     "n_jobs": 10,
+     "n_machines": 10,
+     "n_outages": 0,
+     "machine_pairs": 450,
+     "n_frozen": 0
+    },
+    "15x15": {
+     "status": "FEASIBLE",
+     "objective": 916,
+     "vars": 1801,
+     "binary": 1575,
+     "constraints": 3375,
+     "build_s": 0.006,
+     "error": "",
+     "n_ops": 225,
+     "n_jobs": 15,
+     "n_machines": 15,
+     "n_outages": 0,
+     "machine_pairs": 1575,
+     "n_frozen": 0
+    },
+    "20x20": {
+     "status": "UNKNOWN",
+     "objective": null,
+     "vars": 4201,
+     "binary": 3800,
+     "constraints": 8000,
+     "build_s": 0.012,
+     "error": "",
+     "n_ops": 400,
+     "n_jobs": 20,
+     "n_machines": 20,
+     "n_outages": 0,
+     "machine_pairs": 3800,
+     "n_frozen": 0
+    }
+   }
+  },
+  "cbc": {
+   "group": "B: mixed-integer",
+   "technology": "MIP",
+   "anytime_trajectory": "final_only",
+   "warm_start": "SetHint",
+   "parallel_workers": true,
+   "seed_meaningful": false,
+   "objective_cutoff": true,
+   "restricted_neighbourhoods": true,
+   "time_limit": true,
+   "documented_size_limit": null,
+   "version": "Cbc 2.10.12 (via OR-Tools pywraplp)",
+   "smoke": {
+    "status": "OPTIMAL",
+    "objective": 13,
+    "validated": true,
+    "total_s": 0.002,
+    "error": null
+   },
+   "status": "AVAILABLE",
+   "scale_probes": {
+    "6x8": {
+     "status": "OPTIMAL",
+     "objective": 305,
+     "vars": 217,
+     "binary": 168,
+     "constraints": 384,
+     "build_s": 0.002,
+     "error": "",
+     "n_ops": 48,
+     "n_jobs": 8,
+     "n_machines": 6,
+     "n_outages": 0,
+     "machine_pairs": 168,
+     "n_frozen": 0
+    },
+    "10x10": {
+     "status": "FEASIBLE",
+     "objective": 744,
+     "vars": 551,
+     "binary": 450,
+     "constraints": 1000,
+     "build_s": 0.005,
+     "error": "",
+     "n_ops": 100,
+     "n_jobs": 10,
+     "n_machines": 10,
+     "n_outages": 0,
+     "machine_pairs": 450,
+     "n_frozen": 0
+    },
+    "15x15": {
+     "status": "FEASIBLE",
+     "objective": 2775,
+     "vars": 1801,
+     "binary": 1575,
+     "constraints": 3375,
+     "build_s": 0.017,
+     "error": "",
+     "n_ops": 225,
+     "n_jobs": 15,
+     "n_machines": 15,
+     "n_outages": 0,
+     "machine_pairs": 1575,
+     "n_frozen": 0
+    },
+    "20x20": {
+     "status": "FEASIBLE",
+     "objective": 6555,
+     "vars": 4201,
+     "binary": 3800,
+     "constraints": 8000,
+     "build_s": 0.082,
+     "error": "",
+     "n_ops": 400,
+     "n_jobs": 20,
+     "n_machines": 20,
+     "n_outages": 0,
+     "machine_pairs": 3800,
+     "n_frozen": 0
+    }
+   }
+  },
+  "glpk": {
+   "group": "B: mixed-integer",
+   "technology": "MIP",
+   "anytime_trajectory": "final_only",
+   "warm_start": "none",
+   "parallel_workers": false,
+   "seed_meaningful": false,
+   "objective_cutoff": true,
+   "restricted_neighbourhoods": true,
+   "time_limit": true,
+   "documented_size_limit": null,
+   "version": "5.0",
+   "smoke": {
+    "status": "OPTIMAL",
+    "objective": 13,
+    "validated": true,
+    "total_s": 0.0,
+    "error": null
+   },
+   "status": "AVAILABLE",
+   "scale_probes": {
+    "6x8": {
+     "status": "OPTIMAL",
+     "objective": 305,
+     "vars": 217,
+     "binary": 168,
+     "constraints": 384,
+     "build_s": 0.003,
+     "error": "",
+     "n_ops": 48,
+     "n_jobs": 8,
+     "n_machines": 6,
+     "n_outages": 0,
+     "machine_pairs": 168,
+     "n_frozen": 0
+    },
+    "10x10": {
+     "status": "UNKNOWN",
+     "objective": null,
+     "vars": 551,
+     "binary": 450,
+     "constraints": 1000,
+     "build_s": 0.007,
+     "error": "",
+     "n_ops": 100,
+     "n_jobs": 10,
+     "n_machines": 10,
+     "n_outages": 0,
+     "machine_pairs": 450,
+     "n_frozen": 0
+    },
+    "15x15": {
+     "status": "UNKNOWN",
+     "objective": null,
+     "vars": 1801,
+     "binary": 1575,
+     "constraints": 3375,
+     "build_s": 0.024,
+     "error": "",
+     "n_ops": 225,
+     "n_jobs": 15,
+     "n_machines": 15,
+     "n_outages": 0,
+     "machine_pairs": 1575,
+     "n_frozen": 0
+    },
+    "20x20": {
+     "status": "UNKNOWN",
+     "objective": null,
+     "vars": 4201,
+     "binary": 3800,
+     "constraints": 8000,
+     "build_s": 0.058,
+     "error": "",
+     "n_ops": 400,
+     "n_jobs": 20,
+     "n_machines": 20,
+     "n_outages": 0,
+     "machine_pairs": 3800,
+     "n_frozen": 0
+    }
+   }
+  }
+ },
+ "not_installed": {
+  "FICO Xpress": "NOT INSTALLED (no Python module; commercial, no licence available)",
+  "Hexaly": "NOT INSTALLED (no Python module; commercial, no licence available)",
+  "LocalSolver/Hexaly": "NOT INSTALLED (no Python module; commercial, no licence available)",
+  "Choco Solver": "NOT INSTALLED (requires a Java runtime; `java` not found)"
+ },
+ "minizinc_backends_seen": [
+  {
+   "id": "org.chuffed.chuffed",
+   "version": "0.14.0"
+  },
+  {
+   "id": "org.minizinc.mip.coin-bc",
+   "version": "2.10.13/1.17.11"
+  },
+  {
+   "id": "org.minizinc.mip.cplex",
+   "version": "<unknown version>"
+  },
+  {
+   "id": "org.minizinc.findmus",
+   "version": "2.10.1"
+  },
+  {
+   "id": "org.gecode.gecode",
+   "version": "6.4.0"
+  },
+  {
+   "id": "org.gecode.gist",
+   "version": "6.4.0"
+  },
+  {
+   "id": "org.minizinc.globalizer",
+   "version": "0.1.8"
+  },
+  {
+   "id": "org.minizinc.mip.gurobi",
+   "version": "<unknown version>"
+  },
+  {
+   "id": "org.minizinc.mip.highs",
+   "version": "1.15.1"
+  },
+  {
+   "id": "cp-sat",
+   "version": "9.15"
+  },
+  {
+   "id": "org.minizinc.mip.scip",
+   "version": "<unknown version>"
+  },
+  {
+   "id": "org.minizinc.mip.xpress",
+   "version": "<unknown version>"
+  }
+ ],
+ "minizinc_policy": "MiniZinc 2.10.1 is a modelling system; only Gecode and Chuffed are used through it. Its fzn-cp-sat (same CP-SAT engine) and its COIN-BC/HiGHS/SCIP/Gurobi/CPLEX interfaces duplicate engines already reached through native APIs and are not counted as independent solvers."
+}

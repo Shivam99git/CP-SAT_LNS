@@ -1,0 +1,11 @@
+{
+ "status_counts": {
+  "OK": 1716,
+  "OK_without_stored_schedule": 674,
+  "NOT_SUPPORTED": 408,
+  "schedule_revalidated": 1042,
+  "NO_SOLUTION": 36
+ },
+ "n_violations": 0,
+ "violations": []
+}

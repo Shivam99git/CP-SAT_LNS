@@ -1,0 +1,252 @@
+{
+ "M2_crit_vs_timewin_by_delta": {
+  "all": {
+   "n_streams": 40,
+   "rel_diff_pct": 11.438457947766434,
+   "crit_wins": 13,
+   "crit_losses": 27,
+   "sign_p_uncorrected": 0.03847730828420026,
+   "ci95_rel_pct": [
+    4.475727957132651,
+    18.832860680276067
+   ]
+  },
+  "arrival": {
+   "n_streams": 40,
+   "rel_diff_pct": 8.932422536660681,
+   "crit_wins": 13,
+   "crit_losses": 27,
+   "sign_p_uncorrected": 0.03847730828420026,
+   "ci95_rel_pct": [
+    2.519500980146994,
+    15.534322886706509
+   ]
+  },
+  "cancellation": {
+   "n_streams": 38,
+   "rel_diff_pct": 18.54141955514655,
+   "crit_wins": 9,
+   "crit_losses": 29,
+   "sign_p_uncorrected": 0.0016580525261815637,
+   "ci95_rel_pct": [
+    7.761035546908802,
+    29.544347743370484
+   ]
+  },
+  "duration_jitter": {
+   "n_streams": 38,
+   "rel_diff_pct": 13.305417588656816,
+   "crit_wins": 12,
+   "crit_losses": 26,
+   "sign_p_uncorrected": 0.03355243967962451,
+   "ci95_rel_pct": [
+    1.8495976224984674,
+    25.049030952879395
+   ]
+  },
+  "outage": {
+   "n_streams": 31,
+   "rel_diff_pct": 9.751221285605057,
+   "crit_wins": 11,
+   "crit_losses": 20,
+   "sign_p_uncorrected": 0.14961278438568115,
+   "ci95_rel_pct": [
+    -4.61239709098453,
+    24.80057702729217
+   ]
+  }
+ },
+ "M1_round_stats_U1": {
+  "B1_random": {
+   "mean_completed_rounds": 1.62,
+   "round_improvement_rate": 0.3891975308641975,
+   "mean_round_solver_s": 0.06236688673207364,
+   "mean_restricted_solver_s_per_instance": 0.1010343565059593,
+   "mean_global_time_s": 6.80802833787899,
+   "mean_local_window_s": 0.7366673921885667,
+   "round_status": {
+    "OPTIMAL": 1255,
+    "INFEASIBLE": 1978,
+    "FEASIBLE": 6,
+    "UNKNOWN": 1
+   },
+   "mean_released_ops": 84.59320987654321,
+   "mean_critical_in_N": 9.637962962962963,
+   "n_rounds": 3240,
+   "mean_rounds_by_delta": {
+    "arrival": 1.6509090909090909,
+    "cancellation": 1.3954022988505748,
+    "outage": 1.9018181818181819,
+    "duration_jitter": 1.6086021505376344
+   }
+  },
+  "B4_prec": {
+   "mean_completed_rounds": 1.297,
+   "round_improvement_rate": 0.23168851195065535,
+   "mean_round_solver_s": 0.030139019360149,
+   "mean_restricted_solver_s_per_instance": 0.039090308110113256,
+   "mean_global_time_s": 6.840357532520895,
+   "mean_local_window_s": 0.685610615652171,
+   "round_status": {
+    "INFEASIBLE": 1993,
+    "OPTIMAL": 601
+   },
+   "mean_released_ops": 0.0,
+   "mean_critical_in_N": 0.0,
+   "n_rounds": 2594,
+   "mean_rounds_by_delta": {
+    "arrival": 1.3454545454545455,
+    "cancellation": 1.1724137931034482,
+    "outage": 1.3672727272727272,
+    "duration_jitter": 1.2860215053763442
+   }
+  },
+  "B2_crit": {
+   "mean_completed_rounds": 2.904,
+   "round_improvement_rate": 0.6637396694214877,
+   "mean_round_solver_s": 0.09755977199280752,
+   "mean_restricted_solver_s_per_instance": 0.28331357786711303,
+   "mean_global_time_s": 6.553978055404732,
+   "mean_local_window_s": 0.9768065695065307,
+   "round_status": {
+    "OPTIMAL": 3848,
+    "INFEASIBLE": 1948,
+    "UNKNOWN": 5,
+    "FEASIBLE": 7
+   },
+   "mean_released_ops": 87.21177685950413,
+   "mean_critical_in_N": 39.49431818181818,
+   "n_rounds": 5808,
+   "mean_rounds_by_delta": {
+    "arrival": 3.1515151515151514,
+    "cancellation": 2.4,
+    "outage": 2.949090909090909,
+    "duration_jitter": 2.9096774193548387
+   }
+  },
+  "B3_timewin": {
+   "mean_completed_rounds": 1.973,
+   "round_improvement_rate": 0.5015205271160669,
+   "mean_round_solver_s": 0.14587850227556204,
+   "mean_restricted_solver_s_per_instance": 0.28781828498968387,
+   "mean_global_time_s": 6.537003835813259,
+   "mean_local_window_s": 0.9642505406417186,
+   "round_status": {
+    "OPTIMAL": 1964,
+    "INFEASIBLE": 1956,
+    "UNKNOWN": 11,
+    "FEASIBLE": 15
+   },
+   "mean_released_ops": 87.0567663456665,
+   "mean_critical_in_N": 10.015965534718703,
+   "n_rounds": 3946,
+   "mean_rounds_by_delta": {
+    "arrival": 2.016969696969697,
+    "cancellation": 1.8528735632183908,
+    "outage": 1.88,
+    "duration_jitter": 2.0623655913978496
+   }
+  }
+ },
+ "M2_round_stats_U2": {
+  "M2_prec": {
+   "mean_completed_rounds": 5.9775,
+   "round_improvement_rate": 0.15575073191133418,
+   "mean_round_solver_s": 0.02119306066460652,
+   "mean_restricted_solver_s_per_instance": 0.12668152012268546,
+   "mean_global_time_s": 6.7244942715945655,
+   "mean_local_window_s": 0.8085256759383482,
+   "round_status": {
+    "INFEASIBLE": 10092,
+    "OPTIMAL": 1842,
+    "FEASIBLE": 20,
+    "UNKNOWN": 1
+   },
+   "mean_released_ops": 0.0,
+   "mean_critical_in_N": 0.0,
+   "n_rounds": 11955,
+   "mean_rounds_by_delta": {
+    "arrival": 5.945454545454545,
+    "cancellation": 6.0,
+    "outage": 6.0,
+    "duration_jitter": 6.0
+   }
+  },
+  "M2_crit": {
+   "mean_completed_rounds": 5.966,
+   "round_improvement_rate": 0.3224103251759973,
+   "mean_round_solver_s": 0.05597903974596776,
+   "mean_restricted_solver_s_per_instance": 0.3339709511244437,
+   "mean_global_time_s": 6.507730604969198,
+   "mean_local_window_s": 1.027802214719588,
+   "round_status": {
+    "INFEASIBLE": 7988,
+    "OPTIMAL": 3471,
+    "FEASIBLE": 376,
+    "UNKNOWN": 97
+   },
+   "mean_released_ops": 82.41074421723097,
+   "mean_critical_in_N": 39.7665102246061,
+   "n_rounds": 11932,
+   "mean_rounds_by_delta": {
+    "arrival": 5.92,
+    "cancellation": 6.0,
+    "outage": 6.0,
+    "duration_jitter": 5.995698924731183
+   }
+  },
+  "M2_timewin": {
+   "mean_completed_rounds": 5.9455,
+   "round_improvement_rate": 0.37465309898242366,
+   "mean_round_solver_s": 0.07991831172294472,
+   "mean_restricted_solver_s_per_instance": 0.47515432234876787,
+   "mean_global_time_s": 6.352682713430026,
+   "mean_local_window_s": 1.1754403206685091,
+   "round_status": {
+    "INFEASIBLE": 7289,
+    "OPTIMAL": 3554,
+    "FEASIBLE": 901,
+    "UNKNOWN": 147
+   },
+   "mean_released_ops": 82.32612900512993,
+   "mean_critical_in_N": 9.901606256832899,
+   "n_rounds": 11891,
+   "mean_rounds_by_delta": {
+    "arrival": 5.867878787878788,
+    "cancellation": 6.0,
+    "outage": 6.0,
+    "duration_jitter": 6.0
+   }
+  },
+  "M2_random": {
+   "mean_completed_rounds": 5.9675,
+   "round_improvement_rate": 0.2517804775869292,
+   "mean_round_solver_s": 0.035412252913601776,
+   "mean_restricted_solver_s_per_instance": 0.2113226192619186,
+   "mean_global_time_s": 6.642596193027799,
+   "mean_local_window_s": 0.8866447279218118,
+   "round_status": {
+    "OPTIMAL": 2840,
+    "INFEASIBLE": 8928,
+    "FEASIBLE": 165,
+    "UNKNOWN": 2
+   },
+   "mean_released_ops": 82.42982823627985,
+   "mean_critical_in_N": 9.730121491411815,
+   "n_rounds": 11935,
+   "mean_rounds_by_delta": {
+    "arrival": 5.921212121212121,
+    "cancellation": 6.0,
+    "outage": 6.0,
+    "duration_jitter": 6.0
+   }
+  }
+ },
+ "restricted_status_counts": {
+  "optimal": 82023,
+  "infeasible": 66224,
+  "feasible": 3804,
+  "unknown": 600,
+  "total": 152651
+ }
+}

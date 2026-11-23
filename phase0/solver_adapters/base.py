@@ -74,6 +74,7 @@ class AdapterResult:
     error: str | None = None
     notes: list = field(default_factory=list)
     validated: bool = False
+    subprocess_cpu_s: float = 0.0   # CPU of solver subprocesses measured before they were killed
 
 
 def now(req: SolveRequest) -> float:
@@ -84,10 +85,13 @@ def remaining(req: SolveRequest) -> float:
     return req.deadline - time.monotonic()
 
 
-def run_adapter(adapter, req: SolveRequest) -> AdapterResult:
+def run_adapter(adapter, req: SolveRequest, validate_intermediate: bool = True) -> AdapterResult:
     """Call an adapter, then independently validate its final schedule and
     every intermediate schedule it reported. Invalid schedules are dropped
-    and recorded; a solver never gets credit for an unvalidated schedule."""
+    and recorded; a solver never gets credit for an unvalidated schedule.
+    validate_intermediate=False defers intermediate checks to the caller
+    (multisolver_methods audits them after the method's clock stops, since a
+    deployed pipeline validates only the schedules it adopts)."""
     t_call = time.monotonic()
     try:
         res = adapter.solve(req)
@@ -100,7 +104,7 @@ def run_adapter(adapter, req: SolveRequest) -> AdapterResult:
     best = None
     for ev in sorted(res.events, key=lambda e: e[0]):
         t, obj, sched = ev
-        if sched is not None:
+        if sched is not None and validate_intermediate:
             try:
                 v = check_schedule(inst, sched)
             except ScheduleError as e:
@@ -114,7 +118,7 @@ def run_adapter(adapter, req: SolveRequest) -> AdapterResult:
                 obj = v
         if best is None or obj < best:
             best = obj
-            kept.append((t, obj, sched is not None))
+            kept.append((t, obj, sched))
     res.events = kept
     if res.schedule is not None:
         try:
@@ -125,7 +129,7 @@ def run_adapter(adapter, req: SolveRequest) -> AdapterResult:
             if not res.events or res.events[-1][1] > v:
                 # final schedule better than any streamed one (e.g. final-only backends):
                 # credit it at the moment the adapter returned it, never earlier.
-                res.events.append((t_call - req.t0 + res.total_s, v, True))
+                res.events.append((t_call - req.t0 + res.total_s, v, res.schedule))
         except ScheduleError as e:
             res.notes.append(f"final schedule rejected: {e}")
             res.schedule, res.objective, res.validated = None, None, False
