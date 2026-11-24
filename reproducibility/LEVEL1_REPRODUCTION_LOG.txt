@@ -1,0 +1,355 @@
+LEVEL 1 analysis reproduction -- 2026-11-24T11:28:42+05:30
+--- 1. IAIP-SR (phase0/analyze_confirmatory.py) ---
+== IAIP-SR confirmatory analysis
+{"records": 22000, "not_validated": 0, "no_solution": 0, "overrun_runs": 20907, "overrun_max_s": 0.24360708193853498, "overrun_p99_s": 0.01661265426548197}
+
+40 streams, seeds [0, 1, 2, 3, 4]; stream mean PI (steps 1..T)
+  iaip_sr                  PI=0.0339 late=0.0289 gapB=0.0197 t1=0.002
+  portfolio_hinted         PI=0.0443 late=0.0395 gapB=0.0267 t1=0.002
+  portfolio_cold           PI=0.0495 late=0.0448 gapB=0.0308 t1=0.002
+  fresh_portfolio_cold     PI=0.0597 late=0.0514 gapB=0.0322 t1=0.006
+  fresh_portfolio_hinted   PI=0.0612 late=0.0526 gapB=0.0333 t1=0.007
+  mwkr_cold                PI=0.0597 late=0.0513 gapB=0.0322 t1=0.006
+  floor                    PI=0.0530 late=0.0465 gapB=0.0311 t1=0.001
+  cold                     PI=0.0666 late=0.0513 gapB=0.0322 t1=0.067
+  elr_cold                 PI=0.0512 late=0.0449 gapB=0.0310 t1=0.024
+  random_nbh_control       PI=0.0420 late=0.0374 gapB=0.0257 t1=0.002
+
+predeclared family (Holm on sign test over streams):
+  iaip_sr vs fresh_portfolio_cold                 -43.2% CI=[-0.0288,-0.0228] W/L=40/0 p_holm=1.5e-11
+  iaip_sr vs fresh_portfolio_hinted               -44.6% CI=[-0.0302,-0.0244] W/L=40/0 p_holm=1.5e-11
+  iaip_sr vs mwkr_cold                            -43.2% CI=[-0.0288,-0.0228] W/L=40/0 p_holm=1.5e-11
+  iaip_sr vs floor                                -36.1% CI=[-0.0218,-0.0164] W/L=39/1 p_holm=1.5e-10
+  iaip_sr vs cold                                 -49.1% CI=[-0.0358,-0.0295] W/L=40/0 p_holm=1.5e-11
+  iaip_sr vs portfolio_hinted                     -23.4% CI=[-0.0124,-0.0084] W/L=40/0 p_holm=1.5e-11
+  iaip_sr vs random_nbh_control                   -19.4% CI=[-0.0102,-0.0061] W/L=36/4 p_holm=1.9e-07
+  portfolio_cold vs fresh_portfolio_cold          -17.1% CI=[-0.0116,-0.0089] W/L=40/0 p_holm=1.5e-11
+
+GO criteria: {
+ "pi_reduction_ge_15pct": true,
+ "wins_ge_70pct_streams": true,
+ "ci_excludes_zero": true,
+ "primary_holm_p_lt_0_05": true,
+ "no_final_gap_regression": true,
+ "all_outputs_validated": true,
+ "selective_stage_adds_value": true
+}
+   OK
+--- 2. COBAR certificate study (phase0/analyze_cobar_confirmatory.py) ---
+== COBAR confirmatory analysis
+
+S1_primary: 40 streams, seeds [0, 1, 2, 3, 4] {"records": 8800, "not_validated": 0, "no_solution": 0, "overrun_max_s": 0.019248030032031238, "overrun_p99_s": 0.01184848099714145}
+  candidate          PI=0.0255 gapB=0.0159
+  random_rounds      PI=0.0310 gapB=0.0206
+  iaip_sr            PI=0.0340 gapB=0.0231
+  portfolio_hinted   PI=0.0446 gapB=0.0287
+  candidate vs iaip_sr                -24.8% CI=[-0.0108,-0.0063] W/L=39/1 p_holm=2.2e-10
+  candidate vs portfolio_hinted       -42.7% CI=[-0.0222,-0.0161] W/L=40/0 p_holm=7.3e-12
+  candidate vs random_rounds          -17.7% CI=[-0.0073,-0.0039] W/L=38/2 p_holm=3e-09
+  random_rounds vs iaip_sr             -8.6% CI=[-0.0045,-0.0015] W/L=34/6 p_holm=8.4e-06
+  non-inferior to IAIP-SR (5% margin): True
+
+S2_short: 40 streams, seeds [0, 1, 2, 3, 4] {"records": 6600, "not_validated": 0, "no_solution": 0, "overrun_max_s": 0.009299441939219832, "overrun_p99_s": 0.004769491030601786}
+  candidate          PI=0.0351 gapB=0.0193
+  iaip_sr            PI=0.0405 gapB=0.0238
+  portfolio_hinted   PI=0.0480 gapB=0.0289
+  candidate vs iaip_sr                -13.2% CI=[-0.0081,-0.0029] W/L=27/13 p_holm=0.038
+  candidate vs portfolio_hinted       -26.8% CI=[-0.0158,-0.0100] W/L=36/4 p_holm=3.7e-07
+  non-inferior to IAIP-SR (5% margin): True
+
+S3_workers4: 20 streams, seeds [0, 1, 2, 3, 4] {"records": 3300, "not_validated": 0, "no_solution": 0, "overrun_max_s": 0.055419384967535734, "overrun_p99_s": 0.013732043094933019}
+  candidate          PI=0.0154 gapB=0.0071
+  iaip_sr            PI=0.0167 gapB=0.0087
+  portfolio_hinted   PI=0.0182 gapB=0.0101
+  candidate vs iaip_sr                 -7.9% CI=[-0.0026,-0.0002] W/L=14/6 p_holm=0.12
+  candidate vs portfolio_hinted       -15.6% CI=[-0.0045,-0.0014] W/L=16/4 p_holm=0.024
+  non-inferior to IAIP-SR (5% margin): True
+
+S4_arrival: 20 streams, seeds [0, 1, 2, 3, 4] {"records": 3300, "not_validated": 0, "no_solution": 0, "overrun_max_s": 0.02014130400493741, "overrun_p99_s": 0.0128244682517834}
+  candidate          PI=0.0253 gapB=0.0135
+  iaip_sr            PI=0.0428 gapB=0.0309
+  portfolio_hinted   PI=0.0719 gapB=0.0525
+  candidate vs iaip_sr                -40.8% CI=[-0.0225,-0.0130] W/L=20/0 p_holm=3.8e-06
+  candidate vs portfolio_hinted       -64.8% CI=[-0.0523,-0.0410] W/L=20/0 p_holm=3.8e-06
+  non-inferior to IAIP-SR (5% margin): True
+
+S5_outage: 20 streams, seeds [0, 1, 2, 3, 4] {"records": 3300, "not_validated": 0, "no_solution": 0, "overrun_max_s": 0.019909262075088918, "overrun_p99_s": 0.011069135763682382}
+  candidate          PI=0.0199 gapB=0.0099
+  iaip_sr            PI=0.0233 gapB=0.0118
+  portfolio_hinted   PI=0.0275 gapB=0.0134
+  candidate vs iaip_sr                -14.7% CI=[-0.0054,-0.0015] W/L=16/4 p_holm=0.012
+  candidate vs portfolio_hinted       -27.7% CI=[-0.0103,-0.0051] W/L=20/0 p_holm=3.8e-06
+  non-inferior to IAIP-SR (5% margin): True
+
+S6_b30: 20 streams, seeds [0, 1, 2] {"records": 1980, "not_validated": 0, "no_solution": 0, "overrun_max_s": 0.048828931991010904, "overrun_p99_s": 0.030759283449733634}
+  candidate          PI=0.0164 gapB=0.0098
+  iaip_sr            PI=0.0209 gapB=0.0121
+  portfolio_hinted   PI=0.0305 gapB=0.0159
+  candidate vs iaip_sr                -21.5% CI=[-0.0060,-0.0031] W/L=19/1 p_holm=4e-05
+  candidate vs portfolio_hinted       -46.0% CI=[-0.0181,-0.0103] W/L=20/0 p_holm=3.8e-06
+  non-inferior to IAIP-SR (5% margin): True
+
+S7_benchmarks: 34 base instances, seeds [0, 1, 2, 3, 4] {"records": 5610, "not_validated": 0, "no_solution": 0, "overrun_max_s": 0.02422724198549986, "overrun_p99_s": 0.012810418920125806}
+  candidate          PI=0.0248 gapB=0.0141
+  iaip_sr            PI=0.0319 gapB=0.0188
+  portfolio_hinted   PI=0.0434 gapB=0.0260
+  candidate vs iaip_sr                -22.4% CI=[-0.0094,-0.0050] W/L=31/3 p_holm=7.7e-07
+  candidate vs portfolio_hinted       -43.0% CI=[-0.0228,-0.0147] W/L=34/0 p_holm=2.3e-10
+  non-inferior to IAIP-SR (5% margin): True
+
+criteria: {
+ "primary_target": true,
+ "stronger_target": true,
+ "location_matters": true,
+ "no_final_gap_regression": true,
+ "all_outputs_validated": true,
+ "non_inferiority_S2_short": true,
+ "non_inferiority_S3_workers4": true
+}
+   OK
+--- 3. Unified critical-region / matched-round study (phase0/analyze_unified_confirmatory.py) ---
+== Unified confirmatory analysis
+
+U1_primary: 40 streams, seeds [0, 1, 2, 3, 4] {"records": 15400, "not_validated": 0, "no_solution": 0, "overrun_max_s": 0.019178380025550723, "overrun_p99_s": 0.011614376481156796}
+  B2_crit          PI=0.0256 gapB=0.0163
+  B3_timewin       PI=0.0273 gapB=0.0176
+  B1_random        PI=0.0322 gapB=0.0217
+  B0_iaip          PI=0.0330 gapB=0.0224
+  B4_prec          PI=0.0340 gapB=0.0233
+  B6_port_hint     PI=0.0447 gapB=0.0288
+  B5_native1w      PI=0.0456 gapB=0.0354
+  B2_crit vs B0_iaip                    -22.4% CI=[-0.0097,-0.0053] W/L=35/5 holm=8.3e-06
+  B2_crit vs B1_random                  -20.4% CI=[-0.0088,-0.0046] W/L=35/5 holm=8.3e-06
+  B2_crit vs B3_timewin                  -6.1% CI=[-0.0036,+0.0002] W/L=26/14 holm=0.16
+  B2_crit vs B4_prec                    -24.5% CI=[-0.0109,-0.0060] W/L=34/6 holm=3.3e-05
+  B2_crit vs B5_native1w                -43.8% CI=[-0.0239,-0.0162] W/L=40/0 holm=1.5e-11
+  B2_crit vs B6_port_hint               -42.7% CI=[-0.0230,-0.0154] W/L=40/0 holm=1.5e-11
+  B3_timewin vs B0_iaip                 -17.4% CI=[-0.0087,-0.0031] W/L=32/8 holm=0.00055
+  B1_random vs B0_iaip                   -2.5% CI=[-0.0024,+0.0006] W/L=21/19 holm=0.87
+
+U2_mechanism: 40 streams, seeds [0, 1, 2, 3, 4] {"records": 8800, "not_validated": 0, "no_solution": 0, "overrun_max_s": 0.01690172404050827, "overrun_p99_s": 0.010785370697267356}
+  M2_timewin       PI=0.0240 gapB=0.0148
+  M2_crit          PI=0.0268 gapB=0.0174
+  M2_random        PI=0.0301 gapB=0.0199
+  M2_prec          PI=0.0301 gapB=0.0200
+  M2_crit vs M2_random                  -10.8% CI=[-0.0051,-0.0014] W/L=28/12 holm=0.033
+  M2_crit vs M2_timewin                 +11.4% CI=[+0.0011,+0.0045] W/L=13/27 holm=0.038
+  M2_crit vs M2_prec                    -10.9% CI=[-0.0050,-0.0015] W/L=31/9 holm=0.002
+  M2_timewin vs M2_random               -20.0% CI=[-0.0080,-0.0042] W/L=34/6 holm=3.3e-05
+
+U3_workers4: 20 streams, seeds [0, 1, 2, 3, 4] {"records": 4400, "not_validated": 0, "no_solution": 0, "overrun_max_s": 0.03456371393986046, "overrun_p99_s": 0.012973638542462156}
+  B3_timewin       PI=0.0162 gapB=0.0086
+  B0_iaip          PI=0.0166 gapB=0.0091
+  B2_crit          PI=0.0166 gapB=0.0092
+  B6_port_hint     PI=0.0182 gapB=0.0104
+  B2_crit vs B0_iaip                     +0.0% CI=[-0.0012,+0.0012] W/L=12/8 holm=1
+  B2_crit vs B6_port_hint                -9.1% CI=[-0.0030,-0.0002] W/L=15/5 holm=0.12
+  B2_crit vs B3_timewin                  +2.2% CI=[-0.0011,+0.0018] W/L=10/10 holm=1
+
+U4_b2: 40 streams, seeds [0, 1, 2, 3, 4] {"records": 8800, "not_validated": 0, "no_solution": 0, "overrun_max_s": 0.00765265803784132, "overrun_p99_s": 0.004660558896139265}
+  B2_crit          PI=0.0392 gapB=0.0227
+  B3_timewin       PI=0.0397 gapB=0.0231
+  B0_iaip          PI=0.0418 gapB=0.0250
+  B6_port_hint     PI=0.0495 gapB=0.0306
+  B2_crit vs B0_iaip                     -6.2% CI=[-0.0059,+0.0007] W/L=23/17 holm=0.86
+  B2_crit vs B6_port_hint               -20.7% CI=[-0.0147,-0.0057] W/L=31/9 holm=0.002
+  B2_crit vs B3_timewin                  -1.3% CI=[-0.0035,+0.0025] W/L=22/18 holm=0.86
+
+U5_b30: 20 streams, seeds [0, 1, 2] {"records": 2640, "not_validated": 0, "no_solution": 0, "overrun_max_s": 0.04972654487937689, "overrun_p99_s": 0.03466247816570117}
+  B2_crit          PI=0.0168 gapB=0.0107
+  B3_timewin       PI=0.0181 gapB=0.0112
+  B0_iaip          PI=0.0209 gapB=0.0129
+  B6_port_hint     PI=0.0293 gapB=0.0162
+  B2_crit vs B0_iaip                    -19.2% CI=[-0.0060,-0.0022] W/L=17/3 holm=0.0052
+  B2_crit vs B6_port_hint               -42.5% CI=[-0.0162,-0.0090] W/L=20/0 holm=5.7e-06
+  B2_crit vs B3_timewin                  -7.0% CI=[-0.0029,+0.0003] W/L=13/7 holm=0.26
+
+U6_arrival: 20 streams, seeds [0, 1, 2, 3, 4] {"records": 4400, "not_validated": 0, "no_solution": 0, "overrun_max_s": 0.022895014146342874, "overrun_p99_s": 0.013099128887988637}
+  B2_crit          PI=0.0284 gapB=0.0156
+  B3_timewin       PI=0.0371 gapB=0.0247
+  B0_iaip          PI=0.0513 gapB=0.0390
+  B6_port_hint     PI=0.0779 gapB=0.0580
+  B2_crit vs B0_iaip                    -44.8% CI=[-0.0296,-0.0177] W/L=20/0 holm=5.7e-06
+  B2_crit vs B6_port_hint               -63.6% CI=[-0.0542,-0.0450] W/L=20/0 holm=5.7e-06
+  B2_crit vs B3_timewin                 -23.6% CI=[-0.0118,-0.0058] W/L=18/2 holm=0.0004
+
+U7_outage: 20 streams, seeds [0, 1, 2, 3, 4] {"records": 4400, "not_validated": 0, "no_solution": 0, "overrun_max_s": 0.01843931805342436, "overrun_p99_s": 0.012195942082908008}
+  B2_crit          PI=0.0243 gapB=0.0116
+  B3_timewin       PI=0.0261 gapB=0.0129
+  B0_iaip          PI=0.0269 gapB=0.0133
+  B6_port_hint     PI=0.0302 gapB=0.0148
+  B2_crit vs B0_iaip                     -9.9% CI=[-0.0046,-0.0009] W/L=14/6 holm=0.23
+  B2_crit vs B6_port_hint               -19.6% CI=[-0.0090,-0.0032] W/L=18/2 holm=0.0012
+  B2_crit vs B3_timewin                  -7.0% CI=[-0.0045,+0.0008] W/L=14/6 holm=0.23
+
+U8_high: 20 streams, seeds [0, 1, 2, 3, 4] {"records": 4400, "not_validated": 0, "no_solution": 0, "overrun_max_s": 0.01860204292461276, "overrun_p99_s": 0.01245833951979876}
+  B2_crit          PI=0.0252 gapB=0.0162
+  B3_timewin       PI=0.0278 gapB=0.0184
+  B0_iaip          PI=0.0310 gapB=0.0207
+  B6_port_hint     PI=0.0441 gapB=0.0284
+  B2_crit vs B0_iaip                    -18.8% CI=[-0.0090,-0.0030] W/L=16/4 holm=0.024
+  B2_crit vs B6_port_hint               -43.0% CI=[-0.0238,-0.0142] W/L=20/0 holm=5.7e-06
+  B2_crit vs B3_timewin                  -9.5% CI=[-0.0059,-0.0001] W/L=14/6 holm=0.12
+
+U9_benchmarks: 34 base instances, seeds [0, 1, 2, 3, 4] {"records": 7480, "not_validated": 0, "no_solution": 0, "overrun_max_s": 0.03654740797355771, "overrun_p99_s": 0.012634039621334523}
+  B2_crit          PI=0.0300 gapB=0.0198
+  B3_timewin       PI=0.0322 gapB=0.0213
+  B0_iaip          PI=0.0438 gapB=0.0322
+  B6_port_hint     PI=0.0641 gapB=0.0450
+  B2_crit vs B0_iaip                    -31.5% CI=[-0.0193,-0.0093] W/L=33/1 holm=8.1e-09
+  B2_crit vs B6_port_hint               -53.2% CI=[-0.0402,-0.0285] W/L=34/0 holm=3.5e-10
+  B2_crit vs B3_timewin                  -6.9% CI=[-0.0057,+0.0014] W/L=21/13 holm=0.23
+
+criteria: {
+ "C1_replication": true,
+ "C2_vs_random": true,
+ "C3_vs_timewin": "inconclusive",
+ "C4_vs_prec": true,
+ "C5_vs_native1w": true,
+ "C6_vs_native4w": false,
+ "validity": true
+}
+CLASSIFICATION: CONDITIONAL_GO
+   OK
+--- 4. Final CP-SAT study: third, code-disjoint recomputation from raw events ---
+== CP-SAT confirmatory re-derivation
+top-level run records: 60720; comparisons: 33
+max |rel-diff error| vs archived: 2.53e-14 pct-points; W/L mismatches: 0; max |Holm error|: 0.00e+00
+  U1_primary     B2_crit vs B0_iaip            -22.41%  35/5  holm=8.3e-06  CI=[-29.1,-16.1]
+  U1_primary     B2_crit vs B1_random          -20.38%  35/5  holm=8.3e-06  CI=[-27.3,-14.3]
+  U1_primary     B2_crit vs B3_timewin          -6.13%  26/14  holm=0.16  CI=[-13.6,+0.8]
+  U1_primary     B2_crit vs B4_prec            -24.51%  34/6  holm=3.3e-05  CI=[-32.0,-17.7]
+  U1_primary     B2_crit vs B5_native1w        -43.80%  40/0  holm=1.5e-11  CI=[-52.3,-35.6]
+  U1_primary     B2_crit vs B6_port_hint       -42.66%  40/0  holm=1.5e-11  CI=[-51.2,-34.5]
+  U1_primary     B3_timewin vs B0_iaip         -17.35%  32/8  holm=0.00055  CI=[-26.0,-9.3]
+  U1_primary     B1_random vs B0_iaip           -2.55%  21/19  holm=0.87  CI=[-7.1,+1.8]
+  U2_mechanism   M2_crit vs M2_random          -10.84%  28/12  holm=0.033  CI=[-16.9,-4.5]
+  U2_mechanism   M2_crit vs M2_timewin         +11.44%  13/27  holm=0.038  CI=[+4.5,+18.8]
+  U2_mechanism   M2_crit vs M2_prec            -10.88%  31/9  holm=0.002  CI=[-16.7,-4.9]
+  U2_mechanism   M2_timewin vs M2_random       -19.99%  34/6  holm=3.3e-05  CI=[-26.2,-13.9]
+  U3_workers4    B2_crit vs B0_iaip             +0.02%  12/8  holm=1  CI=[-7.4,+7.4]
+  U3_workers4    B2_crit vs B6_port_hint        -9.12%  15/5  holm=0.12  CI=[-16.7,-1.3]
+  U3_workers4    B2_crit vs B3_timewin          +2.20%  10/10  holm=1  CI=[-6.8,+11.0]
+  U4_b2          B2_crit vs B0_iaip             -6.22%  23/17  holm=0.86  CI=[-14.3,+1.9]
+  U4_b2          B2_crit vs B6_port_hint       -20.74%  31/9  holm=0.002  CI=[-29.7,-11.6]
+  U4_b2          B2_crit vs B3_timewin          -1.28%  22/18  holm=0.86  CI=[-8.7,+6.1]
+  U5_b30         B2_crit vs B0_iaip            -19.22%  17/3  holm=0.0052  CI=[-28.7,-10.4]
+  U5_b30         B2_crit vs B6_port_hint       -42.54%  20/0  holm=5.7e-06  CI=[-55.2,-30.8]
+  U5_b30         B2_crit vs B3_timewin          -6.98%  13/7  holm=0.26  CI=[-16.1,+1.6]
+  U6_arrival     B2_crit vs B0_iaip            -44.78%  20/0  holm=5.7e-06  CI=[-57.3,-34.5]
+  U6_arrival     B2_crit vs B6_port_hint       -63.60%  20/0  holm=5.7e-06  CI=[-69.5,-57.8]
+  U6_arrival     B2_crit vs B3_timewin         -23.62%  18/2  holm=0.0004  CI=[-31.9,-15.3]
+  U7_outage      B2_crit vs B0_iaip             -9.86%  14/6  holm=0.23  CI=[-17.1,-3.3]
+  U7_outage      B2_crit vs B6_port_hint       -19.61%  18/2  holm=0.0012  CI=[-29.6,-10.4]
+  U7_outage      B2_crit vs B3_timewin          -6.98%  14/6  holm=0.23  CI=[-17.1,+3.3]
+  U8_high        B2_crit vs B0_iaip            -18.82%  16/4  holm=0.024  CI=[-29.1,-9.8]
+  U8_high        B2_crit vs B6_port_hint       -42.98%  20/0  holm=5.7e-06  CI=[-54.0,-32.2]
+  U8_high        B2_crit vs B3_timewin          -9.53%  14/6  holm=0.12  CI=[-21.2,-0.4]
+  U9_benchmarks  B2_crit vs B0_iaip            -31.54%  33/1  holm=8.1e-09  CI=[-44.2,-21.2]
+  U9_benchmarks  B2_crit vs B6_port_hint       -53.20%  34/0  holm=3.5e-10  CI=[-62.5,-44.5]
+  U9_benchmarks  B2_crit vs B3_timewin          -6.90%  21/13  holm=0.23  CI=[-17.6,+4.2]
+   OK
+== Mechanism (M1/M2) re-derivation
+M2 crit vs tw [all             ]  +11.4%  13/27  p=0.0385  CI=[+4.5,+18.8]  n=40
+M2 crit vs tw [arrival         ]   +8.9%  13/27  p=0.0385  CI=[+2.5,+15.5]  n=40
+M2 crit vs tw [cancellation    ]  +18.5%  9/29  p=0.00166  CI=[+7.8,+29.5]  n=38
+M2 crit vs tw [duration_jitter ]  +13.3%  12/26  p=0.0336  CI=[+1.8,+25.0]  n=38
+M2 crit vs tw [outage          ]   +9.8%  11/20  p=0.15  CI=[-4.6,+24.8]  n=31
+M1_round_stats_U1 B1_random   rounds=1.62 impr=0.389 round_solver=0.062s restricted/inst=0.10s global=6.81s by_delta={'arrival': 1.65, 'cancellation': 1.4, 'outage': 1.9, 'duration_jitter': 1.61}
+M1_round_stats_U1 B2_crit     rounds=2.90 impr=0.664 round_solver=0.098s restricted/inst=0.28s global=6.55s by_delta={'arrival': 3.15, 'cancellation': 2.4, 'outage': 2.95, 'duration_jitter': 2.91}
+M1_round_stats_U1 B3_timewin  rounds=1.97 impr=0.502 round_solver=0.146s restricted/inst=0.29s global=6.54s by_delta={'arrival': 2.02, 'cancellation': 1.85, 'outage': 1.88, 'duration_jitter': 2.06}
+M1_round_stats_U1 B4_prec     rounds=1.30 impr=0.232 round_solver=0.030s restricted/inst=0.04s global=6.84s by_delta={'arrival': 1.35, 'cancellation': 1.17, 'outage': 1.37, 'duration_jitter': 1.29}
+M2_round_stats_U2 M2_crit     rounds=5.97 impr=0.322 round_solver=0.056s restricted/inst=0.33s global=6.51s by_delta={'arrival': 5.92, 'cancellation': 6.0, 'outage': 6.0, 'duration_jitter': 6.0}
+M2_round_stats_U2 M2_prec     rounds=5.98 impr=0.156 round_solver=0.021s restricted/inst=0.13s global=6.72s by_delta={'arrival': 5.95, 'cancellation': 6.0, 'outage': 6.0, 'duration_jitter': 6.0}
+M2_round_stats_U2 M2_random   rounds=5.97 impr=0.252 round_solver=0.035s restricted/inst=0.21s global=6.64s by_delta={'arrival': 5.92, 'cancellation': 6.0, 'outage': 6.0, 'duration_jitter': 6.0}
+M2_round_stats_U2 M2_timewin  rounds=5.95 impr=0.375 round_solver=0.080s restricted/inst=0.48s global=6.35s by_delta={'arrival': 5.87, 'cancellation': 6.0, 'outage': 6.0, 'duration_jitter': 6.0}
+   OK
+--- 5. Multi-solver held-out campaign ---
+== Re-validate every stored schedule
+{"status_counts": {"OK": 18660, "schedule_revalidated": 17986, "NOT_SUPPORTED": 2508, "NO_SOLUTION": 432, "OK_without_stored_schedule": 674}, "by_experiment": {"AB": {"OK": 11346, "schedule_revalidated": 11346, "NOT_SUPPORTED": 2100, "NO_SOLUTION": 384}, "R2": {"OK": 2988, "schedule_revalidated": 2988, "NO_SOLUTION": 12}, "R30": {"OK": 1440, "schedule_revalidated": 1440}, "W4": {"OK": 1170, "schedule_revalidated": 1170}, "pilot": {"OK": 1716, "OK_without_stored_schedule": 674, "NOT_SUPPORTED": 408, "schedule_revalidated": 1042, "NO_SOLUTION": 36}}, "n_violations": 0}
+   OK
+== Recompute held-out statistics
+19440 records, 199 physical instances, 209 configurations -> results/multisolver/analysis/heldout.json
+   OK
+== Contention sensitivity (CPU/wall >= 0.8)
+contention filter cpu/wall >= 0.8: kept 15823/17340 rows
+19440 records, 199 physical instances, 209 configurations -> results/multisolver/analysis/heldout_cpu08.json
+   OK
+== Post-hoc stage attribution (descriptive)
+106 configurations -> results/multisolver/analysis/stage_attribution.json
+   OK
+== Post-hoc 20x20 comparisons (exploratory)
+AB|M20|gecode|S4|8|1         vs AB|M20|cpsat|S4|8|1        +43.9%  0/5  p=0.0625  CI=[32.1, 61.4]
+AB|M20|chuffed|S4|8|1        vs AB|M20|cpsat|S4|8|1        -15.5%  3/2  p=1  CI=[-44.3, 13.3]
+AB|M20|scip|S4|8|1           vs AB|M20|cpsat|S4|8|1       +102.5%  0/5  p=0.0625  CI=[64.3, 138.7]
+AB|M20|highs|S4|8|1          vs AB|M20|cpsat|S4|8|1       +103.0%  0/5  p=0.0625  CI=[65.3, 140.7]
+AB|M20|cbc|S4|8|1            vs AB|M20|cpsat|S4|8|1       +136.5%  0/5  p=0.0625  CI=[103.2, 161.3]
+AB|M20|glpk|S4|8|1           vs AB|M20|cpsat|S4|8|1       +129.5%  0/5  p=0.0625  CI=[102.7, 155.0]
+-> /home/shivam-sharma/CP-SAT model/results/multisolver/analysis/posthoc.json
+   OK
+--- 6. Figures and tables ---
+== CP-SAT confirmatory figures
+wrote /home/shivam-sharma/CP-SAT model/paper/icaps27_multisolver_final/figures/forest_u1.pdf
+vs.\ \textsc{SR} (IAIP-SR)                    mean=-22.4%  CI(rel)=[-29.2,-16.1]  holm=8.3e-06
+vs.\ \textsc{SR+Rand}                         mean=-20.4%  CI(rel)=[-27.2,-14.2]  holm=8.3e-06
+vs.\ \textsc{SR+Prec}                         mean=-24.5%  CI(rel)=[-32.0,-17.7]  holm=3.3e-05
+vs.\ \textsc{SR+TimeWin}                      mean=-6.1%  CI(rel)=[-13.3,+0.8]  holm=0.16
+vs.\ \textsc{Port+Hint-ILS} (native, 1w)      mean=-43.8%  CI(rel)=[-52.4,-35.6]  holm=1.5e-11
+vs.\ \textsc{Port+Hint}                       mean=-42.7%  CI(rel)=[-51.4,-34.5]  holm=1.5e-11
+   OK
+== Mechanism figure
+wrote /home/shivam-sharma/CP-SAT model/paper/icaps27_multisolver_final/figures/mechanism_u2_u1.pdf
+  U1 mixed         -6.1% CI=[-13.3,+0.8] sig=False exploratory=False
+  U6 arrival      -23.6% CI=[-31.8,-15.6] sig=True exploratory=False
+  U7 outage        -7.0% CI=[-17.1,+3.1] sig=False exploratory=False
+  overall         +11.4% CI=[+4.6,+18.9] sig=True exploratory=False
+  arrival*         +8.9% CI=[+2.5,+15.5] sig=True exploratory=True
+  cancellation*   +18.5% CI=[+7.8,+29.5] sig=True exploratory=True
+  duration*       +13.3% CI=[+1.8,+25.0] sig=True exploratory=True
+  outage*          +9.8% CI=[-4.6,+24.8] sig=False exploratory=True
+   OK
+== Robustness heatmap
+wrote /home/shivam-sharma/CP-SAT model/paper/icaps27_multisolver_final/figures/robustness_heatmap.pdf
+vs.\ \textsc{SR}     2s (budget)          mean=-6.2%  sig=False  n=40
+vs.\ \textsc{SR}     8s (primary)         mean=-22.4%  sig=True  n=40
+vs.\ \textsc{SR}     30s (budget)         mean=-19.2%  sig=True  n=20
+vs.\ \textsc{SR}     4 workers (parallel) mean=+0.0%  sig=False  n=20
+vs.\ \textsc{SR}     arrival (disrupt.)   mean=-44.8%  sig=True  n=20
+vs.\ \textsc{SR}     outage (disrupt.)    mean=-9.9%  sig=False  n=20
+vs.\ \textsc{SR}     high sev. (disrupt.) mean=-18.8%  sig=True  n=20
+vs.\ \textsc{SR}     34 published bases   mean=-31.5%  sig=True  n=34
+vs.\ \textsc{Port+Hint} 2s (budget)          mean=-20.7%  sig=True  n=40
+vs.\ \textsc{Port+Hint} 8s (primary)         mean=-42.7%  sig=True  n=40
+vs.\ \textsc{Port+Hint} 30s (budget)         mean=-42.5%  sig=True  n=20
+vs.\ \textsc{Port+Hint} 4 workers (parallel) mean=-9.1%  sig=False  n=20
+vs.\ \textsc{Port+Hint} arrival (disrupt.)   mean=-63.6%  sig=True  n=20
+vs.\ \textsc{Port+Hint} outage (disrupt.)    mean=-19.6%  sig=True  n=20
+vs.\ \textsc{Port+Hint} high sev. (disrupt.) mean=-43.0%  sig=True  n=20
+vs.\ \textsc{Port+Hint} 34 published bases   mean=-53.2%  sig=True  n=34
+   OK
+== Multisolver figures and tables
+wrote paper/icaps27_multisolver_final/figures/ms/s1_engines_cold.pdf
+wrote paper/icaps27_multisolver_final/figures/ms/s2_trajectories.pdf
+wrote paper/icaps27_multisolver_final/figures/ms/s34_within_solver.pdf
+wrote paper/icaps27_multisolver_final/figures/ms/s4b_stage_attribution.pdf
+wrote paper/icaps27_multisolver_final/figures/ms/s5_scalability.pdf
+wrote paper/icaps27_multisolver_final/figures/ms/s6_model_overhead.pdf
+wrote tables to paper/icaps27_multisolver_final/figures/ms/tables
+   OK
+--- 7. Comparison against archived reference values (Task A10) ---
+== Reproduction-vs-archive comparison report
+EXACT MATCH                      results/research_extension/confirmatory/confirmatory_analysis.json  (max_rel_diff=0.00e+00)
+EXACT MATCH                      results/cobar/confirmatory/confirmatory_analysis.json  (max_rel_diff=0.00e+00)
+EXACT MATCH                      results/unified_icaps/confirmatory/confirmatory_analysis.json  (max_rel_diff=0.00e+00)
+EXACT MATCH                      results/multisolver/audit/cpsat_reproduction.json  (max_rel_diff=0.00e+00)
+EXACT MATCH                      results/multisolver/audit/mechanism_reproduction.json  (max_rel_diff=0.00e+00)
+EXACT MATCH                      results/multisolver/validation_report.json  (max_rel_diff=0.00e+00)
+EXACT MATCH                      results/multisolver/analysis/heldout.json  (max_rel_diff=0.00e+00)
+EXACT MATCH                      results/multisolver/analysis/heldout_cpu08.json  (max_rel_diff=0.00e+00)
+EXACT MATCH                      results/multisolver/analysis/stage_attribution.json  (max_rel_diff=0.00e+00)
+EXACT MATCH                      results/multisolver/analysis/posthoc.json  (max_rel_diff=0.00e+00)
+
+summary: {'EXACT MATCH': 10}
+   OK
+
+RESULT: Level 1 analysis reproduction completed; see reproducibility/LEVEL1_REPRODUCTION_LOG.txt and reproducibility/REPRODUCTION_COMPARISON.json

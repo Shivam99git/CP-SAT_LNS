@@ -1,0 +1,561 @@
+{
+ "generated": "reproducibility/compare_live_rerun.py",
+ "structural": {
+  "zero_validation_violations": true,
+  "status_categories_known": true
+ },
+ "numeric": {
+  "n_configs_compared": 78,
+  "n_outside_band": 11,
+  "cpsat_lowest_cold_pi": true,
+  "per_config": [
+   {
+    "config": "AB|S|cplex|S3|8|1",
+    "archived_pi": 0.0029500844741362727,
+    "rerun_pi": 0.0001841549942985491,
+    "ratio": 16.019573541153292,
+    "within_band": false
+   },
+   {
+    "config": "AB|S|cplex|S0|8|1",
+    "archived_pi": 0.012491501185114632,
+    "rerun_pi": 0.0030556341258398596,
+    "ratio": 4.088022541534245,
+    "within_band": true
+   },
+   {
+    "config": "AB|S|cplex|S4|8|1",
+    "archived_pi": 0.002070985940379741,
+    "rerun_pi": 0.00015461142753045977,
+    "ratio": 13.394779244061628,
+    "within_band": false
+   },
+   {
+    "config": "AB|S|glpk|S3|8|1",
+    "archived_pi": 0.015909279297319022,
+    "rerun_pi": 0.005403385991386275,
+    "ratio": 2.9443166419501687,
+    "within_band": true
+   },
+   {
+    "config": "AB|S|glpk|S4|8|1",
+    "archived_pi": 0.010034941425132138,
+    "rerun_pi": 0.002606555416328111,
+    "ratio": 3.849886084243892,
+    "within_band": true
+   },
+   {
+    "config": "AB|S|glpk|S0|8|1",
+    "archived_pi": 0.3838071258098353,
+    "rerun_pi": 0.15897876190720125,
+    "ratio": 2.414203766625572,
+    "within_band": true
+   },
+   {
+    "config": "AB|S|cbc|S3|8|1",
+    "archived_pi": 0.019322752379692956,
+    "rerun_pi": 0.00866151523081773,
+    "ratio": 2.230874375298963,
+    "within_band": true
+   },
+   {
+    "config": "AB|S|cbc|S0|8|1",
+    "archived_pi": 0.46215385703137146,
+    "rerun_pi": 0.21784644882427529,
+    "ratio": 2.1214661038801945,
+    "within_band": true
+   },
+   {
+    "config": "AB|S|cbc|S4|8|1",
+    "archived_pi": 0.01268926309172815,
+    "rerun_pi": 0.00439379284383377,
+    "ratio": 2.887997578114364,
+    "within_band": true
+   },
+   {
+    "config": "AB|S|gurobi|S4|8|1",
+    "archived_pi": 0.0009568841621134768,
+    "rerun_pi": 0.00019613749216703546,
+    "ratio": 4.878639731452113,
+    "within_band": true
+   },
+   {
+    "config": "AB|S|gurobi|S0|8|1",
+    "archived_pi": 0.006704981689124999,
+    "rerun_pi": 0.0013443900173775256,
+    "ratio": 4.987378366736366,
+    "within_band": true
+   },
+   {
+    "config": "AB|S|gurobi|S3|8|1",
+    "archived_pi": 0.0014856449824620997,
+    "rerun_pi": 0.00020709676074108448,
+    "ratio": 7.173675614943469,
+    "within_band": false
+   },
+   {
+    "config": "AB|S|highs|S4|8|1",
+    "archived_pi": 0.003210620951893677,
+    "rerun_pi": 0.00033491902087282765,
+    "ratio": 9.58626041461164,
+    "within_band": false
+   },
+   {
+    "config": "AB|S|highs|S0|8|1",
+    "archived_pi": 0.027511750799389396,
+    "rerun_pi": 0.006952558982498307,
+    "ratio": 3.957068306596865,
+    "within_band": true
+   },
+   {
+    "config": "AB|S|highs|S3|8|1",
+    "archived_pi": 0.004417882527554737,
+    "rerun_pi": 0.0006444533012365722,
+    "ratio": 6.855240742933176,
+    "within_band": false
+   },
+   {
+    "config": "AB|S|scip|S4|8|1",
+    "archived_pi": 0.004052538327021353,
+    "rerun_pi": 0.0005028570785105619,
+    "ratio": 8.05902611339344,
+    "within_band": false
+   },
+   {
+    "config": "AB|S|scip|S3|8|1",
+    "archived_pi": 0.006279720609844291,
+    "rerun_pi": 0.0004918782236613527,
+    "ratio": 12.7668197284695,
+    "within_band": false
+   },
+   {
+    "config": "AB|S|scip|S0|8|1",
+    "archived_pi": 0.03401617825463861,
+    "rerun_pi": 0.006037273292489237,
+    "ratio": 5.6343611770825355,
+    "within_band": false
+   },
+   {
+    "config": "AB|S|cpoptimizer|S3|8|1",
+    "archived_pi": 0.0005659076093951292,
+    "rerun_pi": 0.00022191895187113268,
+    "ratio": 2.550064357386426,
+    "within_band": true
+   },
+   {
+    "config": "AB|S|cpoptimizer|S4|8|1",
+    "archived_pi": 0.0006839917675003588,
+    "rerun_pi": 0.00033365691033353803,
+    "ratio": 2.049985318201894,
+    "within_band": true
+   },
+   {
+    "config": "AB|S|cpoptimizer|S0|8|1",
+    "archived_pi": 0.009797117049342602,
+    "rerun_pi": 0.0058406248258601814,
+    "ratio": 1.677409068626442,
+    "within_band": true
+   },
+   {
+    "config": "AB|S|gecode|S0|8|1",
+    "archived_pi": 0.03907938046167166,
+    "rerun_pi": 0.013881640067202699,
+    "ratio": 2.8151846808074303,
+    "within_band": true
+   },
+   {
+    "config": "AB|S|gecode|S4|8|1",
+    "archived_pi": 0.006247897014333768,
+    "rerun_pi": 0.0012429232071168497,
+    "ratio": 5.02677637569156,
+    "within_band": false
+   },
+   {
+    "config": "AB|S|gecode|S3|8|1",
+    "archived_pi": 0.00652269447902281,
+    "rerun_pi": 0.000744431119378328,
+    "ratio": 8.761985238432658,
+    "within_band": false
+   },
+   {
+    "config": "AB|S|chuffed|S4|8|1",
+    "archived_pi": 0.015588451869233456,
+    "rerun_pi": 0.012274961835477083,
+    "ratio": 1.2699389275638908,
+    "within_band": true
+   },
+   {
+    "config": "AB|S|chuffed|S3|8|1",
+    "archived_pi": 0.026251492798076044,
+    "rerun_pi": 0.01904502791686544,
+    "ratio": 1.3783908804265326,
+    "within_band": true
+   },
+   {
+    "config": "AB|S|chuffed|S0|8|1",
+    "archived_pi": 0.6009172516076324,
+    "rerun_pi": 0.3862863245337,
+    "ratio": 1.5556265221996173,
+    "within_band": true
+   },
+   {
+    "config": "AB|S|cpsat|S0|8|1",
+    "archived_pi": 0.0020217067470474992,
+    "rerun_pi": 0.0007875757471653687,
+    "ratio": 2.566999751229005,
+    "within_band": true
+   },
+   {
+    "config": "AB|S|cpsat|S3|8|1",
+    "archived_pi": 0.0004989215848234277,
+    "rerun_pi": 0.00013384541759907837,
+    "ratio": 3.7275955633976308,
+    "within_band": true
+   },
+   {
+    "config": "AB|S|cpsat|S4|8|1",
+    "archived_pi": 0.0005323774004451435,
+    "rerun_pi": 0.0001056426914899204,
+    "ratio": 5.03941534371016,
+    "within_band": false
+   },
+   {
+    "config": "AB|M15|cplex|S0|8|1",
+    "archived_pi": 1.0,
+    "rerun_pi": 1.0,
+    "ratio": 1.0,
+    "within_band": true
+   },
+   {
+    "config": "AB|M15|glpk|S0|8|1",
+    "archived_pi": 1.0,
+    "rerun_pi": 1.0,
+    "ratio": 1.0,
+    "within_band": true
+   },
+   {
+    "config": "AB|M15|glpk|S4|8|1",
+    "archived_pi": 0.042625835492594674,
+    "rerun_pi": 0.02181290027948192,
+    "ratio": 1.9541571705936889,
+    "within_band": true
+   },
+   {
+    "config": "AB|M15|glpk|S3|8|1",
+    "archived_pi": 0.049656451624350874,
+    "rerun_pi": 0.029259102509811917,
+    "ratio": 1.6971283246879767,
+    "within_band": true
+   },
+   {
+    "config": "AB|M15|cbc|S3|8|1",
+    "archived_pi": 0.0495693300987485,
+    "rerun_pi": 0.029252488786603713,
+    "ratio": 1.6945337697710343,
+    "within_band": true
+   },
+   {
+    "config": "AB|M15|cbc|S0|8|1",
+    "archived_pi": 0.9999262644235893,
+    "rerun_pi": 1.0,
+    "ratio": 0.9999262644235893,
+    "within_band": true
+   },
+   {
+    "config": "AB|M15|cbc|S4|8|1",
+    "archived_pi": 0.044814023967205165,
+    "rerun_pi": 0.022454366600894272,
+    "ratio": 1.995782146240562,
+    "within_band": true
+   },
+   {
+    "config": "AB|M15|gurobi|S0|8|1",
+    "archived_pi": 1.0,
+    "rerun_pi": 1.0,
+    "ratio": 1.0,
+    "within_band": true
+   },
+   {
+    "config": "AB|M15|highs|S3|8|1",
+    "archived_pi": 0.04925780034058573,
+    "rerun_pi": 0.02924414048794679,
+    "ratio": 1.684364782780596,
+    "within_band": true
+   },
+   {
+    "config": "AB|M15|highs|S4|8|1",
+    "archived_pi": 0.03271471520373784,
+    "rerun_pi": 0.017898290261419876,
+    "ratio": 1.8278123064220868,
+    "within_band": true
+   },
+   {
+    "config": "AB|M15|highs|S0|8|1",
+    "archived_pi": 0.7269289390380405,
+    "rerun_pi": 0.4806738203860877,
+    "ratio": 1.5123123170181294,
+    "within_band": true
+   },
+   {
+    "config": "AB|M15|scip|S3|8|1",
+    "archived_pi": 0.04949092555230776,
+    "rerun_pi": 0.02922241357818169,
+    "ratio": 1.6935947272082665,
+    "within_band": true
+   },
+   {
+    "config": "AB|M15|scip|S4|8|1",
+    "archived_pi": 0.03486297496414197,
+    "rerun_pi": 0.016788078774438435,
+    "ratio": 2.0766506657822226,
+    "within_band": true
+   },
+   {
+    "config": "AB|M15|scip|S0|8|1",
+    "archived_pi": 0.4670391101833095,
+    "rerun_pi": 0.3534540796205552,
+    "ratio": 1.3213572486833132,
+    "within_band": true
+   },
+   {
+    "config": "AB|M15|cpoptimizer|S0|8|1",
+    "archived_pi": 1.0,
+    "rerun_pi": 1.0,
+    "ratio": 1.0,
+    "within_band": true
+   },
+   {
+    "config": "AB|M15|gecode|S3|8|1",
+    "archived_pi": 0.04971188329078988,
+    "rerun_pi": 0.02924464713557906,
+    "ratio": 1.6998626470110614,
+    "within_band": true
+   },
+   {
+    "config": "AB|M15|gecode|S0|8|1",
+    "archived_pi": 0.1882084904001075,
+    "rerun_pi": 0.16700512018737876,
+    "ratio": 1.126962396056712,
+    "within_band": true
+   },
+   {
+    "config": "AB|M15|gecode|S4|8|1",
+    "archived_pi": 0.03352681497820586,
+    "rerun_pi": 0.02201977476491123,
+    "ratio": 1.5225775620389739,
+    "within_band": true
+   },
+   {
+    "config": "AB|M15|chuffed|S4|8|1",
+    "archived_pi": 0.025886600504767564,
+    "rerun_pi": 0.015608862690895101,
+    "ratio": 1.6584552646406219,
+    "within_band": true
+   },
+   {
+    "config": "AB|M15|chuffed|S0|8|1",
+    "archived_pi": 0.8739672843867652,
+    "rerun_pi": 0.8667883081780257,
+    "ratio": 1.0082822716238866,
+    "within_band": true
+   },
+   {
+    "config": "AB|M15|chuffed|S3|8|1",
+    "archived_pi": 0.049813996922759805,
+    "rerun_pi": 0.02924830508456604,
+    "ratio": 1.7031413197698768,
+    "within_band": true
+   },
+   {
+    "config": "AB|M15|cpsat|S3|8|1",
+    "archived_pi": 0.03654725244244748,
+    "rerun_pi": 0.016837762366409607,
+    "ratio": 2.1705528114209045,
+    "within_band": true
+   },
+   {
+    "config": "AB|M15|cpsat|S0|8|1",
+    "archived_pi": 0.06910312749730092,
+    "rerun_pi": 0.04941426947596813,
+    "ratio": 1.3984447858914149,
+    "within_band": true
+   },
+   {
+    "config": "AB|M15|cpsat|S4|8|1",
+    "archived_pi": 0.0224630189402479,
+    "rerun_pi": 0.010800052434055647,
+    "ratio": 2.0798990632133965,
+    "within_band": true
+   },
+   {
+    "config": "AB|M20|cplex|S0|8|1",
+    "archived_pi": 1.0,
+    "rerun_pi": 1.0,
+    "ratio": 1.0,
+    "within_band": true
+   },
+   {
+    "config": "AB|M20|glpk|S4|8|1",
+    "archived_pi": 0.04610850873139653,
+    "rerun_pi": 0.04438826024065987,
+    "ratio": 1.0387545824371125,
+    "within_band": true
+   },
+   {
+    "config": "AB|M20|glpk|S3|8|1",
+    "archived_pi": 0.04815728626225603,
+    "rerun_pi": 0.0495229861020927,
+    "ratio": 0.9724229101003471,
+    "within_band": true
+   },
+   {
+    "config": "AB|M20|glpk|S0|8|1",
+    "archived_pi": 1.0,
+    "rerun_pi": 1.0,
+    "ratio": 1.0,
+    "within_band": true
+   },
+   {
+    "config": "AB|M20|cbc|S3|8|1",
+    "archived_pi": 0.048098933488871884,
+    "rerun_pi": 0.049469303259494,
+    "ratio": 0.9722985835593082,
+    "within_band": true
+   },
+   {
+    "config": "AB|M20|cbc|S4|8|1",
+    "archived_pi": 0.047509684434258376,
+    "rerun_pi": 0.04639454730468401,
+    "ratio": 1.0240359523771403,
+    "within_band": true
+   },
+   {
+    "config": "AB|M20|cbc|S0|8|1",
+    "archived_pi": 0.9978072234626394,
+    "rerun_pi": 1.0,
+    "ratio": 0.9978072234626394,
+    "within_band": true
+   },
+   {
+    "config": "AB|M20|gurobi|S0|8|1",
+    "archived_pi": 1.0,
+    "rerun_pi": 1.0,
+    "ratio": 1.0,
+    "within_band": true
+   },
+   {
+    "config": "AB|M20|highs|S0|8|1",
+    "archived_pi": 0.9827469362098812,
+    "rerun_pi": 0.8664157202030387,
+    "ratio": 1.134267203715534,
+    "within_band": true
+   },
+   {
+    "config": "AB|M20|highs|S4|8|1",
+    "archived_pi": 0.04078418038482688,
+    "rerun_pi": 0.03387891030840054,
+    "ratio": 1.2038220832242685,
+    "within_band": true
+   },
+   {
+    "config": "AB|M20|highs|S3|8|1",
+    "archived_pi": 0.048120689663239874,
+    "rerun_pi": 0.04942302112090258,
+    "ratio": 0.9736492948402156,
+    "within_band": true
+   },
+   {
+    "config": "AB|M20|scip|S3|8|1",
+    "archived_pi": 0.04816295046895796,
+    "rerun_pi": 0.04905594576467357,
+    "ratio": 0.981796390186841,
+    "within_band": true
+   },
+   {
+    "config": "AB|M20|scip|S4|8|1",
+    "archived_pi": 0.040674652807603906,
+    "rerun_pi": 0.03655159558803161,
+    "ratio": 1.112801018758326,
+    "within_band": true
+   },
+   {
+    "config": "AB|M20|scip|S0|8|1",
+    "archived_pi": 0.6968422038990163,
+    "rerun_pi": 0.48650399362947994,
+    "ratio": 1.432346317859272,
+    "within_band": true
+   },
+   {
+    "config": "AB|M20|cpoptimizer|S0|8|1",
+    "archived_pi": 1.0,
+    "rerun_pi": 1.0,
+    "ratio": 1.0,
+    "within_band": true
+   },
+   {
+    "config": "AB|M20|gecode|S3|8|1",
+    "archived_pi": 0.047951863687920745,
+    "rerun_pi": 0.049528202946190404,
+    "ratio": 0.9681728961581291,
+    "within_band": true
+   },
+   {
+    "config": "AB|M20|gecode|S0|8|1",
+    "archived_pi": 0.17387059205062677,
+    "rerun_pi": 0.1523201793041147,
+    "ratio": 1.1414810095744807,
+    "within_band": true
+   },
+   {
+    "config": "AB|M20|gecode|S4|8|1",
+    "archived_pi": 0.028914409156840303,
+    "rerun_pi": 0.024509527915492622,
+    "ratio": 1.1797211784957853,
+    "within_band": true
+   },
+   {
+    "config": "AB|M20|chuffed|S0|8|1",
+    "archived_pi": 0.9050472725982359,
+    "rerun_pi": 0.8998873040757249,
+    "ratio": 1.0057340163586492,
+    "within_band": true
+   },
+   {
+    "config": "AB|M20|chuffed|S4|8|1",
+    "archived_pi": 0.01697808726915747,
+    "rerun_pi": 0.016332863244762495,
+    "ratio": 1.0395046486782948,
+    "within_band": true
+   },
+   {
+    "config": "AB|M20|chuffed|S3|8|1",
+    "archived_pi": 0.048360782940267945,
+    "rerun_pi": 0.04952072399277955,
+    "ratio": 0.9765766539947854,
+    "within_band": true
+   },
+   {
+    "config": "AB|M20|cpsat|S3|8|1",
+    "archived_pi": 0.037340261560136305,
+    "rerun_pi": 0.026126662813190215,
+    "ratio": 1.4292013422121723,
+    "within_band": true
+   },
+   {
+    "config": "AB|M20|cpsat|S4|8|1",
+    "archived_pi": 0.020088825828659885,
+    "rerun_pi": 0.018837136973696822,
+    "ratio": 1.0664479350928358,
+    "within_band": true
+   },
+   {
+    "config": "AB|M20|cpsat|S0|8|1",
+    "archived_pi": 0.08037913074710898,
+    "rerun_pi": 0.057007249108870464,
+    "ratio": 1.4099808709170252,
+    "within_band": true
+   }
+  ]
+ },
+ "status": "MISMATCH"
+}

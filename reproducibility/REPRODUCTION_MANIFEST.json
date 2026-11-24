@@ -1,0 +1,101 @@
+{
+  "generated_by": "reproducibility/ (hand-assembled from verified environment probes; see reproducibility/check_dependencies.sh to re-verify)",
+  "source_revision": "0b77c2a44b560dc840d80b28dc640dbc9fc0f1f9",
+  "branch": "research/icaps2027-final-multisolver",
+  "python": {
+    ".venv (CP-SAT study, manuscript tooling)": "3.12.3",
+    ".venv_ms (multisolver study: reuses .venv site-packages via zz_base_venv.pth)": "3.12.3"
+  },
+  "packages": {
+    "ortools": "9.15.6755",
+    "pyscipopt": "6.3.0",
+    "highspy": "1.16.0",
+    "pulp": "4.3.1",
+    "swiglpk": "5.0.13",
+    "minizinc (python binding)": "0.10.0",
+    "psutil": "7.2.2",
+    "gurobipy": "13.0.2 (pip, free/size-limited licence: <=2000 vars / <=2000 constraints)",
+    "cplex": "22.2.0.0 (Community Edition: <=1000 vars / <=1000 constraints)",
+    "docplex": "2.32.264 (CP Optimizer Community Edition: <=1000 vars/constraints; binary at .venv/bin/cpoptimizer)",
+    "matplotlib": "3.11.0",
+    "pypdf": "6.19.0",
+    "pytest": "9.1.1",
+    "numpy": "2.5.1",
+    "pandas": "3.0.3",
+    "scipy": "1.18.0",
+    "pin source": "requirements_research.txt (base venv); reproducibility/setup_environment.sh (venv_ms additions)"
+  },
+  "external_solvers": {
+    "MiniZinc": "2.10.1 (bundle at .solvers/MiniZincIDE-2.10.1-x86_64-linux-gnu, not committed; downloaded by setup_environment.sh, sha256 recorded in .solvers/mzn.tgz.sha256 at install time)",
+    "Gecode": "6.4.0 (via MiniZinc)",
+    "Chuffed": "0.14.0 (via MiniZinc)",
+    "CBC": "2.10.12 (via OR-Tools pywraplp, not a separate install)"
+  },
+  "not_installed": {
+    "FICO Xpress": "no Python module; commercial, no licence available",
+    "Hexaly": "no Python module; commercial, no licence available",
+    "Choco Solver": "requires a Java runtime; none found on the development machine"
+  },
+  "solver_parameter_settings": {
+    "note": "full per-solver parameters are in phase0/solver_adapters/*.py (one file per engine family); nothing is tuned per instance",
+    "default_workers": 1,
+    "exploratory_workers": 4,
+    "time_limits_s": [2, 8, 30],
+    "objective_cutoff_for_restricted_rounds": "C_max <= U - 1 (strict improvement; see phase0/cobar.py)"
+  },
+  "random_seeds": {
+    "development_stream_seeds": "301-310 (3 rounds, frozen before any confirmatory run)",
+    "cpsat_confirmatory_stream_seeds": "1101-1120 (40 streams = 2 sizes x 20 seeds)",
+    "cpsat_confirmatory_solver_seeds": "0-4",
+    "multisolver_heldout_stream_seeds": {
+      "tier S (8x6)": "first 10 streams from seed 3101 fitting CPLEX CE and CP Optimizer CE licences",
+      "tier M15/M20 (15x15/20x20)": "first 5 streams from seed 3201"
+    },
+    "multisolver_solver_seeds": "0-4 for stochastic engines (cpsat, cpoptimizer, gurobi, cplex, scip, highs); seed 0 only for deterministic ones",
+    "frozen_plan_shuffle_seed": 3101,
+    "note": "all stream seeds verified unused in any other phase of the project before being frozen"
+  },
+  "scheduling_instances": {
+    "generator": "phase0/streams.py (job-shop with arrivals, cancellations, duration changes, machine outages)",
+    "cpsat_study_sizes": "15x15, 20x20 full job shops; durations uniform integer [5,50]; 10 deltas/stream, weights 0.4/0.2/0.25/0.15 (arrival/cancellation/duration/outage)",
+    "multisolver_tiers": {
+      "S": "8x6 (licence-feasible tier, all 10 engines)",
+      "M15": "15x15 (paper scale)",
+      "M20": "20x20 (paper scale)"
+    },
+    "canonical_representation": "phase0/solver_independent_model.py (SHA-256 instance hash; instance archive under results/multisolver/instances/, tracked in git)"
+  },
+  "benchmark_manifests": {
+    "published_bases (U9)": "34 published job-shop bases (Taillard, DMU, SWV, YN); see docs referenced from the manuscript's U9 setting",
+    "multisolver_frozen_plan": "results/multisolver/FROZEN_PLAN.json, sha256 in results/multisolver/FROZEN_PLAN.sha256 (6cacd478b20d743b97bb6622920352cd1e9a27e71d91bd75d7729d1ec05e0e51)"
+  },
+  "computational_budgets": {
+    "cpsat_study": "B = 8s (primary), 2s and 30s (U4/U5), 1 worker (4 in U3)",
+    "multisolver_study": "B = 8s (AB, primary), 2s (R2, exploratory), 30s (R30, exploratory); 1 worker (AB/R2/R30), 4 workers (W4, exploratory)"
+  },
+  "neighbourhood_parameters": {
+    "restricted_window": "25% of operations, breadth-first from the disrupted operations",
+    "round_cap_M1": "stop at local-window close or first non-improving round",
+    "round_cap_M2": "fixed 6 rounds of at most 0.4s each"
+  },
+  "experimental_protocols": {
+    "cpsat_confirmatory": "9 settings (U1 primary; U2 mechanism; U3 workers; U4/U5 budget; U6/U7/U8 disruption/severity; U9 benchmarks), fixed order, frozen before any confirmatory run",
+    "multisolver_confirmatory": "Experiments A (engines), B (within-engine ablation), C (development-selected configuration); frozen in results/multisolver/FROZEN_PLAN.json before any held-out run",
+    "multisolver_exploratory": "R2 (2s budget), R30 (30s budget), W4 (4 workers)"
+  },
+  "statistical_analysis_settings": {
+    "unit_of_inference": "stream (steps and solver seeds averaged within a stream first)",
+    "test": "exact two-sided sign test, Holm correction within each pre-registered family",
+    "confidence_interval": "10,000-resample stream-clustered bootstrap, 95%",
+    "significance_rule": "Holm p < 0.05 AND the CI excludes zero",
+    "primary_metric_cpsat_study": "uncapped primal gap (z(t)-z*)/z*",
+    "primary_metric_multisolver_study": "bounded (Berthold) primal gap (z(t)-z*)/z(t), fixed on development data before the held-out run",
+    "note": "the two primal-integral gap variants are never mixed within one reported comparison"
+  },
+  "hardware": {
+    "cpu": "12th Gen Intel Core i7-12700 (12 cores / 20 threads)",
+    "ram": "31 GiB",
+    "note": "dedicated performance cores [0,2,4,6,8,10,12,14] used for timed runs; E-cores [16-19] for auxiliary work; per-run CPU/wall and 1-minute load average are recorded in every record for a contention sensitivity check"
+  },
+  "operating_system": "Ubuntu 24.04.4 LTS, Linux kernel 7.0.0-34-generic, x86_64"
+}

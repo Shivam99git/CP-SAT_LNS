@@ -1,0 +1,59 @@
+{
+ "generated": "reproducibility/compare_results.py",
+ "tolerance": 1e-06,
+ "summary": {
+  "EXACT MATCH": 10
+ },
+ "files": [
+  {
+   "file": "results/research_extension/confirmatory/confirmatory_analysis.json",
+   "status": "EXACT MATCH",
+   "max_rel_diff": 0.0
+  },
+  {
+   "file": "results/cobar/confirmatory/confirmatory_analysis.json",
+   "status": "EXACT MATCH",
+   "max_rel_diff": 0.0
+  },
+  {
+   "file": "results/unified_icaps/confirmatory/confirmatory_analysis.json",
+   "status": "EXACT MATCH",
+   "max_rel_diff": 0.0
+  },
+  {
+   "file": "results/multisolver/audit/cpsat_reproduction.json",
+   "status": "EXACT MATCH",
+   "max_rel_diff": 0.0
+  },
+  {
+   "file": "results/multisolver/audit/mechanism_reproduction.json",
+   "status": "EXACT MATCH",
+   "max_rel_diff": 0.0
+  },
+  {
+   "file": "results/multisolver/validation_report.json",
+   "status": "EXACT MATCH",
+   "max_rel_diff": 0.0
+  },
+  {
+   "file": "results/multisolver/analysis/heldout.json",
+   "status": "EXACT MATCH",
+   "max_rel_diff": 0.0
+  },
+  {
+   "file": "results/multisolver/analysis/heldout_cpu08.json",
+   "status": "EXACT MATCH",
+   "max_rel_diff": 0.0
+  },
+  {
+   "file": "results/multisolver/analysis/stage_attribution.json",
+   "status": "EXACT MATCH",
+   "max_rel_diff": 0.0
+  },
+  {
+   "file": "results/multisolver/analysis/posthoc.json",
+   "status": "EXACT MATCH",
+   "max_rel_diff": 0.0
+  }
+ ]
+}

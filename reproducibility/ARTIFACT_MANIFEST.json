@@ -1,0 +1,154 @@
+{
+ "generated": "reproducibility/make_artifact_manifest.py",
+ "n_files": 37,
+ "files": {
+  "paper/icaps27_multisolver_final/manuscript.pdf": {
+   "sha256": "8303d0e2e5aed7760df3fe518ab2892f7def4a4a3dbddcce54e7d4a8a91c3055",
+   "bytes": 391855
+  },
+  "paper/icaps27_multisolver_final/manuscript_candidate.pdf": {
+   "sha256": "147948c48d6132601143e405a4c94c9e87ac968063804561db78ba5579c9bfc1",
+   "bytes": 419712
+  },
+  "paper/icaps27_multisolver_final/supplement.pdf": {
+   "sha256": "aad0607069f6a9b5a4d7368f963ee6f386670c99614d581788b18474d9f4b685",
+   "bytes": 257885
+  },
+  "paper/icaps27_multisolver_final/numbers.tex": {
+   "sha256": "a851cc3eb38267b09482e5ce8ec368a3714df65c581c98f76c3551bc1a04ae84",
+   "bytes": 191329
+  },
+  "paper/icaps27_multisolver_final/claims.json": {
+   "sha256": "1f8a4df99ed092b0e9263666433cfdb391dbaf8d1b21c5407a05510f32b99db2",
+   "bytes": 837272
+  },
+  "paper/icaps27_multisolver_final/claim_map.md": {
+   "sha256": "8e7ed1d1f44febadc6468c57857e00517d4f3d61ca494cbf0b170190d18789d8",
+   "bytes": 35294
+  },
+  "paper/icaps27_multisolver_final/figures/forest_u1.pdf": {
+   "sha256": "dab2dc0bbe9b4fa48206b0b221ef287f74ec912a529bf373760b749e77d754d5",
+   "bytes": 15767
+  },
+  "paper/icaps27_multisolver_final/figures/mechanism_u2_u1.pdf": {
+   "sha256": "a9ad2fef7b31072b9414e5b0f7ecd458092e367bed6fa0bda23abf3bfd261edf",
+   "bytes": 32859
+  },
+  "paper/icaps27_multisolver_final/figures/robustness_heatmap.pdf": {
+   "sha256": "c2199381a29234c58e40109cbe4678955e735d948698ef7550197a5cc33ff2a0",
+   "bytes": 18054
+  },
+  "paper/icaps27_multisolver_final/figures/trajectories.pdf": {
+   "sha256": "37e8053cd65f9f7de4b1513246a6e3bcbacdc032a7bb59120090c17da7b1bba7",
+   "bytes": 52630
+  },
+  "paper/icaps27_multisolver_final/figures/ms/s1_engines_cold.pdf": {
+   "sha256": "cedae58beeb2499c13d414af578b17f446f2b7b8b75c48447aed270daaa9dbcc",
+   "bytes": 33986
+  },
+  "paper/icaps27_multisolver_final/figures/ms/s2_trajectories.pdf": {
+   "sha256": "e21e2f6cf204083667d8279494eb73c861b8d7cab53398cb9dea3d06e0b9cea1",
+   "bytes": 36782
+  },
+  "paper/icaps27_multisolver_final/figures/ms/s34_within_solver.pdf": {
+   "sha256": "5697c74fe591485a19542fb9828e48b734c8b49a184c59ad76b95cc8046cd28c",
+   "bytes": 39556
+  },
+  "paper/icaps27_multisolver_final/figures/ms/s4b_stage_attribution.pdf": {
+   "sha256": "a58ba0f066faf488abfca0c42a9ef52cb2c5bf4f6740a25d0d3f3e30bb923466",
+   "bytes": 32909
+  },
+  "paper/icaps27_multisolver_final/figures/ms/s5_scalability.pdf": {
+   "sha256": "0c5be1f8524d2d244a7ff9d4bbf9c08eed34f400072cba41372ba85c7590b2bc",
+   "bytes": 50391
+  },
+  "paper/icaps27_multisolver_final/figures/ms/s6_model_overhead.pdf": {
+   "sha256": "5c1951fa273ceb57da413fa16b639696f1fb568bb25540c1941c70db04e7f66e",
+   "bytes": 61485
+  },
+  "paper/icaps27_multisolver_final/figures/ms/tables/tab_s1_availability.tex": {
+   "sha256": "f13143f36f373215e400505a3ae8b6b503652bc34430dac566c073f9041fe690",
+   "bytes": 1371
+  },
+  "paper/icaps27_multisolver_final/figures/ms/tables/tab_s2_cold_M15.tex": {
+   "sha256": "ecd307d85d7c4c1f0d59e5e4c0d6307082fb85e96e4c91455beae618ffa52a15",
+   "bytes": 939
+  },
+  "paper/icaps27_multisolver_final/figures/ms/tables/tab_s2_cold_M20.tex": {
+   "sha256": "7df61e5a12e393f84c0827e8edfd1b8635586ea2c924b2b1fb23ca9200377acc",
+   "bytes": 941
+  },
+  "paper/icaps27_multisolver_final/figures/ms/tables/tab_s2_cold_S.tex": {
+   "sha256": "f7c29ca7368e6468df3fd8cd7afcfa2fa7672a8d0dd6ec8bc385d152d52b8eec",
+   "bytes": 948
+  },
+  "paper/icaps27_multisolver_final/figures/ms/tables/tab_s3_ablation_M15.tex": {
+   "sha256": "9ff57d1c3b9c450c0b687874e5c26ad8e2d23e9f66e02538939d3f0f07a99417",
+   "bytes": 514
+  },
+  "paper/icaps27_multisolver_final/figures/ms/tables/tab_s3_ablation_M20.tex": {
+   "sha256": "072e4f1e1d3875d2ee306355da029f2c01a5e7ffca1dac57aaa702f92de14b0f",
+   "bytes": 514
+  },
+  "paper/icaps27_multisolver_final/figures/ms/tables/tab_s3_ablation_S.tex": {
+   "sha256": "f5dc44c7e4cedace0c9fbbbb1d2a4ef6c91834b71b883b1ad08e05e7c8d76845",
+   "bytes": 699
+  },
+  "paper/icaps27_multisolver_final/figures/ms/tables/tab_s4_resources.tex": {
+   "sha256": "19da6f583663ee5f5783a06a578d36694b2430d37d2b42f855e82aaf9bde527c",
+   "bytes": 2718
+  },
+  "paper/icaps27_multisolver_final/figures/ms/tables/tab_s5_comparisons.tex": {
+   "sha256": "b2f76624587aea29820b310d554760f486079f15325dad496e0069bd36bdd19a",
+   "bytes": 17616
+  },
+  "paper/icaps27_multisolver_final/figures/ms/tables/tab_s6_attribution.tex": {
+   "sha256": "8800417dc13c439344395c9481dc20974cfebab2519991a762def586967284d3",
+   "bytes": 3819
+  },
+  "results/multisolver/solver_inventory.json": {
+   "sha256": "cd031cefbeaf68d326b96693aee85b630d9030067f686bbe9ee2edfc8fbaccee",
+   "bytes": 20105
+  },
+  "results/multisolver/FROZEN_PLAN.json": {
+   "sha256": "6cacd478b20d743b97bb6622920352cd1e9a27e71d91bd75d7729d1ec05e0e51",
+   "bytes": 45762
+  },
+  "results/multisolver/analysis/heldout.json": {
+   "sha256": "3196d24c60b7847490c83eae6da0ca8b140415bf0e783caa619b0d05a2512a7b",
+   "bytes": 293452
+  },
+  "results/multisolver/analysis/heldout_cpu08.json": {
+   "sha256": "1748243d6510a6db7d7bb9ce778c0f91d4f282e5cdec31ce7f18866ed74847bf",
+   "bytes": 300284
+  },
+  "results/multisolver/analysis/pilot.json": {
+   "sha256": "dd77195c4a9b38dc5d6394f6f1c0e8744bca1d4dc89d9887a8f7f52902ffa420",
+   "bytes": 120762
+  },
+  "results/multisolver/analysis/posthoc.json": {
+   "sha256": "587190e05534ec147e866612ebd6deec9913dbbf65a16494f379d50752e7f761",
+   "bytes": 2261
+  },
+  "results/multisolver/analysis/stage_attribution.json": {
+   "sha256": "c7105f9e3cd3713cf47f4312659cd95cbf7381d7b9d7cedba79f87ffa02660b1",
+   "bytes": 33742
+  },
+  "results/multisolver/audit/cpsat_reproduction.json": {
+   "sha256": "a9b131ca694e9398aa15894d74faced700b933de37ec1f45092a1cfa213ece40",
+   "bytes": 18323
+  },
+  "results/multisolver/audit/mechanism_reproduction.json": {
+   "sha256": "1df16d072f8205245fa573f86640c649c350f047e3b110f243f50d0001d99c12",
+   "bytes": 6802
+  },
+  "results/multisolver/audit/restricted_status_counts.json": {
+   "sha256": "e9b86246a610d75c23b217a98469f5b82889c2d50df7f9d4ff9f922afba3fde9",
+   "bytes": 97
+  },
+  "results/multisolver/validation_report.json": {
+   "sha256": "97e19ad22cfebdb35e208fa103a0523c326423f0180a33655f90945df9270cb5",
+   "bytes": 691
+  }
+ }
+}

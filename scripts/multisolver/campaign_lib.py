@@ -27,13 +27,17 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT))
 
+# Reproducibility: a fresh live rerun can be redirected to a separate output root
+# (e.g. for an independent re-execution compared against the archived campaign)
+# without touching the already-verified results, via MULTISOLVER_OUT.
+
 from phase0.run_gate1 import StreamSpec  # noqa: E402
 from phase0.solver_independent_model import (  # noqa: E402
     from_canonical_dict, instance_hash, model_size_hint, to_canonical_dict,
 )
 
-OUT = ROOT / "results/multisolver"
-INST_DIR = OUT / "instances"
+OUT = Path(os.environ.get("MULTISOLVER_OUT", str(ROOT / "results/multisolver")))
+INST_DIR = ROOT / "results/multisolver/instances"  # canonical archive, read-only, independent of MULTISOLVER_OUT
 # one logical CPU per physical P-core (cores 0-7 have HT siblings 2k, 2k+1); E-cores 16-19 excluded
 P_CORES = [0, 2, 4, 6, 8, 10, 12, 14]
 
