@@ -100,6 +100,21 @@ EXACT MATCH / MATCH WITHIN TOLERANCE / MISMATCH (Task A10); see
 deterministic (same raw records, same code), so anything other than EXACT MATCH
 indicates a real reproducibility problem, not solver randomness.
 
+**Known gap verified by a fresh-clone test, not just asserted:** of the four
+historical confirmatory studies, two (the final CP-SAT study and the unified
+critical-rounds study) reproduce EXACT MATCH from a clean `git clone` with no
+other setup, because their raw per-run records are fully committed. The other
+two do not: IAIP-SR's analysis script raises on a fresh clone (its `runs/`
+directory is absent) and COBAR's analysis script silently writes an empty
+result for every setting whose `runs/` directory is absent, which earlier
+versions of `compare_results.py` failed to flag as a mismatch (a dict-vs-dict
+comparison that only checked keys present on *both* sides silently ignored
+keys missing entirely from one side -- fixed, and re-verified against the
+archive on the original development machine, where IAIP-SR and COBAR's raw
+records still exist and reproduce EXACT MATCH). See section 11 (expected
+output directories) and `docs/git_sync/FINAL_PUSH_AND_REPRODUCTION_REPORT.md`
+for the verified state of each study's raw data.
+
 ## 7. Full experimental reproduction (Level 2)
 
 ```bash
@@ -175,6 +190,21 @@ writes a SHA-256 manifest of every generated artifact
 | `results/multisolver_rerun/` | Level 2's independent live rerun (not committed; regenerate locally) |
 | `paper/icaps27_multisolver_final/figures/ms/` | multi-solver figures and tables |
 | `reproducibility/*.json`, `*LOG*.txt` | reproduction run logs and comparison reports |
+
+**Raw per-run records, by study** (needed to re-derive a `confirmatory_analysis.json`
+from raw events rather than trust the one already committed):
+
+| Study | Raw records committed? |
+|---|---|
+| Final CP-SAT confirmatory (`results/unified_icaps/confirmatory/*/runs/`) | yes |
+| Unified critical-rounds (same directory, shared with the above) | yes |
+| Multi-solver held-out campaign (`results/multisolver/runs/`) | yes |
+| IAIP-SR (`results/research_extension/confirmatory/runs/`) | **no** -- its analysis script raises on a fresh clone |
+| COBAR (`results/cobar/confirmatory/*/runs/`) | **no** -- its analysis script silently writes an empty result per missing setting on a fresh clone (caught by `compare_results.py`) |
+
+For the two "no" rows, the already-computed, checksummed `confirmatory_analysis.json`
+is committed and can be read/cited, but cannot currently be independently
+re-derived from raw events by someone who only has this repository.
 
 ## 12. Expected computational resources
 

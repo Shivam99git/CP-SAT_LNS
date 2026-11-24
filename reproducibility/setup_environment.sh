@@ -47,11 +47,11 @@ fi
 # is version-specific (docs/multisolver/SOLVER_AVAILABILITY.md). Re-download is skipped
 # if the checksum already on disk matches.
 MZN_DIR=".solvers/MiniZincIDE-2.10.1-x86_64-linux-gnu"
-MZN_URL="https://github.com/MiniZinc/MiniZincIDE/releases/download/2.10.1/MiniZincIDE-2.10.1-x86_64-linux.tgz"
+MZN_URL="https://github.com/MiniZinc/MiniZincIDE/releases/download/2.10.1/MiniZincIDE-2.10.1-x86_64-linux-gnu.tgz"
 if [ ! -x "$MZN_DIR/bin/minizinc" ]; then
   mkdir -p .solvers
   echo "== Downloading MiniZinc 2.10.1 bundle (Gecode + Chuffed) ..."
-  if curl -sSL -o .solvers/mzn.tgz "$MZN_URL"; then
+  if curl -fsSL -o .solvers/mzn.tgz "$MZN_URL"; then
     sha256sum .solvers/mzn.tgz > .solvers/mzn.tgz.sha256
     tar xzf .solvers/mzn.tgz -C .solvers
   else

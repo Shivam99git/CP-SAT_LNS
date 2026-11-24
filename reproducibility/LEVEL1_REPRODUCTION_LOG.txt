@@ -1,4 +1,4 @@
-LEVEL 1 analysis reproduction -- 2026-11-24T11:28:42+05:30
+LEVEL 1 analysis reproduction -- 2026-11-24T16:01:59+05:30
 --- 1. IAIP-SR (phase0/analyze_confirmatory.py) ---
 == IAIP-SR confirmatory analysis
 {"records": 22000, "not_validated": 0, "no_solution": 0, "overrun_runs": 20907, "overrun_max_s": 0.24360708193853498, "overrun_p99_s": 0.01661265426548197}

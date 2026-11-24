@@ -1,0 +1,31 @@
+{
+ "status_counts": {
+  "OK": 17089,
+  "schedule_revalidated": 17089,
+  "NOT_SUPPORTED": 2100,
+  "NO_SOLUTION": 251
+ },
+ "by_experiment": {
+  "AB": {
+   "OK": 11489,
+   "schedule_revalidated": 11489,
+   "NOT_SUPPORTED": 2100,
+   "NO_SOLUTION": 241
+  },
+  "R2": {
+   "OK": 2990,
+   "schedule_revalidated": 2990,
+   "NO_SOLUTION": 10
+  },
+  "R30": {
+   "OK": 1440,
+   "schedule_revalidated": 1440
+  },
+  "W4": {
+   "OK": 1170,
+   "schedule_revalidated": 1170
+  }
+ },
+ "n_violations": 0,
+ "violations": []
+}

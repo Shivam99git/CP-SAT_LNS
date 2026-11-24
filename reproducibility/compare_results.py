@@ -56,6 +56,11 @@ def numeric_diff(a, b, path=""):
         for k in sorted(set(a) | set(b)):
             if k in a and k in b:
                 yield from numeric_diff(a[k], b[k], f"{path}.{k}")
+            else:
+                # a key present on only one side (e.g. a reproduction step silently
+                # produced fewer/more entries than the archive) is a real mismatch,
+                # not something to skip
+                yield (f"{path}.{k}", float("inf"))
     elif isinstance(a, list) and isinstance(b, list) and len(a) == len(b):
         for i, (x, y) in enumerate(zip(a, b)):
             yield from numeric_diff(x, y, f"{path}[{i}]")
