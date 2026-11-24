@@ -20,7 +20,7 @@ and one broken URL in `reproducibility/setup_environment.sh` (section 16).
 
 | Branch | Local | Remote (`origin/<branch>`) | Match |
 |---|---|---|---|
-| `research/icaps2027-final-multisolver` | `b1586f457e392e3a94b91b33e09a6cc99e36c213` | `b1586f457e392e3a94b91b33e09a6cc99e36c213` | yes |
+| `research/icaps2027-final-multisolver` | `aca52273ea3baf01baf11b66195cda267da2d245` | `aca52273ea3baf01baf11b66195cda267da2d245` | yes |
 | `research/icaps2027-final-empirical` | `91be5405076aa78f0ce0bfa96badba2bcb6d4111` | same | yes |
 | `research/icaps-unified-critical-rounds` | `4761b7978e07c986f293240744f3dda107a8a483` | same | yes |
 | `research/iaip-sr` | `6a669789738ba634abdd6aba88d5820febfc2c26` | same | yes |
